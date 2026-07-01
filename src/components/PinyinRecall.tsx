@@ -23,6 +23,7 @@ export function PinyinRecall({ entries, scriptMode, onComplete, onGoBack }: Piny
   const headword = active ? (scriptMode === "traditional" ? active.traditional : active.simplified) : "";
   const speechLang = "zh-CN";
   const correct = active ? isPinyinMatch(input, active.pinyin) : false;
+  const inputLocked = revealed || (submitted && correct);
   const slotCharacters = useMemo(
     () => (active ? buildSlotCharacters(input, active.pinyin, submitted || revealed, revealed) : []),
     [active, input, revealed, submitted]
@@ -83,7 +84,7 @@ export function PinyinRecall({ entries, scriptMode, onComplete, onGoBack }: Piny
           onKeyDown={(event) => {
             if (event.key === "Enter" && input.trim()) setSubmitted(true);
           }}
-          disabled={submitted || revealed}
+          disabled={inputLocked}
           autoCapitalize="none"
           autoCorrect="off"
           spellCheck={false}
@@ -110,7 +111,7 @@ export function PinyinRecall({ entries, scriptMode, onComplete, onGoBack }: Piny
       )}
 
       <div className="recall-actions">
-        {!submitted && !revealed ? (
+        {!revealed && (!submitted || !correct) ? (
           <>
             <button className="secondary" type="button" onClick={() => setRevealed(true)}>
               <Eye size={18} aria-hidden="true" />
@@ -143,7 +144,7 @@ function shuffle<T>(items: T[]) {
 }
 
 function buildSlotCharacters(input: string, answer: string, showResult: boolean, revealed: boolean) {
-  const typed = Array.from(input.trim());
+  const typed = Array.from(normalizePinyin(input).replace(/\s/g, ""));
   let typedIndex = 0;
 
   return Array.from(answer).map((char) => {

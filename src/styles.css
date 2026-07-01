@@ -412,6 +412,8 @@ input {
   margin-top: 6px;
   color: var(--ink);
   font-size: clamp(0.78rem, 1.45vw, 0.94rem);
+  width: 100%;
+  min-width: 0;
 }
 
 .example-line {
@@ -459,6 +461,7 @@ input {
   color: var(--cinnabar);
   font-size: 0.78rem;
   font-weight: 700;
+  max-width: 100%;
   justify-self: center;
   justify-items: center;
   text-align: center;
@@ -481,8 +484,13 @@ input {
 }
 
 .example-pinyin {
+  display: block;
+  max-width: 100%;
   color: var(--cinnabar);
   font-weight: 700;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+  white-space: normal;
 }
 
 .example-chevron {
@@ -749,17 +757,24 @@ button:disabled {
 .pinyin-slots {
   min-height: 54px;
   display: flex;
+  align-items: flex-end;
   justify-content: center;
   gap: 4px;
   color: var(--ink);
   font-size: clamp(1.4rem, 4vw, 2.6rem);
   font-weight: 700;
+  line-height: 1;
   position: relative;
   z-index: 0;
 }
 
 .pinyin-slots span {
   min-width: 0.82em;
+  min-height: 1.02em;
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 1px;
   text-align: center;
   border-bottom: 3px solid rgba(43, 43, 43, 0.32);
 }
@@ -767,13 +782,11 @@ button:disabled {
 .pinyin-slots span.is-correct {
   border-color: var(--jade);
   color: var(--jade);
-  background: rgba(168, 195, 160, 0.18);
 }
 
 .pinyin-slots span.is-incorrect {
   border-color: var(--incorrect);
   color: var(--incorrect);
-  background: var(--incorrect-soft);
 }
 
 .recall-answer {
@@ -817,26 +830,59 @@ button:disabled {
 }
 
 @media (max-width: 760px) {
+  body {
+    overflow-x: hidden;
+  }
+
   .app-shell {
     grid-template-columns: 1fr;
     padding: 12px;
+    gap: 14px;
+    width: 100%;
+    overflow-x: hidden;
   }
 
   .app-header {
+    order: -2;
     border-radius: 18px;
     padding: 16px;
+    display: grid;
+    gap: 14px;
+  }
+
+  .app-header h1 {
+    font-size: clamp(2.55rem, 13vw, 3.35rem);
+    line-height: 0.95;
+    max-width: 100%;
+  }
+
+  .controls {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    justify-content: stretch;
+  }
+
+  label {
+    min-width: 0;
+  }
+
+  select {
+    width: 100%;
+    min-width: 0;
   }
 
   .workspace {
-    min-height: 620px;
+    min-height: 540px;
     padding: 18px 12px;
     border-radius: 24px;
   }
 
   .progress-panel {
     order: -1;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: 1fr;
     align-items: center;
+    width: 100%;
   }
 
   .progress-panel strong {
@@ -844,13 +890,46 @@ button:disabled {
   }
 
   .fan {
-    width: min(88vw, 340px);
+    width: min(86vw, 328px);
     padding: 18% 14% 0;
-    margin-bottom: -54px;
+    margin-bottom: -48px;
+  }
+
+  .example-toggle {
+    font-size: 0.72rem;
+  }
+
+  .example-pinyin {
+    max-width: 17ch;
+    font-size: 0.68rem;
+  }
+
+  .pinyin-slots {
+    min-height: 40px;
+    font-size: clamp(1.55rem, 8vw, 2.1rem);
+  }
+
+  .fan-back:has(.example-toggle[open]) {
+    top: 13.5%;
+    gap: 4px;
+  }
+
+  .fan-back:has(.example-toggle[open]) .hanzi-answer {
+    font-size: clamp(3.3rem, 9vw, 4.65rem);
+  }
+
+  .fan-back:has(.example-toggle[open]) .translation {
+    font-size: clamp(1rem, 2vw, 1.2rem);
+  }
+
+  .fan-back:has(.example-toggle[open]) .example-block {
+    margin-top: 3px;
+    gap: 3px;
   }
 
   .card-toolbar {
-    margin-top: -72px;
+    max-width: calc(100vw - 52px);
+    margin-top: -66px;
   }
 
   .card-toolbar button,
@@ -863,5 +942,56 @@ button:disabled {
   .fan-panel {
     min-height: 420px;
     padding: 52px 22px 34px;
+  }
+
+  .first-word-tip {
+    width: min(100%, calc(100vw - 44px));
+    margin-top: -16px;
+  }
+}
+
+@media (max-width: 420px) {
+  .app-shell {
+    padding: 10px;
+  }
+
+  .app-header {
+    padding: 14px;
+  }
+
+  .workspace {
+    padding: 16px 10px;
+  }
+
+  .workspace-ornament {
+    width: 54px;
+  }
+
+  .fan {
+    width: min(88vw, 306px);
+    margin-bottom: -44px;
+  }
+
+  .card-toolbar {
+    max-width: calc(100vw - 40px);
+    gap: 7px;
+    padding: 2px 6px;
+  }
+
+  .card-toolbar button,
+  .review-actions button {
+    min-height: 36px;
+    padding: 0 11px;
+    font-size: 0.82rem;
+  }
+
+  .first-word-tip {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .controls {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
