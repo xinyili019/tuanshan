@@ -8,3 +8,4 @@ coverage/
 extracted-vocabulary-draft.json
 *.pdf
 .vercel
+.env*
