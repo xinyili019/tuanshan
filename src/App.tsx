@@ -7,6 +7,20 @@ import type { ProgressState, ScriptMode, StudyPhase, VocabEntry } from "./types"
 import "./styles.css";
 
 const SESSION_SIZE = 20;
+const UNIT_SUMMARIES: Record<string, string> = {
+  "1": "identity, pronouns, numbers",
+  "2": "family and relationships",
+  "3": "body and health",
+  "4": "food and dining",
+  "5": "home and objects",
+  "6": "clothing and appearance",
+  "7": "time and dates",
+  "8": "study, work, digital life",
+  "9": "travel, transport, directions",
+  "10": "shopping and money",
+  "11": "nature, weather, animals",
+  "12": "feelings, communication, society"
+};
 
 export default function App() {
   const [progress, setProgress] = useState<ProgressState>(() => loadProgress());
@@ -21,6 +35,15 @@ export default function App() {
   useEffect(() => saveProgress(progress), [progress]);
 
   const units = useMemo(() => Array.from(new Set(vocabulary.map((entry) => entry.unit))), []);
+  const unitOptions = useMemo(
+    () =>
+      units.map((item) => ({
+        id: item,
+        title: vocabulary.find((entry) => entry.unit === item)?.theme ?? `Unit ${item}`,
+        summary: UNIT_SUMMARIES[item] ?? "vocabulary"
+      })),
+    [units]
+  );
   const entries = useMemo(
     () => (unit === "all" ? vocabulary : vocabulary.filter((entry) => entry.unit === unit)),
     [unit]
@@ -31,6 +54,12 @@ export default function App() {
   const activeEntries = phase === "review" ? reviewEntries : currentSession;
   const activeEntry = activeEntries[cardIndex];
   const knownCount = entries.filter((entry) => getProgress(progress, entry.id).status === "known").length;
+  const sessionProgress =
+    phase === "sessionChoice" || phase === "complete"
+      ? 100
+      : activeEntries.length
+        ? Math.min(100, (cardIndex / activeEntries.length) * 100)
+        : 0;
 
   useEffect(() => {
     setPhase("study");
@@ -48,8 +77,7 @@ export default function App() {
     }
 
     if (phase === "review") {
-      setPhase("sessionChoice");
-      setCardIndex(0);
+      nextSession();
       return;
     }
 
@@ -98,14 +126,14 @@ export default function App() {
 
   function finishRecall(troubleIds: string[]) {
     setProgress((current) => troubleIds.reduce((state, id) => recordRecallTrouble(state, id), current));
-    setPhase("sessionChoice");
+    nextSession();
   }
 
   return (
     <main className="app-shell">
       <header className="app-header">
         <div>
-          <p className="eyebrow">团扇 Tuanshan</p>
+          <p className="eyebrow">團扇 TUANSHAN</p>
           <h1>Chinese Vocabulary</h1>
         </div>
         <div className="controls" aria-label="Study controls">
@@ -120,9 +148,9 @@ export default function App() {
             <span>Unit</span>
             <select value={unit} onChange={(event) => setUnit(event.target.value)}>
               <option value="all">All units</option>
-              {units.map((item) => (
-                <option key={item} value={item}>
-                  Unit {item}
+              {unitOptions.map((item) => (
+                <option key={item.id} value={item.id}>
+                  Unit {item.id}: {item.title} - {item.summary}
                 </option>
               ))}
             </select>
@@ -143,11 +171,13 @@ export default function App() {
               scriptMode={scriptMode}
               revealed={revealed}
               canGoPrevious={cardIndex > 0}
+              showFirstWordTip={phase === "study" && sessionIndex === 0 && cardIndex === 0}
               onFlip={() => setRevealed((current) => !current)}
               onPrevious={() => {
                 setRevealed(false);
                 setCardIndex((current) => Math.max(0, current - 1));
               }}
+              onGoBack={phase === "review" ? () => setPhase("sessionChoice") : undefined}
               onAgain={() => mark("again")}
               onKnown={() => mark("known")}
             />
@@ -175,7 +205,6 @@ export default function App() {
           <PinyinRecall
             entries={reviewEntries}
             scriptMode={scriptMode}
-            title="Recall pinyin"
             onComplete={finishRecall}
             onGoBack={() => setPhase("sessionChoice")}
           />
@@ -195,16 +224,10 @@ export default function App() {
       </section>
 
       <aside className="progress-panel">
-        <p className="eyebrow">Progress</p>
-        <strong>{knownCount}</strong>
-        <span>recognized words</span>
-        <div className="progress-line">
-          <span style={{ width: `${entries.length ? (knownCount / entries.length) * 100 : 0}%` }} />
+        <p className="eyebrow">Session progress</p>
+        <div className="progress-line" aria-label="Current session progress">
+          <span style={{ width: `${sessionProgress}%` }} />
         </div>
-        <p>
-          Session {Math.min(sessionIndex + 1, sessions.length)} / {sessions.length || 1}
-        </p>
-        <p>{currentSession.length} words in this session</p>
       </aside>
     </main>
   );

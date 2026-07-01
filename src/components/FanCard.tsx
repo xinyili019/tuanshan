@@ -1,4 +1,4 @@
-import { BookOpen, RotateCcw, Sparkles, Volume2 } from "lucide-react";
+import { ArrowLeft, BookOpen, ChevronDown, RotateCcw, Sparkles, Volume2 } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import type { ScriptMode, VocabEntry } from "../types";
 import { StrokeOrder } from "./StrokeOrder";
@@ -8,8 +8,10 @@ interface FanCardProps {
   scriptMode: ScriptMode;
   revealed: boolean;
   canGoPrevious: boolean;
+  showFirstWordTip?: boolean;
   onFlip: () => void;
   onPrevious: () => void;
+  onGoBack?: () => void;
   onAgain: () => void;
   onKnown: () => void;
 }
@@ -19,15 +21,20 @@ export function FanCard({
   scriptMode,
   revealed,
   canGoPrevious,
+  showFirstWordTip = false,
   onFlip,
   onPrevious,
+  onGoBack,
   onAgain,
   onKnown
 }: FanCardProps) {
   const [showStrokeOrder, setShowStrokeOrder] = useState(false);
+  const [showExamplePinyin, setShowExamplePinyin] = useState(false);
+  const [firstWordTipDismissed, setFirstWordTipDismissed] = useState(false);
   const headword = scriptMode === "traditional" ? entry.traditional : entry.simplified;
   const example = scriptMode === "traditional" ? entry.exampleTraditional : entry.exampleSimplified;
   const speechLang = scriptMode === "traditional" ? "zh-TW" : "zh-CN";
+  const displayEnglish = getDisplayEnglish(entry);
   const fontSizeClass = useMemo(() => {
     const length = Array.from(headword).length;
     if (length >= 5) return "is-compact";
@@ -37,6 +44,8 @@ export function FanCard({
 
   useEffect(() => {
     setShowStrokeOrder(false);
+    setShowExamplePinyin(false);
+    setFirstWordTipDismissed(false);
   }, [entry.id, scriptMode]);
 
   useEffect(() => {
@@ -59,17 +68,14 @@ export function FanCard({
           onFlip();
         }}
       >
-        <span className="fan-ribs" aria-hidden="true" />
-        {!revealed ? (
-          <span className="fan-front">
+        <span className="fan-inner">
+          <span className="fan-front" aria-hidden={revealed}>
             <span className={`hanzi-main ${fontSizeClass}`}>{headword}</span>
-            <span className="fan-subtitle">{entry.theme}</span>
           </span>
-        ) : (
-          <span className="fan-back">
-            <span className="translation">{entry.english}</span>
-            <span className={`hanzi-answer ${fontSizeClass}`}>{headword}</span>
+          <span className="fan-back" aria-hidden={!revealed}>
             <span className="pinyin">{entry.pinyin}</span>
+            <span className={`hanzi-answer ${fontSizeClass}`}>{headword}</span>
+            <span className="translation">{displayEnglish}</span>
             <span className="example-block">
               <span className="example-line">
                 <span>{example}</span>
@@ -87,12 +93,46 @@ export function FanCard({
                 </button>
               </span>
               <span className="example-translation">{entry.exampleEnglish}</span>
+              <details
+                className="example-toggle"
+                open={showExamplePinyin}
+                onClick={(event) => event.stopPropagation()}
+                onToggle={(event) => {
+                  event.stopPropagation();
+                  setShowExamplePinyin((event.currentTarget as HTMLDetailsElement).open);
+                }}
+              >
+                <summary>
+                  <ChevronDown className="example-chevron" size={14} aria-hidden="true" />
+                  Pinyin
+                </summary>
+                <span className="example-pinyin">{entry.examplePinyin}</span>
+              </details>
             </span>
           </span>
-        )}
+        </span>
+        <span className="fan-ribs" aria-hidden="true" />
       </div>
 
+      {showFirstWordTip && revealed && !firstWordTipDismissed && (
+        <div className="first-word-tip" role="status" aria-live="polite">
+          <p>
+            Tap the fan again to flip back. Strokes shows how to write the character. Again saves this word for review
+            and pinyin recall. Known moves on.
+          </p>
+          <button className="primary first-word-tip-dismiss" type="button" onClick={() => setFirstWordTipDismissed(true)}>
+            Got it
+          </button>
+        </div>
+      )}
+
       <div className="card-toolbar">
+        {onGoBack && (
+          <button className="secondary" type="button" onClick={onGoBack}>
+            <ArrowLeft size={17} aria-hidden="true" />
+            Back
+          </button>
+        )}
         <button className="secondary" type="button" onClick={onPrevious} disabled={!canGoPrevious}>
           Previous
         </button>
@@ -124,17 +164,58 @@ export function FanCard({
   );
 }
 
+function getDisplayEnglish(entry: VocabEntry) {
+  const byWord: Record<string, string> = {
+    "我": "I / me",
+    "你": "you",
+    "您": "you (polite)",
+    "他": "he / him",
+    "她": "she / her",
+    "我们": "we / us",
+    "我們": "we / us",
+    "你们": "you (plural)",
+    "你們": "you (plural)"
+  };
+
+  return byWord[entry.simplified] ?? byWord[entry.traditional] ?? entry.english;
+}
+
 export function speak(text: string, lang: string) {
   if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) return;
 
   const utterance = new SpeechSynthesisUtterance(text);
   const voices = window.speechSynthesis.getVoices();
-  const voice =
-    voices.find((candidate) => candidate.lang === lang) ??
-    voices.find((candidate) => candidate.lang.toLowerCase().startsWith(lang.slice(0, 2).toLowerCase()));
+  const voice = pickMandarinVoice(voices, lang);
 
   utterance.lang = voice?.lang ?? lang;
   utterance.voice = voice ?? null;
   window.speechSynthesis.cancel();
   window.speechSynthesis.speak(utterance);
+}
+
+function pickMandarinVoice(voices: SpeechSynthesisVoice[], lang: string) {
+  const mandarinCandidates = voices.filter((voice) => /^zh/i.test(voice.lang) || /mandarin|putonghua|chinese/i.test(voice.name));
+
+  const rank = (voice: SpeechSynthesisVoice) => {
+    const normalizedLang = voice.lang.toLowerCase();
+    const normalizedName = voice.name.toLowerCase();
+    let score = 0;
+
+    if (normalizedLang === "zh-cn" || normalizedLang.startsWith("zh-hans")) score += 100;
+    if (normalizedLang.startsWith("zh-sg")) score += 80;
+    if (normalizedLang.startsWith("zh")) score += 60;
+    if (normalizedLang.startsWith(lang.toLowerCase())) score += 40;
+    if (normalizedName.includes("mandarin")) score += 30;
+    if (normalizedName.includes("putonghua")) score += 25;
+    if (normalizedName.includes("standard")) score += 10;
+    if (normalizedName.includes("taiwan") || normalizedName.includes("cantonese")) score -= 40;
+
+    return score;
+  };
+
+  const pool = mandarinCandidates.length ? mandarinCandidates : voices;
+  return pool.reduce<SpeechSynthesisVoice | null>((best, voice) => {
+    if (!best) return voice;
+    return rank(voice) > rank(best) ? voice : best;
+  }, null);
 }

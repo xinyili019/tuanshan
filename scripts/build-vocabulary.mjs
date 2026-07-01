@@ -886,7 +886,7 @@ const colorWords = new Set("红色 黄色 蓝色 绿色 黑色 白色 灰色 紫
 const timeWords = new Set("年 月 日 天 星期 周 小时 分钟 秒 岁 早上 上午 中午 下午 晚上 夜 白天 今天 明天 昨天 后天 前天 现在 刚才 以前 以后 最近 时候 时间 日子 季节 春 夏 秋 冬 周末 假期 生日 节日 平时 当时 未来 过去".split(" "));
 const classifierExamples = new Map(Object.entries({
   个: ["这是一个美丽的地区。", "Zhè shì yí ge měilì de dìqū.", "This is a beautiful area."],
-  些: ["我买了一些新鲜水果。", "Wǒ mǎi le yìxiē xīnxiān shuǐguǒ.", "I bought some fresh fruit."],
+  一些: ["我买了一些新鲜水果。", "Wǒ mǎi le yìxiē xīnxiān shuǐguǒ.", "I bought some fresh fruit."],
   位: ["这位老师很认真。", "Zhè wèi lǎoshī hěn rènzhēn.", "This teacher is very dedicated."],
   名: ["学校有一名新学生。", "Xuéxiào yǒu yì míng xīn xuéshēng.", "The school has one new student."],
   次: ["我去过中国两次。", "Wǒ qùguo Zhōngguó liǎng cì.", "I have been to China twice."],
@@ -922,6 +922,35 @@ const classifierExamples = new Map(Object.entries({
   座: ["远处有一座山。", "Yuǎnchù yǒu yí zuò shān.", "There is a mountain in the distance."]
 }));
 
+const classifierMeanings = new Map(Object.entries({
+  一些: "some",
+  次: "time; occurrence",
+  回: "time; occurrence",
+  遍: "time; occurrence",
+  位: "person; honorific classifier",
+  名: "person; classifier for people"
+}));
+
+const numberExamples = new Map(Object.entries({
+  一: ["我写了一遍。", "Wǒ xiě le yí biàn.", "I wrote it once."],
+  二: ["她吃了两个苹果。", "Tā chī le liǎng ge píngguǒ.", "She ate two apples."],
+  三: ["这里有三个学生。", "Zhèlǐ yǒu sān ge xuéshēng.", "There are three students here."],
+  四: ["桌上有四本书。", "Zhuō shàng yǒu sì běn shū.", "There are four books on the table."],
+  五: ["我们有五分钟。", "Wǒmen yǒu wǔ fēnzhōng.", "We have five minutes."],
+  六: ["她写了六个汉字。", "Tā xiě le liù ge Hànzì.", "She wrote six Chinese characters."],
+  七: ["他等了七天。", "Tā děng le qī tiān.", "He waited seven days."],
+  八: ["这里有八个人。", "Zhèlǐ yǒu bā ge rén.", "There are eight people here."],
+  九: ["我看见九只鸟。", "Wǒ kànjiàn jiǔ zhī niǎo.", "I see nine birds."],
+  十: ["班里有十个学生。", "Bān lǐ yǒu shí ge xuéshēng.", "There are ten students in class."],
+  百: ["这里有几百人。", "Zhèlǐ yǒu jǐ bǎi rén.", "There are a few hundred people here."],
+  千: ["这座城市有几千人。", "Zhè zuò chéngshì yǒu jǐ qiān rén.", "This city has a few thousand people."],
+  万: ["这个城市有十万人。", "Zhège chéngshì yǒu shí wàn rén.", "This city has one hundred thousand people."],
+  亿: ["中国的人口超过十亿。", "Zhōngguó de rénkǒu chāoguò shí yì.", "China's population exceeds one billion."],
+  零: ["我考了零分。", "Wǒ kǎo le líng fēn.", "I got zero points."],
+  两: ["她买了两本书。", "Tā mǎi le liǎng běn shū.", "She bought two books."],
+  半: ["我喝了半杯茶。", "Wǒ hē le bàn bēi chá.", "I drank half a cup of tea."]
+}));
+
 function buildExample(word, wordPinyin, partOfSpeech, theme) {
   if (specialExamples.has(word)) {
     const [zh, pinyin, en] = specialExamples.get(word);
@@ -950,6 +979,11 @@ function buildExample(word, wordPinyin, partOfSpeech, theme) {
   }
 
   if (partOfSpeech === "数词") {
+    if (numberExamples.has(word)) {
+      const [zh, pinyin, en] = numberExamples.get(word);
+      return { zh, pinyin, en: () => en };
+    }
+
     return {
       zh: `我写了${word}遍。`,
       pinyin: `Wǒ xiě le ${wordPinyin} biàn.`,
@@ -1133,11 +1167,16 @@ function buildExample(word, wordPinyin, partOfSpeech, theme) {
 
 const rows = parseCsv(fs.readFileSync(source, "utf8").replace(/^\uFEFF/, ""));
 const entries = rows.map((row, index) => {
-  const simplified = row["词"]?.trim() ?? "";
+  const rawSimplified = row["词"]?.trim() ?? "";
   const partOfSpeech = row["词类"]?.trim() ?? "";
-  const english = partOfSpeech === "量词" ? "classifier" : glossary.get(simplified) ?? `${partOfSpeech || "word"}: ${row.theme}`;
+  const simplified = rawSimplified === "些" && partOfSpeech === "量词" ? "一些" : rawSimplified;
+  const pinyin = rawSimplified === "些" && partOfSpeech === "量词" ? "yìxiē" : row.pinyin;
+  const english =
+    partOfSpeech === "量词"
+      ? classifierMeanings.get(simplified) ?? "classifier"
+      : glossary.get(simplified) ?? `${partOfSpeech || "word"}: ${row.theme}`;
   const traditional = toTraditional(simplified);
-  const example = buildExample(simplified, row.pinyin, partOfSpeech, row.theme);
+  const example = buildExample(simplified, pinyin, partOfSpeech, row.theme);
   return {
     id: `u${row.unit}-${slug(simplified)}-${index + 1}`,
     unit: row.unit,
@@ -1145,7 +1184,7 @@ const entries = rows.map((row, index) => {
     partOfSpeech,
     simplified,
     traditional,
-    pinyin: row.pinyin,
+    pinyin,
     english,
     exampleSimplified: example.zh,
     exampleTraditional: toTraditional(example.zh),

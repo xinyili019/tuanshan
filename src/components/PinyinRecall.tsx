@@ -1,5 +1,5 @@
-import { Eye, Volume2 } from "lucide-react";
-import { useEffect, useMemo, useState } from "react";
+import { ArrowLeft, Eye, Volume2 } from "lucide-react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { isPinyinMatch, normalizePinyin } from "../lib/pinyin";
 import type { ScriptMode, VocabEntry } from "../types";
 import { speak } from "./FanCard";
@@ -7,23 +7,26 @@ import { speak } from "./FanCard";
 interface PinyinRecallProps {
   entries: VocabEntry[];
   scriptMode: ScriptMode;
-  title: string;
   onComplete: (troubleIds: string[]) => void;
   onGoBack: () => void;
 }
 
-export function PinyinRecall({ entries, scriptMode, title, onComplete, onGoBack }: PinyinRecallProps) {
+export function PinyinRecall({ entries, scriptMode, onComplete, onGoBack }: PinyinRecallProps) {
   const [queue] = useState(() => shuffle(entries));
   const [index, setIndex] = useState(0);
   const [input, setInput] = useState("");
   const [submitted, setSubmitted] = useState(false);
   const [revealed, setRevealed] = useState(false);
   const [troubleIds, setTroubleIds] = useState<string[]>([]);
+  const inputRef = useRef<HTMLInputElement | null>(null);
   const active = queue[index];
   const headword = active ? (scriptMode === "traditional" ? active.traditional : active.simplified) : "";
-  const speechLang = scriptMode === "traditional" ? "zh-TW" : "zh-CN";
+  const speechLang = "zh-CN";
   const correct = active ? isPinyinMatch(input, active.pinyin) : false;
-  const cue = useMemo(() => (active ? Array.from(active.pinyin).map((char) => (char === " " ? " " : "_")).join("") : ""), [active]);
+  const slotCharacters = useMemo(
+    () => (active ? buildSlotCharacters(input, active.pinyin, submitted || revealed, revealed) : []),
+    [active, input, revealed, submitted]
+  );
 
   useEffect(() => {
     setInput("");
@@ -56,25 +59,25 @@ export function PinyinRecall({ entries, scriptMode, title, onComplete, onGoBack 
   return (
     <section className="recall-panel fan-panel">
       <button className="go-back" type="button" onClick={onGoBack}>
-        Go back
+        <ArrowLeft size={17} aria-hidden="true" />
+        Back
       </button>
-      <div className="review-header">
-        <p className="eyebrow">{title}</p>
-        <strong>
-          {index + 1} / {queue.length}
-        </strong>
-      </div>
 
       <div className="recall-cue">
-        <span>{active.english}</span>
+        <div className="recall-cue-copy">
+          <span className="recall-english">{active.english}</span>
+          <span className="recall-hanzi-cue">{headword}</span>
+        </div>
         <button className="icon-button" type="button" onClick={() => speak(headword, speechLang)} aria-label="Listen">
           <Volume2 size={18} aria-hidden="true" />
         </button>
       </div>
 
-      <label className="pinyin-input-label">
-        <span>Type the pinyin</span>
+      <div className="pinyin-entry" onClick={() => inputRef.current?.focus()}>
         <input
+          ref={inputRef}
+          className="pinyin-ghost-input"
+          aria-label="Type the full pinyin"
           value={input}
           onChange={(event) => setInput(event.target.value)}
           onKeyDown={(event) => {
@@ -86,15 +89,19 @@ export function PinyinRecall({ entries, scriptMode, title, onComplete, onGoBack 
           spellCheck={false}
           autoFocus
         />
-      </label>
-
-      <div className={`pinyin-slots ${submitted || revealed ? (correct && !revealed ? "is-correct" : "is-incorrect") : ""}`}>
-        {(input || cue).split("").map((char, charIndex) => (
-          <span key={`${active.id}-${charIndex}`}>{char === " " ? "\u00a0" : char}</span>
-        ))}
+        <div
+          className={`pinyin-slots ${submitted || revealed ? "has-result" : ""}`}
+          aria-hidden="true"
+        >
+          {slotCharacters.map((slot, charIndex) => (
+            <span key={`${active.id}-${charIndex}`} className={slot.status ? `is-${slot.status}` : undefined}>
+              {slot.char === " " ? "\u00a0" : slot.char}
+            </span>
+          ))}
+        </div>
       </div>
 
-      {(submitted || revealed) && (
+      {revealed && (
         <div className="recall-answer">
           <span className="recall-hanzi">{headword}</span>
           <span>{active.pinyin}</span>
@@ -120,9 +127,11 @@ export function PinyinRecall({ entries, scriptMode, title, onComplete, onGoBack 
         )}
       </div>
 
-      {(submitted || revealed) && (
-        <p className={`recall-feedback ${correct && !revealed ? "is-correct" : "is-incorrect"}`}>
-          {correct && !revealed ? "Correct" : `Answer: ${normalizePinyin(active.pinyin)}`}
+      {submitted && correct && !revealed && <p className="recall-feedback is-correct">Correct</p>}
+
+      {revealed && (
+        <p className="recall-feedback is-answer">
+          Answer: {active.pinyin}
         </p>
       )}
     </section>
@@ -131,4 +140,23 @@ export function PinyinRecall({ entries, scriptMode, title, onComplete, onGoBack 
 
 function shuffle<T>(items: T[]) {
   return [...items].sort(() => Math.random() - 0.5);
+}
+
+function buildSlotCharacters(input: string, answer: string, showResult: boolean, revealed: boolean) {
+  const typed = Array.from(input.trim());
+  let typedIndex = 0;
+
+  return Array.from(answer).map((char) => {
+    if (char === " ") return { char: " ", status: null };
+    const typedChar = typed[typedIndex];
+    typedIndex += 1;
+    if (!showResult) return { char: typedChar ?? "_", status: null };
+
+    if (!typedChar) {
+      return { char: revealed ? normalizePinyin(char) || char : "_", status: "incorrect" };
+    }
+
+    const status = normalizePinyin(typedChar) === normalizePinyin(char) ? "correct" : "incorrect";
+    return { char: typedChar, status };
+  });
 }
