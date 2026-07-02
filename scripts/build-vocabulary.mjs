@@ -1,9 +1,11 @@
 import fs from "node:fs";
 import path from "node:path";
+import OpenCC from "opencc-js";
 import { pinyin as sentencePinyin } from "pinyin-pro";
 
-const source = process.argv[2] ?? path.resolve("chinese 800 sentences.csv");
+const source = process.argv[2] ?? path.resolve("chinese_800_sentences_original_with_english.csv");
 const outFile = path.resolve("src/data/vocabulary.ts");
+const toTraditionalChinese = OpenCC.Converter({ from: "cn", to: "tw" });
 
 const glossary = makeGlossary(`
 我=I
@@ -830,7 +832,7 @@ function makeCharMap(text) {
 }
 
 function toTraditional(text) {
-  return Array.from(text).map((char) => traditionalMap.get(char) ?? char).join("");
+  return toTraditionalChinese(text);
 }
 
 const specialExamples = new Map(Object.entries({
@@ -1116,12 +1118,13 @@ const sentenceEnglishOverrides = new Map(
 function buildCsvExample(row, word, wordPinyin, partOfSpeech, theme, english) {
   const sentence = row["例句"]?.trim();
   if (!sentence) return buildExample(word, wordPinyin, partOfSpeech, theme);
+  const translation = row["English translation"]?.trim();
 
   return {
     zh: sentence,
     traditional: toTraditional(sentence),
     pinyin: formatSentencePinyin(sentence),
-    en: () => translateSentence(sentence, english)
+    en: () => translation || translateSentence(sentence, english)
   };
 }
 

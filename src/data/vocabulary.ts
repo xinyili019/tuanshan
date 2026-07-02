@@ -10,10 +10,10 @@ export const vocabulary: VocabEntry[] = [
     "traditional": "我",
     "pinyin": "wǒ",
     "english": "I",
-    "exampleSimplified": "我先走了，再见。",
-    "exampleTraditional": "我先走了，再见。",
-    "examplePinyin": "Wǒ xiān zǒu le, zài jiàn.",
-    "exampleEnglish": "I am leaving first. Goodbye."
+    "exampleSimplified": "我很高兴见到你！",
+    "exampleTraditional": "我很高興見到你！",
+    "examplePinyin": "Wǒ hěn gāo xìng jiàn dào nǐ!",
+    "exampleEnglish": "I'm very glad to see you."
   },
   {
     "id": "u1-e4bda0-2",
@@ -41,7 +41,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "您慢走，欢迎再来。",
     "exampleTraditional": "您慢走，歡迎再來。",
     "examplePinyin": "Nín màn zǒu, huān yíng zài lái.",
-    "exampleEnglish": "Take care, and please come again."
+    "exampleEnglish": "Take care on your way home. Please come again."
   },
   {
     "id": "u1-e4bb96-4",
@@ -53,9 +53,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "tā",
     "english": "he",
     "exampleSimplified": "他是我的中文老师。",
-    "exampleTraditional": "他是我的中文老师。",
+    "exampleTraditional": "他是我的中文老師。",
     "examplePinyin": "Tā shì wǒ de zhōng wén lǎo shī.",
-    "exampleEnglish": "He is my Chinese teacher."
+    "exampleEnglish": "He's my Chinese teacher."
   },
   {
     "id": "u1-e5a5b9-5",
@@ -66,10 +66,10 @@ export const vocabulary: VocabEntry[] = [
     "traditional": "她",
     "pinyin": "tā",
     "english": "she",
-    "exampleSimplified": "她在葡萄牙工作。",
-    "exampleTraditional": "她在葡萄牙工作。",
-    "examplePinyin": "Tā zài pú táo yá gōng zuò.",
-    "exampleEnglish": "She works in Portugal."
+    "exampleSimplified": "她在纽约工作。",
+    "exampleTraditional": "她在紐約工作。",
+    "examplePinyin": "Tā zài niǔ yuē gōng zuò.",
+    "exampleEnglish": "She works in New York."
   },
   {
     "id": "u1-e5ae83-6",
@@ -83,7 +83,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "小猫饿了，它一直叫。",
     "exampleTraditional": "小貓餓了，它一直叫。",
     "examplePinyin": "Xiǎo māo è le, tā yì zhí jiào.",
-    "exampleEnglish": "The kitten is hungry, and it keeps meowing."
+    "exampleEnglish": "The kitten is hungry and keeps meowing."
   },
   {
     "id": "u1-e68891e4bbac-7",
@@ -97,7 +97,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我们一起去吃饭吧。",
     "exampleTraditional": "我們一起去吃飯吧。",
     "examplePinyin": "Wǒ men yì qǐ qù chī fàn ba.",
-    "exampleEnglish": "Let's go eat together."
+    "exampleEnglish": "Let's go and get something to eat."
   },
   {
     "id": "u1-e4bda0e4bbac-8",
@@ -109,7 +109,7 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "nǐmen",
     "english": "you, plural",
     "exampleSimplified": "你们是从哪里来的？",
-    "exampleTraditional": "你們是从哪里來的？",
+    "exampleTraditional": "你們是從哪裡來的？",
     "examplePinyin": "Nǐ men shì cóng nǎ lǐ lái de?",
     "exampleEnglish": "Where are you all from?"
   },
@@ -123,9 +123,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "tāmen",
     "english": "they",
     "exampleSimplified": "他们都会说英语。",
-    "exampleTraditional": "他們都會說英语。",
+    "exampleTraditional": "他們都會說英語。",
     "examplePinyin": "Tā men dōu huì shuō yīng yǔ.",
-    "exampleEnglish": "They all can speak English."
+    "exampleEnglish": "They can all speak English."
   },
   {
     "id": "u1-e887aae5b7b1-10",
@@ -139,7 +139,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这是我自己做的蛋糕。",
     "exampleTraditional": "這是我自己做的蛋糕。",
     "examplePinyin": "Zhè shì wǒ zì jǐ zuò de dàn gāo.",
-    "exampleEnglish": "This is a cake I made myself."
+    "exampleEnglish": "I made this cake myself."
   },
   {
     "id": "u1-e5a4a7e5aeb6-11",
@@ -153,7 +153,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "大家好，请坐。",
     "exampleTraditional": "大家好，請坐。",
     "examplePinyin": "Dà jiā hǎo, qǐng zuò.",
-    "exampleEnglish": "Hello everyone, please sit down."
+    "exampleEnglish": "Hello, everyone. Please have a seat."
   },
   {
     "id": "u1-e588abe4baba-12",
@@ -167,7 +167,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "别拿别人的东西。",
     "exampleTraditional": "別拿別人的東西。",
     "examplePinyin": "Bié ná bié rén de dōng xī.",
-    "exampleEnglish": "Do not take other people's things."
+    "exampleEnglish": "Don't take other people's things."
   },
   {
     "id": "u1-e8bf99-13",
@@ -193,7 +193,7 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "nà",
     "english": "that",
     "exampleSimplified": "那是谁的手机？",
-    "exampleTraditional": "那是谁的手機？",
+    "exampleTraditional": "那是誰的手機？",
     "examplePinyin": "Nà shì shéi de shǒu jī?",
     "exampleEnglish": "Whose phone is that?"
   },
@@ -203,13 +203,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "身份·人称·数",
     "partOfSpeech": "代词",
     "simplified": "谁",
-    "traditional": "谁",
+    "traditional": "誰",
     "pinyin": "shéi",
     "english": "who",
     "exampleSimplified": "门口站着的人是谁？",
-    "exampleTraditional": "門口站着的人是谁？",
+    "exampleTraditional": "門口站著的人是誰？",
     "examplePinyin": "Mén kǒu zhàn zhe de rén shì shéi?",
-    "exampleEnglish": "Who is the person standing at the door?"
+    "exampleEnglish": "Who is standing at the door?"
   },
   {
     "id": "u1-e4bb80e4b988-16",
@@ -237,7 +237,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "你喜欢哪件衣服？",
     "exampleTraditional": "你喜歡哪件衣服？",
     "examplePinyin": "Nǐ xǐ huan nǎ jiàn yī fu?",
-    "exampleEnglish": "Which piece of clothing do you like?"
+    "exampleEnglish": "Which item of clothing do you like?"
   },
   {
     "id": "u1-e593aae584bf-18",
@@ -265,7 +265,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我要一杯咖啡。",
     "exampleTraditional": "我要一杯咖啡。",
     "examplePinyin": "Wǒ yào yì bēi kā fēi.",
-    "exampleEnglish": "I want a cup of coffee."
+    "exampleEnglish": "I'd like a coffee, please."
   },
   {
     "id": "u1-e4ba8c-20",
@@ -291,9 +291,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "sān",
     "english": "three",
     "exampleSimplified": "我们三点见面。",
-    "exampleTraditional": "我們三點见麵。",
+    "exampleTraditional": "我們三點見面。",
     "examplePinyin": "Wǒ men sān diǎn jiàn miàn.",
-    "exampleEnglish": "We will meet at three o'clock."
+    "exampleEnglish": "Let's meet at three."
   },
   {
     "id": "u1-e59b9b-22",
@@ -321,7 +321,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "现在是下午五点。",
     "exampleTraditional": "現在是下午五點。",
     "examplePinyin": "Xiàn zài shì xià wǔ wǔ diǎn.",
-    "exampleEnglish": "It is five o'clock in the afternoon now."
+    "exampleEnglish": "It's five o'clock in the afternoon."
   },
   {
     "id": "u1-e585ad-24",
@@ -335,7 +335,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我六月去里斯本。",
     "exampleTraditional": "我六月去里斯本。",
     "examplePinyin": "Wǒ liù yuè qù lǐ sī běn.",
-    "exampleEnglish": "I am going to Lisbon in June."
+    "exampleEnglish": "I'm going to Lisbon in June."
   },
   {
     "id": "u1-e4b883-25",
@@ -349,7 +349,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "一个星期有七天。",
     "exampleTraditional": "一個星期有七天。",
     "examplePinyin": "Yí gè xīng qī yǒu qī tiān.",
-    "exampleEnglish": "A week has seven days."
+    "exampleEnglish": "There are seven days in a week."
   },
   {
     "id": "u1-e585ab-26",
@@ -391,7 +391,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他这次考了第十名。",
     "exampleTraditional": "他這次考了第十名。",
     "examplePinyin": "Tā zhè cì kǎo le dì shí míng.",
-    "exampleEnglish": "He ranked tenth on this exam."
+    "exampleEnglish": "He came tenth in this exam."
   },
   {
     "id": "u1-e799be-29",
@@ -403,9 +403,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "bǎi",
     "english": "hundred",
     "exampleSimplified": "这里能坐一百个人。",
-    "exampleTraditional": "這里能坐一百個人。",
+    "exampleTraditional": "這裡能坐一百個人。",
     "examplePinyin": "Zhè lǐ néng zuò yì bǎi gè rén.",
-    "exampleEnglish": "This place can seat one hundred people."
+    "exampleEnglish": "This place seats one hundred people."
   },
   {
     "id": "u1-e58d83-30",
@@ -427,13 +427,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "身份·人称·数",
     "partOfSpeech": "数词",
     "simplified": "万",
-    "traditional": "万",
+    "traditional": "萬",
     "pinyin": "wàn",
     "english": "ten thousand",
     "exampleSimplified": "这辆车要十万。",
-    "exampleTraditional": "這輛車要十万。",
+    "exampleTraditional": "這輛車要十萬。",
     "examplePinyin": "Zhè liàng chē yào shí wàn.",
-    "exampleEnglish": "This car costs one hundred thousand."
+    "exampleEnglish": "This car costs one hundred thousand yuan."
   },
   {
     "id": "u1-e4babf-32",
@@ -441,11 +441,11 @@ export const vocabulary: VocabEntry[] = [
     "theme": "身份·人称·数",
     "partOfSpeech": "数词",
     "simplified": "亿",
-    "traditional": "亿",
+    "traditional": "億",
     "pinyin": "yì",
     "english": "hundred million",
     "exampleSimplified": "中国有十四亿人。",
-    "exampleTraditional": "中國有十四亿人。",
+    "exampleTraditional": "中國有十四億人。",
     "examplePinyin": "Zhōng guó yǒu shí sì yì rén.",
     "exampleEnglish": "China has 1.4 billion people."
   },
@@ -469,11 +469,11 @@ export const vocabulary: VocabEntry[] = [
     "theme": "身份·人称·数",
     "partOfSpeech": "数词",
     "simplified": "两",
-    "traditional": "两",
+    "traditional": "兩",
     "pinyin": "liǎng",
     "english": "two",
     "exampleSimplified": "我买了两张票。",
-    "exampleTraditional": "我買了两張票。",
+    "exampleTraditional": "我買了兩張票。",
     "examplePinyin": "Wǒ mǎi le liǎng zhāng piào.",
     "exampleEnglish": "I bought two tickets."
   },
@@ -489,7 +489,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我们十点半出发。",
     "exampleTraditional": "我們十點半出發。",
     "examplePinyin": "Wǒ men shí diǎn bàn chū fā.",
-    "exampleEnglish": "We set off at half past ten."
+    "exampleEnglish": "We leave at half past ten."
   },
   {
     "id": "u1-e4b8aa-36",
@@ -501,7 +501,7 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "gè",
     "english": "classifier",
     "exampleSimplified": "我有三个问题。",
-    "exampleTraditional": "我有三個問题。",
+    "exampleTraditional": "我有三個問題。",
     "examplePinyin": "Wǒ yǒu sān gè wèn tí.",
     "exampleEnglish": "I have three questions."
   },
@@ -514,10 +514,10 @@ export const vocabulary: VocabEntry[] = [
     "traditional": "一些",
     "pinyin": "yìxiē",
     "english": "some",
-    "exampleSimplified": "冰箱里还有一些水果。",
-    "exampleTraditional": "冰箱里還有一些水果。",
-    "examplePinyin": "Bīng xiāng lǐ hái yǒu yì xiē shuǐ guǒ.",
-    "exampleEnglish": "There is still some fruit in the refrigerator."
+    "exampleSimplified": "冰箱里有一些水果。",
+    "exampleTraditional": "冰箱裡有一些水果。",
+    "examplePinyin": "Bīng xiāng lǐ yǒu yì xiē shuǐ guǒ.",
+    "exampleEnglish": "There's some fruit in the fridge."
   },
   {
     "id": "u1-e4bd8d-38",
@@ -531,7 +531,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这位是我们的新同事。",
     "exampleTraditional": "這位是我們的新同事。",
     "examplePinyin": "Zhè wèi shì wǒ men de xīn tóng shì.",
-    "exampleEnglish": "This person is our new colleague."
+    "exampleEnglish": "This is our new colleague."
   },
   {
     "id": "u1-e5908d-39",
@@ -545,7 +545,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我们班有二十名学生。",
     "exampleTraditional": "我們班有二十名學生。",
     "examplePinyin": "Wǒ men bān yǒu èr shí míng xué shēng.",
-    "exampleEnglish": "Our class has twenty students."
+    "exampleEnglish": "There are twenty students in our class."
   },
   {
     "id": "u1-e6aca1-40",
@@ -559,7 +559,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我去过一次北京。",
     "exampleTraditional": "我去過一次北京。",
     "examplePinyin": "Wǒ qù guò yí cì běi jīng.",
-    "exampleEnglish": "I have been to Beijing once."
+    "exampleEnglish": "I've been to Beijing once."
   },
   {
     "id": "u1-e59b9e-41",
@@ -573,7 +573,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这是我第一回坐飞机。",
     "exampleTraditional": "這是我第一回坐飛機。",
     "examplePinyin": "Zhè shì wǒ dì yī huí zuò fēi jī.",
-    "exampleEnglish": "This is my first time taking a plane."
+    "exampleEnglish": "This is my first time flying."
   },
   {
     "id": "u1-e9818d-42",
@@ -587,7 +587,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "请再说一遍。",
     "exampleTraditional": "請再說一遍。",
     "examplePinyin": "Qǐng zài shuō yí biàn.",
-    "exampleEnglish": "Please say it again."
+    "exampleEnglish": "Please say that again."
   },
   {
     "id": "u1-e698af-43",
@@ -601,7 +601,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他是葡萄牙人。",
     "exampleTraditional": "他是葡萄牙人。",
     "examplePinyin": "Tā shì pú táo yá rén.",
-    "exampleEnglish": "He is Portuguese."
+    "exampleEnglish": "He's Portuguese."
   },
   {
     "id": "u1-e69c89-44",
@@ -613,7 +613,7 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "yǒu",
     "english": "to have",
     "exampleSimplified": "我有两个妹妹。",
-    "exampleTraditional": "我有两個妹妹。",
+    "exampleTraditional": "我有兩個妹妹。",
     "examplePinyin": "Wǒ yǒu liǎng gè mèi mei.",
     "exampleEnglish": "I have two younger sisters."
   },
@@ -627,7 +627,7 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "zài",
     "english": "to be at",
     "exampleSimplified": "我爸妈都在上海。",
-    "exampleTraditional": "我爸妈都在上海。",
+    "exampleTraditional": "我爸媽都在上海。",
     "examplePinyin": "Wǒ bà mā dōu zài shàng hǎi.",
     "exampleEnglish": "My parents are both in Shanghai."
   },
@@ -669,9 +669,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "zhù",
     "english": "to live",
     "exampleSimplified": "我住在波尔图。",
-    "exampleTraditional": "我住在波尔圖。",
+    "exampleTraditional": "我住在波爾圖。",
     "examplePinyin": "Wǒ zhù zài bō ěr tú.",
-    "exampleEnglish": "I live be at Porto."
+    "exampleEnglish": "I live in Porto."
   },
   {
     "id": "u1-e587bae7949f-49",
@@ -683,9 +683,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "chūshēng",
     "english": "to be born",
     "exampleSimplified": "我1990年出生在广州。",
-    "exampleTraditional": "我1990年出生在广州。",
+    "exampleTraditional": "我1990年出生在廣州。",
     "examplePinyin": "Wǒ 1 9 9 0 nián chū shēng zài guǎng zhōu.",
-    "exampleEnglish": "I year be born be at Guangzhou."
+    "exampleEnglish": "I was born in Guangzhou in 1990."
   },
   {
     "id": "u1-e995bfe5a4a7-50",
@@ -697,9 +697,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "zhǎngdà",
     "english": "to grow up",
     "exampleSimplified": "我在海边的小城长大。",
-    "exampleTraditional": "我在海边的小城長大。",
+    "exampleTraditional": "我在海邊的小城長大。",
     "examplePinyin": "Wǒ zài hǎi biān de xiǎo chéng zhǎng dà.",
-    "exampleEnglish": "I be at sea of small grow up."
+    "exampleEnglish": "I grew up in a small town by the sea."
   },
   {
     "id": "u1-e69da5e887aa-51",
@@ -713,7 +713,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "她来自法国。",
     "exampleTraditional": "她來自法國。",
     "examplePinyin": "Tā lái zì fǎ guó.",
-    "exampleEnglish": "She come from France."
+    "exampleEnglish": "She's from France."
   },
   {
     "id": "u1-e5908de5ad97-52",
@@ -725,9 +725,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "míngzi",
     "english": "name",
     "exampleSimplified": "你的名字很好听。",
-    "exampleTraditional": "你的名字很好听。",
+    "exampleTraditional": "你的名字很好聽。",
     "examplePinyin": "Nǐ de míng zì hěn hǎo tīng.",
-    "exampleEnglish": "You of name very good."
+    "exampleEnglish": "Your name sounds lovely."
   },
   {
     "id": "u1-e4baba-53",
@@ -741,7 +741,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "车上人太多了。",
     "exampleTraditional": "車上人太多了。",
     "examplePinyin": "Chē shàng rén tài duō le.",
-    "exampleEnglish": "Vehicle up person too completed action."
+    "exampleEnglish": "There are too many people in the car."
   },
   {
     "id": "u1-e59bbde5aeb6-54",
@@ -755,7 +755,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "你去过哪些国家？",
     "exampleTraditional": "你去過哪些國家？",
     "examplePinyin": "Nǐ qù guò nǎ xiē guó jiā?",
-    "exampleEnglish": "You go before which country."
+    "exampleEnglish": "Which countries have you been to?"
   },
   {
     "id": "u1-e59bbde7b18d-55",
@@ -767,9 +767,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "guójí",
     "english": "nationality",
     "exampleSimplified": "请写一下您的国籍。",
-    "exampleTraditional": "請写一下您的國籍。",
+    "exampleTraditional": "請寫一下您的國籍。",
     "examplePinyin": "Qǐng xiě yí xià nín de guó jí.",
-    "exampleEnglish": "Write a moment you of nationality."
+    "exampleEnglish": "Please write down your nationality."
   },
   {
     "id": "u1-e5aeb6e4b9a1-56",
@@ -783,7 +783,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我的家乡在南方。",
     "exampleTraditional": "我的家鄉在南方。",
     "examplePinyin": "Wǒ de jiā xiāng zài nán fāng.",
-    "exampleEnglish": "I of hometown be at south."
+    "exampleEnglish": "My hometown is in the south."
   },
   {
     "id": "u1-e88081e5aeb6-57",
@@ -797,7 +797,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "过年我要回老家。",
     "exampleTraditional": "過年我要回老家。",
     "examplePinyin": "Guò nián wǒ yào huí lǎo jiā.",
-    "exampleEnglish": "Before year I return hometown."
+    "exampleEnglish": "I'm going back to my hometown for the New Year."
   },
   {
     "id": "u1-e68aa4e785a7-58",
@@ -811,7 +811,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我的护照下个月到期。",
     "exampleTraditional": "我的護照下個月到期。",
     "examplePinyin": "Wǒ de hù zhào xià gè yuè dào qī.",
-    "exampleEnglish": "I of passport down month to."
+    "exampleEnglish": "My passport expires next month."
   },
   {
     "id": "u1-e7adbee8af81-59",
@@ -819,13 +819,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "身份·人称·数",
     "partOfSpeech": "名词",
     "simplified": "签证",
-    "traditional": "签證",
+    "traditional": "簽證",
     "pinyin": "qiānzhèng",
     "english": "visa",
     "exampleSimplified": "我在办去美国的签证。",
-    "exampleTraditional": "我在辦去美國的签證。",
+    "exampleTraditional": "我在辦去美國的簽證。",
     "examplePinyin": "Wǒ zài bàn qù měi guó de qiān zhèng.",
-    "exampleEnglish": "I be at go beautiful of visa."
+    "exampleEnglish": "I'm applying for a visa to the United States."
   },
   {
     "id": "u1-e8baabe4bbbde8af81-60",
@@ -837,9 +837,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "shēnfènzhèng",
     "english": "ID card",
     "exampleSimplified": "买火车票要带身份证。",
-    "exampleTraditional": "買火車票要带身份證。",
+    "exampleTraditional": "買火車票要帶身份證。",
     "examplePinyin": "Mǎi huǒ chē piào yào dài shēn fèn zhèng.",
-    "exampleEnglish": "Buy train ticket bring ID card."
+    "exampleEnglish": "You need to bring your ID to buy a train ticket."
   },
   {
     "id": "u1-e5a496e59bbde4baba-61",
@@ -851,9 +851,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "wàiguórén",
     "english": "foreigner",
     "exampleSimplified": "这里有很多外国人。",
-    "exampleTraditional": "這里有很多外國人。",
+    "exampleTraditional": "這裡有很多外國人。",
     "examplePinyin": "Zhè lǐ yǒu hěn duō wài guó rén.",
-    "exampleEnglish": "Here have very foreigner."
+    "exampleEnglish": "There are many foreigners here."
   },
   {
     "id": "u1-e4b8ade59bbde4baba-62",
@@ -865,9 +865,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "zhōngguórén",
     "english": "Chinese person",
     "exampleSimplified": "那家店的老板是中国人。",
-    "exampleTraditional": "那家店的老板是中國人。",
+    "exampleTraditional": "那家店的老闆是中國人。",
     "examplePinyin": "Nà jiā diàn de lǎo bǎn shì zhōng guó rén.",
-    "exampleEnglish": "That home of boss be Chinese person."
+    "exampleEnglish": "The owner of that shop is Chinese."
   },
   {
     "id": "u1-e6aca7e6b4b2e4baba-63",
@@ -875,13 +875,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "身份·人称·数",
     "partOfSpeech": "名词",
     "simplified": "欧洲人",
-    "traditional": "欧洲人",
+    "traditional": "歐洲人",
     "pinyin": "ōuzhōurén",
     "english": "European person",
     "exampleSimplified": "很多欧洲人喜欢喝咖啡。",
-    "exampleTraditional": "很多欧洲人喜歡喝咖啡。",
+    "exampleTraditional": "很多歐洲人喜歡喝咖啡。",
     "examplePinyin": "Hěn duō ōu zhōu rén xǐ huan hē kā fēi.",
-    "exampleEnglish": "Very European person like drink coffee."
+    "exampleEnglish": "Many Europeans like drinking coffee."
   },
   {
     "id": "u1-e7be8ee59bbde4baba-64",
@@ -893,9 +893,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "měiguórén",
     "english": "American person",
     "exampleSimplified": "我的邻居是美国人。",
-    "exampleTraditional": "我的邻居是美國人。",
+    "exampleTraditional": "我的鄰居是美國人。",
     "examplePinyin": "Wǒ de lín jū shì měi guó rén.",
-    "exampleEnglish": "I of neighbor be American person."
+    "exampleEnglish": "My neighbour is American."
   },
   {
     "id": "u1-e58d8ee4baba-65",
@@ -909,7 +909,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这个城市有不少华人。",
     "exampleTraditional": "這個城市有不少華人。",
     "examplePinyin": "Zhè ge chéng shì yǒu bù shǎo huá rén.",
-    "exampleEnglish": "This city have not person of Chinese heritage."
+    "exampleEnglish": "There is quite a large Chinese community in this city."
   },
   {
     "id": "u1-e7a7bbe6b091-66",
@@ -923,7 +923,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他们十年前移民到了加拿大。",
     "exampleTraditional": "他們十年前移民到了加拿大。",
     "examplePinyin": "Tā men shí nián qián yí mín dào le jiā ná dà.",
-    "exampleEnglish": "They ten year front immigrant to completed action take big."
+    "exampleEnglish": "They emigrated to Canada ten years ago."
   },
   {
     "id": "u1-e6b8b8e5aea2-67",
@@ -935,9 +935,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "yóukè",
     "english": "tourist",
     "exampleSimplified": "夏天这里游客特别多。",
-    "exampleTraditional": "夏天這里遊客特別多。",
+    "exampleTraditional": "夏天這裡遊客特別多。",
     "examplePinyin": "Xià tiān zhè lǐ yóu kè tè bié duō.",
-    "exampleEnglish": "Summer day here tourist special."
+    "exampleEnglish": "There are especially many tourists here in summer."
   },
   {
     "id": "u1-e79599e5ada6e7949f-68",
@@ -949,9 +949,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "liúxuéshēng",
     "english": "international student",
     "exampleSimplified": "她是来自韩国的留学生。",
-    "exampleTraditional": "她是來自韩國的留學生。",
+    "exampleTraditional": "她是來自韓國的留學生。",
     "examplePinyin": "Tā shì lái zì hán guó de liú xué shēng.",
-    "exampleEnglish": "She be come from of international student."
+    "exampleEnglish": "She's an international student from Korea."
   },
   {
     "id": "u1-e8baabe4bbbd-69",
@@ -965,7 +965,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他的身份是记者。",
     "exampleTraditional": "他的身份是記者。",
     "examplePinyin": "Tā de shēn fèn shì jì zhě.",
-    "exampleEnglish": "He of identity be remember."
+    "exampleEnglish": "He's a journalist."
   },
   {
     "id": "u1-e69785e6b8b8-70",
@@ -979,7 +979,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我们打算去意大利旅游。",
     "exampleTraditional": "我們打算去意大利旅遊。",
     "examplePinyin": "Wǒ men dǎ suàn qù yì dà lì lǚ yóu.",
-    "exampleEnglish": "We calculate go big travel."
+    "exampleEnglish": "We're planning to travel to Italy."
   },
   {
     "id": "u1-e69785e8a18c-71",
@@ -993,7 +993,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "一个人旅行很自由。",
     "exampleTraditional": "一個人旅行很自由。",
     "examplePinyin": "Yí gè rén lǚ xíng hěn zì yóu.",
-    "exampleEnglish": "One person travel very."
+    "exampleEnglish": "Travelling alone gives you a lot of freedom."
   },
   {
     "id": "u1-e587bae59bbd-72",
@@ -1005,9 +1005,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "chūguó",
     "english": "to go abroad",
     "exampleSimplified": "他明年想出国读书。",
-    "exampleTraditional": "他明年想出國读書。",
+    "exampleTraditional": "他明年想出國讀書。",
     "examplePinyin": "Tā míng nián xiǎng chū guó dú shū.",
-    "exampleEnglish": "He year think go abroad read book."
+    "exampleEnglish": "He wants to study abroad next year."
   },
   {
     "id": "u1-e59b9ee59bbd-73",
@@ -1021,7 +1021,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "她下星期回国看父母。",
     "exampleTraditional": "她下星期回國看父母。",
     "examplePinyin": "Tā xià xīng qī huí guó kàn fù mǔ.",
-    "exampleEnglish": "She down week return to one's country."
+    "exampleEnglish": "She's going home next week to see her parents."
   },
   {
     "id": "u1-e690ace5aeb6-74",
@@ -1035,7 +1035,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我们上个月刚搬家。",
     "exampleTraditional": "我們上個月剛搬家。",
     "examplePinyin": "Wǒ men shàng gè yuè gāng bān jiā.",
-    "exampleEnglish": "We up month move house."
+    "exampleEnglish": "We moved house just last month."
   },
   {
     "id": "u1-e5ae9ae5b185-75",
@@ -1049,7 +1049,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他们决定在里斯本定居。",
     "exampleTraditional": "他們決定在里斯本定居。",
     "examplePinyin": "Tā men jué dìng zài lǐ sī běn dìng jū.",
-    "exampleEnglish": "They decide be at Lisbon settle."
+    "exampleEnglish": "They have decided to settle in Lisbon."
   },
   {
     "id": "u2-e788b8e788b8-76",
@@ -1063,7 +1063,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我爸爸会做很多菜。",
     "exampleTraditional": "我爸爸會做很多菜。",
     "examplePinyin": "Wǒ bà ba huì zuò hěn duō cài.",
-    "exampleEnglish": "I dad very dish."
+    "exampleEnglish": "My dad can cook lots of dishes."
   },
   {
     "id": "u2-e5a688e5a688-77",
@@ -1071,13 +1071,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "家庭·关系",
     "partOfSpeech": "名词",
     "simplified": "妈妈",
-    "traditional": "妈妈",
+    "traditional": "媽媽",
     "pinyin": "māma",
     "english": "mom",
     "exampleSimplified": "妈妈每天送我上学。",
-    "exampleTraditional": "妈妈每天送我上學。",
+    "exampleTraditional": "媽媽每天送我上學。",
     "examplePinyin": "Mā ma měi tiān sòng wǒ shàng xué.",
-    "exampleEnglish": "Mom day I up learn."
+    "exampleEnglish": "My mum takes me to school every day."
   },
   {
     "id": "u2-e788b7e788b7-78",
@@ -1085,13 +1085,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "家庭·关系",
     "partOfSpeech": "名词",
     "simplified": "爷爷",
-    "traditional": "爷爷",
+    "traditional": "爺爺",
     "pinyin": "yéye",
     "english": "paternal grandfather",
     "exampleSimplified": "爷爷喜欢早上散步。",
-    "exampleTraditional": "爷爷喜歡早上散步。",
+    "exampleTraditional": "爺爺喜歡早上散步。",
     "examplePinyin": "Yé ye xǐ huan zǎo shàng sàn bù.",
-    "exampleEnglish": "Paternal grandfather like early morning."
+    "exampleEnglish": "Grandpa likes taking a walk in the morning."
   },
   {
     "id": "u2-e5a5b6e5a5b6-79",
@@ -1105,7 +1105,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "奶奶做的饺子最好吃。",
     "exampleTraditional": "奶奶做的餃子最好吃。",
     "examplePinyin": "Nǎi nai zuò de jiǎo zǐ zuì hǎo chī.",
-    "exampleEnglish": "Paternal grandmother of dumpling tasty."
+    "exampleEnglish": "Grandma makes the best dumplings."
   },
   {
     "id": "u2-e5a496e585ac-80",
@@ -1119,7 +1119,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "外公教我下棋。",
     "exampleTraditional": "外公教我下棋。",
     "examplePinyin": "Wài gōng jiào wǒ xià qí.",
-    "exampleEnglish": "Maternal grandfather teach I play chess."
+    "exampleEnglish": "My maternal grandfather taught me to play Chinese chess."
   },
   {
     "id": "u2-e5a496e5a986-81",
@@ -1133,7 +1133,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "外婆住在乡下。",
     "exampleTraditional": "外婆住在鄉下。",
     "examplePinyin": "Wài pó zhù zài xiāng xià.",
-    "exampleEnglish": "Maternal grandmother live be at down."
+    "exampleEnglish": "My maternal grandmother lives in the countryside."
   },
   {
     "id": "u2-e593a5e593a5-82",
@@ -1147,7 +1147,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我哥哥比我高。",
     "exampleTraditional": "我哥哥比我高。",
     "examplePinyin": "Wǒ gē ge bǐ wǒ gāo.",
-    "exampleEnglish": "I older brother I tall."
+    "exampleEnglish": "My older brother is taller than I am."
   },
   {
     "id": "u2-e5a790e5a790-83",
@@ -1159,9 +1159,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "jiějie",
     "english": "older sister",
     "exampleSimplified": "姐姐在医院当护士。",
-    "exampleTraditional": "姐姐在醫院当護士。",
+    "exampleTraditional": "姐姐在醫院當護士。",
     "examplePinyin": "Jiě jie zài yī yuàn dāng hù shì.",
-    "exampleEnglish": "Older sister be at hospital nurse."
+    "exampleEnglish": "My older sister works as a nurse at a hospital."
   },
   {
     "id": "u2-e5bc9fe5bc9f-84",
@@ -1175,7 +1175,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "弟弟今年上小学。",
     "exampleTraditional": "弟弟今年上小學。",
     "examplePinyin": "Dì di jīn nián shàng xiǎo xué.",
-    "exampleEnglish": "Younger brother year up small learn."
+    "exampleEnglish": "My younger brother starts primary school this year."
   },
   {
     "id": "u2-e5a6b9e5a6b9-85",
@@ -1187,9 +1187,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "mèimei",
     "english": "younger sister",
     "exampleSimplified": "妹妹喜欢画画。",
-    "exampleTraditional": "妹妹喜歡画画。",
+    "exampleTraditional": "妹妹喜歡畫畫。",
     "examplePinyin": "Mèi mei xǐ huan huà huà.",
-    "exampleEnglish": "Younger sister like."
+    "exampleEnglish": "My younger sister likes drawing."
   },
   {
     "id": "u2-e584bfe5ad90-86",
@@ -1201,9 +1201,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "érzi",
     "english": "son",
     "exampleSimplified": "他儿子会说三种语言。",
-    "exampleTraditional": "他兒子會說三种语言。",
+    "exampleTraditional": "他兒子會說三種語言。",
     "examplePinyin": "Tā ér zi huì shuō sān zhǒng yǔ yán.",
-    "exampleEnglish": "He son say three."
+    "exampleEnglish": "His son can speak three languages."
   },
   {
     "id": "u2-e5a5b3e584bf-87",
@@ -1217,7 +1217,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我女儿刚学会走路。",
     "exampleTraditional": "我女兒剛學會走路。",
     "examplePinyin": "Wǒ nǚ ér gāng xué huì zǒu lù.",
-    "exampleEnglish": "I daughter learn walk road."
+    "exampleEnglish": "My daughter has just learned to walk."
   },
   {
     "id": "u2-e4b888e5a4ab-88",
@@ -1229,9 +1229,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "zhàngfu",
     "english": "husband",
     "exampleSimplified": "她丈夫是工程师。",
-    "exampleTraditional": "她丈夫是工程师。",
+    "exampleTraditional": "她丈夫是工程師。",
     "examplePinyin": "Tā zhàng fu shì gōng chéng shī.",
-    "exampleEnglish": "She husband be."
+    "exampleEnglish": "Her husband is an engineer."
   },
   {
     "id": "u2-e5a6bbe5ad90-89",
@@ -1245,7 +1245,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他和妻子一起开店。",
     "exampleTraditional": "他和妻子一起開店。",
     "examplePinyin": "Tā hé qī zǐ yì qǐ kāi diàn.",
-    "exampleEnglish": "He and wife together open."
+    "exampleEnglish": "He runs a shop with his wife."
   },
   {
     "id": "u2-e88081e585ac-90",
@@ -1259,7 +1259,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我老公不爱吃辣。",
     "exampleTraditional": "我老公不愛吃辣。",
     "examplePinyin": "Wǒ lǎo gōng bú ài chī là.",
-    "exampleEnglish": "I husband not love eat spicy."
+    "exampleEnglish": "My husband doesn't like spicy food."
   },
   {
     "id": "u2-e88081e5a986-91",
@@ -1271,9 +1271,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "lǎopó",
     "english": "wife",
     "exampleSimplified": "他给老婆买了花。",
-    "exampleTraditional": "他给老婆買了花。",
+    "exampleTraditional": "他給老婆買了花。",
     "examplePinyin": "Tā gěi lǎo pó mǎi le huā.",
-    "exampleEnglish": "He to wife buy completed action flower."
+    "exampleEnglish": "He bought flowers for his wife."
   },
   {
     "id": "u2-e5aeb6e4baba-92",
@@ -1287,7 +1287,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "周末我想多陪陪家人。",
     "exampleTraditional": "週末我想多陪陪家人。",
     "examplePinyin": "Zhōu mò wǒ xiǎng duō péi péi jiā rén.",
-    "exampleEnglish": "Weekend I think accompany accompany family member."
+    "exampleEnglish": "I want to spend more time with my family this weekend."
   },
   {
     "id": "u2-e5aeb6e5baad-93",
@@ -1301,7 +1301,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "她有一个幸福的家庭。",
     "exampleTraditional": "她有一個幸福的家庭。",
     "examplePinyin": "Tā yǒu yí gè xìng fú de jiā tíng.",
-    "exampleEnglish": "She have one of family."
+    "exampleEnglish": "She has a happy family."
   },
   {
     "id": "u2-e4bab2e6889a-94",
@@ -1315,7 +1315,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "春节我们去亲戚家吃饭。",
     "exampleTraditional": "春節我們去親戚家吃飯。",
     "examplePinyin": "Chūn jié wǒ men qù qīn qi jiā chī fàn.",
-    "exampleEnglish": "Spring classifier we go relative home eat meal."
+    "exampleEnglish": "We visit relatives for a meal during the Spring Festival."
   },
   {
     "id": "u2-e58f94e58f94-95",
@@ -1329,7 +1329,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "叔叔送了我一辆自行车。",
     "exampleTraditional": "叔叔送了我一輛自行車。",
     "examplePinyin": "Shū shu sòng le wǒ yí liàng zì xíng chē.",
-    "exampleEnglish": "Uncle completed action I a vehicle of bicycle."
+    "exampleEnglish": "My uncle gave me a bicycle."
   },
   {
     "id": "u2-e998bfe5a7a8-96",
@@ -1343,7 +1343,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "楼下的阿姨人很好。",
     "exampleTraditional": "樓下的阿姨人很好。",
     "examplePinyin": "Lóu xià de ā yí rén hěn hǎo.",
-    "exampleEnglish": "Building down of aunt person very good."
+    "exampleEnglish": "The auntie downstairs is very kind."
   },
   {
     "id": "u2-e5a4a7e4baba-97",
@@ -1357,7 +1357,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这部电影大人小孩都爱看。",
     "exampleTraditional": "這部電影大人小孩都愛看。",
     "examplePinyin": "Zhè bù diàn yǐng dà rén xiǎo hái dōu ài kàn.",
-    "exampleEnglish": "This movie adult child all love."
+    "exampleEnglish": "Both adults and children love this film."
   },
   {
     "id": "u2-e5b08fe5ada9-98",
@@ -1369,9 +1369,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "xiǎohái",
     "english": "child",
     "exampleSimplified": "公园里有很多小孩在玩。",
-    "exampleTraditional": "公園里有很多小孩在玩。",
+    "exampleTraditional": "公園裡有很多小孩在玩。",
     "examplePinyin": "Gōng yuán lǐ yǒu hěn duō xiǎo hái zài wán.",
-    "exampleEnglish": "Park inside have very child be at."
+    "exampleEnglish": "Many children are playing in the park."
   },
   {
     "id": "u2-e5ae9de5ae9d-99",
@@ -1379,13 +1379,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "家庭·关系",
     "partOfSpeech": "名词",
     "simplified": "宝宝",
-    "traditional": "宝宝",
+    "traditional": "寶寶",
     "pinyin": "bǎobao",
     "english": "baby",
     "exampleSimplified": "宝宝睡着了，小声一点。",
-    "exampleTraditional": "宝宝睡着了，小聲一點。",
+    "exampleTraditional": "寶寶睡著了，小聲一點。",
     "examplePinyin": "Bǎo bao shuì zháo le, xiǎo shēng yì diǎn.",
-    "exampleEnglish": "Baby sleep ongoing completed action, small a little."
+    "exampleEnglish": "The baby is asleep, so please keep your voice down."
   },
   {
     "id": "u2-e5a4abe5a6bb-100",
@@ -1399,7 +1399,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这对夫妻结婚二十年了。",
     "exampleTraditional": "這對夫妻結婚二十年了。",
     "examplePinyin": "Zhè duì fū qī jié hūn èr shí nián le.",
-    "exampleEnglish": "This married couple marry two ten year completed action."
+    "exampleEnglish": "This couple have been married for twenty years."
   },
   {
     "id": "u2-e88081e4baba-101",
@@ -1411,9 +1411,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "lǎorén",
     "english": "elderly person",
     "exampleSimplified": "请给老人让个座。",
-    "exampleTraditional": "請给老人让個座。",
+    "exampleTraditional": "請給老人讓個座。",
     "examplePinyin": "Qǐng gěi lǎo rén ràng gè zuò.",
-    "exampleEnglish": "To elderly person let."
+    "exampleEnglish": "Please give up your seat for an older person."
   },
   {
     "id": "u2-e5b9b4e8bdbbe4baba-102",
@@ -1427,7 +1427,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "现在的年轻人喜欢点外卖。",
     "exampleTraditional": "現在的年輕人喜歡點外賣。",
     "examplePinyin": "Xiàn zài de nián qīng rén xǐ huan diǎn wài mài.",
-    "exampleEnglish": "Now of young person like order takeout."
+    "exampleEnglish": "Young people today like ordering takeaway."
   },
   {
     "id": "u2-e982bbe5b185-103",
@@ -1435,13 +1435,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "家庭·关系",
     "partOfSpeech": "名词",
     "simplified": "邻居",
-    "traditional": "邻居",
+    "traditional": "鄰居",
     "pinyin": "línjū",
     "english": "neighbor",
     "exampleSimplified": "我们和邻居关系很好。",
-    "exampleTraditional": "我們和邻居關系很好。",
+    "exampleTraditional": "我們和鄰居關係很好。",
     "examplePinyin": "Wǒ men hé lín jū guān xì hěn hǎo.",
-    "exampleEnglish": "We and neighbor relationship very good."
+    "exampleEnglish": "We get along very well with our neighbours."
   },
   {
     "id": "u2-e5908ce5ada6-104",
@@ -1455,7 +1455,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我和老同学吃了个饭。",
     "exampleTraditional": "我和老同學吃了個飯。",
     "examplePinyin": "Wǒ hé lǎo tóng xué chī le gè fàn.",
-    "exampleEnglish": "I and classmate eat completed action meal."
+    "exampleEnglish": "I had a meal with an old classmate."
   },
   {
     "id": "u2-e5908ce4ba8b-105",
@@ -1467,9 +1467,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "tóngshì",
     "english": "colleague",
     "exampleSimplified": "同事们都很热心。",
-    "exampleTraditional": "同事們都很热心。",
+    "exampleTraditional": "同事們都很熱心。",
     "examplePinyin": "Tóng shì men dōu hěn rè xīn.",
-    "exampleEnglish": "Colleague all very hot heart."
+    "exampleEnglish": "My colleagues are all very helpful."
   },
   {
     "id": "u2-e88081e5b888-106",
@@ -1477,13 +1477,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "家庭·关系",
     "partOfSpeech": "名词",
     "simplified": "老师",
-    "traditional": "老师",
+    "traditional": "老師",
     "pinyin": "lǎoshī",
     "english": "teacher",
     "exampleSimplified": "老师让我们多练口语。",
-    "exampleTraditional": "老师让我們多練口语。",
+    "exampleTraditional": "老師讓我們多練口語。",
     "examplePinyin": "Lǎo shī ràng wǒ men duō liàn kǒu yǔ.",
-    "exampleEnglish": "Teacher let we practice."
+    "exampleEnglish": "The teacher told us to practise speaking more."
   },
   {
     "id": "u2-e9a286e5afbc-107",
@@ -1491,13 +1491,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "家庭·关系",
     "partOfSpeech": "名词",
     "simplified": "领导",
-    "traditional": "导導",
+    "traditional": "領導",
     "pinyin": "lǐngdǎo",
     "english": "leader",
     "exampleSimplified": "领导今天不在办公室。",
-    "exampleTraditional": "导導今天不在辦公室。",
+    "exampleTraditional": "領導今天不在辦公室。",
     "examplePinyin": "Lǐng dǎo jīn tiān bú zài bàn gōng shì.",
-    "exampleEnglish": "Leader today not be at office."
+    "exampleEnglish": "The manager isn't in the office today."
   },
   {
     "id": "u2-e88081e69dbf-108",
@@ -1505,13 +1505,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "家庭·关系",
     "partOfSpeech": "名词",
     "simplified": "老板",
-    "traditional": "老板",
+    "traditional": "老闆",
     "pinyin": "lǎobǎn",
     "english": "boss",
     "exampleSimplified": "老板同意给我加工资了。",
-    "exampleTraditional": "老板同意给我加工資了。",
+    "exampleTraditional": "老闆同意給我加工資了。",
     "examplePinyin": "Lǎo bǎn tóng yì gěi wǒ jiā gōng zī le.",
-    "exampleEnglish": "Boss agree to I salary completed action."
+    "exampleEnglish": "My boss agreed to give me a pay rise."
   },
   {
     "id": "u2-e69c8be58f8b-109",
@@ -1525,7 +1525,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "好朋友要互相帮助。",
     "exampleTraditional": "好朋友要互相幫助。",
     "examplePinyin": "Hǎo péng yǒu yào hù xiāng bāng zhù.",
-    "exampleEnglish": "Good friend."
+    "exampleEnglish": "Good friends should help each other."
   },
   {
     "id": "u2-e794b7e69c8be58f8b-110",
@@ -1539,7 +1539,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "她男朋友很会做饭。",
     "exampleTraditional": "她男朋友很會做飯。",
     "examplePinyin": "Tā nán péng yǒu hěn huì zuò fàn.",
-    "exampleEnglish": "She boyfriend very cook."
+    "exampleEnglish": "Her boyfriend is a very good cook."
   },
   {
     "id": "u2-e5a5b3e69c8be58f8b-111",
@@ -1553,7 +1553,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他送女朋友回家了。",
     "exampleTraditional": "他送女朋友回家了。",
     "examplePinyin": "Tā sòng nǚ péng yǒu huí jiā le.",
-    "exampleEnglish": "He girlfriend return home completed action."
+    "exampleEnglish": "He walked his girlfriend home."
   },
   {
     "id": "u2-e788b1-112",
@@ -1567,7 +1567,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我很爱我的家人。",
     "exampleTraditional": "我很愛我的家人。",
     "examplePinyin": "Wǒ hěn ài wǒ de jiā rén.",
-    "exampleEnglish": "I very love I of family member."
+    "exampleEnglish": "I love my family very much."
   },
   {
     "id": "u2-e5969ce6aca2-113",
@@ -1581,7 +1581,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我特别喜欢秋天。",
     "exampleTraditional": "我特別喜歡秋天。",
     "examplePinyin": "Wǒ tè bié xǐ huan qiū tiān.",
-    "exampleEnglish": "I special like autumn day."
+    "exampleEnglish": "I especially like autumn."
   },
   {
     "id": "u2-e785a7e9a1be-114",
@@ -1595,7 +1595,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "谢谢你照顾我的猫。",
     "exampleTraditional": "謝謝你照顧我的貓。",
     "examplePinyin": "Xiè xiè nǐ zhào gù wǒ de māo.",
-    "exampleEnglish": "You take care of I of cat."
+    "exampleEnglish": "Thank you for looking after my cat."
   },
   {
     "id": "u2-e585b3e5bf83-115",
@@ -1607,9 +1607,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "guānxīn",
     "english": "to care about",
     "exampleSimplified": "妈妈总是关心我的身体。",
-    "exampleTraditional": "妈妈总是關心我的身體。",
+    "exampleTraditional": "媽媽總是關心我的身體。",
     "examplePinyin": "Mā ma zǒng shì guān xīn wǒ de shēn tǐ.",
-    "exampleEnglish": "Mom be care about I of body."
+    "exampleEnglish": "Mum is always concerned about my health."
   },
   {
     "id": "u2-e7bb93e5a99a-116",
@@ -1623,7 +1623,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他们打算明年结婚。",
     "exampleTraditional": "他們打算明年結婚。",
     "examplePinyin": "Tā men dǎ suàn míng nián jié hūn.",
-    "exampleEnglish": "They calculate year marry."
+    "exampleEnglish": "They plan to get married next year."
   },
   {
     "id": "u2-e7a6bbe5a99a-117",
@@ -1637,7 +1637,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他们去年离婚了。",
     "exampleTraditional": "他們去年離婚了。",
     "examplePinyin": "Tā men qù nián lí hūn le.",
-    "exampleEnglish": "They go year divorce completed action."
+    "exampleEnglish": "They got divorced last year."
   },
   {
     "id": "u2-e8aea4e8af86-118",
@@ -1651,7 +1651,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "很高兴认识你。",
     "exampleTraditional": "很高興認識你。",
     "examplePinyin": "Hěn gāo xìng rèn shi nǐ.",
-    "exampleEnglish": "Very happy know you."
+    "exampleEnglish": "It's very nice to meet you."
   },
   {
     "id": "u2-e5b8aee5bf99-119",
@@ -1663,9 +1663,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "bāngmáng",
     "english": "to help",
     "exampleSimplified": "需要我帮忙吗？",
-    "exampleTraditional": "需要我幫忙吗？",
+    "exampleTraditional": "需要我幫忙嗎？",
     "examplePinyin": "Xū yào wǒ bāng máng ma?",
-    "exampleEnglish": "I help."
+    "exampleEnglish": "Do you need a hand?"
   },
   {
     "id": "u2-e999aa-120",
@@ -1679,7 +1679,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "晚上我陪你去医院。",
     "exampleTraditional": "晚上我陪你去醫院。",
     "examplePinyin": "Wǎn shàng wǒ péi nǐ qù yī yuàn.",
-    "exampleEnglish": "Evening I accompany you go hospital."
+    "exampleEnglish": "I'll go to the hospital with you tonight."
   },
   {
     "id": "u2-e683b3e5bfb5-121",
@@ -1693,7 +1693,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我很想念家乡的味道。",
     "exampleTraditional": "我很想念家鄉的味道。",
     "examplePinyin": "Wǒ hěn xiǎng niàn jiā xiāng de wèi dào.",
-    "exampleEnglish": "I very miss hometown of taste."
+    "exampleEnglish": "I really miss the flavours of my hometown."
   },
   {
     "id": "u2-e4bab2-122",
@@ -1707,7 +1707,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "她和外婆最亲。",
     "exampleTraditional": "她和外婆最親。",
     "examplePinyin": "Tā hé wài pó zuì qīn.",
-    "exampleEnglish": "She and maternal grandmother close."
+    "exampleEnglish": "She's closest to her grandmother."
   },
   {
     "id": "u2-e7869f-123",
@@ -1719,9 +1719,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "shú",
     "english": "familiar",
     "exampleSimplified": "我们俩很熟，别客气。",
-    "exampleTraditional": "我們俩很熟，別客氣。",
+    "exampleTraditional": "我們倆很熟，別客氣。",
     "examplePinyin": "Wǒ men liǎ hěn shú, bié kè qì.",
-    "exampleEnglish": "We very familiar, do not air."
+    "exampleEnglish": "We know each other well, so don't be formal."
   },
   {
     "id": "u2-e5b9b4e8bdbb-124",
@@ -1735,7 +1735,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "你看起来真年轻。",
     "exampleTraditional": "你看起來真年輕。",
     "examplePinyin": "Nǐ kàn qǐ lái zhēn nián qīng.",
-    "exampleEnglish": "You come really young."
+    "exampleEnglish": "You look so young."
   },
   {
     "id": "u2-e58fafe788b1-125",
@@ -1749,7 +1749,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这只小狗太可爱了。",
     "exampleTraditional": "這隻小狗太可愛了。",
     "examplePinyin": "Zhè zhī xiǎo gǒu tài kě ài le.",
-    "exampleEnglish": "This only small dog too cute completed action."
+    "exampleEnglish": "This puppy is so cute."
   },
   {
     "id": "u2-e5a5bd-126",
@@ -1761,9 +1761,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "hǎo",
     "english": "good",
     "exampleSimplified": "这里的咖啡真好喝。",
-    "exampleTraditional": "這里的咖啡真好喝。",
+    "exampleTraditional": "這裡的咖啡真好喝。",
     "examplePinyin": "Zhè lǐ de kā fēi zhēn hǎo hē.",
-    "exampleEnglish": "Here of coffee really good drink."
+    "exampleEnglish": "The coffee here is really good."
   },
   {
     "id": "u2-e58d95e8baab-127",
@@ -1777,7 +1777,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他现在还是单身。",
     "exampleTraditional": "他現在還是單身。",
     "examplePinyin": "Tā xiàn zài hái shì dān shēn.",
-    "exampleEnglish": "He now still be single."
+    "exampleEnglish": "He's still single."
   },
   {
     "id": "u3-e5a4b4-128",
@@ -1791,7 +1791,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我头有点疼。",
     "exampleTraditional": "我頭有點疼。",
     "examplePinyin": "Wǒ tóu yǒu diǎn téng.",
-    "exampleEnglish": "I head a little hurt."
+    "exampleEnglish": "I have a bit of a headache."
   },
   {
     "id": "u3-e884b8-129",
@@ -1805,7 +1805,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "她的脸红了。",
     "exampleTraditional": "她的臉紅了。",
     "examplePinyin": "Tā de liǎn hóng le.",
-    "exampleEnglish": "She of face completed action."
+    "exampleEnglish": "Her face turned red."
   },
   {
     "id": "u3-e79cbce79d9b-130",
@@ -1819,7 +1819,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "看书太久，眼睛很累。",
     "exampleTraditional": "看書太久，眼睛很累。",
     "examplePinyin": "Kàn shū tài jiǔ, yǎn jīng hěn lèi.",
-    "exampleEnglish": "Book too a long time, eyes very tired."
+    "exampleEnglish": "My eyes are tired from reading for too long."
   },
   {
     "id": "u3-e9bcbbe5ad90-131",
@@ -1833,7 +1833,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "感冒了，鼻子不通气。",
     "exampleTraditional": "感冒了，鼻子不通氣。",
     "examplePinyin": "Gǎn mào le, bí zi bù tōng qì.",
-    "exampleEnglish": "Cold completed action, nose not air."
+    "exampleEnglish": "I have a cold, and my nose is blocked."
   },
   {
     "id": "u3-e598b4-132",
@@ -1845,9 +1845,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "zuǐ",
     "english": "mouth",
     "exampleSimplified": "他嘴里吃着东西，说不了话。",
-    "exampleTraditional": "他嘴里吃着東西，說不了話。",
+    "exampleTraditional": "他嘴裡吃著東西，說不了話。",
     "examplePinyin": "Tā zuǐ lǐ chī zhe dōng xī, shuō bù liǎo huà.",
-    "exampleEnglish": "He mouth inside eat ongoing thing, say not completed action."
+    "exampleEnglish": "His mouth is full, so he can't talk."
   },
   {
     "id": "u3-e880b3e69cb5-133",
@@ -1861,7 +1861,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "兔子的耳朵长长的。",
     "exampleTraditional": "兔子的耳朵長長的。",
     "examplePinyin": "Tù zi de ěr duo cháng cháng de.",
-    "exampleEnglish": "Rabbit of ear long long of."
+    "exampleEnglish": "Rabbits have long ears."
   },
   {
     "id": "u3-e78999-134",
@@ -1873,9 +1873,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "yá",
     "english": "tooth",
     "exampleSimplified": "我一颗牙坏了，得去看牙医。",
-    "exampleTraditional": "我一颗牙坏了，得去看牙醫。",
+    "exampleTraditional": "我一顆牙壞了，得去看牙醫。",
     "examplePinyin": "Wǒ yì kē yá huài le, dé qù kàn yá yī.",
-    "exampleEnglish": "I one tooth completed action, so go tooth."
+    "exampleEnglish": "One of my teeth is bad, so I need to see a dentist."
   },
   {
     "id": "u3-e8888ce5a4b4-135",
@@ -1889,7 +1889,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "汤太烫，烫到舌头了。",
     "exampleTraditional": "湯太燙，燙到舌頭了。",
     "examplePinyin": "Tāng tài tàng, tàng dào shé tou le.",
-    "exampleEnglish": "Soup too hot to the touch, hot to the touch to tongue completed action."
+    "exampleEnglish": "The soup was so hot that I burned my tongue."
   },
   {
     "id": "u3-e88496e5ad90-136",
@@ -1903,7 +1903,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "坐久了，脖子很酸。",
     "exampleTraditional": "坐久了，脖子很酸。",
     "examplePinyin": "Zuò jiǔ le, bó zi hěn suān.",
-    "exampleEnglish": "Sit a long time completed action, neck very sour."
+    "exampleEnglish": "My neck is sore from sitting too long."
   },
   {
     "id": "u3-e882a9e88680-137",
@@ -1917,7 +1917,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他拍了拍我的肩膀。",
     "exampleTraditional": "他拍了拍我的肩膀。",
     "examplePinyin": "Tā pāi le pāi wǒ de jiān bǎng.",
-    "exampleEnglish": "He completed action I of shoulder."
+    "exampleEnglish": "He patted me on the shoulder."
   },
   {
     "id": "u3-e6898b-138",
@@ -1931,7 +1931,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "吃饭前要洗手。",
     "exampleTraditional": "吃飯前要洗手。",
     "examplePinyin": "Chī fàn qián yào xǐ shǒu.",
-    "exampleEnglish": "Eat meal front wash hand."
+    "exampleEnglish": "You should wash your hands before eating."
   },
   {
     "id": "u3-e6898be68c87-139",
@@ -1943,9 +1943,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "shǒuzhǐ",
     "english": "finger",
     "exampleSimplified": "她的手指又细又长。",
-    "exampleTraditional": "她的手指又细又長。",
+    "exampleTraditional": "她的手指又細又長。",
     "examplePinyin": "Tā de shǒu zhǐ yòu xì yòu cháng.",
-    "exampleEnglish": "She of finger long."
+    "exampleEnglish": "Her fingers are long and slender."
   },
   {
     "id": "u3-e883b3e8868a-140",
@@ -1959,7 +1959,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我打球伤了胳膊。",
     "exampleTraditional": "我打球傷了胳膊。",
     "examplePinyin": "Wǒ dǎ qiú shāng le gē bo.",
-    "exampleEnglish": "I completed action arm."
+    "exampleEnglish": "I hurt my arm playing ball."
   },
   {
     "id": "u3-e885bf-141",
@@ -1973,7 +1973,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "走了一天，腿都软了。",
     "exampleTraditional": "走了一天，腿都軟了。",
     "examplePinyin": "Zǒu le yì tiān, tuǐ dōu ruǎn le.",
-    "exampleEnglish": "Walk completed action one day, leg all soft completed action."
+    "exampleEnglish": "After walking all day, my legs feel weak."
   },
   {
     "id": "u3-e8849a-142",
@@ -1985,9 +1985,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "jiǎo",
     "english": "foot",
     "exampleSimplified": "这双鞋有点挤脚。",
-    "exampleTraditional": "這雙鞋有點挤腳。",
+    "exampleTraditional": "這雙鞋有點擠腳。",
     "examplePinyin": "Zhè shuāng xié yǒu diǎn jǐ jiǎo.",
-    "exampleEnglish": "This shoes a little foot."
+    "exampleEnglish": "These shoes are a bit tight."
   },
   {
     "id": "u3-e8829ae5ad90-143",
@@ -2001,7 +2001,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我肚子饿得咕咕叫。",
     "exampleTraditional": "我肚子餓得咕咕叫。",
     "examplePinyin": "Wǒ dù zǐ è dé gū gū jiào.",
-    "exampleEnglish": "I belly hungry so be called."
+    "exampleEnglish": "My stomach is growling because I'm hungry."
   },
   {
     "id": "u3-e8838c-144",
@@ -2013,9 +2013,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "bèi",
     "english": "back",
     "exampleSimplified": "他的背晒黑了。",
-    "exampleTraditional": "他的背晒黑了。",
+    "exampleTraditional": "他的背曬黑了。",
     "examplePinyin": "Tā de bèi shài hēi le.",
-    "exampleEnglish": "He of back completed action."
+    "exampleEnglish": "His back got tanned in the sun."
   },
   {
     "id": "u3-e885b0-145",
@@ -2029,7 +2029,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "搬东西的时候小心腰。",
     "exampleTraditional": "搬東西的時候小心腰。",
     "examplePinyin": "Bān dōng xī de shí hòu xiǎo xīn yāo.",
-    "exampleEnglish": "Move thing of time small heart waist."
+    "exampleEnglish": "Be careful with your back when lifting things."
   },
   {
     "id": "u3-e5bf83-146",
@@ -2040,10 +2040,10 @@ export const vocabulary: VocabEntry[] = [
     "traditional": "心",
     "pinyin": "xīn",
     "english": "heart",
-    "exampleSimplified": "听到这个消息，我心里很难受。",
-    "exampleTraditional": "听到這個消息，我心里很難受。",
-    "examplePinyin": "Tīng dào zhè ge xiāo xī, wǒ xīn lǐ hěn nán shòu.",
-    "exampleEnglish": "To this message, I heart inside very uncomfortable."
+    "exampleSimplified": "听到这个消息，我心里难受。",
+    "exampleTraditional": "聽到這個消息，我心裡難受。",
+    "examplePinyin": "Tīng dào zhè ge xiāo xī, wǒ xīn lǐ nán shòu.",
+    "exampleEnglish": "That news made me feel terrible."
   },
   {
     "id": "u3-e79aaee882a4-147",
@@ -2055,9 +2055,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "pífū",
     "english": "skin",
     "exampleSimplified": "冬天皮肤容易干。",
-    "exampleTraditional": "冬天皮膚容易乾。",
+    "exampleTraditional": "冬天皮膚容易幹。",
     "examplePinyin": "Dōng tiān pí fū róng yì gān.",
-    "exampleEnglish": "Winter day skin easy dry."
+    "exampleEnglish": "Skin gets dry easily in winter."
   },
   {
     "id": "u3-e5a4b4e58f91-148",
@@ -2065,13 +2065,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "身体·健康",
     "partOfSpeech": "名词",
     "simplified": "头发",
-    "traditional": "頭發",
+    "traditional": "頭髮",
     "pinyin": "tóufa",
     "english": "hair",
     "exampleSimplified": "她剪短了头发。",
-    "exampleTraditional": "她剪短了頭發。",
+    "exampleTraditional": "她剪短了頭髮。",
     "examplePinyin": "Tā jiǎn duǎn le tóu fa.",
-    "exampleEnglish": "She short completed action hair."
+    "exampleEnglish": "She cut her hair short."
   },
   {
     "id": "u3-e8a180-149",
@@ -2085,7 +2085,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "手指破了，流了一点血。",
     "exampleTraditional": "手指破了，流了一點血。",
     "examplePinyin": "Shǒu zhǐ pò le, liú le yì diǎn xuè.",
-    "exampleEnglish": "Finger completed action, flow completed action a little blood."
+    "exampleEnglish": "I cut my finger and it bled a little."
   },
   {
     "id": "u3-e9aaa8e5a4b4-150",
@@ -2099,7 +2099,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "狗最爱啃骨头。",
     "exampleTraditional": "狗最愛啃骨頭。",
     "examplePinyin": "Gǒu zuì ài kěn gǔ tou.",
-    "exampleEnglish": "Dog love bone."
+    "exampleEnglish": "Dogs love chewing bones."
   },
   {
     "id": "u3-e8baabe4bd93-151",
@@ -2111,9 +2111,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "shēntǐ",
     "english": "body",
     "exampleSimplified": "爷爷的身体一直不错。",
-    "exampleTraditional": "爷爷的身體一直不错。",
+    "exampleTraditional": "爺爺的身體一直不錯。",
     "examplePinyin": "Yé ye de shēn tǐ yì zhí bú cuò.",
-    "exampleEnglish": "Paternal grandfather of body continuously not."
+    "exampleEnglish": "Grandpa has always been in good health."
   },
   {
     "id": "u3-e4b8aae5ad90-152",
@@ -2127,7 +2127,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他个子高，坐后排吧。",
     "exampleTraditional": "他個子高，坐後排吧。",
     "examplePinyin": "Tā gè zi gāo, zuò hòu pái ba.",
-    "exampleEnglish": "He height tall, sit back."
+    "exampleEnglish": "He's tall, so he should sit in the back row."
   },
   {
     "id": "u3-e58a9be6b094-153",
@@ -2139,9 +2139,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "lìqi",
     "english": "strength",
     "exampleSimplified": "这箱子太重，我没力气搬。",
-    "exampleTraditional": "這箱子太重，我没力氣搬。",
+    "exampleTraditional": "這箱子太重，我沒力氣搬。",
     "examplePinyin": "Zhè xiāng zǐ tài zhòng, wǒ méi lì qi bān.",
-    "exampleEnglish": "This too, I not strength move."
+    "exampleEnglish": "This box is too heavy for me to move."
   },
   {
     "id": "u3-e79785-154",
@@ -2153,9 +2153,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "bìng",
     "english": "illness",
     "exampleSimplified": "他的病已经好了。",
-    "exampleTraditional": "他的病已经好了。",
+    "exampleTraditional": "他的病已經好了。",
     "examplePinyin": "Tā de bìng yǐ jīng hǎo le.",
-    "exampleEnglish": "He of illness already good completed action."
+    "exampleEnglish": "He's recovered from his illness."
   },
   {
     "id": "u3-e6849fe58692-155",
@@ -2169,7 +2169,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "天冷了，小心感冒。",
     "exampleTraditional": "天冷了，小心感冒。",
     "examplePinyin": "Tiān lěng le, xiǎo xīn gǎn mào.",
-    "exampleEnglish": "Day cold completed action, small heart cold."
+    "exampleEnglish": "It's getting cold, so be careful not to catch a cold."
   },
   {
     "id": "u3-e88daf-156",
@@ -2183,7 +2183,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这个药一天吃三次。",
     "exampleTraditional": "這個藥一天吃三次。",
     "examplePinyin": "Zhè ge yào yì tiān chī sān cì.",
-    "exampleEnglish": "This medicine one day eat three."
+    "exampleEnglish": "Take this medicine three times a day."
   },
   {
     "id": "u3-e58cbbe999a2-157",
@@ -2195,9 +2195,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "yīyuàn",
     "english": "hospital",
     "exampleSimplified": "医院就在地铁站旁边。",
-    "exampleTraditional": "醫院就在地鐵站旁边。",
+    "exampleTraditional": "醫院就在地鐵站旁邊。",
     "examplePinyin": "Yī yuàn jiù zài dì tiě zhàn páng biān.",
-    "exampleEnglish": "Hospital then be at subway beside."
+    "exampleEnglish": "The hospital is right next to the metro station."
   },
   {
     "id": "u3-e58cbbe7949f-158",
@@ -2209,9 +2209,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "yīshēng",
     "english": "doctor",
     "exampleSimplified": "医生让我多喝水。",
-    "exampleTraditional": "醫生让我多喝水。",
+    "exampleTraditional": "醫生讓我多喝水。",
     "examplePinyin": "Yī shēng ràng wǒ duō hē shuǐ.",
-    "exampleEnglish": "Doctor let I drink water."
+    "exampleEnglish": "The doctor told me to drink more water."
   },
   {
     "id": "u3-e68aa4e5a3ab-159",
@@ -2225,7 +2225,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "护士帮我量了体温。",
     "exampleTraditional": "護士幫我量了體溫。",
     "examplePinyin": "Hù shì bāng wǒ liáng le tǐ wēn.",
-    "exampleEnglish": "Nurse I completed action."
+    "exampleEnglish": "The nurse took my temperature."
   },
   {
     "id": "u3-e7b2bee7a59e-160",
@@ -2236,10 +2236,10 @@ export const vocabulary: VocabEntry[] = [
     "traditional": "精神",
     "pinyin": "jīngshén",
     "english": "energy; spirit",
-    "exampleSimplified": "睡了个好觉，今天精神很好。",
-    "exampleTraditional": "睡了個好覺，今天精神很好。",
-    "examplePinyin": "Shuì le gè hǎo jué, jīn tiān jīng shén hěn hǎo.",
-    "exampleEnglish": "Sleep completed action good sleep, today energy very good."
+    "exampleSimplified": "今天精神很好。",
+    "exampleTraditional": "今天精神很好。",
+    "examplePinyin": "Jīn tiān jīng shén hěn hǎo.",
+    "exampleEnglish": "I feel full of energy today."
   },
   {
     "id": "u3-e591bd-161",
@@ -2253,7 +2253,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "医生救了他的命。",
     "exampleTraditional": "醫生救了他的命。",
     "examplePinyin": "Yī shēng jiù le tā de mìng.",
-    "exampleEnglish": "Doctor completed action he of life."
+    "exampleEnglish": "The doctor saved his life."
   },
   {
     "id": "u3-e6b094-162",
@@ -2267,7 +2267,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他跑上五楼，喘不过气。",
     "exampleTraditional": "他跑上五樓，喘不過氣。",
     "examplePinyin": "Tā pǎo shàng wǔ lóu, chuǎn bú guò qì.",
-    "exampleEnglish": "He run up five building, not before air."
+    "exampleEnglish": "He ran up to the fifth floor and was out of breath."
   },
   {
     "id": "u3-e6b197-163",
@@ -2281,7 +2281,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他跑完步，满头是汗。",
     "exampleTraditional": "他跑完步，滿頭是汗。",
     "examplePinyin": "Tā pǎo wán bù, mǎn tóu shì hàn.",
-    "exampleEnglish": "He run, full head be sweat."
+    "exampleEnglish": "After running, his head was covered in sweat."
   },
   {
     "id": "u3-e79785e4baba-164",
@@ -2295,7 +2295,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这位病人需要休息。",
     "exampleTraditional": "這位病人需要休息。",
     "examplePinyin": "Zhè wèi bìng rén xū yào xiū xi.",
-    "exampleEnglish": "This person patient rest."
+    "exampleEnglish": "This patient needs to rest."
   },
   {
     "id": "u3-e4bd93e6a380-165",
@@ -2309,7 +2309,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "公司每年安排一次体检。",
     "exampleTraditional": "公司每年安排一次體檢。",
     "examplePinyin": "Gōng sī měi nián ān pái yí cì tǐ jiǎn.",
-    "exampleEnglish": "Company year one physical exam."
+    "exampleEnglish": "The company arranges an annual health check-up."
   },
   {
     "id": "u3-e58fa3e7bda9-166",
@@ -2321,9 +2321,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "kǒuzhào",
     "english": "mask",
     "exampleSimplified": "医院里要戴口罩。",
-    "exampleTraditional": "醫院里要戴口罩。",
+    "exampleTraditional": "醫院裡要戴口罩。",
     "examplePinyin": "Yī yuàn lǐ yào dài kǒu zhào.",
-    "exampleEnglish": "Hospital inside wear mask."
+    "exampleEnglish": "You need to wear a mask in the hospital."
   },
   {
     "id": "u3-e79da1-167",
@@ -2337,7 +2337,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "昨晚我十一点才睡。",
     "exampleTraditional": "昨晚我十一點才睡。",
     "examplePinyin": "Zuó wǎn wǒ shí yī diǎn cái shuì.",
-    "exampleEnglish": "Late I ten a little sleep."
+    "exampleEnglish": "I didn't go to bed until eleven last night."
   },
   {
     "id": "u3-e98692-168",
@@ -2351,7 +2351,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我今天六点就醒了。",
     "exampleTraditional": "我今天六點就醒了。",
     "examplePinyin": "Wǒ jīn tiān liù diǎn jiù xǐng le.",
-    "exampleEnglish": "I today six order then wake up completed action."
+    "exampleEnglish": "I woke up at six today."
   },
   {
     "id": "u3-e4bc91e681af-169",
@@ -2365,7 +2365,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "累了就休息一会儿。",
     "exampleTraditional": "累了就休息一會兒。",
     "examplePinyin": "Lèi le jiù xiū xi yí huì er.",
-    "exampleEnglish": "Tired completed action then rest one."
+    "exampleEnglish": "Rest for a while when you're tired."
   },
   {
     "id": "u3-e7949fe79785-170",
@@ -2379,7 +2379,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他生病了，今天不来上课。",
     "exampleTraditional": "他生病了，今天不來上課。",
     "examplePinyin": "Tā shēng bìng le, jīn tiān bù lái shàng kè.",
-    "exampleEnglish": "He get sick completed action, today not come attend class."
+    "exampleEnglish": "He's ill, so he isn't coming to class today."
   },
   {
     "id": "u3-e79c8be79785-171",
@@ -2391,9 +2391,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "kànbìng",
     "english": "to see a doctor",
     "exampleSimplified": "网上也可以预约看病。",
-    "exampleTraditional": "網上也可以预約看病。",
+    "exampleTraditional": "網上也可以預約看病。",
     "examplePinyin": "Wǎng shàng yě kě yǐ yù yuē kàn bìng.",
-    "exampleEnglish": "Online also see a doctor."
+    "exampleEnglish": "You can book a doctor's appointment online too."
   },
   {
     "id": "u3-e592b3e597bd-172",
@@ -2407,7 +2407,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他咳嗽了一整夜。",
     "exampleTraditional": "他咳嗽了一整夜。",
     "examplePinyin": "Tā ké sou le yì zhěng yè.",
-    "exampleEnglish": "He cough completed action one night."
+    "exampleEnglish": "He coughed all night."
   },
   {
     "id": "u3-e58f91e783a7-173",
@@ -2418,10 +2418,10 @@ export const vocabulary: VocabEntry[] = [
     "traditional": "發燒",
     "pinyin": "fāshāo",
     "english": "to have a fever",
-    "exampleSimplified": "孩子发烧了，快带他去医院。",
-    "exampleTraditional": "孩子發燒了，快带他去醫院。",
-    "examplePinyin": "Hái zi fā shāo le, kuài dài tā qù yī yuàn.",
-    "exampleEnglish": "Have a fever completed action, fast bring he go hospital."
+    "exampleSimplified": "孩子发烧了。",
+    "exampleTraditional": "孩子發燒了。",
+    "examplePinyin": "Hái zi fā shāo le.",
+    "exampleEnglish": "The child has a fever."
   },
   {
     "id": "u3-e58f97e4bca4-174",
@@ -2435,7 +2435,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "踢球的时候他受伤了。",
     "exampleTraditional": "踢球的時候他受傷了。",
     "examplePinyin": "Tī qiú de shí hòu tā shòu shāng le.",
-    "exampleEnglish": "Of time he get injured completed action."
+    "exampleEnglish": "He was injured while playing football."
   },
   {
     "id": "u3-e6b497e6bea1-175",
@@ -2449,7 +2449,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我习惯晚上洗澡。",
     "exampleTraditional": "我習慣晚上洗澡。",
     "examplePinyin": "Wǒ xí guàn wǎn shàng xǐ zǎo.",
-    "exampleEnglish": "I habit evening bathe."
+    "exampleEnglish": "I'm used to taking a shower at night."
   },
   {
     "id": "u3-e588b7e78999-176",
@@ -2463,7 +2463,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "睡前别忘了刷牙。",
     "exampleTraditional": "睡前別忘了刷牙。",
     "examplePinyin": "Shuì qián bié wàng le shuā yá.",
-    "exampleEnglish": "Sleep front do not forget completed action brush teeth."
+    "exampleEnglish": "Don't forget to brush your teeth before bed."
   },
   {
     "id": "u3-e8bf90e58aa8-177",
@@ -2477,7 +2477,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "每周运动三次对身体好。",
     "exampleTraditional": "每週運動三次對身體好。",
     "examplePinyin": "Měi zhōu yùn dòng sān cì duì shēn tǐ hǎo.",
-    "exampleEnglish": "Week exercise three body good."
+    "exampleEnglish": "Exercising three times a week is good for your health."
   },
   {
     "id": "u3-e994bbe782bc-178",
@@ -2485,13 +2485,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "身体·健康",
     "partOfSpeech": "动词",
     "simplified": "锻炼",
-    "traditional": "鍛煉",
+    "traditional": "鍛鍊",
     "pinyin": "duànliàn",
     "english": "to exercise",
-    "exampleSimplified": "爷爷每天早上去公园锻炼。",
-    "exampleTraditional": "爷爷每天早上去公園鍛煉。",
-    "examplePinyin": "Yé ye měi tiān zǎo shàng qù gōng yuán duàn liàn.",
-    "exampleEnglish": "Paternal grandfather day early morning go park exercise."
+    "exampleSimplified": "爷爷每天早上去锻炼。",
+    "exampleTraditional": "爺爺每天早上去鍛鍊。",
+    "examplePinyin": "Yé ye měi tiān zǎo shàng qù duàn liàn.",
+    "exampleEnglish": "Grandpa goes to exercise every morning."
   },
   {
     "id": "u3-e995bf-179",
@@ -2503,9 +2503,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "zhǎng",
     "english": "long; to grow",
     "exampleSimplified": "这孩子长得像妈妈。",
-    "exampleTraditional": "這孩子長得像妈妈。",
+    "exampleTraditional": "這孩子長得像媽媽。",
     "examplePinyin": "Zhè hái zi cháng dé xiàng mā ma.",
-    "exampleEnglish": "This long so mom."
+    "exampleEnglish": "This child looks like his mother."
   },
   {
     "id": "u3-e581a5e8baab-180",
@@ -2519,7 +2519,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他下班后去健身房健身。",
     "exampleTraditional": "他下班後去健身房健身。",
     "examplePinyin": "Tā xià bān hòu qù jiàn shēn fáng jiàn shēn.",
-    "exampleEnglish": "He get off work back go work out work out."
+    "exampleEnglish": "He goes to the gym after work."
   },
   {
     "id": "u3-e796bc-181",
@@ -2533,7 +2533,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "牙疼起来吃不下饭。",
     "exampleTraditional": "牙疼起來吃不下飯。",
     "examplePinyin": "Yá téng qǐ lái chī bú xià fàn.",
-    "exampleEnglish": "Tooth hurt come eat not down meal."
+    "exampleEnglish": "When my tooth hurts, I can't eat."
   },
   {
     "id": "u3-e7b4af-182",
@@ -2547,7 +2547,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "今天开了一天会，好累。",
     "exampleTraditional": "今天開了一天會，好累。",
     "examplePinyin": "Jīn tiān kāi le yì tiān huì, hǎo lèi.",
-    "exampleEnglish": "Today open completed action one day, good tired."
+    "exampleEnglish": "I've had meetings all day. I'm exhausted."
   },
   {
     "id": "u3-e59bb0-183",
@@ -2561,7 +2561,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "中午不睡，下午就困。",
     "exampleTraditional": "中午不睡，下午就困。",
     "examplePinyin": "Zhōng wǔ bú shuì, xià wǔ jiù kùn.",
-    "exampleEnglish": "Noon not sleep, afternoon then sleepy."
+    "exampleEnglish": "If I don't nap at midday, I get sleepy in the afternoon."
   },
   {
     "id": "u3-e9a5bf-184",
@@ -2575,7 +2575,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我饿了，先吃点东西吧。",
     "exampleTraditional": "我餓了，先吃點東西吧。",
     "examplePinyin": "Wǒ è le, xiān chī diǎn dōng xī ba.",
-    "exampleEnglish": "I hungry completed action, first eat order thing."
+    "exampleEnglish": "I'm hungry. Let's eat something first."
   },
   {
     "id": "u3-e6b8b4-185",
@@ -2589,7 +2589,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "跑完步特别渴。",
     "exampleTraditional": "跑完步特別渴。",
     "examplePinyin": "Pǎo wán bù tè bié kě.",
-    "exampleEnglish": "Run special thirsty."
+    "exampleEnglish": "I'm especially thirsty after running."
   },
   {
     "id": "u3-e9a5b1-186",
@@ -2603,7 +2603,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我吃饱了，你们慢用。",
     "exampleTraditional": "我吃飽了，你們慢用。",
     "examplePinyin": "Wǒ chī bǎo le, nǐ men màn yòng.",
-    "exampleEnglish": "I eat full completed action, you slow use."
+    "exampleEnglish": "I'm full. Please enjoy your meal."
   },
   {
     "id": "u3-e88892e69c8d-187",
@@ -2615,9 +2615,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "shūfu",
     "english": "comfortable",
     "exampleSimplified": "这张沙发坐着真舒服。",
-    "exampleTraditional": "這張沙發坐着真舒服。",
+    "exampleTraditional": "這張沙發坐著真舒服。",
     "examplePinyin": "Zhè zhāng shā fā zuò zhe zhēn shū fú.",
-    "exampleEnglish": "This sofa sit ongoing really comfortable."
+    "exampleEnglish": "This sofa is really comfortable."
   },
   {
     "id": "u3-e581a5e5bab7-188",
@@ -2631,7 +2631,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "祝你身体健康。",
     "exampleTraditional": "祝你身體健康。",
     "examplePinyin": "Zhù nǐ shēn tǐ jiàn kāng.",
-    "exampleEnglish": "Wish you body healthy."
+    "exampleEnglish": "I wish you good health."
   },
   {
     "id": "u3-e88396-189",
@@ -2645,7 +2645,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "假期一过，我又胖了。",
     "exampleTraditional": "假期一過，我又胖了。",
     "examplePinyin": "Jià qī yí guò, wǒ yòu pàng le.",
-    "exampleEnglish": "Holiday one before, I fat completed action."
+    "exampleEnglish": "I gained weight again over the holiday."
   },
   {
     "id": "u3-e798a6-190",
@@ -2659,7 +2659,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "她最近瘦了很多。",
     "exampleTraditional": "她最近瘦了很多。",
     "examplePinyin": "Tā zuì jìn shòu le hěn duō.",
-    "exampleEnglish": "She recently thin completed action very."
+    "exampleEnglish": "She has lost a lot of weight recently."
   },
   {
     "id": "u3-e9ab98-191",
@@ -2671,9 +2671,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "gāo",
     "english": "tall; high",
     "exampleSimplified": "那栋楼真高。",
-    "exampleTraditional": "那栋樓真高。",
+    "exampleTraditional": "那棟樓真高。",
     "examplePinyin": "Nà dòng lóu zhēn gāo.",
-    "exampleEnglish": "That building really tall."
+    "exampleEnglish": "That building is really tall."
   },
   {
     "id": "u3-e79fae-192",
@@ -2687,7 +2687,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我比哥哥矮一点。",
     "exampleTraditional": "我比哥哥矮一點。",
     "examplePinyin": "Wǒ bǐ gē ge ǎi yì diǎn.",
-    "exampleEnglish": "I older brother short a little."
+    "exampleEnglish": "I'm a little shorter than my older brother."
   },
   {
     "id": "u3-e5a3ae-193",
@@ -2699,9 +2699,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "zhuàng",
     "english": "strong",
     "exampleSimplified": "他天天锻炼，身体很壮。",
-    "exampleTraditional": "他天天鍛煉，身體很壯。",
+    "exampleTraditional": "他天天鍛鍊，身體很壯。",
     "examplePinyin": "Tā tiān tiān duàn liàn, shēn tǐ hěn zhuàng.",
-    "exampleEnglish": "He day day exercise, body very strong."
+    "exampleEnglish": "He works out every day and is very strong."
   },
   {
     "id": "u3-e99abee58f97-194",
@@ -2713,9 +2713,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "nánshòu",
     "english": "uncomfortable",
     "exampleSimplified": "晕车的感觉很难受。",
-    "exampleTraditional": "晕車的感覺很難受。",
+    "exampleTraditional": "暈車的感覺很難受。",
     "examplePinyin": "Yùn chē de gǎn jué hěn nán shòu.",
-    "exampleEnglish": "Vehicle of feeling very uncomfortable."
+    "exampleEnglish": "Feeling carsick is awful."
   },
   {
     "id": "u4-e9a5ad-195",
@@ -2729,7 +2729,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "饭好了，快来吃。",
     "exampleTraditional": "飯好了，快來吃。",
     "examplePinyin": "Fàn hǎo le, kuài lái chī.",
-    "exampleEnglish": "Meal good completed action, fast come eat."
+    "exampleEnglish": "The food is ready. Come and eat."
   },
   {
     "id": "u4-e7b1b3e9a5ad-196",
@@ -2743,7 +2743,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "再来一碗米饭。",
     "exampleTraditional": "再來一碗米飯。",
     "examplePinyin": "Zài lái yì wǎn mǐ fàn.",
-    "exampleEnglish": "Again come a bowl of rice."
+    "exampleEnglish": "I'd like another bowl of rice."
   },
   {
     "id": "u4-e99da2-197",
@@ -2751,13 +2751,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "饮食",
     "partOfSpeech": "名词",
     "simplified": "面",
-    "traditional": "麵",
+    "traditional": "面",
     "pinyin": "miàn",
     "english": "noodles; flour",
     "exampleSimplified": "我中午吃了一碗牛肉面。",
     "exampleTraditional": "我中午吃了一碗牛肉麵。",
     "examplePinyin": "Wǒ zhōng wǔ chī le yì wǎn niú ròu miàn.",
-    "exampleEnglish": "I noon eat completed action a bowl of beef noodles."
+    "exampleEnglish": "I had a bowl of beef noodles for lunch."
   },
   {
     "id": "u4-e99da2e69da1-198",
@@ -2769,9 +2769,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "miàntiáo",
     "english": "noodles",
     "exampleSimplified": "妈妈煮的面条特别香。",
-    "exampleTraditional": "妈妈煮的麵條特別香。",
+    "exampleTraditional": "媽媽煮的麵條特別香。",
     "examplePinyin": "Mā ma zhǔ de miàn tiáo tè bié xiāng.",
-    "exampleEnglish": "Mom boil of noodles special fragrant."
+    "exampleEnglish": "The noodles Mum cooked smell wonderful."
   },
   {
     "id": "u4-e88f9c-199",
@@ -2785,7 +2785,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "今天的菜有点咸。",
     "exampleTraditional": "今天的菜有點鹹。",
     "examplePinyin": "Jīn tiān de cài yǒu diǎn xián.",
-    "exampleEnglish": "Today of dish a little salty."
+    "exampleEnglish": "Today's dishes are a little salty."
   },
   {
     "id": "u4-e88289-200",
@@ -2797,9 +2797,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "ròu",
     "english": "meat",
     "exampleSimplified": "他不吃肉，只吃素。",
-    "exampleTraditional": "他不吃肉，隻吃素。",
+    "exampleTraditional": "他不吃肉，只吃素。",
     "examplePinyin": "Tā bù chī ròu, zhī chī sù.",
-    "exampleEnglish": "He not eat meat, only eat."
+    "exampleEnglish": "He doesn't eat meat; he's vegetarian."
   },
   {
     "id": "u4-e9b1bc-201",
@@ -2813,7 +2813,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这条鱼很新鲜。",
     "exampleTraditional": "這條魚很新鮮。",
     "examplePinyin": "Zhè tiáo yú hěn xīn xiān.",
-    "exampleEnglish": "This fish very fresh."
+    "exampleEnglish": "This fish is very fresh."
   },
   {
     "id": "u4-e9b8a1-202",
@@ -2825,9 +2825,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "jī",
     "english": "chicken",
     "exampleSimplified": "外婆养了几只鸡。",
-    "exampleTraditional": "外婆养了几隻雞。",
+    "exampleTraditional": "外婆養了幾隻雞。",
     "examplePinyin": "Wài pó yǎng le jǐ zhī jī.",
-    "exampleEnglish": "Maternal grandmother completed action only chicken."
+    "exampleEnglish": "Grandma keeps several chickens."
   },
   {
     "id": "u4-e9b8a1e89b8b-203",
@@ -2839,9 +2839,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "jīdàn",
     "english": "egg",
     "exampleSimplified": "我早上吃了两个鸡蛋。",
-    "exampleTraditional": "我早上吃了两個雞蛋。",
+    "exampleTraditional": "我早上吃了兩個雞蛋。",
     "examplePinyin": "Wǒ zǎo shàng chī le liǎng gè jī dàn.",
-    "exampleEnglish": "I early morning eat completed action two egg."
+    "exampleEnglish": "I ate two eggs this morning."
   },
   {
     "id": "u4-e78caae88289-204",
@@ -2853,9 +2853,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "zhūròu",
     "english": "pork",
     "exampleSimplified": "猪肉最近涨价了。",
-    "exampleTraditional": "豬肉最近涨價了。",
+    "exampleTraditional": "豬肉最近漲價了。",
     "examplePinyin": "Zhū ròu zuì jìn zhǎng jià le.",
-    "exampleEnglish": "Pork recently completed action."
+    "exampleEnglish": "Pork has gone up in price recently."
   },
   {
     "id": "u4-e7899be88289-205",
@@ -2869,7 +2869,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这家店的牛肉很嫩。",
     "exampleTraditional": "這家店的牛肉很嫩。",
     "examplePinyin": "Zhè jiā diàn de niú ròu hěn nèn.",
-    "exampleEnglish": "This home of beef very."
+    "exampleEnglish": "The beef at this restaurant is very tender."
   },
   {
     "id": "u4-e7be8ae88289-206",
@@ -2883,7 +2883,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "冬天吃羊肉火锅最舒服。",
     "exampleTraditional": "冬天吃羊肉火鍋最舒服。",
     "examplePinyin": "Dōng tiān chī yáng ròu huǒ guō zuì shū fú.",
-    "exampleEnglish": "Winter day eat lamb fire pot comfortable."
+    "exampleEnglish": "Hotpot with lamb is especially comforting in winter."
   },
   {
     "id": "u4-e899be-207",
@@ -2897,7 +2897,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我对虾过敏。",
     "exampleTraditional": "我對蝦過敏。",
     "examplePinyin": "Wǒ duì xiā guò mǐn.",
-    "exampleEnglish": "I shrimp before."
+    "exampleEnglish": "I'm allergic to shrimp."
   },
   {
     "id": "u4-e99d92e88f9c-208",
@@ -2911,7 +2911,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "多吃点青菜吧。",
     "exampleTraditional": "多吃點青菜吧。",
     "examplePinyin": "Duō chī diǎn qīng cài ba.",
-    "exampleEnglish": "Eat order greens."
+    "exampleEnglish": "Eat some more green vegetables."
   },
   {
     "id": "u4-e894ace88f9c-209",
@@ -2925,7 +2925,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "市场的蔬菜很便宜。",
     "exampleTraditional": "市場的蔬菜很便宜。",
     "examplePinyin": "Shì chǎng de shū cài hěn pián yi.",
-    "exampleEnglish": "Market of vegetables very cheap."
+    "exampleEnglish": "The vegetables at the market are very cheap."
   },
   {
     "id": "u4-e6b0b4e69e9c-210",
@@ -2939,7 +2939,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "饭后吃点水果。",
     "exampleTraditional": "飯後吃點水果。",
     "examplePinyin": "Fàn hòu chī diǎn shuǐ guǒ.",
-    "exampleEnglish": "Meal back eat order fruit."
+    "exampleEnglish": "Have some fruit after your meal."
   },
   {
     "id": "u4-e88bb9e69e9c-211",
@@ -2953,7 +2953,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这个苹果很脆。",
     "exampleTraditional": "這個蘋果很脆。",
     "examplePinyin": "Zhè ge píng guǒ hěn cuì.",
-    "exampleEnglish": "This apple very."
+    "exampleEnglish": "This apple is very crisp."
   },
   {
     "id": "u4-e9a699e89589-212",
@@ -2967,7 +2967,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "香蕉熟得太快了。",
     "exampleTraditional": "香蕉熟得太快了。",
     "examplePinyin": "Xiāng jiāo shú dé tài kuài le.",
-    "exampleEnglish": "Banana familiar so too fast completed action."
+    "exampleEnglish": "Bananas ripen too quickly."
   },
   {
     "id": "u4-e6a998e5ad90-213",
@@ -2981,7 +2981,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "橘子有点酸。",
     "exampleTraditional": "橘子有點酸。",
     "examplePinyin": "Jú zǐ yǒu diǎn suān.",
-    "exampleEnglish": "Orange a little sour."
+    "exampleEnglish": "These oranges are a little sour."
   },
   {
     "id": "u4-e8a5bfe7939c-214",
@@ -2995,7 +2995,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "夏天就要吃冰西瓜。",
     "exampleTraditional": "夏天就要吃冰西瓜。",
     "examplePinyin": "Xià tiān jiù yào chī bīng xī guā.",
-    "exampleEnglish": "Summer day then eat watermelon."
+    "exampleEnglish": "Summer is the time for chilled watermelon."
   },
   {
     "id": "u4-e891a1e89084-215",
@@ -3009,7 +3009,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这串葡萄真甜。",
     "exampleTraditional": "這串葡萄真甜。",
     "examplePinyin": "Zhè chuàn pú táo zhēn tián.",
-    "exampleEnglish": "This grape really sweet."
+    "exampleEnglish": "This bunch of grapes is so sweet."
   },
   {
     "id": "u4-e6b1a4-216",
@@ -3023,7 +3023,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "先喝口汤吧。",
     "exampleTraditional": "先喝口湯吧。",
     "examplePinyin": "Xiān hē kǒu tāng ba.",
-    "exampleEnglish": "First drink soup."
+    "exampleEnglish": "Have some soup first."
   },
   {
     "id": "u4-e7b2a5-217",
@@ -3037,7 +3037,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "生病的时候喝点粥。",
     "exampleTraditional": "生病的時候喝點粥。",
     "examplePinyin": "Shēng bìng de shí hòu hē diǎn zhōu.",
-    "exampleEnglish": "Get sick of time drink order porridge."
+    "exampleEnglish": "Have some porridge when you're ill."
   },
   {
     "id": "u4-e58c85e5ad90-218",
@@ -3049,9 +3049,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "bāozi",
     "english": "steamed bun",
     "exampleSimplified": "早上我买了两个肉包子。",
-    "exampleTraditional": "早上我買了两個肉包子。",
+    "exampleTraditional": "早上我買了兩個肉包子。",
     "examplePinyin": "Zǎo shàng wǒ mǎi le liǎng gè ròu bāo zǐ.",
-    "exampleEnglish": "Early morning I buy completed action two meat steamed bun."
+    "exampleEnglish": "I bought two meat buns this morning."
   },
   {
     "id": "u4-e9a5bae5ad90-219",
@@ -3065,7 +3065,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "过年全家一起包饺子。",
     "exampleTraditional": "過年全家一起包餃子。",
     "examplePinyin": "Guò nián quán jiā yì qǐ bāo jiǎo zǐ.",
-    "exampleEnglish": "Before year home together bag dumpling."
+    "exampleEnglish": "At New Year, the whole family makes dumplings together."
   },
   {
     "id": "u4-e9a692e5a4b4-220",
@@ -3079,7 +3079,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "北方人爱吃馒头。",
     "exampleTraditional": "北方人愛吃饅頭。",
     "examplePinyin": "Běi fāng rén ài chī mán tou.",
-    "exampleEnglish": "North person love eat steamed bun."
+    "exampleEnglish": "People in northern China like steamed buns."
   },
   {
     "id": "u4-e99da2e58c85-221",
@@ -3091,9 +3091,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "miànbāo",
     "english": "bread",
     "exampleSimplified": "面包刚烤好，还热着呢。",
-    "exampleTraditional": "麵包剛烤好，還热着呢。",
+    "exampleTraditional": "麵包剛烤好，還熱著呢。",
     "examplePinyin": "Miàn bāo gāng kǎo hǎo, hái rè zhe ne.",
-    "exampleEnglish": "Bread roast good, still hot ongoing."
+    "exampleEnglish": "The bread has just come out of the oven and is still warm."
   },
   {
     "id": "u4-e89b8be7b395-222",
@@ -3107,7 +3107,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "生日蛋糕上有草莓。",
     "exampleTraditional": "生日蛋糕上有草莓。",
     "examplePinyin": "Shēng rì dàn gāo shàng yǒu cǎo méi.",
-    "exampleEnglish": "Birthday cake up have grass."
+    "exampleEnglish": "There's a strawberry on the birthday cake."
   },
   {
     "id": "u4-e7b396-223",
@@ -3119,9 +3119,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "táng",
     "english": "sugar; candy",
     "exampleSimplified": "咖啡里要加糖吗？",
-    "exampleTraditional": "咖啡里要加糖吗？",
+    "exampleTraditional": "咖啡裡要加糖嗎？",
     "examplePinyin": "Kā fēi lǐ yào jiā táng ma?",
-    "exampleEnglish": "Coffee inside sugar."
+    "exampleEnglish": "Would you like sugar in your coffee?"
   },
   {
     "id": "u4-e79b90-224",
@@ -3133,9 +3133,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "yán",
     "english": "salt",
     "exampleSimplified": "汤里盐放多了。",
-    "exampleTraditional": "湯里鹽放多了。",
+    "exampleTraditional": "湯裡鹽放多了。",
     "examplePinyin": "Tāng lǐ yán fàng duō le.",
-    "exampleEnglish": "Soup inside salt put completed action."
+    "exampleEnglish": "I put too much salt in the soup."
   },
   {
     "id": "u4-e6b2b9-225",
@@ -3149,7 +3149,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "少放点油更健康。",
     "exampleTraditional": "少放點油更健康。",
     "examplePinyin": "Shǎo fàng diǎn yóu gèng jiàn kāng.",
-    "exampleEnglish": "Put order oil healthy."
+    "exampleEnglish": "Using less oil is healthier."
   },
   {
     "id": "u4-e985b1e6b2b9-226",
@@ -3163,7 +3163,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "蘸一点酱油更好吃。",
     "exampleTraditional": "蘸一點醬油更好吃。",
     "examplePinyin": "Zhàn yì diǎn jiàng yóu gèng hǎo chī.",
-    "exampleEnglish": "A little soy sauce tasty."
+    "exampleEnglish": "It tastes better with a little soy sauce for dipping."
   },
   {
     "id": "u4-e9868b-227",
@@ -3177,7 +3177,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "吃饺子我喜欢加醋。",
     "exampleTraditional": "吃餃子我喜歡加醋。",
     "examplePinyin": "Chī jiǎo zǐ wǒ xǐ huan jiā cù.",
-    "exampleEnglish": "Eat dumpling I like vinegar."
+    "exampleEnglish": "I like adding vinegar when I eat dumplings."
   },
   {
     "id": "u4-e6b0b4-228",
@@ -3189,9 +3189,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "shuǐ",
     "english": "water",
     "exampleSimplified": "请给我一杯水。",
-    "exampleTraditional": "請给我一杯水。",
+    "exampleTraditional": "請給我一杯水。",
     "examplePinyin": "Qǐng gěi wǒ yì bēi shuǐ.",
-    "exampleEnglish": "To I a cup of water."
+    "exampleEnglish": "Please give me a glass of water."
   },
   {
     "id": "u4-e88cb6-229",
@@ -3205,7 +3205,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我爸爱喝绿茶。",
     "exampleTraditional": "我爸愛喝綠茶。",
     "examplePinyin": "Wǒ bà ài hē lǜ chá.",
-    "exampleEnglish": "I love drink tea."
+    "exampleEnglish": "My dad likes drinking green tea."
   },
   {
     "id": "u4-e59296e595a1-230",
@@ -3217,9 +3217,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "kāfēi",
     "english": "coffee",
     "exampleSimplified": "早上不喝咖啡我没精神。",
-    "exampleTraditional": "早上不喝咖啡我没精神。",
+    "exampleTraditional": "早上不喝咖啡我沒精神。",
     "examplePinyin": "Zǎo shàng bù hē kā fēi wǒ méi jīng shén.",
-    "exampleEnglish": "Early morning not drink coffee I not energy."
+    "exampleEnglish": "I have no energy in the morning without coffee."
   },
   {
     "id": "u4-e7899be5a5b6-231",
@@ -3233,7 +3233,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "睡前喝杯牛奶。",
     "exampleTraditional": "睡前喝杯牛奶。",
     "examplePinyin": "Shuì qián hē bēi niú nǎi.",
-    "exampleEnglish": "Sleep front drink milk."
+    "exampleEnglish": "Have a glass of milk before bed."
   },
   {
     "id": "u4-e69e9ce6b181-232",
@@ -3247,7 +3247,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这杯果汁是鲜榨的。",
     "exampleTraditional": "這杯果汁是鮮榨的。",
     "examplePinyin": "Zhè bēi guǒ zhī shì xiān zhà de.",
-    "exampleEnglish": "This juice be of."
+    "exampleEnglish": "This juice is freshly squeezed."
   },
   {
     "id": "u4-e98592-233",
@@ -3261,7 +3261,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "开车不能喝酒。",
     "exampleTraditional": "開車不能喝酒。",
     "examplePinyin": "Kāi chē bù néng hē jiǔ.",
-    "exampleEnglish": "Drive not drink alcohol."
+    "exampleEnglish": "Don't drink alcohol if you're driving."
   },
   {
     "id": "u4-e595a4e98592-234",
@@ -3273,9 +3273,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "píjiǔ",
     "english": "beer",
     "exampleSimplified": "天热来杯冰啤酒。",
-    "exampleTraditional": "天热來杯冰啤酒。",
+    "exampleTraditional": "天熱來杯冰啤酒。",
     "examplePinyin": "Tiān rè lái bēi bīng pí jiǔ.",
-    "exampleEnglish": "Day hot come beer."
+    "exampleEnglish": "Have an ice-cold beer when it's hot."
   },
   {
     "id": "u4-e9a5aee69699-235",
@@ -3289,7 +3289,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "少喝甜饮料。",
     "exampleTraditional": "少喝甜飲料。",
     "examplePinyin": "Shǎo hē tián yǐn liào.",
-    "exampleEnglish": "Drink sweet drink."
+    "exampleEnglish": "Drink fewer sugary drinks."
   },
   {
     "id": "u4-e591b3e98193-236",
@@ -3301,9 +3301,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "wèidào",
     "english": "taste",
     "exampleSimplified": "这道菜味道不错。",
-    "exampleTraditional": "這道菜味道不错。",
+    "exampleTraditional": "這道菜味道不錯。",
     "examplePinyin": "Zhè dào cài wèi dào bú cuò.",
-    "exampleEnglish": "This dish taste not."
+    "exampleEnglish": "This dish tastes good."
   },
   {
     "id": "u4-e697a9e9a490-237",
@@ -3317,7 +3317,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "早餐一定要吃好。",
     "exampleTraditional": "早餐一定要吃好。",
     "examplePinyin": "Zǎo cān yí dìng yào chī hǎo.",
-    "exampleEnglish": "Breakfast one eat good."
+    "exampleEnglish": "You should have a good breakfast."
   },
   {
     "id": "u4-e58d88e9a490-238",
@@ -3331,7 +3331,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我们午餐吃什么？",
     "exampleTraditional": "我們午餐吃什麼？",
     "examplePinyin": "Wǒ men wǔ cān chī shén me?",
-    "exampleEnglish": "We lunch eat what."
+    "exampleEnglish": "What shall we have for lunch?"
   },
   {
     "id": "u4-e6999ae9a490-239",
@@ -3345,7 +3345,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "今天的晚餐我来做。",
     "exampleTraditional": "今天的晚餐我來做。",
     "examplePinyin": "Jīn tiān de wǎn cān wǒ lái zuò.",
-    "exampleEnglish": "Today of dinner I come."
+    "exampleEnglish": "I'll make dinner today."
   },
   {
     "id": "u4-e99bb6e9a39f-240",
@@ -3359,7 +3359,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "看电影少不了零食。",
     "exampleTraditional": "看電影少不了零食。",
     "examplePinyin": "Kàn diàn yǐng shǎo bù liǎo líng shí.",
-    "exampleEnglish": "Movie cannot do without snack."
+    "exampleEnglish": "You can't watch a film without snacks."
   },
   {
     "id": "u4-e9a490e58e85-241",
@@ -3371,9 +3371,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "cāntīng",
     "english": "restaurant",
     "exampleSimplified": "这家餐厅要排队。",
-    "exampleTraditional": "這家餐廳要排队。",
+    "exampleTraditional": "這家餐廳要排隊。",
     "examplePinyin": "Zhè jiā cān tīng yào pái duì.",
-    "exampleEnglish": "This home restaurant."
+    "exampleEnglish": "You have to queue at this restaurant."
   },
   {
     "id": "u4-e9a5ade5ba97-242",
@@ -3387,7 +3387,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "楼下新开了一家饭店。",
     "exampleTraditional": "樓下新開了一家飯店。",
     "examplePinyin": "Lóu xià xīn kāi le yì jiā fàn diàn.",
-    "exampleEnglish": "Building down new open completed action one home restaurant."
+    "exampleEnglish": "A new restaurant has opened downstairs."
   },
   {
     "id": "u4-e9a39fe5a082-243",
@@ -3401,7 +3401,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "学校食堂的菜挺便宜。",
     "exampleTraditional": "學校食堂的菜挺便宜。",
     "examplePinyin": "Xué xiào shí táng de cài tǐng pián yi.",
-    "exampleEnglish": "School cafeteria of dish cheap."
+    "exampleEnglish": "The food in the school cafeteria is quite cheap."
   },
   {
     "id": "u4-e58ea8e688bf-244",
@@ -3413,9 +3413,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "chúfáng",
     "english": "kitchen",
     "exampleSimplified": "厨房里飘出香味。",
-    "exampleTraditional": "廚房里飘出香味。",
+    "exampleTraditional": "廚房裡飄出香味。",
     "examplePinyin": "Chú fáng lǐ piāo chū xiāng wèi.",
-    "exampleEnglish": "Kitchen inside exit fragrant."
+    "exampleEnglish": "A delicious smell is coming from the kitchen."
   },
   {
     "id": "u4-e5a496e58d96-245",
@@ -3429,7 +3429,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "下雨天我们点外卖吧。",
     "exampleTraditional": "下雨天我們點外賣吧。",
     "examplePinyin": "Xià yǔ tiān wǒ men diǎn wài mài ba.",
-    "exampleEnglish": "Down rain day we order takeout."
+    "exampleEnglish": "Let's order takeaway on this rainy day."
   },
   {
     "id": "u4-e59083-246",
@@ -3441,9 +3441,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "chī",
     "english": "to eat",
     "exampleSimplified": "你早饭吃了吗？",
-    "exampleTraditional": "你早飯吃了吗？",
+    "exampleTraditional": "你早飯吃了嗎？",
     "examplePinyin": "Nǐ zǎo fàn chī le ma?",
-    "exampleEnglish": "You early meal eat completed action."
+    "exampleEnglish": "Have you had breakfast?"
   },
   {
     "id": "u4-e5969d-247",
@@ -3455,9 +3455,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "hē",
     "english": "to drink",
     "exampleSimplified": "天热要多喝水。",
-    "exampleTraditional": "天热要多喝水。",
+    "exampleTraditional": "天熱要多喝水。",
     "examplePinyin": "Tiān rè yào duō hē shuǐ.",
-    "exampleEnglish": "Day hot drink water."
+    "exampleEnglish": "Drink plenty of water when it's hot."
   },
   {
     "id": "u4-e5b09d-248",
@@ -3469,9 +3469,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "cháng",
     "english": "to taste",
     "exampleSimplified": "你尝尝这个汤。",
-    "exampleTraditional": "你嘗嘗這個湯。",
+    "exampleTraditional": "你嚐嚐這個湯。",
     "examplePinyin": "Nǐ cháng cháng zhè ge tāng.",
-    "exampleEnglish": "You taste taste this soup."
+    "exampleEnglish": "Try this soup."
   },
   {
     "id": "u4-e5819ae9a5ad-249",
@@ -3483,9 +3483,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "zuòfàn",
     "english": "to cook",
     "exampleSimplified": "今天轮到我做饭。",
-    "exampleTraditional": "今天轮到我做飯。",
+    "exampleTraditional": "今天輪到我做飯。",
     "examplePinyin": "Jīn tiān lún dào wǒ zuò fàn.",
-    "exampleEnglish": "Today to I cook."
+    "exampleEnglish": "It's my turn to cook today."
   },
   {
     "id": "u4-e785ae-250",
@@ -3497,9 +3497,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "zhǔ",
     "english": "to boil; to cook",
     "exampleSimplified": "我去煮点面。",
-    "exampleTraditional": "我去煮點麵。",
+    "exampleTraditional": "我去煮點面。",
     "examplePinyin": "Wǒ qù zhǔ diǎn miàn.",
-    "exampleEnglish": "I go boil order noodles."
+    "exampleEnglish": "I'll go and cook some noodles."
   },
   {
     "id": "u4-e78292-251",
@@ -3513,7 +3513,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这个菜要大火快炒。",
     "exampleTraditional": "這個菜要大火快炒。",
     "examplePinyin": "Zhè ge cài yào dà huǒ kuài chǎo.",
-    "exampleEnglish": "This dish big fire fast stir-fry."
+    "exampleEnglish": "This dish needs to be stir-fried quickly over high heat."
   },
   {
     "id": "u4-e892b8-252",
@@ -3527,7 +3527,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "鱼蒸十分钟就熟了。",
     "exampleTraditional": "魚蒸十分鐘就熟了。",
     "examplePinyin": "Yú zhēng shí fēn zhōng jiù shú le.",
-    "exampleEnglish": "Fish steam ten minute then familiar completed action."
+    "exampleEnglish": "The fish will be done after steaming for ten minutes."
   },
   {
     "id": "u4-e783a4-253",
@@ -3541,7 +3541,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "周末我们烤肉吧。",
     "exampleTraditional": "週末我們烤肉吧。",
     "examplePinyin": "Zhōu mò wǒ men kǎo ròu ba.",
-    "exampleEnglish": "Weekend we roast meat."
+    "exampleEnglish": "Let's have a barbecue this weekend."
   },
   {
     "id": "u4-e58887-254",
@@ -3555,7 +3555,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "小心别切到手。",
     "exampleTraditional": "小心別切到手。",
     "examplePinyin": "Xiǎo xīn bié qiè dào shǒu.",
-    "exampleEnglish": "Small heart do not cut to hand."
+    "exampleEnglish": "Be careful not to cut your hand."
   },
   {
     "id": "u4-e782b9-255",
@@ -3569,7 +3569,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "你来点菜吧。",
     "exampleTraditional": "你來點菜吧。",
     "examplePinyin": "Nǐ lái diǎn cài ba.",
-    "exampleEnglish": "You come order dish."
+    "exampleEnglish": "You can order the dishes."
   },
   {
     "id": "u4-e8afb7e5aea2-256",
@@ -3581,9 +3581,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "qǐngkè",
     "english": "to treat someone",
     "exampleSimplified": "今天我请客，随便点。",
-    "exampleTraditional": "今天我請客，随便點。",
+    "exampleTraditional": "今天我請客，隨便點。",
     "examplePinyin": "Jīn tiān wǒ qǐng kè, suí biàn diǎn.",
-    "exampleEnglish": "Today I treat someone, order."
+    "exampleEnglish": "It's my treat today, so order whatever you like."
   },
   {
     "id": "u4-e69daf-257",
@@ -3595,9 +3595,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "bēi",
     "english": "classifier",
     "exampleSimplified": "请来两杯咖啡。",
-    "exampleTraditional": "請來两杯咖啡。",
+    "exampleTraditional": "請來兩杯咖啡。",
     "examplePinyin": "Qǐng lái liǎng bēi kā fēi.",
-    "exampleEnglish": "Two cups of coffee, please."
+    "exampleEnglish": "Two coffees, please."
   },
   {
     "id": "u4-e7a297-258",
@@ -3609,9 +3609,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "wǎn",
     "english": "classifier",
     "exampleSimplified": "我能再来一碗吗？",
-    "exampleTraditional": "我能再來一碗吗？",
+    "exampleTraditional": "我能再來一碗嗎？",
     "examplePinyin": "Wǒ néng zài lái yì wǎn ma?",
-    "exampleEnglish": "Can I have another bowl?"
+    "exampleEnglish": "Could I have another bowl?"
   },
   {
     "id": "u4-e79b98-259",
@@ -3625,7 +3625,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "桌上有一盘水果。",
     "exampleTraditional": "桌上有一盤水果。",
     "examplePinyin": "Zhuō shàng yǒu yì pán shuǐ guǒ.",
-    "exampleEnglish": "There is a plate of fruit on the table."
+    "exampleEnglish": "There's a plate of fruit on the table."
   },
   {
     "id": "u4-e793b6-260",
@@ -3637,7 +3637,7 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "píng",
     "english": "classifier",
     "exampleSimplified": "买一瓶矿泉水。",
-    "exampleTraditional": "買一瓶矿泉水。",
+    "exampleTraditional": "買一瓶礦泉水。",
     "examplePinyin": "Mǎi yì píng kuàng quán shuǐ.",
     "exampleEnglish": "Buy a bottle of mineral water."
   },
@@ -3651,7 +3651,7 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "fèn",
     "english": "classifier",
     "exampleSimplified": "我们要了两份炒饭。",
-    "exampleTraditional": "我們要了两份炒飯。",
+    "exampleTraditional": "我們要了兩份炒飯。",
     "examplePinyin": "Wǒ men yào le liǎng fèn chǎo fàn.",
     "exampleEnglish": "We ordered two portions of fried rice."
   },
@@ -3665,7 +3665,7 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "piàn",
     "english": "classifier",
     "exampleSimplified": "面包上放两片火腿。",
-    "exampleTraditional": "麵包上放两片火腿。",
+    "exampleTraditional": "麵包上放兩片火腿。",
     "examplePinyin": "Miàn bāo shàng fàng liǎng piàn huǒ tuǐ.",
     "exampleEnglish": "Put two slices of ham on the bread."
   },
@@ -3679,9 +3679,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "kǒu",
     "english": "classifier",
     "exampleSimplified": "我就尝了一口。",
-    "exampleTraditional": "我就嘗了一口。",
+    "exampleTraditional": "我就嚐了一口。",
     "examplePinyin": "Wǒ jiù cháng le yì kǒu.",
-    "exampleEnglish": "I only tasted one bite."
+    "exampleEnglish": "I only had one bite."
   },
   {
     "id": "u4-e9a1bf-264",
@@ -3695,7 +3695,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我们好好吃一顿吧。",
     "exampleTraditional": "我們好好吃一頓吧。",
     "examplePinyin": "Wǒ men hǎo hǎo chī yí dùn ba.",
-    "exampleEnglish": "Let's have a proper meal."
+    "exampleEnglish": "Let's have a proper meal together."
   },
   {
     "id": "u4-e7949c-265",
@@ -3709,7 +3709,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这个西瓜真甜。",
     "exampleTraditional": "這個西瓜真甜。",
     "examplePinyin": "Zhè ge xī guā zhēn tián.",
-    "exampleEnglish": "This watermelon really sweet."
+    "exampleEnglish": "This watermelon is really sweet."
   },
   {
     "id": "u4-e592b8-266",
@@ -3723,7 +3723,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "火腿有点咸。",
     "exampleTraditional": "火腿有點鹹。",
     "examplePinyin": "Huǒ tuǐ yǒu diǎn xián.",
-    "exampleEnglish": "Ham a little salty."
+    "exampleEnglish": "The ham is a little salty."
   },
   {
     "id": "u4-e8bea3-267",
@@ -3737,7 +3737,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "四川菜太辣了。",
     "exampleTraditional": "四川菜太辣了。",
     "examplePinyin": "Sì chuān cài tài là le.",
-    "exampleEnglish": "Four dish too spicy completed action."
+    "exampleEnglish": "Sichuan food is too spicy."
   },
   {
     "id": "u4-e985b8-268",
@@ -3749,9 +3749,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "suān",
     "english": "sour",
     "exampleSimplified": "柠檬特别酸。",
-    "exampleTraditional": "柠檬特別酸。",
+    "exampleTraditional": "檸檬特別酸。",
     "examplePinyin": "Níng méng tè bié suān.",
-    "exampleEnglish": "Special sour."
+    "exampleEnglish": "Lemons are very sour."
   },
   {
     "id": "u4-e88ba6-269",
@@ -3765,7 +3765,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这个药有点苦。",
     "exampleTraditional": "這個藥有點苦。",
     "examplePinyin": "Zhè ge yào yǒu diǎn kǔ.",
-    "exampleEnglish": "This medicine a little bitter."
+    "exampleEnglish": "This medicine is a little bitter."
   },
   {
     "id": "u4-e9a699-270",
@@ -3779,7 +3779,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "米饭闻起来真香。",
     "exampleTraditional": "米飯聞起來真香。",
     "examplePinyin": "Mǐ fàn wén qǐ lái zhēn xiāng.",
-    "exampleEnglish": "Rice come really fragrant."
+    "exampleEnglish": "The rice smells delicious."
   },
   {
     "id": "u4-e5a5bde59083-271",
@@ -3793,7 +3793,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "你做的菜真好吃。",
     "exampleTraditional": "你做的菜真好吃。",
     "examplePinyin": "Nǐ zuò de cài zhēn hǎo chī.",
-    "exampleEnglish": "You of dish really tasty."
+    "exampleEnglish": "The food you made is really tasty."
   },
   {
     "id": "u4-e696b0e9b29c-272",
@@ -3807,7 +3807,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "早市的鱼最新鲜。",
     "exampleTraditional": "早市的魚最新鮮。",
     "examplePinyin": "Zǎo shì de yú zuì xīn xiān.",
-    "exampleEnglish": "Early of fish fresh."
+    "exampleEnglish": "The fish at the morning market is the freshest."
   },
   {
     "id": "u4-e783ab-273",
@@ -3821,7 +3821,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "小心，汤很烫。",
     "exampleTraditional": "小心，湯很燙。",
     "examplePinyin": "Xiǎo xīn, tāng hěn tàng.",
-    "exampleEnglish": "Small heart, soup very hot to the touch."
+    "exampleEnglish": "Be careful, the soup is very hot."
   },
   {
     "id": "u5-e5aeb6-274",
@@ -3835,7 +3835,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我到家了，你放心吧。",
     "exampleTraditional": "我到家了，你放心吧。",
     "examplePinyin": "Wǒ dào jiā le, nǐ fàng xīn ba.",
-    "exampleEnglish": "I to home completed action, you put heart."
+    "exampleEnglish": "I'm home, so don't worry."
   },
   {
     "id": "u5-e688bfe5ad90-275",
@@ -3849,7 +3849,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他们在看新房子。",
     "exampleTraditional": "他們在看新房子。",
     "examplePinyin": "Tā men zài kàn xīn fáng zi.",
-    "exampleEnglish": "They be at new house."
+    "exampleEnglish": "They're looking at new houses."
   },
   {
     "id": "u5-e688bfe997b4-276",
@@ -3863,7 +3863,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我的房间朝南，很亮。",
     "exampleTraditional": "我的房間朝南，很亮。",
     "examplePinyin": "Wǒ de fáng jiān cháo nán, hěn liàng.",
-    "exampleEnglish": "I of room south, very bright."
+    "exampleEnglish": "My room faces south and gets lots of light."
   },
   {
     "id": "u5-e5b18be5ad90-277",
@@ -3875,9 +3875,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "wūzi",
     "english": "room; house",
     "exampleSimplified": "屋子里暖和多了。",
-    "exampleTraditional": "屋子里暖和多了。",
+    "exampleTraditional": "屋子裡暖和多了。",
     "examplePinyin": "Wū zi lǐ nuǎn huo duō le.",
-    "exampleEnglish": "Room inside warm and completed action."
+    "exampleEnglish": "The room feels much warmer now."
   },
   {
     "id": "u5-e997a8-278",
@@ -3891,7 +3891,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "出门记得锁门。",
     "exampleTraditional": "出門記得鎖門。",
     "examplePinyin": "Chū mén jì de suǒ mén.",
-    "exampleEnglish": "Exit door remember lock door."
+    "exampleEnglish": "Remember to lock the door when you leave."
   },
   {
     "id": "u5-e7aa97e688b7-279",
@@ -3899,13 +3899,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "居家·物品",
     "partOfSpeech": "名词",
     "simplified": "窗户",
-    "traditional": "窗户",
+    "traditional": "窗戶",
     "pinyin": "chuānghu",
     "english": "window",
     "exampleSimplified": "打开窗户透透气。",
-    "exampleTraditional": "打開窗户透透氣。",
+    "exampleTraditional": "打開窗戶透透氣。",
     "examplePinyin": "Dǎ kāi chuāng hù tòu tòu qì.",
-    "exampleEnglish": "Open window air."
+    "exampleEnglish": "Open the window to let in some fresh air."
   },
   {
     "id": "u5-e5a299-280",
@@ -3917,9 +3917,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "qiáng",
     "english": "wall",
     "exampleSimplified": "墙上挂着全家福。",
-    "exampleTraditional": "牆上挂着全家福。",
+    "exampleTraditional": "牆上掛著全家福。",
     "examplePinyin": "Qiáng shàng guà zhe quán jiā fú.",
-    "exampleEnglish": "Wall up ongoing home."
+    "exampleEnglish": "A family portrait hangs on the wall."
   },
   {
     "id": "u5-e6a5bc-281",
@@ -3933,7 +3933,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我住在五楼。",
     "exampleTraditional": "我住在五樓。",
     "examplePinyin": "Wǒ zhù zài wǔ lóu.",
-    "exampleEnglish": "I live be at five building."
+    "exampleEnglish": "I live on the fifth floor."
   },
   {
     "id": "u5-e6a5bce6a2af-282",
@@ -3945,9 +3945,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "lóutī",
     "english": "stairs",
     "exampleSimplified": "电梯坏了，走楼梯吧。",
-    "exampleTraditional": "電梯坏了，走樓梯吧。",
+    "exampleTraditional": "電梯壞了，走樓梯吧。",
     "examplePinyin": "Diàn tī huài le, zǒu lóu tī ba.",
-    "exampleEnglish": "Completed action, walk stairs."
+    "exampleEnglish": "The lift is broken, so let's take the stairs."
   },
   {
     "id": "u5-e5aea2e58e85-283",
@@ -3959,9 +3959,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "kètīng",
     "english": "living room",
     "exampleSimplified": "客人都坐在客厅里。",
-    "exampleTraditional": "客人都坐在客廳里。",
+    "exampleTraditional": "客人都坐在客廳裡。",
     "examplePinyin": "Kè rén dōu zuò zài kè tīng lǐ.",
-    "exampleEnglish": "Person all sit be at living room inside."
+    "exampleEnglish": "The guests are all sitting in the living room."
   },
   {
     "id": "u5-e58da7e5aea4-284",
@@ -3973,9 +3973,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "wòshì",
     "english": "bedroom",
     "exampleSimplified": "卧室里只有一张床。",
-    "exampleTraditional": "臥室里隻有一張床。",
+    "exampleTraditional": "臥室裡只有一張床。",
     "examplePinyin": "Wò shì lǐ zhǐ yǒu yì zhāng chuáng.",
-    "exampleEnglish": "Bedroom inside only have a sheet of bed."
+    "exampleEnglish": "There's only one bed in the bedroom."
   },
   {
     "id": "u5-e58e95e68980-285",
@@ -3989,7 +3989,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "请问厕所怎么走？",
     "exampleTraditional": "請問廁所怎麼走？",
     "examplePinyin": "Qǐng wèn cè suǒ zěn me zǒu?",
-    "exampleEnglish": "Ask toilet how walk."
+    "exampleEnglish": "Excuse me, how do I get to the toilet?"
   },
   {
     "id": "u5-e58dabe7949fe997b4-286",
@@ -4003,7 +4003,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "卫生间刚打扫过。",
     "exampleTraditional": "衛生間剛打掃過。",
     "examplePinyin": "Wèi shēng jiān gāng dǎ sǎo guò.",
-    "exampleEnglish": "Bathroom clean before."
+    "exampleEnglish": "The bathroom has just been cleaned."
   },
   {
     "id": "u5-e5ba8a-287",
@@ -4017,7 +4017,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这张床太软了。",
     "exampleTraditional": "這張床太軟了。",
     "examplePinyin": "Zhè zhāng chuáng tài ruǎn le.",
-    "exampleEnglish": "This bed too soft completed action."
+    "exampleEnglish": "This bed is too soft."
   },
   {
     "id": "u5-e6a18ce5ad90-288",
@@ -4031,7 +4031,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "把书放在桌子上吧。",
     "exampleTraditional": "把書放在桌子上吧。",
     "examplePinyin": "Bǎ shū fàng zài zhuō zi shàng ba.",
-    "exampleEnglish": "Disposal marker book put be at table up."
+    "exampleEnglish": "Put the book on the table."
   },
   {
     "id": "u5-e6a485e5ad90-289",
@@ -4045,7 +4045,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这把椅子有点晃。",
     "exampleTraditional": "這把椅子有點晃。",
     "examplePinyin": "Zhè bǎ yǐ zi yǒu diǎn huàng.",
-    "exampleEnglish": "This disposal marker chair a little."
+    "exampleEnglish": "This chair wobbles a little."
   },
   {
     "id": "u5-e6b299e58f91-290",
@@ -4059,7 +4059,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "猫在沙发上睡觉。",
     "exampleTraditional": "貓在沙發上睡覺。",
     "examplePinyin": "Māo zài shā fā shàng shuì jiào.",
-    "exampleEnglish": "Cat be at sofa up sleep."
+    "exampleEnglish": "The cat is sleeping on the sofa."
   },
   {
     "id": "u5-e69f9ce5ad90-291",
@@ -4071,9 +4071,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "guìzi",
     "english": "cabinet",
     "exampleSimplified": "碗都在柜子里。",
-    "exampleTraditional": "碗都在櫃子里。",
+    "exampleTraditional": "碗都在櫃子裡。",
     "examplePinyin": "Wǎn dōu zài guì zi lǐ.",
-    "exampleEnglish": "All be at cabinet inside."
+    "exampleEnglish": "The bowls are all in the cupboard."
   },
   {
     "id": "u5-e781af-292",
@@ -4087,7 +4087,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "出门前记得关灯。",
     "exampleTraditional": "出門前記得關燈。",
     "examplePinyin": "Chū mén qián jì de guān dēng.",
-    "exampleEnglish": "Exit door front remember close lamp."
+    "exampleEnglish": "Remember to turn off the lights before you leave."
   },
   {
     "id": "u5-e794b5e8a786-293",
@@ -4099,9 +4099,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "diànshì",
     "english": "television",
     "exampleSimplified": "爷爷在看电视新闻。",
-    "exampleTraditional": "爷爷在看電視新聞。",
+    "exampleTraditional": "爺爺在看電視新聞。",
     "examplePinyin": "Yé ye zài kàn diàn shì xīn wén.",
-    "exampleEnglish": "Paternal grandfather be at television news."
+    "exampleEnglish": "Grandpa is watching the TV news."
   },
   {
     "id": "u5-e586b0e7aeb1-294",
@@ -4113,9 +4113,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "bīngxiāng",
     "english": "refrigerator",
     "exampleSimplified": "冰箱里还有西瓜。",
-    "exampleTraditional": "冰箱里還有西瓜。",
+    "exampleTraditional": "冰箱裡還有西瓜。",
     "examplePinyin": "Bīng xiāng lǐ hái yǒu xī guā.",
-    "exampleEnglish": "Refrigerator inside still have watermelon."
+    "exampleEnglish": "There's still watermelon in the fridge."
   },
   {
     "id": "u5-e7a9bae8b083-295",
@@ -4127,9 +4127,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "kōngtiáo",
     "english": "air conditioner",
     "exampleSimplified": "太热了，开空调吧。",
-    "exampleTraditional": "太热了，開空調吧。",
+    "exampleTraditional": "太熱了，開空調吧。",
     "examplePinyin": "Tài rè le, kāi kōng tiáo ba.",
-    "exampleEnglish": "Too hot completed action, open air conditioner."
+    "exampleEnglish": "It's too hot. Let's turn on the air conditioning."
   },
   {
     "id": "u5-e6b497e8a1a3e69cba-296",
@@ -4141,9 +4141,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "xǐyījī",
     "english": "washing machine",
     "exampleSimplified": "洗衣机响了，衣服洗好了。",
-    "exampleTraditional": "洗衣機响了，衣服洗好了。",
+    "exampleTraditional": "洗衣機響了，衣服洗好了。",
     "examplePinyin": "Xǐ yī jī xiǎng le, yī fu xǐ hǎo le.",
-    "exampleEnglish": "Washing machine completed action, clothing wash good completed action."
+    "exampleEnglish": "The washing machine has finished; the clothes are done."
   },
   {
     "id": "u5-e9929f-297",
@@ -4151,13 +4151,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "居家·物品",
     "partOfSpeech": "名词",
     "simplified": "钟",
-    "traditional": "鐘",
+    "traditional": "鍾",
     "pinyin": "zhōng",
     "english": "clock",
     "exampleSimplified": "墙上的钟慢了五分钟。",
     "exampleTraditional": "牆上的鐘慢了五分鐘。",
     "examplePinyin": "Qiáng shàng de zhōng màn le wǔ fēn zhōng.",
-    "exampleEnglish": "Wall up of clock slow completed action five minute."
+    "exampleEnglish": "The clock on the wall is five minutes slow."
   },
   {
     "id": "u5-e8a1a8-298",
@@ -4169,9 +4169,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "biǎo",
     "english": "watch; meter",
     "exampleSimplified": "他的表是爷爷留下的。",
-    "exampleTraditional": "他的表是爷爷留下的。",
+    "exampleTraditional": "他的表是爺爺留下的。",
     "examplePinyin": "Tā de biǎo shì yé ye liú xià de.",
-    "exampleEnglish": "He of watch be paternal grandfather down of."
+    "exampleEnglish": "This watch was left to him by his grandfather."
   },
   {
     "id": "u5-e9959ce5ad90-299",
@@ -4183,9 +4183,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "jìngzi",
     "english": "mirror",
     "exampleSimplified": "她照着镜子试帽子。",
-    "exampleTraditional": "她照着鏡子試帽子。",
+    "exampleTraditional": "她照著鏡子試帽子。",
     "examplePinyin": "Tā zhào zhe jìng zi shì mào zi.",
-    "exampleEnglish": "She ongoing mirror try hat."
+    "exampleEnglish": "She's trying on hats in front of the mirror."
   },
   {
     "id": "u5-e6af9be5b7be-300",
@@ -4199,7 +4199,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "用干净的毛巾擦手。",
     "exampleTraditional": "用乾淨的毛巾擦手。",
     "examplePinyin": "Yòng gān jìng de máo jīn cā shǒu.",
-    "exampleEnglish": "Use clean of towel wipe hand."
+    "exampleEnglish": "Use a clean towel to dry your hands."
   },
   {
     "id": "u5-e78999e588b7-301",
@@ -4211,9 +4211,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "yáshuā",
     "english": "toothbrush",
     "exampleSimplified": "我的牙刷该换了。",
-    "exampleTraditional": "我的牙刷该換了。",
+    "exampleTraditional": "我的牙刷該換了。",
     "examplePinyin": "Wǒ de yá shuā gāi huàn le.",
-    "exampleEnglish": "I of toothbrush change completed action."
+    "exampleEnglish": "I need to replace my toothbrush."
   },
   {
     "id": "u5-e882a5e79a82-302",
@@ -4227,7 +4227,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "用肥皂好好洗手。",
     "exampleTraditional": "用肥皂好好洗手。",
     "examplePinyin": "Yòng féi zào hǎo hǎo xǐ shǒu.",
-    "exampleEnglish": "Use soap good good wash hand."
+    "exampleEnglish": "Wash your hands thoroughly with soap."
   },
   {
     "id": "u5-e8a2abe5ad90-303",
@@ -4241,7 +4241,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "天冷了，换厚被子吧。",
     "exampleTraditional": "天冷了，換厚被子吧。",
     "examplePinyin": "Tiān lěng le, huàn hòu bèi zi ba.",
-    "exampleEnglish": "Day cold completed action, change thick quilt."
+    "exampleEnglish": "It's getting cold. Let's change to a thicker quilt."
   },
   {
     "id": "u5-e69e95e5a4b4-304",
@@ -4255,7 +4255,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这个枕头太高了。",
     "exampleTraditional": "這個枕頭太高了。",
     "examplePinyin": "Zhè ge zhěn tou tài gāo le.",
-    "exampleEnglish": "This pillow too tall completed action."
+    "exampleEnglish": "This pillow is too high."
   },
   {
     "id": "u5-e58880-305",
@@ -4269,7 +4269,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这把刀不太快了。",
     "exampleTraditional": "這把刀不太快了。",
     "examplePinyin": "Zhè bǎ dāo bú tài kuài le.",
-    "exampleEnglish": "This disposal marker knife not too fast completed action."
+    "exampleEnglish": "This knife isn't very sharp anymore."
   },
   {
     "id": "u5-e58bbae5ad90-306",
@@ -4281,9 +4281,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "sháozi",
     "english": "spoon",
     "exampleSimplified": "宝宝会自己用勺子了。",
-    "exampleTraditional": "宝宝會自己用勺子了。",
+    "exampleTraditional": "寶寶會自己用勺子了。",
     "examplePinyin": "Bǎo bao huì zì jǐ yòng sháo zǐ le.",
-    "exampleEnglish": "Baby oneself use spoon completed action."
+    "exampleEnglish": "The baby can use a spoon by herself now."
   },
   {
     "id": "u5-e7adb7e5ad90-307",
@@ -4295,9 +4295,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "kuàizi",
     "english": "chopsticks",
     "exampleSimplified": "你会用筷子吗？",
-    "exampleTraditional": "你會用筷子吗？",
+    "exampleTraditional": "你會用筷子嗎？",
     "examplePinyin": "Nǐ huì yòng kuài zi ma?",
-    "exampleEnglish": "You use chopsticks."
+    "exampleEnglish": "Can you use chopsticks?"
   },
   {
     "id": "u5-e79b98e5ad90-308",
@@ -4311,7 +4311,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "盘子洗好了放在架子上。",
     "exampleTraditional": "盤子洗好了放在架子上。",
     "examplePinyin": "Pán zi xǐ hǎo le fàng zài jià zi shàng.",
-    "exampleEnglish": "Plate wash good completed action put be at up."
+    "exampleEnglish": "Put the washed plates on the rack."
   },
   {
     "id": "u5-e69dafe5ad90-309",
@@ -4325,7 +4325,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我的杯子是蓝色的。",
     "exampleTraditional": "我的杯子是藍色的。",
     "examplePinyin": "Wǒ de bēi zi shì lán sè de.",
-    "exampleEnglish": "I of cup be blue of."
+    "exampleEnglish": "My cup is blue."
   },
   {
     "id": "u5-e793b6e5ad90-310",
@@ -4339,7 +4339,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "空瓶子可以回收。",
     "exampleTraditional": "空瓶子可以回收。",
     "examplePinyin": "Kōng píng zi kě yǐ huí shōu.",
-    "exampleEnglish": "Empty bottle return."
+    "exampleEnglish": "Empty bottles can be recycled."
   },
   {
     "id": "u5-e99485-311",
@@ -4351,9 +4351,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "guō",
     "english": "pot",
     "exampleSimplified": "锅里还热着菜呢。",
-    "exampleTraditional": "鍋里還热着菜呢。",
+    "exampleTraditional": "鍋裡還熱著菜呢。",
     "examplePinyin": "Guō lǐ hái rè zhe cài ne.",
-    "exampleEnglish": "Pot inside still hot ongoing dish."
+    "exampleEnglish": "There's still hot food in the pot."
   },
   {
     "id": "u5-e59e83e59cbe-312",
@@ -4365,9 +4365,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "lājī",
     "english": "trash",
     "exampleSimplified": "出门时顺便扔垃圾。",
-    "exampleTraditional": "出門時顺便扔垃圾。",
+    "exampleTraditional": "出門時順便扔垃圾。",
     "examplePinyin": "Chū mén shí shùn biàn rēng lā jī.",
-    "exampleEnglish": "Exit door trash."
+    "exampleEnglish": "Take out the rubbish on your way out."
   },
   {
     "id": "u5-e7bab8-313",
@@ -4381,7 +4381,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "桌上有纸和笔。",
     "exampleTraditional": "桌上有紙和筆。",
     "examplePinyin": "Zhuō shàng yǒu zhǐ hé bǐ.",
-    "exampleEnglish": "Up have paper and pen."
+    "exampleEnglish": "There's paper and a pen on the table."
   },
   {
     "id": "u5-e7ac94-314",
@@ -4393,9 +4393,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "bǐ",
     "english": "pen",
     "exampleSimplified": "我的笔没水了。",
-    "exampleTraditional": "我的筆没水了。",
+    "exampleTraditional": "我的筆沒水了。",
     "examplePinyin": "Wǒ de bǐ méi shuǐ le.",
-    "exampleEnglish": "I of pen not water completed action."
+    "exampleEnglish": "My pen has run out of ink."
   },
   {
     "id": "u5-e4b9a6-315",
@@ -4407,9 +4407,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "shū",
     "english": "book",
     "exampleSimplified": "这本书我看了两遍。",
-    "exampleTraditional": "這本書我看了两遍。",
+    "exampleTraditional": "這本書我看了兩遍。",
     "examplePinyin": "Zhè běn shū wǒ kàn le liǎng biàn.",
-    "exampleEnglish": "This classifier book I completed action two."
+    "exampleEnglish": "I've read this book twice."
   },
   {
     "id": "u5-e992a5e58c99-316",
@@ -4421,9 +4421,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "yàoshi",
     "english": "key",
     "exampleSimplified": "糟糕，钥匙忘在家里了。",
-    "exampleTraditional": "糟糕，鑰匙忘在家里了。",
+    "exampleTraditional": "糟糕，鑰匙忘在家裡了。",
     "examplePinyin": "Zāo gāo, yào shi wàng zài jiā lǐ le.",
-    "exampleEnglish": "Key forget be at home inside completed action."
+    "exampleEnglish": "Oh no, I left my keys at home."
   },
   {
     "id": "u5-e99481-317",
@@ -4437,7 +4437,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这个锁有点难开。",
     "exampleTraditional": "這個鎖有點難開。",
     "examplePinyin": "Zhè ge suǒ yǒu diǎn nán kāi.",
-    "exampleEnglish": "This lock a little difficult open."
+    "exampleEnglish": "This lock is a bit hard to open."
   },
   {
     "id": "u5-e794b5e88491-318",
@@ -4451,7 +4451,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我的电脑需要更新了。",
     "exampleTraditional": "我的電腦需要更新了。",
     "examplePinyin": "Wǒ de diàn nǎo xū yào gēng xīn le.",
-    "exampleEnglish": "I of computer new completed action."
+    "exampleEnglish": "My computer needs an update."
   },
   {
     "id": "u5-e6898be69cba-319",
@@ -4463,9 +4463,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "shǒujī",
     "english": "mobile phone",
     "exampleSimplified": "手机快没电了。",
-    "exampleTraditional": "手機快没電了。",
+    "exampleTraditional": "手機快沒電了。",
     "examplePinyin": "Shǒu jī kuài méi diàn le.",
-    "exampleEnglish": "Mobile phone fast not completed action."
+    "exampleEnglish": "My phone is about to run out of battery."
   },
   {
     "id": "u5-e58585e794b5e599a8-320",
@@ -4477,9 +4477,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "chōngdiànqì",
     "english": "charger",
     "exampleSimplified": "你带充电器了吗？",
-    "exampleTraditional": "你带充電器了吗？",
+    "exampleTraditional": "你帶充電器了嗎？",
     "examplePinyin": "Nǐ dài chōng diàn qì le ma?",
-    "exampleEnglish": "You bring charger completed action."
+    "exampleEnglish": "Did you bring a charger?"
   },
   {
     "id": "u5-e68f92e5baa7-321",
@@ -4491,9 +4491,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "chāzuò",
     "english": "socket",
     "exampleSimplified": "沙发旁边有个插座。",
-    "exampleTraditional": "沙發旁边有個插座。",
+    "exampleTraditional": "沙發旁邊有個插座。",
     "examplePinyin": "Shā fā páng biān yǒu gè chā zuò.",
-    "exampleEnglish": "Sofa beside have socket."
+    "exampleEnglish": "There's a socket beside the sofa."
   },
   {
     "id": "u5-e794a8-322",
@@ -4507,7 +4507,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这个词怎么用？",
     "exampleTraditional": "這個詞怎麼用？",
     "examplePinyin": "Zhè ge cí zěn me yòng?",
-    "exampleEnglish": "This word how use."
+    "exampleEnglish": "How do you use this word?"
   },
   {
     "id": "u5-e694be-323",
@@ -4519,9 +4519,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "fàng",
     "english": "to put",
     "exampleSimplified": "牛奶放冰箱里了。",
-    "exampleTraditional": "牛奶放冰箱里了。",
+    "exampleTraditional": "牛奶放冰箱裡了。",
     "examplePinyin": "Niú nǎi fàng bīng xiāng lǐ le.",
-    "exampleEnglish": "Milk put refrigerator inside completed action."
+    "exampleEnglish": "I put the milk in the fridge."
   },
   {
     "id": "u5-e68bbf-324",
@@ -4535,7 +4535,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "帮我拿一下快递。",
     "exampleTraditional": "幫我拿一下快遞。",
     "examplePinyin": "Bāng wǒ ná yí xià kuài dì.",
-    "exampleEnglish": "I take a moment delivery."
+    "exampleEnglish": "Please get the delivery for me."
   },
   {
     "id": "u5-e694b6e68bbe-325",
@@ -4549,7 +4549,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "出发前把行李收拾好。",
     "exampleTraditional": "出發前把行李收拾好。",
     "examplePinyin": "Chū fā qián bǎ xíng li shōu shí hǎo.",
-    "exampleEnglish": "Set off front disposal marker luggage tidy up good."
+    "exampleEnglish": "Pack your luggage before you leave."
   },
   {
     "id": "u5-e68993e689ab-326",
@@ -4563,7 +4563,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "周末我要打扫房间。",
     "exampleTraditional": "週末我要打掃房間。",
     "examplePinyin": "Zhōu mò wǒ yào dǎ sǎo fáng jiān.",
-    "exampleEnglish": "Weekend I clean room."
+    "exampleEnglish": "I'm going to clean my room this weekend."
   },
   {
     "id": "u5-e689ab-327",
@@ -4577,7 +4577,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我先扫一下地。",
     "exampleTraditional": "我先掃一下地。",
     "examplePinyin": "Wǒ xiān sǎo yí xià dì.",
-    "exampleEnglish": "I first sweep a moment adverb marker."
+    "exampleEnglish": "I'll sweep the floor first."
   },
   {
     "id": "u5-e693a6-328",
@@ -4591,7 +4591,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "把桌子擦干净。",
     "exampleTraditional": "把桌子擦乾淨。",
     "examplePinyin": "Bǎ zhuō zi cā gān jìng.",
-    "exampleEnglish": "Disposal marker table wipe clean."
+    "exampleEnglish": "Wipe the table clean."
   },
   {
     "id": "u5-e6b497-329",
@@ -4605,7 +4605,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这件衣服要用手洗。",
     "exampleTraditional": "這件衣服要用手洗。",
     "examplePinyin": "Zhè jiàn yī fu yào yòng shǒu xǐ.",
-    "exampleEnglish": "This clothing use hand wash."
+    "exampleEnglish": "This garment needs to be washed by hand."
   },
   {
     "id": "u5-e4bfae-330",
@@ -4617,9 +4617,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "xiū",
     "english": "to repair",
     "exampleSimplified": "我的自行车该修了。",
-    "exampleTraditional": "我的自行車该修了。",
+    "exampleTraditional": "我的自行車該修了。",
     "examplePinyin": "Wǒ de zì xíng chē gāi xiū le.",
-    "exampleEnglish": "I of bicycle repair completed action."
+    "exampleEnglish": "My bicycle needs repairing."
   },
   {
     "id": "u5-e5bc80-331",
@@ -4633,7 +4633,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "帮我开一下门。",
     "exampleTraditional": "幫我開一下門。",
     "examplePinyin": "Bāng wǒ kāi yí xià mén.",
-    "exampleEnglish": "I open a moment door."
+    "exampleEnglish": "Please open the door for me."
   },
   {
     "id": "u5-e585b3-332",
@@ -4645,9 +4645,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "guān",
     "english": "to close",
     "exampleSimplified": "睡觉前把窗户关好。",
-    "exampleTraditional": "睡覺前把窗户關好。",
+    "exampleTraditional": "睡覺前把窗戶關好。",
     "examplePinyin": "Shuì jiào qián bǎ chuāng hù guān hǎo.",
-    "exampleEnglish": "Sleep front disposal marker window close good."
+    "exampleEnglish": "Close the window properly before going to sleep."
   },
   {
     "id": "u5-e690ac-333",
@@ -4659,9 +4659,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "bān",
     "english": "to move",
     "exampleSimplified": "我们把沙发搬到窗边吧。",
-    "exampleTraditional": "我們把沙發搬到窗边吧。",
+    "exampleTraditional": "我們把沙發搬到窗邊吧。",
     "examplePinyin": "Wǒ men bǎ shā fā bān dào chuāng biān ba.",
-    "exampleEnglish": "We disposal marker sofa move to."
+    "exampleEnglish": "Let's move the sofa by the window."
   },
   {
     "id": "u5-e4b8a2-334",
@@ -4675,7 +4675,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我的伞丢在地铁上了。",
     "exampleTraditional": "我的傘丟在地鐵上了。",
     "examplePinyin": "Wǒ de sǎn diū zài dì tiě shàng le.",
-    "exampleEnglish": "I of umbrella lose be at subway up completed action."
+    "exampleEnglish": "I left my umbrella on the metro."
   },
   {
     "id": "u5-e689be-335",
@@ -4689,7 +4689,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我在找我的眼镜。",
     "exampleTraditional": "我在找我的眼鏡。",
     "examplePinyin": "Wǒ zài zhǎo wǒ de yǎn jìng.",
-    "exampleEnglish": "I be at look for I of."
+    "exampleEnglish": "I'm looking for my glasses."
   },
   {
     "id": "u5-e5bca0-336",
@@ -4701,7 +4701,7 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "zhāng",
     "english": "classifier",
     "exampleSimplified": "请给我一张纸。",
-    "exampleTraditional": "請给我一張紙。",
+    "exampleTraditional": "請給我一張紙。",
     "examplePinyin": "Qǐng gěi wǒ yì zhāng zhǐ.",
     "exampleEnglish": "Please give me a sheet of paper."
   },
@@ -4715,7 +4715,7 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "bǎ",
     "english": "classifier",
     "exampleSimplified": "家里有三把伞。",
-    "exampleTraditional": "家里有三把傘。",
+    "exampleTraditional": "家裡有三把傘。",
     "examplePinyin": "Jiā lǐ yǒu sān bǎ sǎn.",
     "exampleEnglish": "There are three umbrellas at home."
   },
@@ -4743,9 +4743,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "tái",
     "english": "classifier",
     "exampleSimplified": "客厅里有一台电视。",
-    "exampleTraditional": "客廳里有一臺電視。",
+    "exampleTraditional": "客廳裡有一臺電視。",
     "examplePinyin": "Kè tīng lǐ yǒu yì tái diàn shì.",
-    "exampleEnglish": "There is a television in the living room."
+    "exampleEnglish": "There's a TV in the living room."
   },
   {
     "id": "u5-e983a8-340",
@@ -4759,7 +4759,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他换了一部新手机。",
     "exampleTraditional": "他換了一部新手機。",
     "examplePinyin": "Tā huàn le yí bù xīn shǒu jī.",
-    "exampleEnglish": "He switched to a new mobile phone."
+    "exampleEnglish": "He got a new phone."
   },
   {
     "id": "u5-e997b4-341",
@@ -4773,7 +4773,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这套房子有三间卧室。",
     "exampleTraditional": "這套房子有三間臥室。",
     "examplePinyin": "Zhè tào fáng zi yǒu sān jiān wò shì.",
-    "exampleEnglish": "This apartment has three bedrooms."
+    "exampleEnglish": "This flat has three bedrooms."
   },
   {
     "id": "u5-e5b9b2e58780-342",
@@ -4787,7 +4787,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "地板擦得很干净。",
     "exampleTraditional": "地板擦得很乾淨。",
     "examplePinyin": "Dì bǎn cā dé hěn gān jìng.",
-    "exampleEnglish": "Adverb marker wipe so very clean."
+    "exampleEnglish": "The floor is very clean."
   },
   {
     "id": "u5-e8848f-343",
@@ -4801,7 +4801,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "鞋子踩得很脏。",
     "exampleTraditional": "鞋子踩得很髒。",
     "examplePinyin": "Xié zǐ cǎi dé hěn zāng.",
-    "exampleEnglish": "Shoes so very dirty."
+    "exampleEnglish": "My shoes got very dirty."
   },
   {
     "id": "u5-e4b9b1-344",
@@ -4815,7 +4815,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "桌子上乱七八糟的。",
     "exampleTraditional": "桌子上亂七八糟的。",
     "examplePinyin": "Zhuō zi shàng luàn qī bā zāo de.",
-    "exampleEnglish": "Table up messy seven eight of."
+    "exampleEnglish": "The desk is a complete mess."
   },
   {
     "id": "u5-e695b4e9bd90-345",
@@ -4827,9 +4827,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "zhěngqí",
     "english": "neat",
     "exampleSimplified": "书架上的书摆得很整齐。",
-    "exampleTraditional": "書架上的書摆得很整齊。",
+    "exampleTraditional": "書架上的書擺得很整齊。",
     "examplePinyin": "Shū jià shàng de shū bǎi dé hěn zhěng qí.",
-    "exampleEnglish": "Book up of book so very neat."
+    "exampleEnglish": "The books on the shelf are arranged very neatly."
   },
   {
     "id": "u5-e696b0-346",
@@ -4843,7 +4843,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他穿了一双新鞋。",
     "exampleTraditional": "他穿了一雙新鞋。",
     "examplePinyin": "Tā chuān le yì shuāng xīn xié.",
-    "exampleEnglish": "He wear completed action a pair of new shoes."
+    "exampleEnglish": "He's wearing a new pair of shoes."
   },
   {
     "id": "u5-e697a7-347",
@@ -4857,7 +4857,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这台洗衣机太旧了。",
     "exampleTraditional": "這臺洗衣機太舊了。",
     "examplePinyin": "Zhè tái xǐ yī jī tài jiù le.",
-    "exampleEnglish": "This washing machine too old completed action."
+    "exampleEnglish": "This washing machine is too old."
   },
   {
     "id": "u5-e7a9ba-348",
@@ -4869,9 +4869,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "kōng",
     "english": "empty",
     "exampleSimplified": "瓶子已经空了。",
-    "exampleTraditional": "瓶子已经空了。",
+    "exampleTraditional": "瓶子已經空了。",
     "examplePinyin": "Píng zi yǐ jīng kōng le.",
-    "exampleEnglish": "Bottle already empty completed action."
+    "exampleEnglish": "The bottle is already empty."
   },
   {
     "id": "u5-e6bba1-349",
@@ -4885,7 +4885,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "冰箱塞得满满的。",
     "exampleTraditional": "冰箱塞得滿滿的。",
     "examplePinyin": "Bīng xiāng sāi dé mǎn mǎn de.",
-    "exampleEnglish": "Refrigerator so full full of."
+    "exampleEnglish": "The fridge is crammed full."
   },
   {
     "id": "u5-e4baae-350",
@@ -4897,9 +4897,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "liàng",
     "english": "bright",
     "exampleSimplified": "这盏灯很亮。",
-    "exampleTraditional": "這盏燈很亮。",
+    "exampleTraditional": "這盞燈很亮。",
     "examplePinyin": "Zhè zhǎn dēng hěn liàng.",
-    "exampleEnglish": "This lamp very bright."
+    "exampleEnglish": "This lamp is very bright."
   },
   {
     "id": "u5-e69a97-351",
@@ -4911,9 +4911,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "àn",
     "english": "dark",
     "exampleSimplified": "屋里太暗，开灯吧。",
-    "exampleTraditional": "屋里太暗，開燈吧。",
+    "exampleTraditional": "屋裡太暗，開燈吧。",
     "examplePinyin": "Wū lǐ tài àn, kāi dēng ba.",
-    "exampleEnglish": "Inside too dark, open lamp."
+    "exampleEnglish": "It's too dark in here. Turn on the light."
   },
   {
     "id": "u5-e8bdaf-352",
@@ -4927,7 +4927,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这个枕头很软。",
     "exampleTraditional": "這個枕頭很軟。",
     "examplePinyin": "Zhè ge zhěn tou hěn ruǎn.",
-    "exampleEnglish": "This pillow very soft."
+    "exampleEnglish": "This pillow is very soft."
   },
   {
     "id": "u5-e7a1ac-353",
@@ -4941,7 +4941,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这个面包放硬了。",
     "exampleTraditional": "這個麵包放硬了。",
     "examplePinyin": "Zhè ge miàn bāo fàng yìng le.",
-    "exampleEnglish": "This bread put hard completed action."
+    "exampleEnglish": "This bread has gone hard."
   },
   {
     "id": "u6-e8a1a3e69c8d-354",
@@ -4953,9 +4953,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "yīfu",
     "english": "clothes",
     "exampleSimplified": "换季了，该买衣服了。",
-    "exampleTraditional": "換季了，该買衣服了。",
+    "exampleTraditional": "換季了，該買衣服了。",
     "examplePinyin": "Huàn jì le, gāi mǎi yī fu le.",
-    "exampleEnglish": "Change completed action, buy clothing completed action."
+    "exampleEnglish": "It's time to buy clothes for the new season."
   },
   {
     "id": "u6-e8a3a4e5ad90-355",
@@ -4969,7 +4969,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这条裤子有点长。",
     "exampleTraditional": "這條褲子有點長。",
     "examplePinyin": "Zhè tiáo kù zǐ yǒu diǎn cháng.",
-    "exampleEnglish": "This pants a little long."
+    "exampleEnglish": "These trousers are a little too long."
   },
   {
     "id": "u6-e8a399e5ad90-356",
@@ -4983,7 +4983,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "她穿裙子很好看。",
     "exampleTraditional": "她穿裙子很好看。",
     "examplePinyin": "Tā chuān qún zǐ hěn hǎo kàn.",
-    "exampleEnglish": "She wear skirt very good-looking."
+    "exampleEnglish": "She looks good in a skirt."
   },
   {
     "id": "u6-e99e8b-357",
@@ -4997,7 +4997,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "新鞋有点磨脚。",
     "exampleTraditional": "新鞋有點磨腳。",
     "examplePinyin": "Xīn xié yǒu diǎn mó jiǎo.",
-    "exampleEnglish": "New shoes a little foot."
+    "exampleEnglish": "New shoes are rubbing my feet a little."
   },
   {
     "id": "u6-e8a29ce5ad90-358",
@@ -5011,7 +5011,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我找不到另一只袜子。",
     "exampleTraditional": "我找不到另一隻襪子。",
     "examplePinyin": "Wǒ zhǎo bú dào lìng yì zhī wà zi.",
-    "exampleEnglish": "I look for not to one animal socks."
+    "exampleEnglish": "I can't find the other sock."
   },
   {
     "id": "u6-e5b8bde5ad90-359",
@@ -5025,7 +5025,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "太阳大，戴上帽子吧。",
     "exampleTraditional": "太陽大，戴上帽子吧。",
     "examplePinyin": "Tài yáng dà, dài shàng mào zi ba.",
-    "exampleEnglish": "Sun big, wear up hat."
+    "exampleEnglish": "It's sunny, so put on a hat."
   },
   {
     "id": "u6-e6898be5a597-360",
@@ -5037,9 +5037,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "shǒutào",
     "english": "gloves",
     "exampleSimplified": "骑车记得戴手套。",
-    "exampleTraditional": "骑車記得戴手套。",
+    "exampleTraditional": "騎車記得戴手套。",
     "examplePinyin": "Qí chē jì de dài shǒu tào.",
-    "exampleEnglish": "Ride vehicle remember wear gloves."
+    "exampleEnglish": "Remember to wear gloves when cycling."
   },
   {
     "id": "u6-e59bb4e5b7be-361",
@@ -5053,7 +5053,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这条围巾真暖和。",
     "exampleTraditional": "這條圍巾真暖和。",
     "examplePinyin": "Zhè tiáo wéi jīn zhēn nuǎn huo.",
-    "exampleEnglish": "This scarf really warm and."
+    "exampleEnglish": "This scarf is really warm."
   },
   {
     "id": "u6-e5a496e5a597-362",
@@ -5065,9 +5065,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "wàitào",
     "english": "coat",
     "exampleSimplified": "晚上凉，带件外套。",
-    "exampleTraditional": "晚上凉，带件外套。",
+    "exampleTraditional": "晚上涼，帶件外套。",
     "examplePinyin": "Wǎn shàng liáng, dài jiàn wài tào.",
-    "exampleEnglish": "Evening cool, bring coat."
+    "exampleEnglish": "It's cool at night, so bring a coat."
   },
   {
     "id": "u6-e6af9be8a1a3-363",
@@ -5079,9 +5079,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "máoyī",
     "english": "sweater",
     "exampleSimplified": "这件毛衣是奶奶织的。",
-    "exampleTraditional": "這件毛衣是奶奶织的。",
+    "exampleTraditional": "這件毛衣是奶奶織的。",
     "examplePinyin": "Zhè jiàn máo yī shì nǎi nai zhī de.",
-    "exampleEnglish": "This sweater be paternal grandmother of."
+    "exampleEnglish": "My grandmother knitted this sweater."
   },
   {
     "id": "u6-e8a1ace8a1ab-364",
@@ -5095,7 +5095,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他的衬衫烫得很平。",
     "exampleTraditional": "他的襯衫燙得很平。",
     "examplePinyin": "Tā de chèn shān tàng dé hěn píng.",
-    "exampleEnglish": "He of shirt hot to the touch so very."
+    "exampleEnglish": "His shirt has been ironed smooth."
   },
   {
     "id": "u6-e58c85-365",
@@ -5107,9 +5107,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "bāo",
     "english": "bag",
     "exampleSimplified": "她的包里什么都有。",
-    "exampleTraditional": "她的包里什麼都有。",
+    "exampleTraditional": "她的包裡什麼都有。",
     "examplePinyin": "Tā de bāo lǐ shén me dōu yǒu.",
-    "exampleEnglish": "She of bag inside what all have."
+    "exampleEnglish": "She has everything in her bag."
   },
   {
     "id": "u6-e4b9a6e58c85-366",
@@ -5123,7 +5123,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "书包太重，孩子背不动。",
     "exampleTraditional": "書包太重，孩子背不動。",
     "examplePinyin": "Shū bāo tài zhòng, hái zi bèi bú dòng.",
-    "exampleEnglish": "Schoolbag too, back not."
+    "exampleEnglish": "The schoolbag is too heavy for the child to carry."
   },
   {
     "id": "u6-e992b1e58c85-367",
@@ -5135,9 +5135,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "qiánbāo",
     "english": "wallet",
     "exampleSimplified": "我的钱包里没多少现金。",
-    "exampleTraditional": "我的錢包里没多少現金。",
+    "exampleTraditional": "我的錢包裡沒多少現金。",
     "examplePinyin": "Wǒ de qián bāo lǐ méi duō shǎo xiàn jīn.",
-    "exampleEnglish": "I of wallet inside not cash."
+    "exampleEnglish": "There isn't much cash in my wallet."
   },
   {
     "id": "u6-e4bc9e-368",
@@ -5149,9 +5149,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "sǎn",
     "english": "umbrella",
     "exampleSimplified": "天阴了，带把伞吧。",
-    "exampleTraditional": "天陰了，带把傘吧。",
+    "exampleTraditional": "天陰了，帶把傘吧。",
     "examplePinyin": "Tiān yīn le, dài bǎ sǎn ba.",
-    "exampleEnglish": "Day cloudy completed action, bring disposal marker umbrella."
+    "exampleEnglish": "It's cloudy, so take an umbrella."
   },
   {
     "id": "u6-e9a29ce889b2-369",
@@ -5165,7 +5165,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "你最喜欢什么颜色？",
     "exampleTraditional": "你最喜歡什麼顏色？",
     "examplePinyin": "Nǐ zuì xǐ huan shén me yán sè?",
-    "exampleEnglish": "You like what color."
+    "exampleEnglish": "What colour do you like best?"
   },
   {
     "id": "u6-e980a0e59e8b-370",
@@ -5179,7 +5179,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "她今天的造型很特别。",
     "exampleTraditional": "她今天的造型很特別。",
     "examplePinyin": "Tā jīn tiān de zào xíng hěn tè bié.",
-    "exampleEnglish": "She today of style very special."
+    "exampleEnglish": "Her look today is very distinctive."
   },
   {
     "id": "u6-e7a9bf-371",
@@ -5193,7 +5193,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "今天穿什么好呢？",
     "exampleTraditional": "今天穿什麼好呢？",
     "examplePinyin": "Jīn tiān chuān shén me hǎo ne?",
-    "exampleEnglish": "Today wear what good."
+    "exampleEnglish": "What should I wear today?"
   },
   {
     "id": "u6-e688b4-372",
@@ -5207,7 +5207,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他戴上了新眼镜。",
     "exampleTraditional": "他戴上了新眼鏡。",
     "examplePinyin": "Tā dài shàng le xīn yǎn jìng.",
-    "exampleEnglish": "He wear up completed action new."
+    "exampleEnglish": "He put on his new glasses."
   },
   {
     "id": "u6-e884b1-373",
@@ -5219,9 +5219,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "tuō",
     "english": "to take off",
     "exampleSimplified": "进门请脱鞋。",
-    "exampleTraditional": "进門請脫鞋。",
+    "exampleTraditional": "進門請脫鞋。",
     "examplePinyin": "Jìn mén qǐng tuō xié.",
-    "exampleEnglish": "Enter door take off shoes."
+    "exampleEnglish": "Please take off your shoes when you come in."
   },
   {
     "id": "u6-e68da2-374",
@@ -5233,9 +5233,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "huàn",
     "english": "to change",
     "exampleSimplified": "这件太小了，能换一件吗？",
-    "exampleTraditional": "這件太小了，能換一件吗？",
+    "exampleTraditional": "這件太小了，能換一件嗎？",
     "examplePinyin": "Zhè jiàn tài xiǎo le, néng huàn yí jiàn ma?",
-    "exampleEnglish": "This too small completed action, change a piece of."
+    "exampleEnglish": "This one is too small. Can I exchange it?"
   },
   {
     "id": "u6-e8af95-375",
@@ -5247,9 +5247,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "shì",
     "english": "to try",
     "exampleSimplified": "这条裙子可以试穿吗？",
-    "exampleTraditional": "這條裙子可以試穿吗？",
+    "exampleTraditional": "這條裙子可以試穿嗎？",
     "examplePinyin": "Zhè tiáo qún zǐ kě yǐ shì chuān ma?",
-    "exampleEnglish": "This skirt try wear."
+    "exampleEnglish": "Can I try on this skirt?"
   },
   {
     "id": "u6-e58c96e5a686-376",
@@ -5263,7 +5263,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "她出门前要化妆。",
     "exampleTraditional": "她出門前要化妝。",
     "examplePinyin": "Tā chū mén qián yào huà zhuāng.",
-    "exampleEnglish": "She exit door front put on makeup."
+    "exampleEnglish": "She puts on make-up before going out."
   },
   {
     "id": "u6-e5a597-377",
@@ -5275,7 +5275,7 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "tào",
     "english": "classifier",
     "exampleSimplified": "他买了一套西装。",
-    "exampleTraditional": "他買了一套西装。",
+    "exampleTraditional": "他買了一套西裝。",
     "examplePinyin": "Tā mǎi le yí tào xī zhuāng.",
     "exampleEnglish": "He bought a suit."
   },
@@ -5291,7 +5291,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这双袜子破了个洞。",
     "exampleTraditional": "這雙襪子破了個洞。",
     "examplePinyin": "Zhè shuāng wà zi pò le gè dòng.",
-    "exampleEnglish": "This pair of socks has a hole."
+    "exampleEnglish": "There's a hole in this pair of socks."
   },
   {
     "id": "u6-e6bc82e4baae-379",
@@ -5305,7 +5305,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "今天的晚霞真漂亮。",
     "exampleTraditional": "今天的晚霞真漂亮。",
     "examplePinyin": "Jīn tiān de wǎn xiá zhēn piào liang.",
-    "exampleEnglish": "Today of late really pretty."
+    "exampleEnglish": "The sunset is beautiful today."
   },
   {
     "id": "u6-e7be8e-380",
@@ -5317,9 +5317,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "měi",
     "english": "beautiful",
     "exampleSimplified": "湖边的风景美极了。",
-    "exampleTraditional": "湖边的風景美极了。",
+    "exampleTraditional": "湖邊的風景美極了。",
     "examplePinyin": "Hú biān de fēng jǐng měi jí le.",
-    "exampleEnglish": "Lake of wind beautiful completed action."
+    "exampleEnglish": "The scenery by the lake is beautiful."
   },
   {
     "id": "u6-e4b891-381",
@@ -5333,7 +5333,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他觉得自己的字很丑。",
     "exampleTraditional": "他覺得自己的字很醜。",
     "examplePinyin": "Tā jué de zì jǐ de zì hěn chǒu.",
-    "exampleEnglish": "He feel oneself of character very ugly."
+    "exampleEnglish": "He thinks his handwriting is ugly."
   },
   {
     "id": "u6-e5a5bde79c8b-382",
@@ -5347,7 +5347,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这个颜色很好看。",
     "exampleTraditional": "這個顏色很好看。",
     "examplePinyin": "Zhè ge yán sè hěn hǎo kàn.",
-    "exampleEnglish": "This color very good-looking."
+    "exampleEnglish": "This colour looks great."
   },
   {
     "id": "u6-e995bf-383",
@@ -5359,9 +5359,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "cháng",
     "english": "long; to grow",
     "exampleSimplified": "她的头发很长。",
-    "exampleTraditional": "她的頭發很長。",
+    "exampleTraditional": "她的頭髮很長。",
     "examplePinyin": "Tā de tóu fa hěn cháng.",
-    "exampleEnglish": "She of hair very long."
+    "exampleEnglish": "Her hair is long."
   },
   {
     "id": "u6-e79fad-384",
@@ -5375,7 +5375,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "夏天他喜欢穿短裤。",
     "exampleTraditional": "夏天他喜歡穿短褲。",
     "examplePinyin": "Xià tiān tā xǐ huan chuān duǎn kù.",
-    "exampleEnglish": "Summer day he like wear short."
+    "exampleEnglish": "He likes wearing shorts in summer."
   },
   {
     "id": "u6-e5a4a7-385",
@@ -5389,7 +5389,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这双鞋大了一号。",
     "exampleTraditional": "這雙鞋大了一號。",
     "examplePinyin": "Zhè shuāng xié dà le yī hào.",
-    "exampleEnglish": "This shoes big completed action one."
+    "exampleEnglish": "These shoes are one size too big."
   },
   {
     "id": "u6-e5b08f-386",
@@ -5403,7 +5403,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这件衬衫小了点。",
     "exampleTraditional": "這件襯衫小了點。",
     "examplePinyin": "Zhè jiàn chèn shān xiǎo le diǎn.",
-    "exampleEnglish": "This shirt small completed action order."
+    "exampleEnglish": "This shirt is a bit too small."
   },
   {
     "id": "u6-e5aebd-387",
@@ -5417,7 +5417,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "新买的牛仔裤有点宽。",
     "exampleTraditional": "新買的牛仔褲有點寬。",
     "examplePinyin": "Xīn mǎi de niú zǎi kù yǒu diǎn kuān.",
-    "exampleEnglish": "New buy of cow a little wide."
+    "exampleEnglish": "The jeans I bought are a little loose."
   },
   {
     "id": "u6-e7aa84-388",
@@ -5431,7 +5431,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这条路很窄，小心开。",
     "exampleTraditional": "這條路很窄，小心開。",
     "examplePinyin": "Zhè tiáo lù hěn zhǎi, xiǎo xīn kāi.",
-    "exampleEnglish": "This road very narrow, small heart open."
+    "exampleEnglish": "This road is very narrow, so drive carefully."
   },
   {
     "id": "u6-e58e9a-389",
@@ -5445,7 +5445,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "冬天要穿厚外套。",
     "exampleTraditional": "冬天要穿厚外套。",
     "examplePinyin": "Dōng tiān yào chuān hòu wài tào.",
-    "exampleEnglish": "Winter day wear thick coat."
+    "exampleEnglish": "You need a thick coat in winter."
   },
   {
     "id": "u6-e89684-390",
@@ -5459,7 +5459,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这条被子太薄了。",
     "exampleTraditional": "這條被子太薄了。",
     "examplePinyin": "Zhè tiáo bèi zi tài báo le.",
-    "exampleEnglish": "This quilt too thin completed action."
+    "exampleEnglish": "This quilt is too thin."
   },
   {
     "id": "u6-e7baa2e889b2-391",
@@ -5473,7 +5473,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "中国人结婚喜欢用红色。",
     "exampleTraditional": "中國人結婚喜歡用紅色。",
     "examplePinyin": "Zhōng guó rén jié hūn xǐ huan yòng hóng sè.",
-    "exampleEnglish": "Chinese person marry like use red."
+    "exampleEnglish": "Chinese people like to use red for weddings."
   },
   {
     "id": "u6-e9bb84e889b2-392",
@@ -5485,9 +5485,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "huángsè",
     "english": "yellow",
     "exampleSimplified": "秋天的树叶变成了黄色。",
-    "exampleTraditional": "秋天的樹葉变成了黃色。",
+    "exampleTraditional": "秋天的樹葉變成了黃色。",
     "examplePinyin": "Qiū tiān de shù yè biàn chéng le huáng sè.",
-    "exampleEnglish": "Autumn day of tree completed action yellow."
+    "exampleEnglish": "The leaves turn yellow in autumn."
   },
   {
     "id": "u6-e8939de889b2-393",
@@ -5501,7 +5501,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "天空是蓝色的。",
     "exampleTraditional": "天空是藍色的。",
     "examplePinyin": "Tiān kōng shì lán sè de.",
-    "exampleEnglish": "Sky be blue of."
+    "exampleEnglish": "The sky is blue."
   },
   {
     "id": "u6-e7bbbfe889b2-394",
@@ -5513,9 +5513,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "lǜsè",
     "english": "green",
     "exampleSimplified": "春天到处都是绿色。",
-    "exampleTraditional": "春天到处都是綠色。",
+    "exampleTraditional": "春天到處都是綠色。",
     "examplePinyin": "Chūn tiān dào chù dōu shì lǜ sè.",
-    "exampleEnglish": "Spring day to all be green."
+    "exampleEnglish": "Spring makes everything green."
   },
   {
     "id": "u6-e9bb91e889b2-395",
@@ -5527,9 +5527,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "hēisè",
     "english": "black",
     "exampleSimplified": "他只穿黑色的T恤。",
-    "exampleTraditional": "他隻穿黑色的T恤。",
+    "exampleTraditional": "他只穿黑色的T恤。",
     "examplePinyin": "Tā zhī chuān hēi sè de T xù.",
-    "exampleEnglish": "He only wear black of."
+    "exampleEnglish": "He only wears black T-shirts."
   },
   {
     "id": "u6-e799bde889b2-396",
@@ -5541,9 +5541,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "báisè",
     "english": "white",
     "exampleSimplified": "婚纱一般是白色的。",
-    "exampleTraditional": "婚纱一般是白色的。",
+    "exampleTraditional": "婚紗一般是白色的。",
     "examplePinyin": "Hūn shā yì bān shì bái sè de.",
-    "exampleEnglish": "One be white of."
+    "exampleEnglish": "Wedding dresses are usually white."
   },
   {
     "id": "u6-e781b0e889b2-397",
@@ -5557,7 +5557,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这件灰色大衣很配你。",
     "exampleTraditional": "這件灰色大衣很配你。",
     "examplePinyin": "Zhè jiàn huī sè dà yī hěn pèi nǐ.",
-    "exampleEnglish": "This gray big very you."
+    "exampleEnglish": "This grey coat suits you very well."
   },
   {
     "id": "u6-e7b4abe889b2-398",
@@ -5569,9 +5569,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "zǐsè",
     "english": "purple",
     "exampleSimplified": "她染了紫色的头发。",
-    "exampleTraditional": "她染了紫色的頭發。",
+    "exampleTraditional": "她染了紫色的頭髮。",
     "examplePinyin": "Tā rǎn le zǐ sè de tóu fa.",
-    "exampleEnglish": "She completed action purple of hair."
+    "exampleEnglish": "She dyed her hair purple."
   },
   {
     "id": "u6-e7b289e889b2-399",
@@ -5585,7 +5585,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "小女孩喜欢粉色的书包。",
     "exampleTraditional": "小女孩喜歡粉色的書包。",
     "examplePinyin": "Xiǎo nǚ hái xǐ huan fěn sè de shū bāo.",
-    "exampleEnglish": "Small like pink of schoolbag."
+    "exampleEnglish": "Little girls like pink schoolbags."
   },
   {
     "id": "u7-e5b9b4-400",
@@ -5599,7 +5599,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "新的一年开始了。",
     "exampleTraditional": "新的一年開始了。",
     "examplePinyin": "Xīn de yì nián kāi shǐ le.",
-    "exampleEnglish": "New of one year begin completed action."
+    "exampleEnglish": "A new year has begun."
   },
   {
     "id": "u7-e69c88-401",
@@ -5613,7 +5613,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我上个月很忙。",
     "exampleTraditional": "我上個月很忙。",
     "examplePinyin": "Wǒ shàng gè yuè hěn máng.",
-    "exampleEnglish": "I up month very busy."
+    "exampleEnglish": "I was very busy last month."
   },
   {
     "id": "u7-e697a5-402",
@@ -5625,9 +5625,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "rì",
     "english": "day",
     "exampleSimplified": "今天是几月几日？",
-    "exampleTraditional": "今天是几月几日？",
+    "exampleTraditional": "今天是幾月幾日？",
     "examplePinyin": "Jīn tiān shì jǐ yuè jǐ rì?",
-    "exampleEnglish": "Today be month day."
+    "exampleEnglish": "What date is it today?"
   },
   {
     "id": "u7-e5a4a9-403",
@@ -5641,7 +5641,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我在北京住了三天。",
     "exampleTraditional": "我在北京住了三天。",
     "examplePinyin": "Wǒ zài běi jīng zhù le sān tiān.",
-    "exampleEnglish": "I be at Beijing live completed action three day."
+    "exampleEnglish": "I stayed in Beijing for three days."
   },
   {
     "id": "u7-e6989fe69c9f-404",
@@ -5655,7 +5655,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "下星期我们考试。",
     "exampleTraditional": "下星期我們考試。",
     "examplePinyin": "Xià xīng qī wǒ men kǎo shì.",
-    "exampleEnglish": "Down week we exam."
+    "exampleEnglish": "We have an exam next week."
   },
   {
     "id": "u7-e591a8-405",
@@ -5663,13 +5663,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "时间·日期",
     "partOfSpeech": "名词",
     "simplified": "周",
-    "traditional": "週",
+    "traditional": "周",
     "pinyin": "zhōu",
     "english": "week",
     "exampleSimplified": "这周的工作特别多。",
-    "exampleTraditional": "這週的工作特別多。",
+    "exampleTraditional": "這周的工作特別多。",
     "examplePinyin": "Zhè zhōu de gōng zuò tè bié duō.",
-    "exampleEnglish": "This week of work special."
+    "exampleEnglish": "There's a lot of work this week."
   },
   {
     "id": "u7-e5b08fe697b6-406",
@@ -5681,9 +5681,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "xiǎoshí",
     "english": "hour",
     "exampleSimplified": "这部电影两个小时。",
-    "exampleTraditional": "這部電影两個小時。",
+    "exampleTraditional": "這部電影兩個小時。",
     "examplePinyin": "Zhè bù diàn yǐng liǎng gè xiǎo shí.",
-    "exampleEnglish": "This movie two hour."
+    "exampleEnglish": "This film is two hours long."
   },
   {
     "id": "u7-e58886e9929f-407",
@@ -5697,7 +5697,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "再等我五分钟。",
     "exampleTraditional": "再等我五分鐘。",
     "examplePinyin": "Zài děng wǒ wǔ fēn zhōng.",
-    "exampleEnglish": "Again wait I five minute."
+    "exampleEnglish": "Wait another five minutes for me."
   },
   {
     "id": "u7-e7a792-408",
@@ -5711,7 +5711,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "还有十秒就到零点了。",
     "exampleTraditional": "還有十秒就到零點了。",
     "examplePinyin": "Hái yǒu shí miǎo jiù dào líng diǎn le.",
-    "exampleEnglish": "Still have ten second then to zero order completed action."
+    "exampleEnglish": "There are ten seconds left until midnight."
   },
   {
     "id": "u7-e5b281-409",
@@ -5725,7 +5725,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我女儿今年五岁。",
     "exampleTraditional": "我女兒今年五歲。",
     "examplePinyin": "Wǒ nǚ ér jīn nián wǔ suì.",
-    "exampleEnglish": "I daughter year five years old."
+    "exampleEnglish": "My daughter is five years old this year."
   },
   {
     "id": "u7-e782b9-410",
@@ -5737,9 +5737,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "diǎn",
     "english": "to order; point",
     "exampleSimplified": "我们几点出发？",
-    "exampleTraditional": "我們几點出發？",
+    "exampleTraditional": "我們幾點出發？",
     "examplePinyin": "Wǒ men jǐ diǎn chū fā?",
-    "exampleEnglish": "We order set off."
+    "exampleEnglish": "What time are we leaving?"
   },
   {
     "id": "u7-e697a9e4b88a-411",
@@ -5753,7 +5753,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "早上的空气真好。",
     "exampleTraditional": "早上的空氣真好。",
     "examplePinyin": "Zǎo shàng de kōng qì zhēn hǎo.",
-    "exampleEnglish": "Early morning of air really good."
+    "exampleEnglish": "The air is so fresh in the morning."
   },
   {
     "id": "u7-e4b88ae58d88-412",
@@ -5767,7 +5767,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "上午我有一个会。",
     "exampleTraditional": "上午我有一個會。",
     "examplePinyin": "Shàng wǔ wǒ yǒu yí gè huì.",
-    "exampleEnglish": "Morning I have one."
+    "exampleEnglish": "I have a meeting this morning."
   },
   {
     "id": "u7-e4b8ade58d88-413",
@@ -5781,7 +5781,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "中午食堂人特别多。",
     "exampleTraditional": "中午食堂人特別多。",
     "examplePinyin": "Zhōng wǔ shí táng rén tè bié duō.",
-    "exampleEnglish": "Noon cafeteria person special."
+    "exampleEnglish": "The cafeteria is especially crowded at midday."
   },
   {
     "id": "u7-e4b88be58d88-414",
@@ -5795,7 +5795,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "下午三点开会。",
     "exampleTraditional": "下午三點開會。",
     "examplePinyin": "Xià wǔ sān diǎn kāi huì.",
-    "exampleEnglish": "Afternoon three order open."
+    "exampleEnglish": "The meeting starts at three in the afternoon."
   },
   {
     "id": "u7-e6999ae4b88a-415",
@@ -5809,7 +5809,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "晚上早点睡。",
     "exampleTraditional": "晚上早點睡。",
     "examplePinyin": "Wǎn shàng zǎo diǎn shuì.",
-    "exampleEnglish": "Evening early order sleep."
+    "exampleEnglish": "Go to bed early tonight."
   },
   {
     "id": "u7-e5a49c-416",
@@ -5823,7 +5823,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他工作到半夜。",
     "exampleTraditional": "他工作到半夜。",
     "examplePinyin": "Tā gōng zuò dào bàn yè.",
-    "exampleEnglish": "He work to half night."
+    "exampleEnglish": "He worked until midnight."
   },
   {
     "id": "u7-e799bde5a4a9-417",
@@ -5837,7 +5837,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "白天他要上班。",
     "exampleTraditional": "白天他要上班。",
     "examplePinyin": "Bái tiān tā yào shàng bān.",
-    "exampleEnglish": "Daytime he go to work."
+    "exampleEnglish": "He has to work during the day."
   },
   {
     "id": "u7-e4bb8ae5a4a9-418",
@@ -5851,7 +5851,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "今天是我第一天上班。",
     "exampleTraditional": "今天是我第一天上班。",
     "examplePinyin": "Jīn tiān shì wǒ dì yī tiān shàng bān.",
-    "exampleEnglish": "Today be I one day go to work."
+    "exampleEnglish": "Today is my first day at work."
   },
   {
     "id": "u7-e6988ee5a4a9-419",
@@ -5865,7 +5865,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "明天可能下雨。",
     "exampleTraditional": "明天可能下雨。",
     "examplePinyin": "Míng tiān kě néng xià yǔ.",
-    "exampleEnglish": "Tomorrow down rain."
+    "exampleEnglish": "It might rain tomorrow."
   },
   {
     "id": "u7-e698a8e5a4a9-420",
@@ -5879,7 +5879,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "昨天我们去爬山了。",
     "exampleTraditional": "昨天我們去爬山了。",
     "examplePinyin": "Zuó tiān wǒ men qù pá shān le.",
-    "exampleEnglish": "Yesterday we go mountain completed action."
+    "exampleEnglish": "We went hiking yesterday."
   },
   {
     "id": "u7-e5908ee5a4a9-421",
@@ -5893,7 +5893,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "后天就放假了。",
     "exampleTraditional": "後天就放假了。",
     "examplePinyin": "Hòu tiān jiù fàng jià le.",
-    "exampleEnglish": "Day after tomorrow then put completed action."
+    "exampleEnglish": "The holiday starts the day after tomorrow."
   },
   {
     "id": "u7-e5898de5a4a9-422",
@@ -5907,7 +5907,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "前天他刚回国。",
     "exampleTraditional": "前天他剛回國。",
     "examplePinyin": "Qián tiān tā gāng huí guó.",
-    "exampleEnglish": "Day before yesterday he return to one's country."
+    "exampleEnglish": "He just returned home from abroad the day before yesterday."
   },
   {
     "id": "u7-e78eb0e59ca8-423",
@@ -5919,9 +5919,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "xiànzài",
     "english": "now",
     "exampleSimplified": "现在几点了？",
-    "exampleTraditional": "現在几點了？",
+    "exampleTraditional": "現在幾點了？",
     "examplePinyin": "Xiàn zài jǐ diǎn le?",
-    "exampleEnglish": "Now order completed action."
+    "exampleEnglish": "What time is it now?"
   },
   {
     "id": "u7-e5889ae6898d-424",
@@ -5935,7 +5935,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "刚才有人找你。",
     "exampleTraditional": "剛才有人找你。",
     "examplePinyin": "Gāng cái yǒu rén zhǎo nǐ.",
-    "exampleEnglish": "Just now have person look for you."
+    "exampleEnglish": "Someone was looking for you just now."
   },
   {
     "id": "u7-e4bba5e5898d-425",
@@ -5949,7 +5949,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我以前住在南京。",
     "exampleTraditional": "我以前住在南京。",
     "examplePinyin": "Wǒ yǐ qián zhù zài nán jīng.",
-    "exampleEnglish": "I before live be at south."
+    "exampleEnglish": "I used to live in Nanjing."
   },
   {
     "id": "u7-e4bba5e5908e-426",
@@ -5963,7 +5963,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "以后有空常来玩。",
     "exampleTraditional": "以後有空常來玩。",
     "examplePinyin": "Yǐ hòu yǒu kōng cháng lái wán.",
-    "exampleEnglish": "After have empty come."
+    "exampleEnglish": "Come and visit whenever you have time."
   },
   {
     "id": "u7-e69c80e8bf91-427",
@@ -5975,9 +5975,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "zuìjìn",
     "english": "recently",
     "exampleSimplified": "最近天气变化很大。",
-    "exampleTraditional": "最近天氣变化很大。",
+    "exampleTraditional": "最近天氣變化很大。",
     "examplePinyin": "Zuì jìn tiān qì biàn huà hěn dà.",
-    "exampleEnglish": "Recently weather very big."
+    "exampleEnglish": "The weather has been changing a lot recently."
   },
   {
     "id": "u7-e697b6e58099-428",
@@ -5989,9 +5989,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "shíhou",
     "english": "time; moment",
     "exampleSimplified": "小时候我最怕打针。",
-    "exampleTraditional": "小時候我最怕打针。",
+    "exampleTraditional": "小時候我最怕打針。",
     "examplePinyin": "Xiǎo shí hòu wǒ zuì pà dǎ zhēn.",
-    "exampleEnglish": "Hour I fear."
+    "exampleEnglish": "When I was little, I was most afraid of injections."
   },
   {
     "id": "u7-e697b6e997b4-429",
@@ -6005,7 +6005,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "时间过得真快。",
     "exampleTraditional": "時間過得真快。",
     "examplePinyin": "Shí jiān guò dé zhēn kuài.",
-    "exampleEnglish": "Time before so really fast."
+    "exampleEnglish": "Time passes so quickly."
   },
   {
     "id": "u7-e697a5e5ad90-430",
@@ -6017,9 +6017,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "rìzi",
     "english": "day; life",
     "exampleSimplified": "搬家的日子定了吗？",
-    "exampleTraditional": "搬家的日子定了吗？",
+    "exampleTraditional": "搬家的日子定了嗎？",
     "examplePinyin": "Bān jiā de rì zi dìng le ma?",
-    "exampleEnglish": "Move house of day completed action."
+    "exampleEnglish": "Have you set a date for the move?"
   },
   {
     "id": "u7-e5ada3e88a82-431",
@@ -6033,7 +6033,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "秋天是我最喜欢的季节。",
     "exampleTraditional": "秋天是我最喜歡的季節。",
     "examplePinyin": "Qiū tiān shì wǒ zuì xǐ huan de jì jié.",
-    "exampleEnglish": "Autumn day be I like of season."
+    "exampleEnglish": "Autumn is my favourite season."
   },
   {
     "id": "u7-e698a5-432",
@@ -6047,7 +6047,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "春天来了，花都开了。",
     "exampleTraditional": "春天來了，花都開了。",
     "examplePinyin": "Chūn tiān lái le, huā dōu kāi le.",
-    "exampleEnglish": "Spring day come completed action, flower all open completed action."
+    "exampleEnglish": "Spring is here, and all the flowers are blooming."
   },
   {
     "id": "u7-e5a48f-433",
@@ -6059,9 +6059,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "xià",
     "english": "summer",
     "exampleSimplified": "今年夏天特别热。",
-    "exampleTraditional": "今年夏天特別热。",
+    "exampleTraditional": "今年夏天特別熱。",
     "examplePinyin": "Jīn nián xià tiān tè bié rè.",
-    "exampleEnglish": "Year summer day special hot."
+    "exampleEnglish": "This summer has been especially hot."
   },
   {
     "id": "u7-e7a78b-434",
@@ -6073,9 +6073,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "qiū",
     "english": "autumn",
     "exampleSimplified": "秋天的枫叶红了。",
-    "exampleTraditional": "秋天的枫葉紅了。",
+    "exampleTraditional": "秋天的楓葉紅了。",
     "examplePinyin": "Qiū tiān de fēng yè hóng le.",
-    "exampleEnglish": "Autumn day of completed action."
+    "exampleEnglish": "The maple leaves have turned red in autumn."
   },
   {
     "id": "u7-e586ac-435",
@@ -6089,7 +6089,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "北方的冬天很冷。",
     "exampleTraditional": "北方的冬天很冷。",
     "examplePinyin": "Běi fāng de dōng tiān hěn lěng.",
-    "exampleEnglish": "North of winter day very cold."
+    "exampleEnglish": "Winters in northern China are very cold."
   },
   {
     "id": "u7-e591a8e69cab-436",
@@ -6101,9 +6101,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "zhōumò",
     "english": "weekend",
     "exampleSimplified": "周末我们去海边吧。",
-    "exampleTraditional": "週末我們去海边吧。",
+    "exampleTraditional": "週末我們去海邊吧。",
     "examplePinyin": "Zhōu mò wǒ men qù hǎi biān ba.",
-    "exampleEnglish": "Weekend we go sea."
+    "exampleEnglish": "Let's go to the seaside this weekend."
   },
   {
     "id": "u7-e58187e69c9f-437",
@@ -6117,7 +6117,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "假期你有什么安排？",
     "exampleTraditional": "假期你有什麼安排？",
     "examplePinyin": "Jià qī nǐ yǒu shén me ān pái?",
-    "exampleEnglish": "Holiday you have what."
+    "exampleEnglish": "What are your plans for the holiday?"
   },
   {
     "id": "u7-e7949fe697a5-438",
@@ -6129,9 +6129,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "shēngrì",
     "english": "birthday",
     "exampleSimplified": "明天是我妈妈的生日。",
-    "exampleTraditional": "明天是我妈妈的生日。",
+    "exampleTraditional": "明天是我媽媽的生日。",
     "examplePinyin": "Míng tiān shì wǒ mā ma de shēng rì.",
-    "exampleEnglish": "Tomorrow be I mom of birthday."
+    "exampleEnglish": "Tomorrow is my mum's birthday."
   },
   {
     "id": "u7-e88a82e697a5-439",
@@ -6143,9 +6143,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "jiérì",
     "english": "festival",
     "exampleSimplified": "中秋是团圆的节日。",
-    "exampleTraditional": "中秋是团圆的節日。",
+    "exampleTraditional": "中秋是團圓的節日。",
     "examplePinyin": "Zhōng qiū shì tuán yuán de jié rì.",
-    "exampleEnglish": "Middle autumn be of festival."
+    "exampleEnglish": "The Mid-Autumn Festival is a time for family reunions."
   },
   {
     "id": "u7-e5b9b3e697b6-440",
@@ -6159,7 +6159,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我平时很少喝酒。",
     "exampleTraditional": "我平時很少喝酒。",
     "examplePinyin": "Wǒ píng shí hěn shǎo hē jiǔ.",
-    "exampleEnglish": "I usually very drink alcohol."
+    "exampleEnglish": "I rarely drink alcohol normally."
   },
   {
     "id": "u7-e5bd93e697b6-441",
@@ -6167,13 +6167,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "时间·日期",
     "partOfSpeech": "名词",
     "simplified": "当时",
-    "traditional": "当時",
+    "traditional": "當時",
     "pinyin": "dāngshí",
     "english": "at that time",
     "exampleSimplified": "当时我不知道该说什么。",
-    "exampleTraditional": "当時我不知道该說什麼。",
+    "exampleTraditional": "當時我不知道該說什麼。",
     "examplePinyin": "Dāng shí wǒ bù zhī dào gāi shuō shén me.",
-    "exampleEnglish": "At that time I not know say what."
+    "exampleEnglish": "At the time, I didn't know what to say."
   },
   {
     "id": "u7-e69caae69da5-442",
@@ -6185,9 +6185,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "wèilái",
     "english": "future",
     "exampleSimplified": "谁也说不准未来的事。",
-    "exampleTraditional": "谁也說不准未來的事。",
+    "exampleTraditional": "誰也說不準未來的事。",
     "examplePinyin": "Shéi yě shuō bù zhǔn wèi lái de shì.",
-    "exampleEnglish": "Who also say not future of."
+    "exampleEnglish": "No one can predict the future."
   },
   {
     "id": "u7-e8bf87e58ebb-443",
@@ -6199,9 +6199,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "guòqù",
     "english": "past",
     "exampleSimplified": "过去的事就让它过去吧。",
-    "exampleTraditional": "過去的事就让它過去吧。",
+    "exampleTraditional": "過去的事就讓它過去吧。",
     "examplePinyin": "Guò qù de shì jiù ràng tā guò qù ba.",
-    "exampleEnglish": "Past of then let it past."
+    "exampleEnglish": "Let the past stay in the past."
   },
   {
     "id": "u7-e7ad89-444",
@@ -6215,7 +6215,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我在门口等你。",
     "exampleTraditional": "我在門口等你。",
     "examplePinyin": "Wǒ zài mén kǒu děng nǐ.",
-    "exampleEnglish": "I be at doorway wait you."
+    "exampleEnglish": "I'll wait for you at the door."
   },
   {
     "id": "u7-e8bf9fe588b0-445",
@@ -6229,7 +6229,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "对不起，我迟到了。",
     "exampleTraditional": "對不起，我遲到了。",
     "examplePinyin": "Duì bù qǐ, wǒ chí dào le.",
-    "exampleEnglish": "Not, I be late completed action."
+    "exampleEnglish": "Sorry I'm late."
   },
   {
     "id": "u7-e5bc80e5a78b-446",
@@ -6241,9 +6241,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "kāishǐ",
     "english": "to begin",
     "exampleSimplified": "电影马上开始了。",
-    "exampleTraditional": "電影马上開始了。",
+    "exampleTraditional": "電影馬上開始了。",
     "examplePinyin": "Diàn yǐng mǎ shàng kāi shǐ le.",
-    "exampleEnglish": "Movie horse up begin completed action."
+    "exampleEnglish": "The film is about to start."
   },
   {
     "id": "u7-e7bb93e69d9f-447",
@@ -6257,7 +6257,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "会议五点才结束。",
     "exampleTraditional": "會議五點才結束。",
     "examplePinyin": "Huì yì wǔ diǎn cái jié shù.",
-    "exampleEnglish": "Meeting five order end."
+    "exampleEnglish": "The meeting didn't finish until five."
   },
   {
     "id": "u7-e8b5b7e5ba8a-448",
@@ -6271,7 +6271,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我每天七点起床。",
     "exampleTraditional": "我每天七點起床。",
     "examplePinyin": "Wǒ měi tiān qī diǎn qǐ chuáng.",
-    "exampleEnglish": "I day seven order get up."
+    "exampleEnglish": "I get up at seven every day."
   },
   {
     "id": "u7-e587bae58f91-449",
@@ -6285,7 +6285,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我们明天一早出发。",
     "exampleTraditional": "我們明天一早出發。",
     "examplePinyin": "Wǒ men míng tiān yì zǎo chū fā.",
-    "exampleEnglish": "We tomorrow one early set off."
+    "exampleEnglish": "We leave early tomorrow morning."
   },
   {
     "id": "u7-e69da5e5be97e58f8a-450",
@@ -6299,7 +6299,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "别急，时间还来得及。",
     "exampleTraditional": "別急，時間還來得及。",
     "examplePinyin": "Bié jí, shí jiān hái lái de jí.",
-    "exampleEnglish": "Do not, time still have enough time."
+    "exampleEnglish": "Don't worry; there's still enough time."
   },
   {
     "id": "u7-e697a9-451",
@@ -6313,7 +6313,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "你今天来得真早。",
     "exampleTraditional": "你今天來得真早。",
     "examplePinyin": "Nǐ jīn tiān lái de zhēn zǎo.",
-    "exampleEnglish": "You today come so really early."
+    "exampleEnglish": "You came really early today."
   },
   {
     "id": "u7-e6999a-452",
@@ -6327,7 +6327,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "现在去还不算晚。",
     "exampleTraditional": "現在去還不算晚。",
     "examplePinyin": "Xiàn zài qù hái bú suàn wǎn.",
-    "exampleEnglish": "Now go still not calculate late."
+    "exampleEnglish": "It's not too late to go now."
   },
   {
     "id": "u7-e5bfab-453",
@@ -6341,7 +6341,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "高铁比火车快多了。",
     "exampleTraditional": "高鐵比火車快多了。",
     "examplePinyin": "Gāo tiě bǐ huǒ chē kuài duō le.",
-    "exampleEnglish": "High-speed rail train fast completed action."
+    "exampleEnglish": "High-speed rail is much faster than regular trains."
   },
   {
     "id": "u7-e685a2-454",
@@ -6355,7 +6355,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "请说慢一点。",
     "exampleTraditional": "請說慢一點。",
     "examplePinyin": "Qǐng shuō màn yì diǎn.",
-    "exampleEnglish": "Say slow a little."
+    "exampleEnglish": "Please speak a little more slowly."
   },
   {
     "id": "u7-e5bf99-455",
@@ -6367,9 +6367,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "máng",
     "english": "busy",
     "exampleSimplified": "他最近忙得没时间吃饭。",
-    "exampleTraditional": "他最近忙得没時間吃飯。",
+    "exampleTraditional": "他最近忙得沒時間吃飯。",
     "examplePinyin": "Tā zuì jìn máng dé méi shí jiān chī fàn.",
-    "exampleEnglish": "He recently busy so not time eat meal."
+    "exampleEnglish": "He's been so busy lately that he has no time to eat."
   },
   {
     "id": "u7-e997b2-456",
@@ -6383,7 +6383,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "退休后他闲不下来。",
     "exampleTraditional": "退休後他閒不下來。",
     "examplePinyin": "Tuì xiū hòu tā xián bú xià lái.",
-    "exampleEnglish": "Return back he free not down come."
+    "exampleEnglish": "He can't sit still after retiring."
   },
   {
     "id": "u7-e4b985-457",
@@ -6395,9 +6395,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "jiǔ",
     "english": "a long time",
     "exampleSimplified": "好久不见！",
-    "exampleTraditional": "好久不见！",
+    "exampleTraditional": "好久不見！",
     "examplePinyin": "Hǎo jiǔ bú jiàn!",
-    "exampleEnglish": "Good a long time not."
+    "exampleEnglish": "Long time no see!"
   },
   {
     "id": "u8-e5ada6e6a0a1-458",
@@ -6411,7 +6411,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "学校离我家很近。",
     "exampleTraditional": "學校離我家很近。",
     "examplePinyin": "Xué xiào lí wǒ jiā hěn jìn.",
-    "exampleEnglish": "School I home very."
+    "exampleEnglish": "The school is very close to my home."
   },
   {
     "id": "u8-e69599e5aea4-459",
@@ -6423,9 +6423,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "jiàoshì",
     "english": "classroom",
     "exampleSimplified": "教室里很安静。",
-    "exampleTraditional": "教室里很安静。",
+    "exampleTraditional": "教室裡很安靜。",
     "examplePinyin": "Jiào shì lǐ hěn ān jìng.",
-    "exampleEnglish": "Classroom inside very quiet."
+    "exampleEnglish": "It's very quiet in the classroom."
   },
   {
     "id": "u8-e58a9ee585ace5aea4-460",
@@ -6439,7 +6439,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他在办公室加班。",
     "exampleTraditional": "他在辦公室加班。",
     "examplePinyin": "Tā zài bàn gōng shì jiā bān.",
-    "exampleEnglish": "He be at office."
+    "exampleEnglish": "He's working overtime in the office."
   },
   {
     "id": "u8-e59bbee4b9a6e9a686-461",
@@ -6451,9 +6451,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "túshūguǎn",
     "english": "library",
     "exampleSimplified": "图书馆周一闭馆。",
-    "exampleTraditional": "圖書館週一闭館。",
+    "exampleTraditional": "圖書館週一閉館。",
     "examplePinyin": "Tú shū guǎn zhōu yī bì guǎn.",
-    "exampleEnglish": "Library week one."
+    "exampleEnglish": "The library is closed on Mondays."
   },
   {
     "id": "u8-e8afbe-462",
@@ -6465,9 +6465,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "kè",
     "english": "class",
     "exampleSimplified": "我下午没有课。",
-    "exampleTraditional": "我下午没有課。",
+    "exampleTraditional": "我下午沒有課。",
     "examplePinyin": "Wǒ xià wǔ méi yǒu kè.",
-    "exampleEnglish": "I afternoon not have class."
+    "exampleEnglish": "I don't have class this afternoon."
   },
   {
     "id": "u8-e4bd9ce4b89a-463",
@@ -6481,7 +6481,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "今天的作业不多。",
     "exampleTraditional": "今天的作業不多。",
     "examplePinyin": "Jīn tiān de zuò yè bù duō.",
-    "exampleEnglish": "Today of homework not."
+    "exampleEnglish": "There isn't much homework today."
   },
   {
     "id": "u8-e88083e8af95-464",
@@ -6495,7 +6495,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "考试前别熬夜。",
     "exampleTraditional": "考試前別熬夜。",
     "examplePinyin": "Kǎo shì qián bié áo yè.",
-    "exampleEnglish": "Exam front do not night."
+    "exampleEnglish": "Don't stay up late before an exam."
   },
   {
     "id": "u8-e68890e7bba9-465",
@@ -6507,9 +6507,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "chéngjì",
     "english": "grade",
     "exampleSimplified": "她这次成绩不错。",
-    "exampleTraditional": "她這次成績不错。",
+    "exampleTraditional": "她這次成績不錯。",
     "examplePinyin": "Tā zhè cì chéng jì bú cuò.",
-    "exampleEnglish": "She this grade not."
+    "exampleEnglish": "She did quite well in this exam."
   },
   {
     "id": "u8-e5ad97-466",
@@ -6521,9 +6521,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "zì",
     "english": "character",
     "exampleSimplified": "这个字怎么读？",
-    "exampleTraditional": "這個字怎麼读？",
+    "exampleTraditional": "這個字怎麼讀？",
     "examplePinyin": "Zhè ge zì zěn me dú?",
-    "exampleEnglish": "This character how read."
+    "exampleEnglish": "How do you pronounce this character?"
   },
   {
     "id": "u8-e8af8d-467",
@@ -6537,7 +6537,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这个词我不会用。",
     "exampleTraditional": "這個詞我不會用。",
     "examplePinyin": "Zhè ge cí wǒ bú huì yòng.",
-    "exampleEnglish": "This word I not use."
+    "exampleEnglish": "I don't know how to use this word."
   },
   {
     "id": "u8-e58fa5e5ad90-468",
@@ -6551,7 +6551,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "请用这个词造一个句子。",
     "exampleTraditional": "請用這個詞造一個句子。",
     "examplePinyin": "Qǐng yòng zhè ge cí zào yí gè jù zi.",
-    "exampleEnglish": "Use this word one sentence."
+    "exampleEnglish": "Please make a sentence using this word."
   },
   {
     "id": "u8-e69687e7aba0-469",
@@ -6563,9 +6563,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "wénzhāng",
     "english": "article",
     "exampleSimplified": "这篇文章写得真好。",
-    "exampleTraditional": "這篇文章写得真好。",
+    "exampleTraditional": "這篇文章寫得真好。",
     "examplePinyin": "Zhè piān wén zhāng xiě dé zhēn hǎo.",
-    "exampleEnglish": "This article write so really good."
+    "exampleEnglish": "This article is very well written."
   },
   {
     "id": "u8-e79fa5e8af86-470",
@@ -6577,9 +6577,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "zhīshi",
     "english": "knowledge",
     "exampleSimplified": "多读书能学到知识。",
-    "exampleTraditional": "多读書能學到知識。",
+    "exampleTraditional": "多讀書能學到知識。",
     "examplePinyin": "Duō dú shū néng xué dào zhī shi.",
-    "exampleEnglish": "Read book learn to knowledge."
+    "exampleEnglish": "Reading more helps you gain knowledge."
   },
   {
     "id": "u8-e4b893e4b89a-471",
@@ -6593,7 +6593,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "你大学学的什么专业？",
     "exampleTraditional": "你大學學的什麼專業？",
     "examplePinyin": "Nǐ dà xué xué de shén me zhuān yè?",
-    "exampleEnglish": "You big learn learn of what major."
+    "exampleEnglish": "What did you study at university?"
   },
   {
     "id": "u8-e7ac94e8aeb0-472",
@@ -6607,7 +6607,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "上课要记笔记。",
     "exampleTraditional": "上課要記筆記。",
     "examplePinyin": "Shàng kè yào jì bǐ jì.",
-    "exampleEnglish": "Attend class remember notes."
+    "exampleEnglish": "Take notes in class."
   },
   {
     "id": "u8-e585ace58fb8-473",
@@ -6621,7 +6621,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我们公司在市中心。",
     "exampleTraditional": "我們公司在市中心。",
     "examplePinyin": "Wǒ men gōng sī zài shì zhōng xīn.",
-    "exampleEnglish": "We company be at middle heart."
+    "exampleEnglish": "Our company is in the city centre."
   },
   {
     "id": "u8-e58d95e4bd8d-474",
@@ -6633,9 +6633,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "dānwèi",
     "english": "work unit",
     "exampleSimplified": "他单位的福利不错。",
-    "exampleTraditional": "他單位的福利不错。",
+    "exampleTraditional": "他單位的福利不錯。",
     "examplePinyin": "Tā dān wèi de fú lì bú cuò.",
-    "exampleEnglish": "He work unit of not."
+    "exampleEnglish": "The benefits at his workplace are good."
   },
   {
     "id": "u8-e5b7a5e4bd9c-475",
@@ -6649,7 +6649,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "她找到了新工作。",
     "exampleTraditional": "她找到了新工作。",
     "examplePinyin": "Tā zhǎo dào le xīn gōng zuò.",
-    "exampleEnglish": "She look for to completed action new work."
+    "exampleEnglish": "She found a new job."
   },
   {
     "id": "u8-e5b7a5e4bd9ce5aea4-476",
@@ -6661,9 +6661,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "gōngzuòshì",
     "english": "studio",
     "exampleSimplified": "他开了一家设计工作室。",
-    "exampleTraditional": "他開了一家设计工作室。",
+    "exampleTraditional": "他開了一家設計工作室。",
     "examplePinyin": "Tā kāi le yì jiā shè jì gōng zuò shì.",
-    "exampleEnglish": "He open completed action one home studio."
+    "exampleEnglish": "He runs a design studio."
   },
   {
     "id": "u8-e9a1b9e79bae-477",
@@ -6675,9 +6675,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "xiàngmù",
     "english": "project",
     "exampleSimplified": "这个项目下个月上线。",
-    "exampleTraditional": "這個項目下個月上线。",
+    "exampleTraditional": "這個項目下個月上線。",
     "examplePinyin": "Zhè ge xiàng mù xià gè yuè shàng xiàn.",
-    "exampleEnglish": "This project down month up."
+    "exampleEnglish": "This project goes live next month."
   },
   {
     "id": "u8-e4bc9ae8aeae-478",
@@ -6691,7 +6691,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "会议改到明天上午了。",
     "exampleTraditional": "會議改到明天上午了。",
     "examplePinyin": "Huì yì gǎi dào míng tiān shàng wǔ le.",
-    "exampleEnglish": "Meeting to tomorrow morning completed action."
+    "exampleEnglish": "The meeting has been moved to tomorrow morning."
   },
   {
     "id": "u8-e4bbbbe58aa1-479",
@@ -6705,7 +6705,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "今天的任务有点重。",
     "exampleTraditional": "今天的任務有點重。",
     "examplePinyin": "Jīn tiān de rèn wu yǒu diǎn zhòng.",
-    "exampleEnglish": "Today of task a little."
+    "exampleEnglish": "Today's workload is a bit heavy."
   },
   {
     "id": "u8-e8aea1e58892-480",
@@ -6713,13 +6713,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "学习·工作·数字生活",
     "partOfSpeech": "名词",
     "simplified": "计划",
-    "traditional": "计劃",
+    "traditional": "計劃",
     "pinyin": "jìhuà",
     "english": "plan",
     "exampleSimplified": "我们的计划变了。",
-    "exampleTraditional": "我們的计劃变了。",
+    "exampleTraditional": "我們的計劃變了。",
     "examplePinyin": "Wǒ men de jì huà biàn le.",
-    "exampleEnglish": "We of plan completed action."
+    "exampleEnglish": "Our plan has changed."
   },
   {
     "id": "u8-e7bb8fe9aa8c-481",
@@ -6727,13 +6727,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "学习·工作·数字生活",
     "partOfSpeech": "名词",
     "simplified": "经验",
-    "traditional": "经驗",
+    "traditional": "經驗",
     "pinyin": "jīngyàn",
     "english": "experience",
     "exampleSimplified": "他有十年的教学经验。",
-    "exampleTraditional": "他有十年的教學经驗。",
+    "exampleTraditional": "他有十年的教學經驗。",
     "examplePinyin": "Tā yǒu shí nián de jiào xué jīng yàn.",
-    "exampleEnglish": "He have ten year of teach learn experience."
+    "exampleEnglish": "He has ten years of teaching experience."
   },
   {
     "id": "u8-e68a80e69caf-482",
@@ -6745,9 +6745,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "jìshù",
     "english": "technology; skill",
     "exampleSimplified": "他的技术在公司数一数二。",
-    "exampleTraditional": "他的技術在公司数一数二。",
+    "exampleTraditional": "他的技術在公司數一數二。",
     "examplePinyin": "Tā de jì shù zài gōng sī shǔ yī shǔ èr.",
-    "exampleEnglish": "He of technology be at company one two."
+    "exampleEnglish": "His technical skills are among the best at the company."
   },
   {
     "id": "u8-e883bde58a9b-483",
@@ -6759,9 +6759,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "nénglì",
     "english": "ability",
     "exampleSimplified": "她的学习能力很强。",
-    "exampleTraditional": "她的學習能力很强。",
+    "exampleTraditional": "她的學習能力很強。",
     "examplePinyin": "Tā de xué xí néng lì hěn qiáng.",
-    "exampleEnglish": "She of learn ability very."
+    "exampleEnglish": "She has a strong ability to learn."
   },
   {
     "id": "u8-e99da2e8af95-484",
@@ -6769,13 +6769,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "学习·工作·数字生活",
     "partOfSpeech": "名词",
     "simplified": "面试",
-    "traditional": "麵試",
+    "traditional": "面試",
     "pinyin": "miànshì",
     "english": "interview",
     "exampleSimplified": "我明天有一个面试。",
-    "exampleTraditional": "我明天有一個麵試。",
+    "exampleTraditional": "我明天有一個面試。",
     "examplePinyin": "Wǒ míng tiān yǒu yí gè miàn shì.",
-    "exampleEnglish": "I tomorrow have one interview."
+    "exampleEnglish": "I have a job interview tomorrow."
   },
   {
     "id": "u8-e7ae80e58e86-485",
@@ -6789,7 +6789,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "请把简历发到我的邮箱。",
     "exampleTraditional": "請把簡歷發到我的郵箱。",
     "examplePinyin": "Qǐng bǎ jiǎn lì fā dào wǒ de yóu xiāng.",
-    "exampleEnglish": "Disposal marker resume to I of."
+    "exampleEnglish": "Please email your CV to me."
   },
   {
     "id": "u8-e5ae9ee4b9a0-486",
@@ -6803,7 +6803,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "她在一家银行实习。",
     "exampleTraditional": "她在一家銀行實習。",
     "examplePinyin": "Tā zài yì jiā yín háng shí xí.",
-    "exampleEnglish": "She be at one home bank internship."
+    "exampleEnglish": "She's doing an internship at a bank."
   },
   {
     "id": "u8-e59fb9e8aead-487",
@@ -6817,7 +6817,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "新员工要参加培训。",
     "exampleTraditional": "新員工要參加培訓。",
     "examplePinyin": "Xīn yuán gōng yào cān jiā péi xùn.",
-    "exampleEnglish": "New participate training."
+    "exampleEnglish": "New employees have to attend training."
   },
   {
     "id": "u8-e694b6e585a5-488",
@@ -6831,7 +6831,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他的收入比去年高。",
     "exampleTraditional": "他的收入比去年高。",
     "examplePinyin": "Tā de shōu rù bǐ qù nián gāo.",
-    "exampleEnglish": "He of income go year tall."
+    "exampleEnglish": "His income is higher than last year."
   },
   {
     "id": "u8-e5889be4b89a-489",
@@ -6843,9 +6843,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "chuàngyè",
     "english": "start a business",
     "exampleSimplified": "大学毕业后他选择创业。",
-    "exampleTraditional": "大學畢業後他選择創業。",
+    "exampleTraditional": "大學畢業後他選擇創業。",
     "examplePinyin": "Dà xué bì yè hòu tā xuǎn zé chuàng yè.",
-    "exampleEnglish": "Big learn graduate back he choose start a business."
+    "exampleEnglish": "He chose to start his own business after graduating from university."
   },
   {
     "id": "u8-e5908ce8a18c-490",
@@ -6859,7 +6859,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我们是同行，多多交流。",
     "exampleTraditional": "我們是同行，多多交流。",
     "examplePinyin": "Wǒ men shì tóng háng, duō duō jiāo liú.",
-    "exampleEnglish": "We be peer, flow."
+    "exampleEnglish": "We work in the same field, so let's stay in touch."
   },
   {
     "id": "u8-e7bd91e7bb9c-491",
@@ -6867,13 +6867,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "学习·工作·数字生活",
     "partOfSpeech": "名词",
     "simplified": "网络",
-    "traditional": "網络",
+    "traditional": "網絡",
     "pinyin": "wǎngluò",
     "english": "network; internet",
     "exampleSimplified": "这里的网络信号不好。",
-    "exampleTraditional": "這里的網络信號不好。",
+    "exampleTraditional": "這裡的網絡信號不好。",
     "examplePinyin": "Zhè lǐ de wǎng luò xìn hào bù hǎo.",
-    "exampleEnglish": "Here of network not good."
+    "exampleEnglish": "The internet signal here is poor."
   },
   {
     "id": "u8-e7bd91e4b88a-492",
@@ -6887,7 +6887,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这本书网上更便宜。",
     "exampleTraditional": "這本書網上更便宜。",
     "examplePinyin": "Zhè běn shū wǎng shàng gèng pián yi.",
-    "exampleEnglish": "This classifier book online cheap."
+    "exampleEnglish": "This book is cheaper online."
   },
   {
     "id": "u8-e7bd91e7ab99-493",
@@ -6901,7 +6901,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这个网站打不开了。",
     "exampleTraditional": "這個網站打不開了。",
     "examplePinyin": "Zhè ge wǎng zhàn dǎ bù kāi le.",
-    "exampleEnglish": "This website not open completed action."
+    "exampleEnglish": "This website won't open."
   },
   {
     "id": "u8-e8bdafe4bbb6-494",
@@ -6913,9 +6913,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "ruǎnjiàn",
     "english": "software",
     "exampleSimplified": "手机里装了太多软件。",
-    "exampleTraditional": "手機里装了太多軟件。",
+    "exampleTraditional": "手機裡裝了太多軟件。",
     "examplePinyin": "Shǒu jī lǐ zhuāng le tài duō ruǎn jiàn.",
-    "exampleEnglish": "Mobile phone inside completed action too software."
+    "exampleEnglish": "There are too many apps installed on my phone."
   },
   {
     "id": "u8-e8a786e9a291-495",
@@ -6929,7 +6929,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这个视频太好笑了。",
     "exampleTraditional": "這個視頻太好笑了。",
     "examplePinyin": "Zhè ge shì pín tài hǎo xiào le.",
-    "exampleEnglish": "This video too good laugh completed action."
+    "exampleEnglish": "This video is hilarious."
   },
   {
     "id": "u8-e982aee4bbb6-496",
@@ -6941,9 +6941,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "yóujiàn",
     "english": "email",
     "exampleSimplified": "我给你发了一封邮件。",
-    "exampleTraditional": "我给你發了一封郵件。",
+    "exampleTraditional": "我給你發了一封郵件。",
     "examplePinyin": "Wǒ gěi nǐ fā le yì fēng yóu jiàn.",
-    "exampleEnglish": "I to you completed action one email."
+    "exampleEnglish": "I sent you an email."
   },
   {
     "id": "u8-e69687e4bbb6-497",
@@ -6955,9 +6955,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "wénjiàn",
     "english": "file",
     "exampleSimplified": "请把文件打印两份。",
-    "exampleTraditional": "請把文件打印两份。",
+    "exampleTraditional": "請把文件打印兩份。",
     "examplePinyin": "Qǐng bǎ wén jiàn dǎ yìn liǎng fèn.",
-    "exampleEnglish": "Disposal marker file print two."
+    "exampleEnglish": "Please print two copies of the document."
   },
   {
     "id": "u8-e6b688e681af-498",
@@ -6969,9 +6969,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "xiāoxi",
     "english": "message",
     "exampleSimplified": "有消息马上告诉我。",
-    "exampleTraditional": "有消息马上告訴我。",
+    "exampleTraditional": "有消息馬上告訴我。",
     "examplePinyin": "Yǒu xiāo xī mǎ shàng gào sù wǒ.",
-    "exampleEnglish": "Have message horse up tell I."
+    "exampleEnglish": "Tell me as soon as you hear anything."
   },
   {
     "id": "u8-e5af86e7a081-499",
@@ -6985,7 +6985,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我又忘了密码。",
     "exampleTraditional": "我又忘了密碼。",
     "examplePinyin": "Wǒ yòu wàng le mì mǎ.",
-    "exampleEnglish": "I forget completed action password."
+    "exampleEnglish": "I forgot my password again."
   },
   {
     "id": "u8-e8b4a6e58fb7-500",
@@ -6993,13 +6993,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "学习·工作·数字生活",
     "partOfSpeech": "名词",
     "simplified": "账号",
-    "traditional": "帳號",
+    "traditional": "賬號",
     "pinyin": "zhànghào",
     "english": "account",
     "exampleSimplified": "我的账号被锁了。",
-    "exampleTraditional": "我的帳號被鎖了。",
+    "exampleTraditional": "我的賬號被鎖了。",
     "examplePinyin": "Wǒ de zhàng hào bèi suǒ le.",
-    "exampleEnglish": "I of account by lock completed action."
+    "exampleEnglish": "My account has been locked."
   },
   {
     "id": "u8-e6b581e9878f-501",
@@ -7013,7 +7013,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这个月的流量用完了。",
     "exampleTraditional": "這個月的流量用完了。",
     "examplePinyin": "Zhè ge yuè de liú liàng yòng wán le.",
-    "exampleEnglish": "This month of data use completed action."
+    "exampleEnglish": "I've used up this month's mobile data."
   },
   {
     "id": "u8-e5b9b3e69dbf-502",
@@ -7027,7 +7027,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "孩子用平板上网课。",
     "exampleTraditional": "孩子用平板上網課。",
     "examplePinyin": "Hái zi yòng píng bǎn shàng wǎng kè.",
-    "exampleEnglish": "Use tablet go online class."
+    "exampleEnglish": "The child uses a tablet for online classes."
   },
   {
     "id": "u8-e880b3e69cba-503",
@@ -7041,7 +7041,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我的耳机找不到了。",
     "exampleTraditional": "我的耳機找不到了。",
     "examplePinyin": "Wǒ de ěr jī zhǎo bú dào le.",
-    "exampleEnglish": "I of headphones look for not to completed action."
+    "exampleEnglish": "I can't find my earphones."
   },
   {
     "id": "u8-e5beaee4bfa1-504",
@@ -7055,7 +7055,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "加个微信吧。",
     "exampleTraditional": "加個微信吧。",
     "examplePinyin": "Jiā gè wēi xìn ba.",
-    "exampleEnglish": "WeChat."
+    "exampleEnglish": "Let's add each other on WeChat."
   },
   {
     "id": "u8-app-505",
@@ -7069,7 +7069,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这个APP很好用。",
     "exampleTraditional": "這個APP很好用。",
     "examplePinyin": "Zhè ge A P P hěn hǎo yòng.",
-    "exampleEnglish": "This app very good use."
+    "exampleEnglish": "This app is very useful."
   },
   {
     "id": "u8-e8a1a8e68385e58c85-506",
@@ -7083,7 +7083,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他发了一个搞笑的表情包。",
     "exampleTraditional": "他發了一個搞笑的表情包。",
     "examplePinyin": "Tā fā le yí gè gǎo xiào de biǎo qíng bāo.",
-    "exampleEnglish": "He completed action one laugh of sticker pack."
+    "exampleEnglish": "He sent a funny meme."
   },
   {
     "id": "u8-e79bb4e692ad-507",
@@ -7097,7 +7097,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "她每天晚上八点直播。",
     "exampleTraditional": "她每天晚上八點直播。",
     "examplePinyin": "Tā měi tiān wǎn shàng bā diǎn zhí bō.",
-    "exampleEnglish": "She day evening eight order live stream."
+    "exampleEnglish": "She livestreams every evening at eight."
   },
   {
     "id": "u8-e58d9ae4b8bb-508",
@@ -7111,7 +7111,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这位博主专门介绍美食。",
     "exampleTraditional": "這位博主專門介紹美食。",
     "examplePinyin": "Zhè wèi bó zhǔ zhuān mén jiè shào měi shí.",
-    "exampleEnglish": "This person blogger door introduce beautiful."
+    "exampleEnglish": "This blogger specialises in introducing food."
   },
   {
     "id": "u8-e7b289e4b89d-509",
@@ -7123,9 +7123,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "fěnsī",
     "english": "fan; follower",
     "exampleSimplified": "她有一百万粉丝。",
-    "exampleTraditional": "她有一百万粉絲。",
+    "exampleTraditional": "她有一百萬粉絲。",
     "examplePinyin": "Tā yǒu yì bǎi wàn fěn sī.",
-    "exampleEnglish": "She have one hundred ten thousand fan."
+    "exampleEnglish": "She has one million followers."
   },
   {
     "id": "u8-e8a786e9a291e9809ae8af9d-510",
@@ -7137,9 +7137,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "shìpín tōnghuà",
     "english": "video call",
     "exampleSimplified": "我每周和爸妈视频通话。",
-    "exampleTraditional": "我每週和爸妈視頻通話。",
+    "exampleTraditional": "我每週和爸媽視頻通話。",
     "examplePinyin": "Wǒ měi zhōu hé bà mā shì pín tōng huà.",
-    "exampleEnglish": "I week and video call."
+    "exampleEnglish": "I video-call my parents every week."
   },
   {
     "id": "u8-e782b9e8b59e-511",
@@ -7147,13 +7147,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "学习·工作·数字生活",
     "partOfSpeech": "名词",
     "simplified": "点赞",
-    "traditional": "點讚",
+    "traditional": "點贊",
     "pinyin": "diǎnzàn",
     "english": "to like",
     "exampleSimplified": "记得给我点赞哦。",
-    "exampleTraditional": "記得给我點讚哦。",
+    "exampleTraditional": "記得給我點贊哦。",
     "examplePinyin": "Jì de gěi wǒ diǎn zàn ò.",
-    "exampleEnglish": "Remember to I like."
+    "exampleEnglish": "Remember to give me a like."
   },
   {
     "id": "u8-e585b3e6b3a8-512",
@@ -7165,9 +7165,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "guānzhù",
     "english": "to follow",
     "exampleSimplified": "欢迎关注我的账号。",
-    "exampleTraditional": "歡迎關注我的帳號。",
+    "exampleTraditional": "歡迎關注我的賬號。",
     "examplePinyin": "Huān yíng guān zhù wǒ de zhàng hào.",
-    "exampleEnglish": "Welcome follow I of account."
+    "exampleEnglish": "Follow my account."
   },
   {
     "id": "u8-e58886e4baab-513",
@@ -7181,7 +7181,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "谢谢你的分享。",
     "exampleTraditional": "謝謝你的分享。",
     "examplePinyin": "Xiè xiè nǐ de fēn xiǎng.",
-    "exampleEnglish": "You of share."
+    "exampleEnglish": "Thank you for sharing."
   },
   {
     "id": "u8-e5ada6-514",
@@ -7193,9 +7193,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "xué",
     "english": "to learn",
     "exampleSimplified": "我在学葡萄牙语。",
-    "exampleTraditional": "我在學葡萄牙语。",
+    "exampleTraditional": "我在學葡萄牙語。",
     "examplePinyin": "Wǒ zài xué pú táo yá yǔ.",
-    "exampleEnglish": "I be at learn Portugal."
+    "exampleEnglish": "I'm learning Portuguese."
   },
   {
     "id": "u8-e69599-515",
@@ -7207,9 +7207,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "jiāo",
     "english": "to teach",
     "exampleSimplified": "王老师教我们数学。",
-    "exampleTraditional": "王老师教我們数學。",
+    "exampleTraditional": "王老師教我們數學。",
     "examplePinyin": "Wáng lǎo shī jiào wǒ men shù xué.",
-    "exampleEnglish": "Teacher teach we learn."
+    "exampleEnglish": "Ms Wang teaches us maths."
   },
   {
     "id": "u8-e8afbb-516",
@@ -7217,13 +7217,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "学习·工作·数字生活",
     "partOfSpeech": "动词",
     "simplified": "读",
-    "traditional": "读",
+    "traditional": "讀",
     "pinyin": "dú",
     "english": "to read",
     "exampleSimplified": "请大声读课文。",
-    "exampleTraditional": "請大聲读課文。",
+    "exampleTraditional": "請大聲讀課文。",
     "examplePinyin": "Qǐng dà shēng dú kè wén.",
-    "exampleEnglish": "Big read class."
+    "exampleEnglish": "Please read the text aloud."
   },
   {
     "id": "u8-e58699-517",
@@ -7231,13 +7231,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "学习·工作·数字生活",
     "partOfSpeech": "动词",
     "simplified": "写",
-    "traditional": "写",
+    "traditional": "寫",
     "pinyin": "xiě",
     "english": "to write",
     "exampleSimplified": "他会写毛笔字。",
-    "exampleTraditional": "他會写毛筆字。",
+    "exampleTraditional": "他會寫毛筆字。",
     "examplePinyin": "Tā huì xiě máo bǐ zì.",
-    "exampleEnglish": "He write jiao pen character."
+    "exampleEnglish": "He can write calligraphy."
   },
   {
     "id": "u8-e997ae-518",
@@ -7251,7 +7251,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "不懂就问。",
     "exampleTraditional": "不懂就問。",
     "examplePinyin": "Bù dǒng jiù wèn.",
-    "exampleEnglish": "Not understand then ask."
+    "exampleEnglish": "If you don't understand, ask."
   },
   {
     "id": "u8-e7ad94-519",
@@ -7263,9 +7263,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "dá",
     "english": "to answer",
     "exampleSimplified": "这道题他答对了。",
-    "exampleTraditional": "這道题他答對了。",
+    "exampleTraditional": "這道題他答對了。",
     "examplePinyin": "Zhè dào tí tā dá duì le.",
-    "exampleEnglish": "This he answer completed action."
+    "exampleEnglish": "He got this question right."
   },
   {
     "id": "u8-e88083-520",
@@ -7277,9 +7277,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "kǎo",
     "english": "to test",
     "exampleSimplified": "明天考听力。",
-    "exampleTraditional": "明天考听力。",
+    "exampleTraditional": "明天考聽力。",
     "examplePinyin": "Míng tiān kǎo tīng lì.",
-    "exampleEnglish": "Tomorrow test."
+    "exampleEnglish": "We have a listening test tomorrow."
   },
   {
     "id": "u8-e8aeb0-521",
@@ -7293,7 +7293,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我记不住这么多单词。",
     "exampleTraditional": "我記不住這麼多單詞。",
     "examplePinyin": "Wǒ jì bú zhù zhè me duō dān cí.",
-    "exampleEnglish": "I remember not live this word."
+    "exampleEnglish": "I can't remember so many words."
   },
   {
     "id": "u8-e7ae97-522",
@@ -7307,7 +7307,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "你算一下一共花了多少。",
     "exampleTraditional": "你算一下一共花了多少。",
     "examplePinyin": "Nǐ suàn yí xià yí gòng huā le duō shǎo.",
-    "exampleEnglish": "You calculate a moment one flower completed action."
+    "exampleEnglish": "Work out how much we spent altogether."
   },
   {
     "id": "u8-e69fa5-523",
@@ -7321,7 +7321,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "不认识的词可以查词典。",
     "exampleTraditional": "不認識的詞可以查詞典。",
     "examplePinyin": "Bú rèn shi de cí kě yǐ chá cí diǎn.",
-    "exampleEnglish": "Not know of word look up dictionary."
+    "exampleEnglish": "You can look up unfamiliar words in a dictionary."
   },
   {
     "id": "u8-e7bb83-524",
@@ -7333,9 +7333,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "liàn",
     "english": "to practice",
     "exampleSimplified": "口语要天天练。",
-    "exampleTraditional": "口语要天天練。",
+    "exampleTraditional": "口語要天天練。",
     "examplePinyin": "Kǒu yǔ yào tiān tiān liàn.",
-    "exampleEnglish": "Day day practice."
+    "exampleEnglish": "You need to practise speaking every day."
   },
   {
     "id": "u8-e5a48de4b9a0-525",
@@ -7349,7 +7349,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "考前好好复习。",
     "exampleTraditional": "考前好好複習。",
     "examplePinyin": "Kǎo qián hǎo hǎo fù xí.",
-    "exampleEnglish": "Test front good good review."
+    "exampleEnglish": "Review carefully before the exam."
   },
   {
     "id": "u8-e4b88ae8afbe-526",
@@ -7363,7 +7363,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "上课别玩手机。",
     "exampleTraditional": "上課別玩手機。",
     "examplePinyin": "Shàng kè bié wán shǒu jī.",
-    "exampleEnglish": "Attend class do not mobile phone."
+    "exampleEnglish": "Don't play on your phone in class."
   },
   {
     "id": "u8-e4b88ae78fad-527",
@@ -7377,7 +7377,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我坐地铁上班。",
     "exampleTraditional": "我坐地鐵上班。",
     "examplePinyin": "Wǒ zuò dì tiě shàng bān.",
-    "exampleEnglish": "I sit subway go to work."
+    "exampleEnglish": "I take the metro to work."
   },
   {
     "id": "u8-e4b88be78fad-528",
@@ -7391,7 +7391,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他今天下班很晚。",
     "exampleTraditional": "他今天下班很晚。",
     "examplePinyin": "Tā jīn tiān xià bān hěn wǎn.",
-    "exampleEnglish": "He today get off work very late."
+    "exampleEnglish": "He finishes work very late today."
   },
   {
     "id": "u8-e6af95e4b89a-529",
@@ -7405,7 +7405,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我2018年大学毕业。",
     "exampleTraditional": "我2018年大學畢業。",
     "examplePinyin": "Wǒ 2 0 1 8 nián dà xué bì yè.",
-    "exampleEnglish": "I year big learn graduate."
+    "exampleEnglish": "I graduated from university in 2018."
   },
   {
     "id": "u8-e58aaae58a9b-530",
@@ -7419,7 +7419,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他学习很努力。",
     "exampleTraditional": "他學習很努力。",
     "examplePinyin": "Tā xué xí hěn nǔ lì.",
-    "exampleEnglish": "He learn very work hard."
+    "exampleEnglish": "He works very hard at his studies."
   },
   {
     "id": "u8-e5ae8ce68890-531",
@@ -7431,9 +7431,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "wánchéng",
     "english": "to complete",
     "exampleSimplified": "报告我已经完成了。",
-    "exampleTraditional": "报告我已经完成了。",
+    "exampleTraditional": "報告我已經完成了。",
     "examplePinyin": "Bào gào wǒ yǐ jīng wán chéng le.",
-    "exampleEnglish": "I already complete completed action."
+    "exampleEnglish": "I've already completed the report."
   },
   {
     "id": "u8-e8b49fe8b4a3-532",
@@ -7441,13 +7441,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "学习·工作·数字生活",
     "partOfSpeech": "动词",
     "simplified": "负责",
-    "traditional": "负責",
+    "traditional": "負責",
     "pinyin": "fùzé",
     "english": "to be responsible for",
     "exampleSimplified": "这个项目由她负责。",
-    "exampleTraditional": "這個項目由她负責。",
+    "exampleTraditional": "這個項目由她負責。",
     "examplePinyin": "Zhè ge xiàng mù yóu tā fù zé.",
-    "exampleEnglish": "This project she be responsible for."
+    "exampleEnglish": "She's in charge of this project."
   },
   {
     "id": "u8-e58f82e58aa0-533",
@@ -7459,9 +7459,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "cānjiā",
     "english": "to participate",
     "exampleSimplified": "你参加明天的会议吗？",
-    "exampleTraditional": "你參加明天的會議吗？",
+    "exampleTraditional": "你參加明天的會議嗎？",
     "examplePinyin": "Nǐ cān jiā míng tiān de huì yì ma?",
-    "exampleEnglish": "You participate tomorrow of meeting."
+    "exampleEnglish": "Are you attending tomorrow's meeting?"
   },
   {
     "id": "u8-e4b88ae7bd91-534",
@@ -7473,9 +7473,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "shàngwǎng",
     "english": "to go online",
     "exampleSimplified": "爷爷也学会上网了。",
-    "exampleTraditional": "爷爷也學會上網了。",
+    "exampleTraditional": "爺爺也學會上網了。",
     "examplePinyin": "Yé ye yě xué huì shàng wǎng le.",
-    "exampleEnglish": "Paternal grandfather also learn go online completed action."
+    "exampleEnglish": "Even Grandpa has learned to go online."
   },
   {
     "id": "u8-e6b3a8e5868c-535",
@@ -7483,13 +7483,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "学习·工作·数字生活",
     "partOfSpeech": "动词",
     "simplified": "注册",
-    "traditional": "注册",
+    "traditional": "註冊",
     "pinyin": "zhùcè",
     "english": "to register",
     "exampleSimplified": "先注册一个账号。",
-    "exampleTraditional": "先注册一個帳號。",
+    "exampleTraditional": "先註冊一個賬號。",
     "examplePinyin": "Xiān zhù cè yí gè zhàng hào.",
-    "exampleEnglish": "First register one account."
+    "exampleEnglish": "Register an account first."
   },
   {
     "id": "u8-e4b88be8bdbd-536",
@@ -7503,7 +7503,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这个软件在哪儿下载？",
     "exampleTraditional": "這個軟件在哪兒下載？",
     "examplePinyin": "Zhè ge ruǎn jiàn zài nǎr xià zài?",
-    "exampleEnglish": "This software be at where download."
+    "exampleEnglish": "Where can I download this software?"
   },
   {
     "id": "u8-e68993e58db0-537",
@@ -7517,7 +7517,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "帮我打印一下这份合同。",
     "exampleTraditional": "幫我打印一下這份合同。",
     "examplePinyin": "Bāng wǒ dǎ yìn yí xià zhè fèn hé tong.",
-    "exampleEnglish": "I print a moment this."
+    "exampleEnglish": "Please print this contract for me."
   },
   {
     "id": "u8-e69cac-538",
@@ -7573,7 +7573,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "中文的声调有点难。",
     "exampleTraditional": "中文的聲調有點難。",
     "examplePinyin": "Zhōng wén de shēng diào yǒu diǎn nán.",
-    "exampleEnglish": "Chinese language of a little difficult."
+    "exampleEnglish": "Chinese tones are a little difficult."
   },
   {
     "id": "u8-e5aeb9e69893-542",
@@ -7585,9 +7585,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "róngyì",
     "english": "easy",
     "exampleSimplified": "这次考试比较容易。",
-    "exampleTraditional": "這次考試比较容易。",
+    "exampleTraditional": "這次考試比較容易。",
     "examplePinyin": "Zhè cì kǎo shì bǐ jiào róng yì.",
-    "exampleEnglish": "This exam easy."
+    "exampleEnglish": "This exam is relatively easy."
   },
   {
     "id": "u8-e7ae80e58d95-543",
@@ -7599,9 +7599,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "jiǎndān",
     "english": "simple",
     "exampleSimplified": "这道题很简单。",
-    "exampleTraditional": "這道题很簡單。",
+    "exampleTraditional": "這道題很簡單。",
     "examplePinyin": "Zhè dào tí hěn jiǎn dān.",
-    "exampleEnglish": "This very simple."
+    "exampleEnglish": "This question is very simple."
   },
   {
     "id": "u8-e5a48de69d82-544",
@@ -7615,7 +7615,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "事情比我想的复杂。",
     "exampleTraditional": "事情比我想的複雜。",
     "examplePinyin": "Shì qíng bǐ wǒ xiǎng de fù zá.",
-    "exampleEnglish": "I think of complex."
+    "exampleEnglish": "The situation is more complicated than I thought."
   },
   {
     "id": "u8-e9878de8a681-545",
@@ -7629,7 +7629,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "健康比什么都重要。",
     "exampleTraditional": "健康比什麼都重要。",
     "examplePinyin": "Jiàn kāng bǐ shén me dōu zhòng yào.",
-    "exampleEnglish": "Healthy what all important."
+    "exampleEnglish": "Health is more important than anything else."
   },
   {
     "id": "u8-e8aea4e79c9f-546",
@@ -7643,7 +7643,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他做事一直很认真。",
     "exampleTraditional": "他做事一直很認真。",
     "examplePinyin": "Tā zuò shì yì zhí hěn rèn zhēn.",
-    "exampleEnglish": "He continuously very serious."
+    "exampleEnglish": "He's always very conscientious."
   },
   {
     "id": "u8-e881aae6988e-547",
@@ -7657,7 +7657,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这孩子聪明又用功。",
     "exampleTraditional": "這孩子聰明又用功。",
     "examplePinyin": "Zhè hái zi cōng ming yòu yòng gōng.",
-    "exampleEnglish": "This smart use."
+    "exampleEnglish": "This child is clever and hardworking."
   },
   {
     "id": "u8-e6b885e6a59a-548",
@@ -7669,9 +7669,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "qīngchu",
     "english": "clear",
     "exampleSimplified": "老师讲得很清楚。",
-    "exampleTraditional": "老师講得很清楚。",
+    "exampleTraditional": "老師講得很清楚。",
     "examplePinyin": "Lǎo shī jiǎng dé hěn qīng chǔ.",
-    "exampleEnglish": "Teacher speak so very clear."
+    "exampleEnglish": "The teacher explained it very clearly."
   },
   {
     "id": "u9-e8bda6-549",
@@ -7685,7 +7685,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "路上车太多了。",
     "exampleTraditional": "路上車太多了。",
     "examplePinyin": "Lù shang chē tài duō le.",
-    "exampleEnglish": "Road up vehicle too completed action."
+    "exampleEnglish": "There are too many cars on the road."
   },
   {
     "id": "u9-e6b1bde8bda6-550",
@@ -7699,7 +7699,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他们家买了新汽车。",
     "exampleTraditional": "他們家買了新汽車。",
     "examplePinyin": "Tā men jiā mǎi le xīn qì chē.",
-    "exampleEnglish": "They home buy completed action new car."
+    "exampleEnglish": "They bought a new car."
   },
   {
     "id": "u9-e587bae7a79fe8bda6-551",
@@ -7713,7 +7713,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我们打出租车去吧。",
     "exampleTraditional": "我們打出租車去吧。",
     "examplePinyin": "Wǒ men dǎ chū zū chē qù ba.",
-    "exampleEnglish": "We taxi go."
+    "exampleEnglish": "Let's take a taxi."
   },
   {
     "id": "u9-e7bd91e7baa6e8bda6-552",
@@ -7725,9 +7725,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "wǎngyuēchē",
     "english": "ride-hailing car",
     "exampleSimplified": "网约车几分钟就到了。",
-    "exampleTraditional": "網約車几分鐘就到了。",
+    "exampleTraditional": "網約車幾分鐘就到了。",
     "examplePinyin": "Wǎng yuē chē jǐ fēn zhōng jiù dào le.",
-    "exampleEnglish": "Ride-hailing car minute then to completed action."
+    "exampleEnglish": "The ride-hailing car will be here in a few minutes."
   },
   {
     "id": "u9-e585ace4baa4e8bda6-553",
@@ -7739,9 +7739,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "gōngjiāochē",
     "english": "bus",
     "exampleSimplified": "这趟公交车直达机场。",
-    "exampleTraditional": "這趟公交車直达機場。",
+    "exampleTraditional": "這趟公交車直達機場。",
     "examplePinyin": "Zhè tàng gōng jiāo chē zhí dá jī chǎng.",
-    "exampleEnglish": "This bus airport."
+    "exampleEnglish": "This bus goes directly to the airport."
   },
   {
     "id": "u9-e781abe8bda6-554",
@@ -7753,9 +7753,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "huǒchē",
     "english": "train",
     "exampleSimplified": "我坐夜里的火车走。",
-    "exampleTraditional": "我坐夜里的火車走。",
+    "exampleTraditional": "我坐夜裡的火車走。",
     "examplePinyin": "Wǒ zuò yè lǐ de huǒ chē zǒu.",
-    "exampleEnglish": "I sit night inside of train walk."
+    "exampleEnglish": "I'm taking the overnight train."
   },
   {
     "id": "u9-e9ab98e99381-555",
@@ -7769,7 +7769,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "高铁上有插座，很方便。",
     "exampleTraditional": "高鐵上有插座，很方便。",
     "examplePinyin": "Gāo tiě shàng yǒu chā zuò, hěn fāng biàn.",
-    "exampleEnglish": "High-speed rail up have socket, very."
+    "exampleEnglish": "There's a socket on the high-speed train, which is very convenient."
   },
   {
     "id": "u9-e9a39ee69cba-556",
@@ -7783,7 +7783,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "飞机晚点了一个小时。",
     "exampleTraditional": "飛機晚點了一個小時。",
     "examplePinyin": "Fēi jī wǎn diǎn le yí gè xiǎo shí.",
-    "exampleEnglish": "Airplane late order completed action one hour."
+    "exampleEnglish": "The flight was delayed by an hour."
   },
   {
     "id": "u9-e887aae8a18ce8bda6-557",
@@ -7795,9 +7795,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "zìxíngchē",
     "english": "bicycle",
     "exampleSimplified": "他每天骑自行车上学。",
-    "exampleTraditional": "他每天骑自行車上學。",
+    "exampleTraditional": "他每天騎自行車上學。",
     "examplePinyin": "Tā měi tiān qí zì xíng chē shàng xué.",
-    "exampleEnglish": "He day ride bicycle up learn."
+    "exampleEnglish": "He cycles to school every day."
   },
   {
     "id": "u9-e585b1e4baabe58d95e8bda6-558",
@@ -7809,9 +7809,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "gòngxiǎng dānchē",
     "english": "shared bike",
     "exampleSimplified": "街上到处是共享单车。",
-    "exampleTraditional": "街上到处是共享單車。",
+    "exampleTraditional": "街上到處是共享單車。",
     "examplePinyin": "Jiē shàng dào chù shì gòng xiǎng dān chē.",
-    "exampleEnglish": "Street up to be shared bike."
+    "exampleEnglish": "There are shared bikes everywhere on the street."
   },
   {
     "id": "u9-e794b5e58aa8e8bda6-559",
@@ -7823,9 +7823,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "diàndòngchē",
     "english": "electric bike",
     "exampleSimplified": "骑电动车要戴头盔。",
-    "exampleTraditional": "骑電動車要戴頭盔。",
+    "exampleTraditional": "騎電動車要戴頭盔。",
     "examplePinyin": "Qí diàn dòng chē yào dài tóu kuī.",
-    "exampleEnglish": "Ride electric bike wear head."
+    "exampleEnglish": "You need to wear a helmet when riding an e-bike."
   },
   {
     "id": "u9-e691a9e68998e8bda6-560",
@@ -7839,7 +7839,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "摩托车声音太大了。",
     "exampleTraditional": "摩托車聲音太大了。",
     "examplePinyin": "Mó tuō chē shēng yīn tài dà le.",
-    "exampleEnglish": "Motorcycle sound too big completed action."
+    "exampleEnglish": "Motorcycles are too noisy."
   },
   {
     "id": "u9-e59cb0e99381-561",
@@ -7853,7 +7853,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "坐地铁比开车快。",
     "exampleTraditional": "坐地鐵比開車快。",
     "examplePinyin": "Zuò dì tiě bǐ kāi chē kuài.",
-    "exampleEnglish": "Sit subway drive fast."
+    "exampleEnglish": "Taking the metro is faster than driving."
   },
   {
     "id": "u9-e888b9-562",
@@ -7865,9 +7865,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "chuán",
     "english": "boat",
     "exampleSimplified": "我们坐船去了那个小岛。",
-    "exampleTraditional": "我們坐船去了那個小岛。",
+    "exampleTraditional": "我們坐船去了那個小島。",
     "examplePinyin": "Wǒ men zuò chuán qù le nà ge xiǎo dǎo.",
-    "exampleEnglish": "We sit boat go completed action that small."
+    "exampleEnglish": "We took a boat to that small island."
   },
   {
     "id": "u9-e7a5a8-563",
@@ -7881,7 +7881,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "演唱会的票卖完了。",
     "exampleTraditional": "演唱會的票賣完了。",
     "examplePinyin": "Yǎn chàng huì de piào mài wán le.",
-    "exampleEnglish": "Of ticket sell completed action."
+    "exampleEnglish": "The concert tickets are sold out."
   },
   {
     "id": "u9-e8bda6e7ab99-564",
@@ -7893,9 +7893,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "chēzhàn",
     "english": "station",
     "exampleSimplified": "车站离这儿不远。",
-    "exampleTraditional": "車站離這兒不远。",
+    "exampleTraditional": "車站離這兒不遠。",
     "examplePinyin": "Chē zhàn lí zhè ér bù yuǎn.",
-    "exampleEnglish": "Station this not."
+    "exampleEnglish": "The station isn't far from here."
   },
   {
     "id": "u9-e69cbae59cba-565",
@@ -7907,9 +7907,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "jīchǎng",
     "english": "airport",
     "exampleSimplified": "提前两小时到机场。",
-    "exampleTraditional": "提前两小時到機場。",
+    "exampleTraditional": "提前兩小時到機場。",
     "examplePinyin": "Tí qián liǎng xiǎo shí dào jī chǎng.",
-    "exampleEnglish": "Front two hour to airport."
+    "exampleEnglish": "Get to the airport two hours early."
   },
   {
     "id": "u9-e8b7af-566",
@@ -7923,7 +7923,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这条路修好了。",
     "exampleTraditional": "這條路修好了。",
     "examplePinyin": "Zhè tiáo lù xiū hǎo le.",
-    "exampleEnglish": "This road repair good completed action."
+    "exampleEnglish": "This road has been repaired."
   },
   {
     "id": "u9-e9a9ace8b7af-567",
@@ -7931,13 +7931,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "出行·交通·方位",
     "partOfSpeech": "名词",
     "simplified": "马路",
-    "traditional": "马路",
+    "traditional": "馬路",
     "pinyin": "mǎlù",
     "english": "road",
     "exampleSimplified": "过马路要看红绿灯。",
-    "exampleTraditional": "過马路要看紅綠燈。",
+    "exampleTraditional": "過馬路要看紅綠燈。",
     "examplePinyin": "Guò mǎ lù yào kàn hóng lǜ dēng.",
-    "exampleEnglish": "Before road traffic light."
+    "exampleEnglish": "Look at the traffic lights before crossing the road."
   },
   {
     "id": "u9-e6a1a5-568",
@@ -7949,9 +7949,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "qiáo",
     "english": "bridge",
     "exampleSimplified": "桥下有人在钓鱼。",
-    "exampleTraditional": "橋下有人在钓魚。",
+    "exampleTraditional": "橋下有人在釣魚。",
     "examplePinyin": "Qiáo xià yǒu rén zài diào yú.",
-    "exampleEnglish": "Bridge down have person be at fish."
+    "exampleEnglish": "Someone is fishing under the bridge."
   },
   {
     "id": "u9-e98592e5ba97-569",
@@ -7963,9 +7963,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "jiǔdiàn",
     "english": "hotel",
     "exampleSimplified": "我们订了海边的酒店。",
-    "exampleTraditional": "我們訂了海边的酒店。",
+    "exampleTraditional": "我們訂了海邊的酒店。",
     "examplePinyin": "Wǒ men dìng le hǎi biān de jiǔ diàn.",
-    "exampleEnglish": "We completed action sea of hotel."
+    "exampleEnglish": "We booked a hotel by the sea."
   },
   {
     "id": "u9-e59cb0e59bbe-570",
@@ -7979,7 +7979,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "打开地图看看怎么走。",
     "exampleTraditional": "打開地圖看看怎麼走。",
     "examplePinyin": "Dǎ kāi dì tú kàn kàn zěn me zǒu.",
-    "exampleEnglish": "Open map how walk."
+    "exampleEnglish": "Open the map and see how to get there."
   },
   {
     "id": "u9-e5afbce888aa-571",
@@ -7991,9 +7991,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "dǎoháng",
     "english": "navigation",
     "exampleSimplified": "跟着导航走就行。",
-    "exampleTraditional": "跟着導航走就行。",
+    "exampleTraditional": "跟著導航走就行。",
     "examplePinyin": "Gēn zhe dǎo háng zǒu jiù xíng.",
-    "exampleEnglish": "Ongoing navigation walk then."
+    "exampleEnglish": "Just follow the navigation."
   },
   {
     "id": "u9-e59f8ee5b882-572",
@@ -8005,9 +8005,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "chéngshì",
     "english": "city",
     "exampleSimplified": "这座城市变化很大。",
-    "exampleTraditional": "這座城市变化很大。",
+    "exampleTraditional": "這座城市變化很大。",
     "examplePinyin": "Zhè zuò chéng shì biàn huà hěn dà.",
-    "exampleEnglish": "This city very big."
+    "exampleEnglish": "This city has changed a lot."
   },
   {
     "id": "u9-e5869ce69d91-573",
@@ -8021,7 +8021,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "农村的空气特别好。",
     "exampleTraditional": "農村的空氣特別好。",
     "examplePinyin": "Nóng cūn de kōng qì tè bié hǎo.",
-    "exampleEnglish": "Countryside of air special good."
+    "exampleEnglish": "The air in the countryside is especially fresh."
   },
   {
     "id": "u9-e69d91-574",
@@ -8033,9 +8033,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "cūn",
     "english": "village",
     "exampleSimplified": "这个村只有几十户人家。",
-    "exampleTraditional": "這個村隻有几十户人家。",
+    "exampleTraditional": "這個村只有幾十戶人家。",
     "examplePinyin": "Zhè ge cūn zhǐ yǒu jǐ shí hù rén jiā.",
-    "exampleEnglish": "This village only have ten person home."
+    "exampleEnglish": "There are only a few dozen households in this village."
   },
   {
     "id": "u9-e8a197-575",
@@ -8047,9 +8047,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "jiē",
     "english": "street",
     "exampleSimplified": "这条街晚上很热闹。",
-    "exampleTraditional": "這條街晚上很热鬧。",
+    "exampleTraditional": "這條街晚上很熱鬧。",
     "examplePinyin": "Zhè tiáo jiē wǎn shàng hěn rè nào.",
-    "exampleEnglish": "This street evening very lively."
+    "exampleEnglish": "This street is very lively at night."
   },
   {
     "id": "u9-e585ace59bad-576",
@@ -8061,9 +8061,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "gōngyuán",
     "english": "park",
     "exampleSimplified": "公园里有人在跳舞。",
-    "exampleTraditional": "公園里有人在跳舞。",
+    "exampleTraditional": "公園裡有人在跳舞。",
     "examplePinyin": "Gōng yuán lǐ yǒu rén zài tiào wǔ.",
-    "exampleEnglish": "Park inside have person be at."
+    "exampleEnglish": "People are dancing in the park."
   },
   {
     "id": "u9-e5b9bfe59cba-577",
@@ -8071,13 +8071,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "出行·交通·方位",
     "partOfSpeech": "名词",
     "simplified": "广场",
-    "traditional": "广場",
+    "traditional": "廣場",
     "pinyin": "guǎngchǎng",
     "english": "square",
     "exampleSimplified": "广场上聚了很多人。",
-    "exampleTraditional": "广場上聚了很多人。",
+    "exampleTraditional": "廣場上聚了很多人。",
     "examplePinyin": "Guǎng chǎng shàng jù le hěn duō rén.",
-    "exampleEnglish": "Square up completed action very person."
+    "exampleEnglish": "A lot of people have gathered in the square."
   },
   {
     "id": "u9-e696b9e59091-578",
@@ -8089,9 +8089,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "fāngxiàng",
     "english": "direction",
     "exampleSimplified": "我们好像走错方向了。",
-    "exampleTraditional": "我們好像走错方向了。",
+    "exampleTraditional": "我們好像走錯方向了。",
     "examplePinyin": "Wǒ men hǎo xiàng zǒu cuò fāng xiàng le.",
-    "exampleEnglish": "We good walk direction completed action."
+    "exampleEnglish": "I think we're going in the wrong direction."
   },
   {
     "id": "u9-e7baa2e7bbbfe781af-579",
@@ -8103,9 +8103,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "hónglǜdēng",
     "english": "traffic light",
     "exampleSimplified": "前面的红绿灯坏了。",
-    "exampleTraditional": "前麵的紅綠燈坏了。",
+    "exampleTraditional": "前面的紅綠燈壞了。",
     "examplePinyin": "Qián miàn de hóng lǜ dēng huài le.",
-    "exampleEnglish": "Front noodles of traffic light completed action."
+    "exampleEnglish": "The traffic lights ahead are broken."
   },
   {
     "id": "u9-e5819ce8bda6e59cba-580",
@@ -8117,9 +8117,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "tíngchēchǎng",
     "english": "parking lot",
     "exampleSimplified": "停车场已经满了。",
-    "exampleTraditional": "停車場已经滿了。",
+    "exampleTraditional": "停車場已經滿了。",
     "examplePinyin": "Tíng chē chǎng yǐ jīng mǎn le.",
-    "exampleEnglish": "Parking lot already full completed action."
+    "exampleEnglish": "The car park is already full."
   },
   {
     "id": "u9-e58aa0e6b2b9e7ab99-581",
@@ -8131,9 +8131,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "jiāyóuzhàn",
     "english": "gas station",
     "exampleSimplified": "前面有个加油站，先加油吧。",
-    "exampleTraditional": "前麵有個加油站，先加油吧。",
+    "exampleTraditional": "前面有個加油站，先加油吧。",
     "examplePinyin": "Qián miàn yǒu gè jiā yóu zhàn, xiān jiā yóu ba.",
-    "exampleEnglish": "Front noodles have gas station, first oil."
+    "exampleEnglish": "There's a petrol station ahead. Let's fill up first."
   },
   {
     "id": "u9-e4b88a-582",
@@ -8145,9 +8145,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "shàng",
     "english": "up; on",
     "exampleSimplified": "墙上贴着一张海报。",
-    "exampleTraditional": "牆上贴着一張海报。",
+    "exampleTraditional": "牆上貼著一張海報。",
     "examplePinyin": "Qiáng shàng tiē zhe yì zhāng hǎi bào.",
-    "exampleEnglish": "Wall up ongoing a sheet of sea."
+    "exampleEnglish": "There's a poster on the wall."
   },
   {
     "id": "u9-e4b88b-583",
@@ -8161,7 +8161,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "猫躲在床下。",
     "exampleTraditional": "貓躲在床下。",
     "examplePinyin": "Māo duǒ zài chuáng xià.",
-    "exampleEnglish": "Cat be at bed down."
+    "exampleEnglish": "The cat is hiding under the bed."
   },
   {
     "id": "u9-e5898d-584",
@@ -8173,9 +8173,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "qián",
     "english": "front; before",
     "exampleSimplified": "学校前面有家书店。",
-    "exampleTraditional": "學校前麵有家書店。",
+    "exampleTraditional": "學校前面有家書店。",
     "examplePinyin": "Xué xiào qián miàn yǒu jiā shū diàn.",
-    "exampleEnglish": "School front noodles have home book."
+    "exampleEnglish": "There's a bookshop in front of the school."
   },
   {
     "id": "u9-e5908e-585",
@@ -8187,9 +8187,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "hòu",
     "english": "back; after",
     "exampleSimplified": "房子后面是一座山。",
-    "exampleTraditional": "房子後麵是一座山。",
+    "exampleTraditional": "房子後面是一座山。",
     "examplePinyin": "Fáng zi hòu miàn shì yí zuò shān.",
-    "exampleEnglish": "House back noodles be one structure mountain."
+    "exampleEnglish": "There's a mountain behind the house."
   },
   {
     "id": "u9-e5b7a6-586",
@@ -8203,7 +8203,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "到路口往左拐。",
     "exampleTraditional": "到路口往左拐。",
     "examplePinyin": "Dào lù kǒu wǎng zuǒ guǎi.",
-    "exampleEnglish": "To road left."
+    "exampleEnglish": "Turn left at the junction."
   },
   {
     "id": "u9-e58fb3-587",
@@ -8215,9 +8215,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "yòu",
     "english": "right",
     "exampleSimplified": "超市在银行右边。",
-    "exampleTraditional": "超市在銀行右边。",
+    "exampleTraditional": "超市在銀行右邊。",
     "examplePinyin": "Chāo shì zài yín háng yòu biān.",
-    "exampleEnglish": "Supermarket be at bank right."
+    "exampleEnglish": "The supermarket is to the right of the bank."
   },
   {
     "id": "u9-e9878c-588",
@@ -8225,13 +8225,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "出行·交通·方位",
     "partOfSpeech": "方位词",
     "simplified": "里",
-    "traditional": "里",
+    "traditional": "裡",
     "pinyin": "lǐ",
     "english": "inside",
     "exampleSimplified": "抽屉里有个手电筒。",
-    "exampleTraditional": "抽屉里有個手電筒。",
+    "exampleTraditional": "抽屜裡有個手電筒。",
     "examplePinyin": "Chōu tì lǐ yǒu gè shǒu diàn tǒng.",
-    "exampleEnglish": "Inside have hand."
+    "exampleEnglish": "There's a torch in the drawer."
   },
   {
     "id": "u9-e5a496-589",
@@ -8245,7 +8245,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "门外有人敲门。",
     "exampleTraditional": "門外有人敲門。",
     "examplePinyin": "Mén wài yǒu rén qiāo mén.",
-    "exampleEnglish": "Door outside have person door."
+    "exampleEnglish": "Someone is knocking at the door."
   },
   {
     "id": "u9-e4b8ad-590",
@@ -8257,9 +8257,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "zhōng",
     "english": "middle",
     "exampleSimplified": "他站在队伍中间。",
-    "exampleTraditional": "他站在队伍中間。",
+    "exampleTraditional": "他站在隊伍中間。",
     "examplePinyin": "Tā zhàn zài duì wu zhōng jiān.",
-    "exampleEnglish": "He be at middle."
+    "exampleEnglish": "He's standing in the middle of the queue."
   },
   {
     "id": "u9-e69781e8beb9-591",
@@ -8267,13 +8267,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "出行·交通·方位",
     "partOfSpeech": "方位词",
     "simplified": "旁边",
-    "traditional": "旁边",
+    "traditional": "旁邊",
     "pinyin": "pángbiān",
     "english": "beside",
     "exampleSimplified": "我家旁边有个地铁站。",
-    "exampleTraditional": "我家旁边有個地鐵站。",
+    "exampleTraditional": "我家旁邊有個地鐵站。",
     "examplePinyin": "Wǒ jiā páng biān yǒu gè dì tiě zhàn.",
-    "exampleEnglish": "I home beside have subway."
+    "exampleEnglish": "There's a metro station next to my home."
   },
   {
     "id": "u9-e5afb9e99da2-592",
@@ -8281,13 +8281,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "出行·交通·方位",
     "partOfSpeech": "方位词",
     "simplified": "对面",
-    "traditional": "對麵",
+    "traditional": "對面",
     "pinyin": "duìmiàn",
     "english": "opposite",
     "exampleSimplified": "对面新开了一家咖啡店。",
-    "exampleTraditional": "對麵新開了一家咖啡店。",
+    "exampleTraditional": "對面新開了一家咖啡店。",
     "examplePinyin": "Duì miàn xīn kāi le yì jiā kā fēi diàn.",
-    "exampleEnglish": "Opposite new open completed action one home coffee."
+    "exampleEnglish": "A new coffee shop has opened opposite."
   },
   {
     "id": "u9-e99984e8bf91-593",
@@ -8299,9 +8299,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "fùjìn",
     "english": "nearby",
     "exampleSimplified": "附近有药店吗？",
-    "exampleTraditional": "附近有藥店吗？",
+    "exampleTraditional": "附近有藥店嗎？",
     "examplePinyin": "Fù jìn yǒu yào diàn ma?",
-    "exampleEnglish": "Nearby have medicine."
+    "exampleEnglish": "Is there a pharmacy nearby?"
   },
   {
     "id": "u9-e4b89c-594",
@@ -8313,9 +8313,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "dōng",
     "english": "east",
     "exampleSimplified": "太阳从东边升起。",
-    "exampleTraditional": "太陽从東边升起。",
+    "exampleTraditional": "太陽從東邊升起。",
     "examplePinyin": "Tài yáng cóng dōng biān shēng qǐ.",
-    "exampleEnglish": "Sun from east."
+    "exampleEnglish": "The sun rises in the east."
   },
   {
     "id": "u9-e58d97-595",
@@ -8329,7 +8329,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "冬天很多鸟飞去南方。",
     "exampleTraditional": "冬天很多鳥飛去南方。",
     "examplePinyin": "Dōng tiān hěn duō niǎo fēi qù nán fāng.",
-    "exampleEnglish": "Winter day very bird go south."
+    "exampleEnglish": "Many birds fly south for the winter."
   },
   {
     "id": "u9-e8a5bf-596",
@@ -8343,7 +8343,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "往西走十分钟就到了。",
     "exampleTraditional": "往西走十分鐘就到了。",
     "examplePinyin": "Wǎng xī zǒu shí fēn zhōng jiù dào le.",
-    "exampleEnglish": "West walk ten minute then to completed action."
+    "exampleEnglish": "Walk west for ten minutes and you'll be there."
   },
   {
     "id": "u9-e58c97-597",
@@ -8357,7 +8357,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我老家在北方。",
     "exampleTraditional": "我老家在北方。",
     "examplePinyin": "Wǒ lǎo jiā zài běi fāng.",
-    "exampleEnglish": "I hometown be at north."
+    "exampleEnglish": "My hometown is in the north."
   },
   {
     "id": "u9-e8b5b0-598",
@@ -8371,7 +8371,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我们走路去吧。",
     "exampleTraditional": "我們走路去吧。",
     "examplePinyin": "Wǒ men zǒu lù qù ba.",
-    "exampleEnglish": "We walk road go."
+    "exampleEnglish": "Let's walk there."
   },
   {
     "id": "u9-e8b791-599",
@@ -8385,7 +8385,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他每天早上跑五公里。",
     "exampleTraditional": "他每天早上跑五公里。",
     "examplePinyin": "Tā měi tiān zǎo shàng pǎo wǔ gōng lǐ.",
-    "exampleEnglish": "He day early morning run five inside."
+    "exampleEnglish": "He runs five kilometres every morning."
   },
   {
     "id": "u9-e69da5-600",
@@ -8399,7 +8399,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "你什么时候来我家？",
     "exampleTraditional": "你什麼時候來我家？",
     "examplePinyin": "Nǐ shén me shí hòu lái wǒ jiā?",
-    "exampleEnglish": "You what time come I home."
+    "exampleEnglish": "When are you coming to my home?"
   },
   {
     "id": "u9-e58ebb-601",
@@ -8413,7 +8413,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我去趟超市。",
     "exampleTraditional": "我去趟超市。",
     "examplePinyin": "Wǒ qù tàng chāo shì.",
-    "exampleEnglish": "I go supermarket."
+    "exampleEnglish": "I'm going to the supermarket."
   },
   {
     "id": "u9-e588b0-602",
@@ -8425,9 +8425,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "dào",
     "english": "to arrive",
     "exampleSimplified": "火车马上就到了。",
-    "exampleTraditional": "火車马上就到了。",
+    "exampleTraditional": "火車馬上就到了。",
     "examplePinyin": "Huǒ chē mǎ shàng jiù dào le.",
-    "exampleEnglish": "Train horse up then to completed action."
+    "exampleEnglish": "The train is arriving soon."
   },
   {
     "id": "u9-e59b9e-603",
@@ -8441,7 +8441,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我先回家了。",
     "exampleTraditional": "我先回家了。",
     "examplePinyin": "Wǒ xiān huí jiā le.",
-    "exampleEnglish": "I first return home completed action."
+    "exampleEnglish": "I'm going home first."
   },
   {
     "id": "u9-e8bf9b-604",
@@ -8449,13 +8449,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "出行·交通·方位",
     "partOfSpeech": "动词",
     "simplified": "进",
-    "traditional": "进",
+    "traditional": "進",
     "pinyin": "jìn",
     "english": "to enter",
     "exampleSimplified": "请进，别客气。",
-    "exampleTraditional": "請进，別客氣。",
+    "exampleTraditional": "請進，別客氣。",
     "examplePinyin": "Qǐng jìn, bié kè qì.",
-    "exampleEnglish": "Enter, do not air."
+    "exampleEnglish": "Come in, make yourself at home."
   },
   {
     "id": "u9-e587ba-605",
@@ -8469,7 +8469,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他刚出门。",
     "exampleTraditional": "他剛出門。",
     "examplePinyin": "Tā gāng chū mén.",
-    "exampleEnglish": "He exit door."
+    "exampleEnglish": "He has just gone out."
   },
   {
     "id": "u9-e59d90-606",
@@ -8481,9 +8481,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "zuò",
     "english": "to sit; to ride",
     "exampleSimplified": "坐高铁两个小时就能到。",
-    "exampleTraditional": "坐高鐵两個小時就能到。",
+    "exampleTraditional": "坐高鐵兩個小時就能到。",
     "examplePinyin": "Zuò gāo tiě liǎng gè xiǎo shí jiù néng dào.",
-    "exampleEnglish": "Sit high-speed rail two hour then to."
+    "exampleEnglish": "It only takes two hours by high-speed train."
   },
   {
     "id": "u9-e9aa91-607",
@@ -8491,13 +8491,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "出行·交通·方位",
     "partOfSpeech": "动词",
     "simplified": "骑",
-    "traditional": "骑",
+    "traditional": "騎",
     "pinyin": "qí",
     "english": "to ride",
     "exampleSimplified": "他骑车去买菜。",
-    "exampleTraditional": "他骑車去買菜。",
+    "exampleTraditional": "他騎車去買菜。",
     "examplePinyin": "Tā qí chē qù mǎi cài.",
-    "exampleEnglish": "He ride vehicle go buy dish."
+    "exampleEnglish": "He rode his bike to buy groceries."
   },
   {
     "id": "u9-e5bc80e8bda6-608",
@@ -8511,7 +8511,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他开车送我回家。",
     "exampleTraditional": "他開車送我回家。",
     "examplePinyin": "Tā kāi chē sòng wǒ huí jiā.",
-    "exampleEnglish": "He drive I return home."
+    "exampleEnglish": "He drove me home."
   },
   {
     "id": "u9-e5819c-609",
@@ -8523,9 +8523,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "tíng",
     "english": "to stop",
     "exampleSimplified": "车不能停在这里。",
-    "exampleTraditional": "車不能停在這里。",
+    "exampleTraditional": "車不能停在這裡。",
     "examplePinyin": "Chē bù néng tíng zài zhè lǐ.",
-    "exampleEnglish": "Vehicle not stop be at here."
+    "exampleEnglish": "You can't park here."
   },
   {
     "id": "u9-e7a6bbe5bc80-610",
@@ -8539,7 +8539,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他十八岁就离开了家乡。",
     "exampleTraditional": "他十八歲就離開了家鄉。",
     "examplePinyin": "Tā shí bā suì jiù lí kāi le jiā xiāng.",
-    "exampleEnglish": "He ten eight years old then leave completed action hometown."
+    "exampleEnglish": "He left his hometown when he was eighteen."
   },
   {
     "id": "u9-e5b8a6-611",
@@ -8547,13 +8547,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "出行·交通·方位",
     "partOfSpeech": "动词",
     "simplified": "带",
-    "traditional": "带",
+    "traditional": "帶",
     "pinyin": "dài",
     "english": "to bring",
     "exampleSimplified": "出门别忘带钥匙。",
-    "exampleTraditional": "出門別忘带鑰匙。",
+    "exampleTraditional": "出門別忘帶鑰匙。",
     "examplePinyin": "Chū mén bié wàng dài yào shi.",
-    "exampleEnglish": "Exit door do not forget bring key."
+    "exampleEnglish": "Don't forget to take your keys when you go out."
   },
   {
     "id": "u9-e68993e8bda6-612",
@@ -8567,7 +8567,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "太晚了，我们打车回去吧。",
     "exampleTraditional": "太晚了，我們打車回去吧。",
     "examplePinyin": "Tài wǎn le, wǒ men dǎ chē huí qù ba.",
-    "exampleEnglish": "Too late completed action, we take a taxi return go."
+    "exampleEnglish": "It's too late. Let's take a taxi home."
   },
   {
     "id": "u9-e8be86-613",
@@ -8579,9 +8579,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "liàng",
     "english": "classifier",
     "exampleSimplified": "门口停着一辆红色的车。",
-    "exampleTraditional": "門口停着一輛紅色的車。",
+    "exampleTraditional": "門口停著一輛紅色的車。",
     "examplePinyin": "Mén kǒu tíng zhe yí liàng hóng sè de chē.",
-    "exampleEnglish": "A red car is parked at the entrance."
+    "exampleEnglish": "There's a red car parked at the entrance."
   },
   {
     "id": "u9-e8b69f-614",
@@ -8595,7 +8595,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我去了一趟银行。",
     "exampleTraditional": "我去了一趟銀行。",
     "examplePinyin": "Wǒ qù le yí tàng yín háng.",
-    "exampleEnglish": "I made a trip to the bank."
+    "exampleEnglish": "I went to the bank."
   },
   {
     "id": "u9-e78fad-615",
@@ -8607,9 +8607,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "bān",
     "english": "classifier",
     "exampleSimplified": "我赶上了最后一班地铁。",
-    "exampleTraditional": "我赶上了最後一班地鐵。",
+    "exampleTraditional": "我趕上了最後一班地鐵。",
     "examplePinyin": "Wǒ gǎn shàng le zuì hòu yì bān dì tiě.",
-    "exampleEnglish": "I caught the last subway train."
+    "exampleEnglish": "I caught the last metro."
   },
   {
     "id": "u10-e59586e5ba97-616",
@@ -8623,7 +8623,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这家商店周日不开门。",
     "exampleTraditional": "這家商店週日不開門。",
     "examplePinyin": "Zhè jiā shāng diàn zhōu rì bù kāi mén.",
-    "exampleEnglish": "This home shop week day not open door."
+    "exampleEnglish": "This shop is closed on Sundays."
   },
   {
     "id": "u10-e8b685e5b882-617",
@@ -8637,7 +8637,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "超市在搞活动。",
     "exampleTraditional": "超市在搞活動。",
     "examplePinyin": "Chāo shì zài gǎo huó dòng.",
-    "exampleEnglish": "Supermarket be at."
+    "exampleEnglish": "The supermarket is having a promotion."
   },
   {
     "id": "u10-e5b882e59cba-618",
@@ -8649,9 +8649,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "shìchǎng",
     "english": "market",
     "exampleSimplified": "早上的市场很热闹。",
-    "exampleTraditional": "早上的市場很热鬧。",
+    "exampleTraditional": "早上的市場很熱鬧。",
     "examplePinyin": "Zǎo shàng de shì chǎng hěn rè nào.",
-    "exampleEnglish": "Early morning of market very lively."
+    "exampleEnglish": "The morning market is very lively."
   },
   {
     "id": "u10-e993b6e8a18c-619",
@@ -8665,7 +8665,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "银行下午五点关门。",
     "exampleTraditional": "銀行下午五點關門。",
     "examplePinyin": "Yín háng xià wǔ wǔ diǎn guān mén.",
-    "exampleEnglish": "Bank afternoon five order close door."
+    "exampleEnglish": "The bank closes at five in the afternoon."
   },
   {
     "id": "u10-e992b1-620",
@@ -8677,9 +8677,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "qián",
     "english": "money",
     "exampleSimplified": "我带的钱不够。",
-    "exampleTraditional": "我带的錢不够。",
+    "exampleTraditional": "我帶的錢不夠。",
     "examplePinyin": "Wǒ dài de qián bú gòu.",
-    "exampleEnglish": "I bring of money not."
+    "exampleEnglish": "I didn't bring enough money."
   },
   {
     "id": "u10-e4bbb7e6a0bc-621",
@@ -8693,7 +8693,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这个价格很合理。",
     "exampleTraditional": "這個價格很合理。",
     "examplePinyin": "Zhè ge jià gé hěn hé lǐ.",
-    "exampleEnglish": "This price very."
+    "exampleEnglish": "That price is reasonable."
   },
   {
     "id": "u10-e5b7a5e8b584-622",
@@ -8707,7 +8707,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "每月十号发工资。",
     "exampleTraditional": "每月十號發工資。",
     "examplePinyin": "Měi yuè shí hào fā gōng zī.",
-    "exampleEnglish": "Month ten salary."
+    "exampleEnglish": "Payday is the tenth of every month."
   },
   {
     "id": "u10-e7949fe6848f-623",
@@ -8721,7 +8721,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他家的生意越来越好。",
     "exampleTraditional": "他家的生意越來越好。",
     "examplePinyin": "Tā jiā de shēng yì yuè lái yuè hǎo.",
-    "exampleEnglish": "He home of business come good."
+    "exampleEnglish": "His family business is getting better and better."
   },
   {
     "id": "u10-e4baa7e59381-624",
@@ -8735,7 +8735,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这款产品卖得很火。",
     "exampleTraditional": "這款產品賣得很火。",
     "examplePinyin": "Zhè kuǎn chǎn pǐn mài dé hěn huǒ.",
-    "exampleEnglish": "This product sell so very fire."
+    "exampleEnglish": "This product is selling very well."
   },
   {
     "id": "u10-e9a1bee5aea2-625",
@@ -8749,7 +8749,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "顾客就是上帝。",
     "exampleTraditional": "顧客就是上帝。",
     "examplePinyin": "Gù kè jiù shì shàng dì.",
-    "exampleEnglish": "Customer then be up."
+    "exampleEnglish": "The customer is always right."
   },
   {
     "id": "u10-e5bfabe98092-626",
@@ -8763,7 +8763,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "你的快递到了。",
     "exampleTraditional": "你的快遞到了。",
     "examplePinyin": "Nǐ de kuài dì dào le.",
-    "exampleEnglish": "You of delivery to completed action."
+    "exampleEnglish": "Your delivery has arrived."
   },
   {
     "id": "u10-e7bd91e8b4ad-627",
@@ -8777,7 +8777,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "她喜欢深夜网购。",
     "exampleTraditional": "她喜歡深夜網購。",
     "examplePinyin": "Tā xǐ huan shēn yè wǎng gòu.",
-    "exampleEnglish": "She like night online shopping."
+    "exampleEnglish": "She likes shopping online late at night."
   },
   {
     "id": "u10-e78eb0e98791-628",
@@ -8789,9 +8789,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "xiànjīn",
     "english": "cash",
     "exampleSimplified": "现在很少有人带现金。",
-    "exampleTraditional": "現在很少有人带現金。",
+    "exampleTraditional": "現在很少有人帶現金。",
     "examplePinyin": "Xiàn zài hěn shǎo yǒu rén dài xiàn jīn.",
-    "exampleEnglish": "Now very have person bring cash."
+    "exampleEnglish": "Very few people carry cash these days."
   },
   {
     "id": "u10-e993b6e8a18ce58da1-629",
@@ -8803,9 +8803,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "yínhángkǎ",
     "english": "bank card",
     "exampleSimplified": "我的银行卡不见了。",
-    "exampleTraditional": "我的銀行卡不见了。",
+    "exampleTraditional": "我的銀行卡不見了。",
     "examplePinyin": "Wǒ de yín háng kǎ bú jiàn le.",
-    "exampleEnglish": "I of bank card not completed action."
+    "exampleEnglish": "My bank card is missing."
   },
   {
     "id": "u10-e7baa2e58c85-630",
@@ -8819,7 +8819,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "过年孩子们都收红包。",
     "exampleTraditional": "過年孩子們都收紅包。",
     "examplePinyin": "Guò nián hái zi men dōu shōu hóng bāo.",
-    "exampleEnglish": "Before year all red envelope."
+    "exampleEnglish": "Children receive red envelopes at New Year."
   },
   {
     "id": "u10-e4bd99e9a29d-631",
@@ -8833,7 +8833,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "卡里余额不多了。",
     "exampleTraditional": "卡里餘額不多了。",
     "examplePinyin": "Kǎ lǐ yú é bù duō le.",
-    "exampleEnglish": "Inside balance not completed action."
+    "exampleEnglish": "There's not much left in the account."
   },
   {
     "id": "u10-e4bc98e683a0-632",
@@ -8841,13 +8841,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "购物·金钱",
     "partOfSpeech": "名词",
     "simplified": "优惠",
-    "traditional": "优惠",
+    "traditional": "優惠",
     "pinyin": "yōuhuì",
     "english": "discount",
     "exampleSimplified": "新用户有优惠。",
-    "exampleTraditional": "新用户有优惠。",
+    "exampleTraditional": "新用戶有優惠。",
     "examplePinyin": "Xīn yòng hù yǒu yōu huì.",
-    "exampleEnglish": "New use have discount."
+    "exampleEnglish": "New users get a discount."
   },
   {
     "id": "u10-e8aea2e58d95-633",
@@ -8859,9 +8859,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "dìngdān",
     "english": "order",
     "exampleSimplified": "你的订单已经发货了。",
-    "exampleTraditional": "你的訂單已经發货了。",
+    "exampleTraditional": "你的訂單已經發貨了。",
     "examplePinyin": "Nǐ de dìng dān yǐ jīng fā huò le.",
-    "exampleEnglish": "You of order already completed action."
+    "exampleEnglish": "Your order has already been dispatched."
   },
   {
     "id": "u10-e58f91e7a5a8-634",
@@ -8873,9 +8873,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "fāpiào",
     "english": "invoice",
     "exampleSimplified": "请给我开张发票。",
-    "exampleTraditional": "請给我開張發票。",
+    "exampleTraditional": "請給我開張發票。",
     "examplePinyin": "Qǐng gěi wǒ kāi zhāng fā piào.",
-    "exampleEnglish": "To I open invoice."
+    "exampleEnglish": "Please issue me an invoice."
   },
   {
     "id": "u10-e7bd91e5ba97-635",
@@ -8889,7 +8889,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "她开了一家网店卖衣服。",
     "exampleTraditional": "她開了一家網店賣衣服。",
     "examplePinyin": "Tā kāi le yì jiā wǎng diàn mài yī fu.",
-    "exampleEnglish": "She open completed action one home online shop sell clothing."
+    "exampleEnglish": "She runs an online shop selling clothes."
   },
   {
     "id": "u10-e5ba97e59198-636",
@@ -8901,9 +8901,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "diànyuán",
     "english": "shop assistant",
     "exampleSimplified": "店员帮我找了合适的尺码。",
-    "exampleTraditional": "店員幫我找了合适的尺碼。",
+    "exampleTraditional": "店員幫我找了合適的尺碼。",
     "examplePinyin": "Diàn yuán bāng wǒ zhǎo le hé shì de chǐ mǎ.",
-    "exampleEnglish": "Shop assistant I look for completed action of."
+    "exampleEnglish": "The shop assistant helped me find the right size."
   },
   {
     "id": "u10-e58583-637",
@@ -8917,7 +8917,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这本书三十元。",
     "exampleTraditional": "這本書三十元。",
     "examplePinyin": "Zhè běn shū sān shí yuán.",
-    "exampleEnglish": "This book is thirty yuan."
+    "exampleEnglish": "This book costs thirty yuan."
   },
   {
     "id": "u10-e59d97-638",
@@ -8931,7 +8931,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "苹果五块钱一斤。",
     "exampleTraditional": "蘋果五塊錢一斤。",
     "examplePinyin": "Píng guǒ wǔ kuài qián yì jīn.",
-    "exampleEnglish": "Apples are five yuan per jin."
+    "exampleEnglish": "Apples are five yuan a jin."
   },
   {
     "id": "u10-e6af9b-639",
@@ -8945,7 +8945,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "找您五毛钱。",
     "exampleTraditional": "找您五毛錢。",
     "examplePinyin": "Zhǎo nín wǔ máo qián.",
-    "exampleEnglish": "Here is fifty cents in change."
+    "exampleEnglish": "Here's fifty fen in change."
   },
   {
     "id": "u10-e696a4-640",
@@ -8957,7 +8957,7 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "jīn",
     "english": "jin, 500 grams",
     "exampleSimplified": "我买了两斤香蕉。",
-    "exampleTraditional": "我買了两斤香蕉。",
+    "exampleTraditional": "我買了兩斤香蕉。",
     "examplePinyin": "Wǒ mǎi le liǎng jīn xiāng jiāo.",
     "exampleEnglish": "I bought two jin of bananas."
   },
@@ -8973,7 +8973,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "行李不能超过二十公斤。",
     "exampleTraditional": "行李不能超過二十公斤。",
     "examplePinyin": "Xíng li bù néng chāo guò èr shí gōng jīn.",
-    "exampleEnglish": "The luggage cannot exceed twenty kilograms."
+    "exampleEnglish": "Luggage must not exceed twenty kilograms."
   },
   {
     "id": "u10-e7b1b3-642",
@@ -8987,7 +8987,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他身高一米八。",
     "exampleTraditional": "他身高一米八。",
     "examplePinyin": "Tā shēn gāo yì mǐ bā.",
-    "exampleEnglish": "He is 1.8 meters tall."
+    "exampleEnglish": "He's 1.8 metres tall."
   },
   {
     "id": "u10-e4b9b0-643",
@@ -9001,7 +9001,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我想买个新手机。",
     "exampleTraditional": "我想買個新手機。",
     "examplePinyin": "Wǒ xiǎng mǎi gè xīn shǒu jī.",
-    "exampleEnglish": "I think buy new mobile phone."
+    "exampleEnglish": "I want to buy a new phone."
   },
   {
     "id": "u10-e58d96-644",
@@ -9013,9 +9013,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "mài",
     "english": "to sell",
     "exampleSimplified": "这家店只卖水果。",
-    "exampleTraditional": "這家店隻賣水果。",
+    "exampleTraditional": "這家店只賣水果。",
     "examplePinyin": "Zhè jiā diàn zhī mài shuǐ guǒ.",
-    "exampleEnglish": "This home only sell fruit."
+    "exampleEnglish": "This shop only sells fruit."
   },
   {
     "id": "u10-e4bb98-645",
@@ -9029,7 +9029,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这次我来付。",
     "exampleTraditional": "這次我來付。",
     "examplePinyin": "Zhè cì wǒ lái fù.",
-    "exampleEnglish": "This I come pay."
+    "exampleEnglish": "I'll pay this time."
   },
   {
     "id": "u10-e88ab1-646",
@@ -9041,9 +9041,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "huā",
     "english": "flower",
     "exampleSimplified": "装修花了不少钱。",
-    "exampleTraditional": "装修花了不少錢。",
+    "exampleTraditional": "裝修花了不少錢。",
     "examplePinyin": "Zhuāng xiū huā le bù shǎo qián.",
-    "exampleEnglish": "Repair flower completed action not money."
+    "exampleEnglish": "The renovation cost quite a lot."
   },
   {
     "id": "u10-e79c81-647",
@@ -9057,7 +9057,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "拼车能省不少钱。",
     "exampleTraditional": "拼車能省不少錢。",
     "examplePinyin": "Pīn chē néng shěng bù shǎo qián.",
-    "exampleEnglish": "Vehicle save not money."
+    "exampleEnglish": "Carpooling can save a lot of money."
   },
   {
     "id": "u10-e5ad98-648",
@@ -9069,9 +9069,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "cún",
     "english": "to save; to deposit",
     "exampleSimplified": "她每月存两千块。",
-    "exampleTraditional": "她每月存两千塊。",
+    "exampleTraditional": "她每月存兩千塊。",
     "examplePinyin": "Tā měi yuè cún liǎng qiān kuài.",
-    "exampleEnglish": "She month save two thousand colloquial yuan."
+    "exampleEnglish": "She saves two thousand yuan a month."
   },
   {
     "id": "u10-e5809f-649",
@@ -9083,9 +9083,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "jiè",
     "english": "to borrow",
     "exampleSimplified": "我能借你的充电器吗？",
-    "exampleTraditional": "我能借你的充電器吗？",
+    "exampleTraditional": "我能借你的充電器嗎？",
     "examplePinyin": "Wǒ néng jiè nǐ de chōng diàn qì ma?",
-    "exampleEnglish": "I borrow you of charger."
+    "exampleEnglish": "Can I borrow your charger?"
   },
   {
     "id": "u10-e8bf98-650",
@@ -9099,7 +9099,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "借的书下周要还。",
     "exampleTraditional": "借的書下週要還。",
     "examplePinyin": "Jiè de shū xià zhōu yào hái.",
-    "exampleEnglish": "Borrow of book down week still."
+    "exampleEnglish": "The book I borrowed must be returned next week."
   },
   {
     "id": "u10-e98080-651",
@@ -9111,9 +9111,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "tuì",
     "english": "to return; refund",
     "exampleSimplified": "不合适可以七天退货。",
-    "exampleTraditional": "不合适可以七天退货。",
+    "exampleTraditional": "不合適可以七天退貨。",
     "examplePinyin": "Bù hé shì kě yǐ qī tiān tuì huò.",
-    "exampleEnglish": "Not seven day return."
+    "exampleEnglish": "You can return it within seven days if it doesn't fit."
   },
   {
     "id": "u10-e68c91-652",
@@ -9125,9 +9125,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "tiāo",
     "english": "to choose",
     "exampleSimplified": "妈妈在挑西红柿。",
-    "exampleTraditional": "妈妈在挑西紅柿。",
+    "exampleTraditional": "媽媽在挑西紅柿。",
     "examplePinyin": "Mā ma zài tiāo xī hóng shì.",
-    "exampleEnglish": "Mom be at choose west."
+    "exampleEnglish": "Mum is picking out tomatoes."
   },
   {
     "id": "u10-e98089-653",
@@ -9139,9 +9139,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "xuǎn",
     "english": "to choose",
     "exampleSimplified": "两个颜色，你选一个。",
-    "exampleTraditional": "两個顏色，你選一個。",
+    "exampleTraditional": "兩個顏色，你選一個。",
     "examplePinyin": "Liǎng gè yán sè, nǐ xuǎn yí gè.",
-    "exampleEnglish": "Two color, you choose one."
+    "exampleEnglish": "There are two colours. Choose one."
   },
   {
     "id": "u10-e68993e68a98-654",
@@ -9155,7 +9155,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这双鞋正在打折。",
     "exampleTraditional": "這雙鞋正在打折。",
     "examplePinyin": "Zhè shuāng xié zhèng zài dǎ zhé.",
-    "exampleEnglish": "This shoes be at discount."
+    "exampleEnglish": "These shoes are on sale."
   },
   {
     "id": "u10-e689abe7a081-655",
@@ -9169,7 +9169,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "扫码就能点餐。",
     "exampleTraditional": "掃碼就能點餐。",
     "examplePinyin": "Sǎo mǎ jiù néng diǎn cān.",
-    "exampleEnglish": "Scan a code then order."
+    "exampleEnglish": "You can order food by scanning the code."
   },
   {
     "id": "u10-e4bb98e6acbe-656",
@@ -9183,7 +9183,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "请到前台付款。",
     "exampleTraditional": "請到前臺付款。",
     "examplePinyin": "Qǐng dào qián tái fù kuǎn.",
-    "exampleEnglish": "To front pay."
+    "exampleEnglish": "Please pay at the counter."
   },
   {
     "id": "u10-e4b88be58d95-657",
@@ -9197,7 +9197,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我昨晚下单，今天就到了。",
     "exampleTraditional": "我昨晚下單，今天就到了。",
     "examplePinyin": "Wǒ zuó wǎn xià dān, jīn tiān jiù dào le.",
-    "exampleEnglish": "I late place an order, today then to completed action."
+    "exampleEnglish": "I placed the order last night, and it arrived today."
   },
   {
     "id": "u10-e8bdace8b4a6-658",
@@ -9205,13 +9205,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "购物·金钱",
     "partOfSpeech": "动词",
     "simplified": "转账",
-    "traditional": "转帳",
+    "traditional": "轉賬",
     "pinyin": "zhuǎnzhàng",
     "english": "to transfer money",
     "exampleSimplified": "我把房租转账给你。",
-    "exampleTraditional": "我把房租转帳给你。",
+    "exampleTraditional": "我把房租轉賬給你。",
     "examplePinyin": "Wǒ bǎ fáng zū zhuǎn zhàng gěi nǐ.",
-    "exampleEnglish": "I disposal marker transfer money to you."
+    "exampleEnglish": "I transferred the rent to you."
   },
   {
     "id": "u10-e588b7e58da1-659",
@@ -9223,9 +9223,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "shuākǎ",
     "english": "to swipe a card",
     "exampleSimplified": "这里可以刷卡吗？",
-    "exampleTraditional": "這里可以刷卡吗？",
+    "exampleTraditional": "這裡可以刷卡嗎？",
     "examplePinyin": "Zhè lǐ kě yǐ shuā kǎ ma?",
-    "exampleEnglish": "Here swipe a card."
+    "exampleEnglish": "Can I pay by card here?"
   },
   {
     "id": "u10-e694afe4bb98-660",
@@ -9239,7 +9239,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "现在大家都用手机支付。",
     "exampleTraditional": "現在大家都用手機支付。",
     "examplePinyin": "Xiàn zài dà jiā dōu yòng shǒu jī zhī fù.",
-    "exampleEnglish": "Now everyone all use mobile phone pay."
+    "exampleEnglish": "Everyone uses mobile payments these days."
   },
   {
     "id": "u10-e8b4b5-661",
@@ -9253,7 +9253,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这家餐厅有点贵。",
     "exampleTraditional": "這家餐廳有點貴。",
     "examplePinyin": "Zhè jiā cān tīng yǒu diǎn guì.",
-    "exampleEnglish": "This home restaurant a little expensive."
+    "exampleEnglish": "This restaurant is a bit expensive."
   },
   {
     "id": "u10-e4bebfe5ae9c-662",
@@ -9267,7 +9267,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "换季的衣服很便宜。",
     "exampleTraditional": "換季的衣服很便宜。",
     "examplePinyin": "Huàn jì de yī fu hěn pián yi.",
-    "exampleEnglish": "Change of clothing very cheap."
+    "exampleEnglish": "Clothes are cheap at the end of the season."
   },
   {
     "id": "u10-e580bc-663",
@@ -9281,7 +9281,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这钱花得值。",
     "exampleTraditional": "這錢花得值。",
     "examplePinyin": "Zhè qián huā dé zhí.",
-    "exampleEnglish": "This money flower so be worth."
+    "exampleEnglish": "It was money well spent."
   },
   {
     "id": "u10-e5af8c-664",
@@ -9293,9 +9293,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "fù",
     "english": "rich",
     "exampleSimplified": "这个村靠种茶富了起来。",
-    "exampleTraditional": "這個村靠种茶富了起來。",
+    "exampleTraditional": "這個村靠種茶富了起來。",
     "examplePinyin": "Zhè ge cūn kào zhǒng chá fù le qǐ lái.",
-    "exampleEnglish": "This village tea rich completed action come."
+    "exampleEnglish": "This village became prosperous by growing tea."
   },
   {
     "id": "u10-e7a9b7-665",
@@ -9307,9 +9307,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "qióng",
     "english": "poor",
     "exampleSimplified": "他小时候家里很穷。",
-    "exampleTraditional": "他小時候家里很窮。",
+    "exampleTraditional": "他小時候家裡很窮。",
     "examplePinyin": "Tā xiǎo shí hòu jiā lǐ hěn qióng.",
-    "exampleEnglish": "He hour home inside very poor."
+    "exampleEnglish": "His family was very poor when he was little."
   },
   {
     "id": "u10-e5858de8b4b9-666",
@@ -9321,9 +9321,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "miǎnfèi",
     "english": "free of charge",
     "exampleSimplified": "展览今天免费参观。",
-    "exampleTraditional": "展览今天免費參观。",
+    "exampleTraditional": "展覽今天免費參觀。",
     "examplePinyin": "Zhǎn lǎn jīn tiān miǎn fèi cān guān.",
-    "exampleEnglish": "Today free of charge."
+    "exampleEnglish": "Entry to the exhibition is free today."
   },
   {
     "id": "u10-e5a49ae5b091e992b1-667",
@@ -9335,9 +9335,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "duōshao qián",
     "english": "how much money",
     "exampleSimplified": "老板，这个多少钱？",
-    "exampleTraditional": "老板，這個多少錢？",
+    "exampleTraditional": "老闆，這個多少錢？",
     "examplePinyin": "Lǎo bǎn, zhè ge duō shǎo qián?",
-    "exampleEnglish": "Boss, this how much money."
+    "exampleEnglish": "How much is this?"
   },
   {
     "id": "u11-e998b3e58589-668",
@@ -9351,7 +9351,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "今天阳光真好。",
     "exampleTraditional": "今天陽光真好。",
     "examplePinyin": "Jīn tiān yáng guāng zhēn hǎo.",
-    "exampleEnglish": "Today sunlight really good."
+    "exampleEnglish": "The sunshine is lovely today."
   },
   {
     "id": "u11-e5a4a9e7a9ba-669",
@@ -9363,9 +9363,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "tiānkōng",
     "english": "sky",
     "exampleSimplified": "天空中一朵云也没有。",
-    "exampleTraditional": "天空中一朵雲也没有。",
+    "exampleTraditional": "天空中一朵雲也沒有。",
     "examplePinyin": "Tiān kōng zhōng yì duǒ yún yě méi yǒu.",
-    "exampleEnglish": "Sky middle one flower cloud also not have."
+    "exampleEnglish": "There's not a cloud in the sky."
   },
   {
     "id": "u11-e5a4aae998b3-670",
@@ -9377,9 +9377,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "tàiyáng",
     "english": "sun",
     "exampleSimplified": "太阳出来了，晒晒被子吧。",
-    "exampleTraditional": "太陽出來了，晒晒被子吧。",
+    "exampleTraditional": "太陽出來了，曬曬被子吧。",
     "examplePinyin": "Tài yáng chū lái le, shài shài bèi zi ba.",
-    "exampleEnglish": "Sun exit come completed action, quilt."
+    "exampleEnglish": "The sun is out. Let's air the quilts."
   },
   {
     "id": "u11-e69c88e4baae-671",
@@ -9391,9 +9391,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "yuèliang",
     "english": "moon",
     "exampleSimplified": "今晚的月亮又大又圆。",
-    "exampleTraditional": "今晚的月亮又大又圆。",
+    "exampleTraditional": "今晚的月亮又大又圓。",
     "examplePinyin": "Jīn wǎn de yuè liàng yòu dà yòu yuán.",
-    "exampleEnglish": "Late of moon big."
+    "exampleEnglish": "The moon is big and round tonight."
   },
   {
     "id": "u11-e6989fe6989f-672",
@@ -9405,9 +9405,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "xīngxing",
     "english": "star",
     "exampleSimplified": "山里能看到满天星星。",
-    "exampleTraditional": "山里能看到滿天星星。",
+    "exampleTraditional": "山裡能看到滿天星星。",
     "examplePinyin": "Shān lǐ néng kàn dào mǎn tiān xīng xīng.",
-    "exampleEnglish": "Mountain inside to full day star."
+    "exampleEnglish": "You can see a sky full of stars in the mountains."
   },
   {
     "id": "u11-e4ba91-673",
@@ -9421,7 +9421,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "天上的云像棉花糖。",
     "exampleTraditional": "天上的雲像棉花糖。",
     "examplePinyin": "Tiān shàng de yún xiàng mián huā táng.",
-    "exampleEnglish": "Day up of cloud flower sugar."
+    "exampleEnglish": "The clouds look like candy floss."
   },
   {
     "id": "u11-e9a38e-674",
@@ -9435,7 +9435,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "今天风很大，戴好帽子。",
     "exampleTraditional": "今天風很大，戴好帽子。",
     "examplePinyin": "Jīn tiān fēng hěn dà, dài hǎo mào zi.",
-    "exampleEnglish": "Today wind very big, wear good hat."
+    "exampleEnglish": "It's very windy today. Keep your hat on."
   },
   {
     "id": "u11-e99ba8-675",
@@ -9449,7 +9449,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "雨下了一整天。",
     "exampleTraditional": "雨下了一整天。",
     "examplePinyin": "Yǔ xià le yì zhěng tiān.",
-    "exampleEnglish": "Rain down completed action one day."
+    "exampleEnglish": "It rained all day."
   },
   {
     "id": "u11-e99baa-676",
@@ -9463,7 +9463,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "昨晚下了今年第一场雪。",
     "exampleTraditional": "昨晚下了今年第一場雪。",
     "examplePinyin": "Zuó wǎn xià le jīn nián dì yī chǎng xuě.",
-    "exampleEnglish": "Late down completed action year one snow."
+    "exampleEnglish": "It snowed for the first time this year last night."
   },
   {
     "id": "u11-e99bb7-677",
@@ -9477,7 +9477,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "打雷了，别站在树下。",
     "exampleTraditional": "打雷了，別站在樹下。",
     "examplePinyin": "Dǎ léi le, bié zhàn zài shù xià.",
-    "exampleEnglish": "Thunder completed action, do not be at tree down."
+    "exampleEnglish": "It's thundering. Don't stand under a tree."
   },
   {
     "id": "u11-e5a4a9e6b094-678",
@@ -9489,9 +9489,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "tiānqì",
     "english": "weather",
     "exampleSimplified": "明天天气怎么样？",
-    "exampleTraditional": "明天天氣怎麼样？",
+    "exampleTraditional": "明天天氣怎麼樣？",
     "examplePinyin": "Míng tiān tiān qì zěn me yàng?",
-    "exampleEnglish": "Tomorrow weather how."
+    "exampleEnglish": "What's the weather forecast for tomorrow?"
   },
   {
     "id": "u11-e6b094e6b8a9-679",
@@ -9505,7 +9505,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "今天气温降到零下了。",
     "exampleTraditional": "今天氣溫降到零下了。",
     "examplePinyin": "Jīn tiān qì wēn jiàng dào líng xià le.",
-    "exampleEnglish": "Today air temperature to zero down completed action."
+    "exampleEnglish": "Temperatures have dropped below zero today."
   },
   {
     "id": "u11-e6b8a9e5baa6-680",
@@ -9519,7 +9519,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "空调温度别开太低。",
     "exampleTraditional": "空調溫度別開太低。",
     "examplePinyin": "Kōng diào wēn dù bié kāi tài dī.",
-    "exampleEnglish": "Air conditioner temperature do not open too."
+    "exampleEnglish": "Don't set the air-conditioning temperature too low."
   },
   {
     "id": "u11-e7a9bae6b094-681",
@@ -9533,7 +9533,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "雨后的空气很清新。",
     "exampleTraditional": "雨後的空氣很清新。",
     "examplePinyin": "Yǔ hòu de kōng qì hěn qīng xīn.",
-    "exampleEnglish": "Rain back of air very new."
+    "exampleEnglish": "The air is very fresh after the rain."
   },
   {
     "id": "u11-e781ab-682",
@@ -9547,7 +9547,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "做饭时别离开火。",
     "exampleTraditional": "做飯時別離開火。",
     "examplePinyin": "Zuò fàn shí bié lí kāi huǒ.",
-    "exampleEnglish": "Cook do not leave fire."
+    "exampleEnglish": "Don't leave the stove unattended while cooking."
   },
   {
     "id": "u11-e58589-683",
@@ -9559,9 +9559,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "guāng",
     "english": "light",
     "exampleSimplified": "月光照进了房间。",
-    "exampleTraditional": "月光照进了房間。",
+    "exampleTraditional": "月光照進了房間。",
     "examplePinyin": "Yuè guāng zhào jìn le fáng jiān.",
-    "exampleEnglish": "Month light enter completed action room."
+    "exampleEnglish": "Moonlight shines into the room."
   },
   {
     "id": "u11-e6b2b3-684",
@@ -9573,9 +9573,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "hé",
     "english": "river",
     "exampleSimplified": "小时候我常在河里游泳。",
-    "exampleTraditional": "小時候我常在河里遊泳。",
+    "exampleTraditional": "小時候我常在河裡游泳。",
     "examplePinyin": "Xiǎo shí hòu wǒ cháng zài hé lǐ yóu yǒng.",
-    "exampleEnglish": "Hour I be at river inside."
+    "exampleEnglish": "I often swam in the river when I was little."
   },
   {
     "id": "u11-e6b5b7-685",
@@ -9587,9 +9587,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "hǎi",
     "english": "sea",
     "exampleSimplified": "我还没见过海。",
-    "exampleTraditional": "我還没见過海。",
+    "exampleTraditional": "我還沒見過海。",
     "examplePinyin": "Wǒ hái méi jiàn guò hǎi.",
-    "exampleEnglish": "I still not before sea."
+    "exampleEnglish": "I've never seen the sea."
   },
   {
     "id": "u11-e6b996-686",
@@ -9603,7 +9603,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "湖水清得能看到鱼。",
     "exampleTraditional": "湖水清得能看到魚。",
     "examplePinyin": "Hú shuǐ qīng dé néng kàn dào yú.",
-    "exampleEnglish": "Lake water so to fish."
+    "exampleEnglish": "The lake water is so clear that you can see the fish."
   },
   {
     "id": "u11-e5b1b1-687",
@@ -9617,7 +9617,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这座山不高，很好爬。",
     "exampleTraditional": "這座山不高，很好爬。",
     "examplePinyin": "Zhè zuò shān bù gāo, hěn hǎo pá.",
-    "exampleEnglish": "This mountain not tall, very good."
+    "exampleEnglish": "This mountain isn't high and is easy to climb."
   },
   {
     "id": "u11-e79fb3e5a4b4-688",
@@ -9629,9 +9629,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "shítou",
     "english": "stone",
     "exampleSimplified": "孩子往水里扔石头玩。",
-    "exampleTraditional": "孩子往水里扔石頭玩。",
+    "exampleTraditional": "孩子往水裡扔石頭玩。",
     "examplePinyin": "Hái zi wǎng shuǐ lǐ rēng shí tou wán.",
-    "exampleEnglish": "Water inside stone."
+    "exampleEnglish": "The child is throwing stones into the water for fun."
   },
   {
     "id": "u11-e59c9f-689",
@@ -9643,9 +9643,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "tǔ",
     "english": "soil",
     "exampleSimplified": "花盆里的土干了。",
-    "exampleTraditional": "花盆里的土乾了。",
+    "exampleTraditional": "花盆裡的土幹了。",
     "examplePinyin": "Huā pén lǐ de tǔ gān le.",
-    "exampleEnglish": "Flower inside of soil dry completed action."
+    "exampleEnglish": "The soil in the flowerpot has dried out."
   },
   {
     "id": "u11-e6a091-690",
@@ -9657,9 +9657,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "shù",
     "english": "tree",
     "exampleSimplified": "院子里有一棵老树。",
-    "exampleTraditional": "院子里有一棵老樹。",
+    "exampleTraditional": "院子裡有一棵老樹。",
     "examplePinyin": "Yuàn zi lǐ yǒu yì kē lǎo shù.",
-    "exampleEnglish": "Inside have one plant tree."
+    "exampleEnglish": "There's an old tree in the courtyard."
   },
   {
     "id": "u11-e88d89-691",
@@ -9673,7 +9673,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "春天的草绿油油的。",
     "exampleTraditional": "春天的草綠油油的。",
     "examplePinyin": "Chūn tiān de cǎo lǜ yóu yóu de.",
-    "exampleEnglish": "Spring day of grass oil oil of."
+    "exampleEnglish": "The grass is lush and green in spring."
   },
   {
     "id": "u11-e88ab1-692",
@@ -9687,7 +9687,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "阳台上的花开了。",
     "exampleTraditional": "陽臺上的花開了。",
     "examplePinyin": "Yáng tái shàng de huā kāi le.",
-    "exampleEnglish": "Up of flower open completed action."
+    "exampleEnglish": "The flowers on the balcony are blooming."
   },
   {
     "id": "u11-e58fb6e5ad90-693",
@@ -9701,7 +9701,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "秋天叶子落了一地。",
     "exampleTraditional": "秋天葉子落了一地。",
     "examplePinyin": "Qiū tiān yè zi luò le yí dì.",
-    "exampleEnglish": "Autumn day leaf completed action one adverb marker."
+    "exampleEnglish": "In autumn, leaves cover the ground."
   },
   {
     "id": "u11-e6a3aee69e97-694",
@@ -9713,9 +9713,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "sēnlín",
     "english": "forest",
     "exampleSimplified": "我们在森林里迷了路。",
-    "exampleTraditional": "我們在森林里迷了路。",
+    "exampleTraditional": "我們在森林裡迷了路。",
     "examplePinyin": "Wǒ men zài sēn lín lǐ mí le lù.",
-    "exampleEnglish": "We be at forest inside completed action road."
+    "exampleEnglish": "We got lost in the forest."
   },
   {
     "id": "u11-e59cb0-695",
@@ -9729,7 +9729,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "地上都是落叶。",
     "exampleTraditional": "地上都是落葉。",
     "examplePinyin": "Dì shàng dōu shì luò yè.",
-    "exampleEnglish": "Adverb marker up all be."
+    "exampleEnglish": "The ground is covered with fallen leaves."
   },
   {
     "id": "u11-e78eafe5a283-696",
@@ -9737,13 +9737,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "自然·天气·动物",
     "partOfSpeech": "名词",
     "simplified": "环境",
-    "traditional": "环境",
+    "traditional": "環境",
     "pinyin": "huánjìng",
     "english": "environment",
     "exampleSimplified": "这里的环境很安静。",
-    "exampleTraditional": "這里的环境很安静。",
+    "exampleTraditional": "這裡的環境很安靜。",
     "examplePinyin": "Zhè lǐ de huán jìng hěn ān jìng.",
-    "exampleEnglish": "Here of environment very quiet."
+    "exampleEnglish": "It's very peaceful here."
   },
   {
     "id": "u11-e59cb0e79083-697",
@@ -9757,7 +9757,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "地球是我们共同的家。",
     "exampleTraditional": "地球是我們共同的家。",
     "examplePinyin": "Dì qiú shì wǒ men gòng tóng de jiā.",
-    "exampleEnglish": "Earth be we of home."
+    "exampleEnglish": "The Earth is our shared home."
   },
   {
     "id": "u11-e4b896e7958c-698",
@@ -9771,7 +9771,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我想去看看世界。",
     "exampleTraditional": "我想去看看世界。",
     "examplePinyin": "Wǒ xiǎng qù kàn kàn shì jiè.",
-    "exampleEnglish": "I think go world."
+    "exampleEnglish": "I want to see the world."
   },
   {
     "id": "u11-e78b97-699",
@@ -9783,9 +9783,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "gǒu",
     "english": "dog",
     "exampleSimplified": "邻居家的狗很凶。",
-    "exampleTraditional": "邻居家的狗很凶。",
+    "exampleTraditional": "鄰居家的狗很兇。",
     "examplePinyin": "Lín jū jiā de gǒu hěn xiōng.",
-    "exampleEnglish": "Neighbor home of dog very."
+    "exampleEnglish": "The neighbour's dog is very fierce."
   },
   {
     "id": "u11-e78cab-700",
@@ -9799,7 +9799,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我家的猫怕水。",
     "exampleTraditional": "我家的貓怕水。",
     "examplePinyin": "Wǒ jiā de māo pà shuǐ.",
-    "exampleEnglish": "I home of cat fear water."
+    "exampleEnglish": "My cat is afraid of water."
   },
   {
     "id": "u11-e9b89f-701",
@@ -9813,7 +9813,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "早上被鸟叫醒了。",
     "exampleTraditional": "早上被鳥叫醒了。",
     "examplePinyin": "Zǎo shàng bèi niǎo jiào xǐng le.",
-    "exampleEnglish": "Early morning by bird be called wake up completed action."
+    "exampleEnglish": "I was woken up by birds singing this morning."
   },
   {
     "id": "u11-e78caa-702",
@@ -9827,7 +9827,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "猪其实很聪明。",
     "exampleTraditional": "豬其實很聰明。",
     "examplePinyin": "Zhū qí shí hěn cōng ming.",
-    "exampleEnglish": "Pig very smart."
+    "exampleEnglish": "Pigs are actually very clever."
   },
   {
     "id": "u11-e7899b-703",
@@ -9839,9 +9839,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "niú",
     "english": "cow",
     "exampleSimplified": "田里有几头牛。",
-    "exampleTraditional": "田里有几頭牛。",
+    "exampleTraditional": "田裡有幾頭牛。",
     "examplePinyin": "Tián lǐ yǒu jǐ tóu niú.",
-    "exampleEnglish": "Inside have head cow."
+    "exampleEnglish": "There are several cows in the field."
   },
   {
     "id": "u11-e7be8a-704",
@@ -9855,7 +9855,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "山坡上有一群羊。",
     "exampleTraditional": "山坡上有一群羊。",
     "examplePinyin": "Shān pō shàng yǒu yì qún yáng.",
-    "exampleEnglish": "Mountain up have one sheep."
+    "exampleEnglish": "There's a flock of sheep on the hillside."
   },
   {
     "id": "u11-e9a9ac-705",
@@ -9863,13 +9863,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "自然·天气·动物",
     "partOfSpeech": "名词",
     "simplified": "马",
-    "traditional": "马",
+    "traditional": "馬",
     "pinyin": "mǎ",
     "english": "horse",
     "exampleSimplified": "她第一次骑马有点紧张。",
-    "exampleTraditional": "她第一次骑马有點緊張。",
+    "exampleTraditional": "她第一次騎馬有點緊張。",
     "examplePinyin": "Tā dì yī cì qí mǎ yǒu diǎn jǐn zhāng.",
-    "exampleEnglish": "She one ride horse a little nervous."
+    "exampleEnglish": "She was a little nervous the first time she rode a horse."
   },
   {
     "id": "u11-e58594e5ad90-706",
@@ -9881,9 +9881,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "tùzi",
     "english": "rabbit",
     "exampleSimplified": "兔子爱吃胡萝卜。",
-    "exampleTraditional": "兔子愛吃胡萝卜。",
+    "exampleTraditional": "兔子愛吃胡蘿蔔。",
     "examplePinyin": "Tù zi ài chī hú luó bo.",
-    "exampleEnglish": "Rabbit love eat."
+    "exampleEnglish": "Rabbits like eating carrots."
   },
   {
     "id": "u11-e88081e9bca0-707",
@@ -9897,7 +9897,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "猫抓住了一只老鼠。",
     "exampleTraditional": "貓抓住了一隻老鼠。",
     "examplePinyin": "Māo zhuā zhù le yì zhī lǎo shǔ.",
-    "exampleEnglish": "Cat live completed action one animal mouse."
+    "exampleEnglish": "The cat caught a mouse."
   },
   {
     "id": "u11-e899ab-708",
@@ -9911,7 +9911,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "叶子上有一只小虫。",
     "exampleTraditional": "葉子上有一隻小蟲。",
     "examplePinyin": "Yè zi shàng yǒu yì zhī xiǎo chóng.",
-    "exampleEnglish": "Leaf up have one animal small bug."
+    "exampleEnglish": "There's a little bug on the leaf."
   },
   {
     "id": "u11-e89b87-709",
@@ -9925,7 +9925,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他最怕蛇。",
     "exampleTraditional": "他最怕蛇。",
     "examplePinyin": "Tā zuì pà shé.",
-    "exampleEnglish": "He fear snake."
+    "exampleEnglish": "He's most afraid of snakes."
   },
   {
     "id": "u11-e5aea0e789a9-710",
@@ -9937,9 +9937,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "chǒngwù",
     "english": "pet",
     "exampleSimplified": "这栋楼不让养宠物。",
-    "exampleTraditional": "這栋樓不让养寵物。",
+    "exampleTraditional": "這棟樓不讓養寵物。",
     "examplePinyin": "Zhè dòng lóu bú ràng yǎng chǒng wù.",
-    "exampleEnglish": "This building not let pet."
+    "exampleEnglish": "Pets are not allowed in this building."
   },
   {
     "id": "u11-e4b88b-711",
@@ -9951,9 +9951,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "xià",
     "english": "down; under",
     "exampleSimplified": "外面下雨了。",
-    "exampleTraditional": "外麵下雨了。",
+    "exampleTraditional": "外面下雨了。",
     "examplePinyin": "Wài miàn xià yǔ le.",
-    "exampleEnglish": "Outside noodles down rain completed action."
+    "exampleEnglish": "It's raining outside."
   },
   {
     "id": "u11-e588ae-712",
@@ -9965,9 +9965,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "guā",
     "english": "to blow; to scrape",
     "exampleSimplified": "晚上要刮大风。",
-    "exampleTraditional": "晚上要刮大風。",
+    "exampleTraditional": "晚上要颳大風。",
     "examplePinyin": "Wǎn shàng yào guā dà fēng.",
-    "exampleEnglish": "Evening blow big wind."
+    "exampleEnglish": "There will be strong winds tonight."
   },
   {
     "id": "u11-e6b581-713",
@@ -9981,7 +9981,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "河水慢慢地流。",
     "exampleTraditional": "河水慢慢地流。",
     "examplePinyin": "Hé shuǐ màn màn dì liú.",
-    "exampleEnglish": "River water slow slow adverb marker flow."
+    "exampleEnglish": "The river flows slowly."
   },
   {
     "id": "u11-e590b9-714",
@@ -9993,9 +9993,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "chuī",
     "english": "to blow",
     "exampleSimplified": "海边的风吹得很舒服。",
-    "exampleTraditional": "海边的風吹得很舒服。",
+    "exampleTraditional": "海邊的風吹得很舒服。",
     "examplePinyin": "Hǎi biān de fēng chuī dé hěn shū fú.",
-    "exampleEnglish": "Sea of wind blow so very comfortable."
+    "exampleEnglish": "The sea breeze feels very pleasant."
   },
   {
     "id": "u11-e586b7-715",
@@ -10009,7 +10009,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "今天冷，多穿点。",
     "exampleTraditional": "今天冷，多穿點。",
     "examplePinyin": "Jīn tiān lěng, duō chuān diǎn.",
-    "exampleEnglish": "Today cold, wear order."
+    "exampleEnglish": "It's cold today. Put on more clothes."
   },
   {
     "id": "u11-e783ad-716",
@@ -10017,13 +10017,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "自然·天气·动物",
     "partOfSpeech": "形容词",
     "simplified": "热",
-    "traditional": "热",
+    "traditional": "熱",
     "pinyin": "rè",
     "english": "hot",
     "exampleSimplified": "屋里比外面热。",
-    "exampleTraditional": "屋里比外麵热。",
+    "exampleTraditional": "屋裡比外面熱。",
     "examplePinyin": "Wū lǐ bǐ wài miàn rè.",
-    "exampleEnglish": "Inside outside noodles hot."
+    "exampleEnglish": "It's warmer indoors than outside."
   },
   {
     "id": "u11-e69a96-717",
@@ -10037,7 +10037,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "三月的天开始暖起来了。",
     "exampleTraditional": "三月的天開始暖起來了。",
     "examplePinyin": "Sān yuè de tiān kāi shǐ nuǎn qǐ lái le.",
-    "exampleEnglish": "Three month of day begin warm come completed action."
+    "exampleEnglish": "The weather starts to warm up in March."
   },
   {
     "id": "u11-e58789-718",
@@ -10045,13 +10045,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "自然·天气·动物",
     "partOfSpeech": "形容词",
     "simplified": "凉",
-    "traditional": "凉",
+    "traditional": "涼",
     "pinyin": "liáng",
     "english": "cool",
     "exampleSimplified": "汤凉了，我热一下。",
-    "exampleTraditional": "湯凉了，我热一下。",
+    "exampleTraditional": "湯涼了，我熱一下。",
     "examplePinyin": "Tāng liáng le, wǒ rè yí xià.",
-    "exampleEnglish": "Soup cool completed action, I hot a moment."
+    "exampleEnglish": "The soup has gone cold, so I'll heat it up."
   },
   {
     "id": "u11-e699b4-719",
@@ -10065,7 +10065,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "明天是个大晴天。",
     "exampleTraditional": "明天是個大晴天。",
     "examplePinyin": "Míng tiān shì gè dà qíng tiān.",
-    "exampleEnglish": "Tomorrow be big sunny day."
+    "exampleEnglish": "Tomorrow will be a bright, sunny day."
   },
   {
     "id": "u11-e998b4-720",
@@ -10079,7 +10079,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "天阴得要下雨了。",
     "exampleTraditional": "天陰得要下雨了。",
     "examplePinyin": "Tiān yīn dé yào xià yǔ le.",
-    "exampleEnglish": "Day cloudy so down rain completed action."
+    "exampleEnglish": "It's overcast; it looks like it might rain."
   },
   {
     "id": "u11-e5b9b2-721",
@@ -10087,13 +10087,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "自然·天气·动物",
     "partOfSpeech": "形容词",
     "simplified": "干",
-    "traditional": "乾",
+    "traditional": "幹",
     "pinyin": "gān",
     "english": "dry",
     "exampleSimplified": "洗的衣服还没干。",
-    "exampleTraditional": "洗的衣服還没乾。",
+    "exampleTraditional": "洗的衣服還沒幹。",
     "examplePinyin": "Xǐ de yī fu hái méi gān.",
-    "exampleEnglish": "Wash of clothing still not dry."
+    "exampleEnglish": "The clothes I washed haven't dried yet."
   },
   {
     "id": "u11-e6b9bf-722",
@@ -10101,13 +10101,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "自然·天气·动物",
     "partOfSpeech": "形容词",
     "simplified": "湿",
-    "traditional": "濕",
+    "traditional": "溼",
     "pinyin": "shī",
     "english": "wet",
     "exampleSimplified": "鞋子被雨淋湿了。",
-    "exampleTraditional": "鞋子被雨淋濕了。",
+    "exampleTraditional": "鞋子被雨淋溼了。",
     "examplePinyin": "Xié zǐ bèi yǔ lín shī le.",
-    "exampleEnglish": "Shoes by rain wet completed action."
+    "exampleEnglish": "My shoes got wet in the rain."
   },
   {
     "id": "u11-e58faa-723",
@@ -10115,11 +10115,11 @@ export const vocabulary: VocabEntry[] = [
     "theme": "自然·天气·动物",
     "partOfSpeech": "量词",
     "simplified": "只",
-    "traditional": "隻",
+    "traditional": "只",
     "pinyin": "zhī",
     "english": "classifier",
     "exampleSimplified": "树上有两只鸟。",
-    "exampleTraditional": "樹上有两隻鳥。",
+    "exampleTraditional": "樹上有兩隻鳥。",
     "examplePinyin": "Shù shàng yǒu liǎng zhī niǎo.",
     "exampleEnglish": "There are two birds in the tree."
   },
@@ -10133,7 +10133,7 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "tiáo",
     "english": "classifier",
     "exampleSimplified": "他钓到了一条大鱼。",
-    "exampleTraditional": "他钓到了一條大魚。",
+    "exampleTraditional": "他釣到了一條大魚。",
     "examplePinyin": "Tā diào dào le yì tiáo dà yú.",
     "exampleEnglish": "He caught a big fish."
   },
@@ -10147,9 +10147,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "tóu",
     "english": "classifier",
     "exampleSimplified": "农场里养了十头猪。",
-    "exampleTraditional": "農場里养了十頭豬。",
+    "exampleTraditional": "農場裡養了十頭豬。",
     "examplePinyin": "Nóng chǎng lǐ yǎng le shí tóu zhū.",
-    "exampleEnglish": "The farm raises ten pigs."
+    "exampleEnglish": "The farm has ten pigs."
   },
   {
     "id": "u11-e6a3b5-726",
@@ -10161,7 +10161,7 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "kē",
     "english": "classifier",
     "exampleSimplified": "门前种了一棵桃树。",
-    "exampleTraditional": "門前种了一棵桃樹。",
+    "exampleTraditional": "門前種了一棵桃樹。",
     "examplePinyin": "Mén qián zhǒng le yì kē táo shù.",
     "exampleEnglish": "A peach tree was planted in front of the door."
   },
@@ -10177,7 +10177,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "她头上戴了一朵花。",
     "exampleTraditional": "她頭上戴了一朵花。",
     "examplePinyin": "Tā tóu shàng dài le yì duǒ huā.",
-    "exampleEnglish": "She is wearing a flower in her hair."
+    "exampleEnglish": "She's wearing a flower in her hair."
   },
   {
     "id": "u11-e5baa7-728",
@@ -10189,9 +10189,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "zuò",
     "english": "classifier",
     "exampleSimplified": "城里新修了一座大桥。",
-    "exampleTraditional": "城里新修了一座大橋。",
+    "exampleTraditional": "城裡新修了一座大橋。",
     "examplePinyin": "Chéng lǐ xīn xiū le yí zuò dà qiáo.",
-    "exampleEnglish": "A large bridge was newly built in the city."
+    "exampleEnglish": "A large bridge has just been built in the city."
   },
   {
     "id": "u12-e5bf83e68385-729",
@@ -10205,7 +10205,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "今天我心情特别好。",
     "exampleTraditional": "今天我心情特別好。",
     "examplePinyin": "Jīn tiān wǒ xīn qíng tè bié hǎo.",
-    "exampleEnglish": "Today I mood special good."
+    "exampleEnglish": "I'm in a particularly good mood today."
   },
   {
     "id": "u12-e6849fe68385-730",
@@ -10219,7 +10219,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他们的感情一直很好。",
     "exampleTraditional": "他們的感情一直很好。",
     "examplePinyin": "Tā men de gǎn qíng yì zhí hěn hǎo.",
-    "exampleEnglish": "They of feeling continuously very good."
+    "exampleEnglish": "They have always had a good relationship."
   },
   {
     "id": "u12-e788b1e68385-731",
@@ -10233,7 +10233,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这部电影讲的是爱情故事。",
     "exampleTraditional": "這部電影講的是愛情故事。",
     "examplePinyin": "Zhè bù diàn yǐng jiǎng de shì ài qíng gù shì.",
-    "exampleEnglish": "This movie speak of be love."
+    "exampleEnglish": "This film is a love story."
   },
   {
     "id": "u12-e58f8be8b08a-732",
@@ -10245,9 +10245,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "yǒuyì",
     "english": "friendship",
     "exampleSimplified": "干杯，为我们的友谊！",
-    "exampleTraditional": "乾杯，为我們的友誼！",
+    "exampleTraditional": "乾杯，為我們的友誼！",
     "examplePinyin": "Gān bēi, wèi wǒ men de yǒu yì!",
-    "exampleEnglish": "Dry, we of friendship."
+    "exampleEnglish": "Cheers to our friendship!"
   },
   {
     "id": "u12-e884bee6b094-733",
@@ -10259,9 +10259,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "píqi",
     "english": "temper",
     "exampleSimplified": "他脾气好，从不着急。",
-    "exampleTraditional": "他脾氣好，从不着急。",
+    "exampleTraditional": "他脾氣好，從不著急。",
     "examplePinyin": "Tā pí qì hǎo, cóng bù zháo jí.",
-    "exampleEnglish": "He temper good, from not ongoing."
+    "exampleEnglish": "He's easy-going and never gets impatient."
   },
   {
     "id": "u12-e680a7e6a0bc-734",
@@ -10275,7 +10275,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "她性格开朗，朋友很多。",
     "exampleTraditional": "她性格開朗，朋友很多。",
     "examplePinyin": "Tā xìng gé kāi lǎng, péng yǒu hěn duō.",
-    "exampleEnglish": "She personality open, friend very."
+    "exampleEnglish": "She's outgoing and has many friends."
   },
   {
     "id": "u12-e4b9a0e683af-735",
@@ -10289,7 +10289,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我习惯早睡早起。",
     "exampleTraditional": "我習慣早睡早起。",
     "examplePinyin": "Wǒ xí guàn zǎo shuì zǎo qǐ.",
-    "exampleEnglish": "I habit early sleep early."
+    "exampleEnglish": "I'm used to going to bed and getting up early."
   },
   {
     "id": "u12-e68081e5baa6-736",
@@ -10301,9 +10301,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "tàidù",
     "english": "attitude",
     "exampleSimplified": "他的态度突然变了。",
-    "exampleTraditional": "他的態度突然变了。",
+    "exampleTraditional": "他的態度突然變了。",
     "examplePinyin": "Tā de tài dù tū rán biàn le.",
-    "exampleEnglish": "He of attitude completed action."
+    "exampleEnglish": "His attitude suddenly changed."
   },
   {
     "id": "u12-e683b3e6b395-737",
@@ -10317,7 +10317,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我有一个新想法。",
     "exampleTraditional": "我有一個新想法。",
     "examplePinyin": "Wǒ yǒu yí gè xīn xiǎng fǎ.",
-    "exampleEnglish": "I have one new idea."
+    "exampleEnglish": "I have a new idea."
   },
   {
     "id": "u12-e6848fe6809d-738",
@@ -10331,7 +10331,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这句话是什么意思？",
     "exampleTraditional": "這句話是什麼意思？",
     "examplePinyin": "Zhè jù huà shì shén me yì sī?",
-    "exampleEnglish": "This be what meaning."
+    "exampleEnglish": "What does this sentence mean?"
   },
   {
     "id": "u12-e696b0e997bb-739",
@@ -10345,7 +10345,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "今天有条新闻很有意思。",
     "exampleTraditional": "今天有條新聞很有意思。",
     "examplePinyin": "Jīn tiān yǒu tiáo xīn wén hěn yǒu yì sī.",
-    "exampleEnglish": "Today have news very have meaning."
+    "exampleEnglish": "There's an interesting news story today."
   },
   {
     "id": "u12-e58e9fe59ba0-740",
@@ -10359,7 +10359,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "迟到的原因是堵车。",
     "exampleTraditional": "遲到的原因是堵車。",
     "examplePinyin": "Chí dào de yuán yīn shì dǔ chē.",
-    "exampleEnglish": "Be late of reason be vehicle."
+    "exampleEnglish": "I was late because of a traffic jam."
   },
   {
     "id": "u12-e7bb93e69e9c-741",
@@ -10373,7 +10373,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "检查结果一切正常。",
     "exampleTraditional": "檢查結果一切正常。",
     "examplePinyin": "Jiǎn chá jié guǒ yí qiè zhèng cháng.",
-    "exampleEnglish": "Look up result one cut."
+    "exampleEnglish": "The test results are all normal."
   },
   {
     "id": "u12-e5b88ce69c9b-742",
@@ -10385,9 +10385,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "xīwàng",
     "english": "hope",
     "exampleSimplified": "别放弃，还有希望。",
-    "exampleTraditional": "別放弃，還有希望。",
+    "exampleTraditional": "別放棄，還有希望。",
     "examplePinyin": "Bié fàng qì, hái yǒu xī wàng.",
-    "exampleEnglish": "Do not put, still have hope."
+    "exampleEnglish": "Don't give up; there's still hope."
   },
   {
     "id": "u12-e6a2a6-743",
@@ -10401,7 +10401,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我昨晚做了个奇怪的梦。",
     "exampleTraditional": "我昨晚做了個奇怪的夢。",
     "examplePinyin": "Wǒ zuó wǎn zuò le gè qí guài de mèng.",
-    "exampleEnglish": "I late completed action strange of dream."
+    "exampleEnglish": "I had a strange dream last night."
   },
   {
     "id": "u12-e585b3e7b3bb-744",
@@ -10409,13 +10409,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "情感·沟通·社会",
     "partOfSpeech": "名词",
     "simplified": "关系",
-    "traditional": "關系",
+    "traditional": "關係",
     "pinyin": "guānxi",
     "english": "relationship",
     "exampleSimplified": "没关系，慢慢来。",
-    "exampleTraditional": "没關系，慢慢來。",
+    "exampleTraditional": "沒關係，慢慢來。",
     "examplePinyin": "Méi guān xì, màn màn lái.",
-    "exampleEnglish": "Not relationship, slow slow come."
+    "exampleEnglish": "That's all right. Take your time."
   },
   {
     "id": "u12-e7a4bee4bc9a-745",
@@ -10427,9 +10427,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "shèhuì",
     "english": "society",
     "exampleSimplified": "大学生要多了解社会。",
-    "exampleTraditional": "大學生要多了解社會。",
+    "exampleTraditional": "大學生要多瞭解社會。",
     "examplePinyin": "Dà xué shēng yào duō liǎo jiě shè huì.",
-    "exampleEnglish": "Big student understand society."
+    "exampleEnglish": "University students should learn more about society."
   },
   {
     "id": "u12-e694bfe5ba9c-746",
@@ -10443,7 +10443,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "政府新建了一个公园。",
     "exampleTraditional": "政府新建了一個公園。",
     "examplePinyin": "Zhèng fǔ xīn jiàn le yí gè gōng yuán.",
-    "exampleEnglish": "Government new completed action one park."
+    "exampleEnglish": "The government has built a new park."
   },
   {
     "id": "u12-e4babae6b091-747",
@@ -10457,7 +10457,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "人民的生活越来越好。",
     "exampleTraditional": "人民的生活越來越好。",
     "examplePinyin": "Rén mín de shēng huó yuè lái yuè hǎo.",
-    "exampleEnglish": "People of come good."
+    "exampleEnglish": "People's lives are getting better and better."
   },
   {
     "id": "u12-e5a3b0e99fb3-748",
@@ -10471,7 +10471,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "隔壁的声音太大了。",
     "exampleTraditional": "隔壁的聲音太大了。",
     "examplePinyin": "Gé bì de shēng yīn tài dà le.",
-    "exampleEnglish": "Of sound too big completed action."
+    "exampleEnglish": "The noise next door is too loud."
   },
   {
     "id": "u12-e69cbae4bc9a-749",
@@ -10485,7 +10485,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这是个难得的机会。",
     "exampleTraditional": "這是個難得的機會。",
     "examplePinyin": "Zhè shì gè nán dé de jī huì.",
-    "exampleEnglish": "This be difficult so of opportunity."
+    "exampleEnglish": "This is a rare opportunity."
   },
   {
     "id": "u12-e58a9ee6b395-750",
@@ -10497,9 +10497,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "bànfǎ",
     "english": "method; solution",
     "exampleSimplified": "总会有办法的，别急。",
-    "exampleTraditional": "总會有辦法的，別急。",
+    "exampleTraditional": "總會有辦法的，別急。",
     "examplePinyin": "Zǒng huì yǒu bàn fǎ de, bié jí.",
-    "exampleEnglish": "Have method of, do not."
+    "exampleEnglish": "There's always a way. Don't worry."
   },
   {
     "id": "u12-e4bfa1e5bf83-751",
@@ -10513,7 +10513,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我对你有信心。",
     "exampleTraditional": "我對你有信心。",
     "examplePinyin": "Wǒ duì nǐ yǒu xìn xīn.",
-    "exampleEnglish": "I you have confidence."
+    "exampleEnglish": "I have confidence in you."
   },
   {
     "id": "u12-e58e8be58a9b-752",
@@ -10527,7 +10527,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他最近工作压力很大。",
     "exampleTraditional": "他最近工作壓力很大。",
     "examplePinyin": "Tā zuì jìn gōng zuò yā lì hěn dà.",
-    "exampleEnglish": "He recently work pressure very big."
+    "exampleEnglish": "He's been under a lot of pressure at work recently."
   },
   {
     "id": "u12-e6849fe8a789-753",
@@ -10541,7 +10541,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我感觉今天会下雨。",
     "exampleTraditional": "我感覺今天會下雨。",
     "examplePinyin": "Wǒ gǎn jué jīn tiān huì xià yǔ.",
-    "exampleEnglish": "I feeling today down rain."
+    "exampleEnglish": "I have a feeling it will rain today."
   },
   {
     "id": "u12-e58db0e8b1a1-754",
@@ -10553,9 +10553,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "yìnxiàng",
     "english": "impression",
     "exampleSimplified": "我对他印象不错。",
-    "exampleTraditional": "我對他印象不错。",
+    "exampleTraditional": "我對他印象不錯。",
     "examplePinyin": "Wǒ duì tā yìn xiàng bú cuò.",
-    "exampleEnglish": "I he impression not."
+    "exampleEnglish": "I have a good impression of him."
   },
   {
     "id": "u12-e8afafe4bc9a-755",
@@ -10569,7 +10569,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这是一场误会。",
     "exampleTraditional": "這是一場誤會。",
     "examplePinyin": "Zhè shì yì chǎng wù huì.",
-    "exampleEnglish": "This be one misunderstanding."
+    "exampleEnglish": "This is a misunderstanding."
   },
   {
     "id": "u12-e8afb4-756",
@@ -10583,7 +10583,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "你说得对。",
     "exampleTraditional": "你說得對。",
     "examplePinyin": "Nǐ shuō dé duì.",
-    "exampleEnglish": "You say so."
+    "exampleEnglish": "You're right."
   },
   {
     "id": "u12-e8aeb2-757",
@@ -10595,9 +10595,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "jiǎng",
     "english": "to speak",
     "exampleSimplified": "爷爷爱讲过去的故事。",
-    "exampleTraditional": "爷爷愛講過去的故事。",
+    "exampleTraditional": "爺爺愛講過去的故事。",
     "examplePinyin": "Yé ye ài jiǎng guò qù de gù shì.",
-    "exampleEnglish": "Paternal grandfather love speak past of."
+    "exampleEnglish": "Grandpa likes telling stories about the past."
   },
   {
     "id": "u12-e8b088-758",
@@ -10611,7 +10611,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我们找时间谈一谈。",
     "exampleTraditional": "我們找時間談一談。",
     "examplePinyin": "Wǒ men zhǎo shí jiān tán yi tán.",
-    "exampleEnglish": "We look for time talk one talk."
+    "exampleEnglish": "Let's find time to talk."
   },
   {
     "id": "u12-e8818a-759",
@@ -10625,7 +10625,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我们聊了一下午。",
     "exampleTraditional": "我們聊了一下午。",
     "examplePinyin": "Wǒ men liáo le yí xià wǔ.",
-    "exampleEnglish": "We chat completed action a moment."
+    "exampleEnglish": "We chatted all afternoon."
   },
   {
     "id": "u12-e5918ae8af89-760",
@@ -10639,7 +10639,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "别告诉别人这件事。",
     "exampleTraditional": "別告訴別人這件事。",
     "examplePinyin": "Bié gào sù bié rén zhè jiàn shì.",
-    "exampleEnglish": "Do not tell other people this."
+    "exampleEnglish": "Don't tell anyone else about this."
   },
   {
     "id": "u12-e59b9ee7ad94-761",
@@ -10651,9 +10651,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "huídá",
     "english": "to answer",
     "exampleSimplified": "这个问题我不知道怎么回答。",
-    "exampleTraditional": "這個問题我不知道怎麼回答。",
+    "exampleTraditional": "這個問題我不知道怎麼回答。",
     "examplePinyin": "Zhè ge wèn tí wǒ bù zhī dào zěn me huí dá.",
-    "exampleEnglish": "This question I not know how answer."
+    "exampleEnglish": "I don't know how to answer this question."
   },
   {
     "id": "u12-e8a7a3e9878a-762",
@@ -10665,9 +10665,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "jiěshì",
     "english": "to explain",
     "exampleSimplified": "你听我解释。",
-    "exampleTraditional": "你听我解釋。",
+    "exampleTraditional": "你聽我解釋。",
     "examplePinyin": "Nǐ tīng wǒ jiě shì.",
-    "exampleEnglish": "You I explain."
+    "exampleEnglish": "Listen to my explanation."
   },
   {
     "id": "u12-e4bb8be7bb8d-763",
@@ -10681,7 +10681,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我来介绍一下我自己。",
     "exampleTraditional": "我來介紹一下我自己。",
     "examplePinyin": "Wǒ lái jiè shào yí xià wǒ zì jǐ.",
-    "exampleEnglish": "I come introduce a moment I oneself."
+    "exampleEnglish": "Let me introduce myself."
   },
   {
     "id": "u12-e59586e9878f-764",
@@ -10695,7 +10695,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这事我得跟家人商量。",
     "exampleTraditional": "這事我得跟家人商量。",
     "examplePinyin": "Zhè shì wǒ dé gēn jiā rén shāng liáng.",
-    "exampleEnglish": "This I so family member discuss."
+    "exampleEnglish": "I need to discuss this with my family."
   },
   {
     "id": "u12-e8aea8e8aeba-765",
@@ -10703,13 +10703,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "情感·沟通·社会",
     "partOfSpeech": "动词",
     "simplified": "讨论",
-    "traditional": "讨論",
+    "traditional": "討論",
     "pinyin": "tǎolùn",
     "english": "to discuss",
     "exampleSimplified": "我们下午讨论这个方案。",
-    "exampleTraditional": "我們下午讨論這個方案。",
+    "exampleTraditional": "我們下午討論這個方案。",
     "examplePinyin": "Wǒ men xià wǔ tǎo lùn zhè ge fāng àn.",
-    "exampleEnglish": "We afternoon discuss this."
+    "exampleEnglish": "We'll discuss this proposal this afternoon."
   },
   {
     "id": "u12-e586b3e5ae9a-766",
@@ -10721,9 +10721,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "juédìng",
     "english": "to decide",
     "exampleSimplified": "我决定开始学画画。",
-    "exampleTraditional": "我決定開始學画画。",
+    "exampleTraditional": "我決定開始學畫畫。",
     "examplePinyin": "Wǒ jué dìng kāi shǐ xué huà huà.",
-    "exampleEnglish": "I decide begin learn."
+    "exampleEnglish": "I've decided to start learning to draw."
   },
   {
     "id": "u12-e683b3-767",
@@ -10737,7 +10737,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我想家了。",
     "exampleTraditional": "我想家了。",
     "examplePinyin": "Wǒ xiǎng jiā le.",
-    "exampleEnglish": "I think home completed action."
+    "exampleEnglish": "I miss home."
   },
   {
     "id": "u12-e8a789e5be97-768",
@@ -10749,9 +10749,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "juéde",
     "english": "to feel; to think",
     "exampleSimplified": "我觉得这个主意不错。",
-    "exampleTraditional": "我覺得這個主意不错。",
+    "exampleTraditional": "我覺得這個主意不錯。",
     "examplePinyin": "Wǒ jué de zhè ge zhǔ yì bú cuò.",
-    "exampleEnglish": "I feel this not."
+    "exampleEnglish": "I think this is a good idea."
   },
   {
     "id": "u12-e79fa5e98193-769",
@@ -10765,7 +10765,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这件事我早就知道了。",
     "exampleTraditional": "這件事我早就知道了。",
     "examplePinyin": "Zhè jiàn shì wǒ zǎo jiù zhī dào le.",
-    "exampleEnglish": "This I early then know completed action."
+    "exampleEnglish": "I've known about this for a long time."
   },
   {
     "id": "u12-e6988ee799bd-770",
@@ -10779,7 +10779,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "现在我明白了。",
     "exampleTraditional": "現在我明白了。",
     "examplePinyin": "Xiàn zài wǒ míng bái le.",
-    "exampleEnglish": "Now I understand completed action."
+    "exampleEnglish": "Now I understand."
   },
   {
     "id": "u12-e68782-771",
@@ -10791,9 +10791,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "dǒng",
     "english": "to understand",
     "exampleSimplified": "这句话你懂了吗？",
-    "exampleTraditional": "這句話你懂了吗？",
+    "exampleTraditional": "這句話你懂了嗎？",
     "examplePinyin": "Zhè jù huà nǐ dǒng le ma?",
-    "exampleEnglish": "This you understand completed action."
+    "exampleEnglish": "Do you understand this sentence?"
   },
   {
     "id": "u12-e4ba86e8a7a3-772",
@@ -10801,13 +10801,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "情感·沟通·社会",
     "partOfSpeech": "动词",
     "simplified": "了解",
-    "traditional": "了解",
+    "traditional": "瞭解",
     "pinyin": "liǎojiě",
     "english": "to understand",
     "exampleSimplified": "我们先了解一下情况。",
-    "exampleTraditional": "我們先了解一下情况。",
+    "exampleTraditional": "我們先了解一下情況。",
     "examplePinyin": "Wǒ men xiān liǎo jiě yí xià qíng kuàng.",
-    "exampleEnglish": "We first understand a moment."
+    "exampleEnglish": "Let's first find out what is going on."
   },
   {
     "id": "u12-e79bb8e4bfa1-773",
@@ -10821,7 +10821,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我相信你能做到。",
     "exampleTraditional": "我相信你能做到。",
     "examplePinyin": "Wǒ xiāng xìn nǐ néng zuò dào.",
-    "exampleEnglish": "I believe you to."
+    "exampleEnglish": "I believe you can do it."
   },
   {
     "id": "u12-e8aeb0e5be97-774",
@@ -10833,9 +10833,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "jìde",
     "english": "to remember",
     "exampleSimplified": "你还记得我吗？",
-    "exampleTraditional": "你還記得我吗？",
+    "exampleTraditional": "你還記得我嗎？",
     "examplePinyin": "Nǐ hái jì de wǒ ma?",
-    "exampleEnglish": "You still remember I."
+    "exampleEnglish": "Do you still remember me?"
   },
   {
     "id": "u12-e5bf98-775",
@@ -10847,9 +10847,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "wàng",
     "english": "to forget",
     "exampleSimplified": "我忘了带伞。",
-    "exampleTraditional": "我忘了带傘。",
+    "exampleTraditional": "我忘了帶傘。",
     "examplePinyin": "Wǒ wàng le dài sǎn.",
-    "exampleEnglish": "I forget completed action bring umbrella."
+    "exampleEnglish": "I forgot to bring an umbrella."
   },
   {
     "id": "u12-e68b85e5bf83-776",
@@ -10861,9 +10861,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "dānxīn",
     "english": "to worry",
     "exampleSimplified": "妈妈很担心你的安全。",
-    "exampleTraditional": "妈妈很擔心你的安全。",
+    "exampleTraditional": "媽媽很擔心你的安全。",
     "examplePinyin": "Mā ma hěn dān xīn nǐ de ān quán.",
-    "exampleEnglish": "Mom very worry you of."
+    "exampleEnglish": "Mum is very worried about your safety."
   },
   {
     "id": "u12-e5aeb3e68095-777",
@@ -10877,7 +10877,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "小时候我害怕黑。",
     "exampleTraditional": "小時候我害怕黑。",
     "examplePinyin": "Xiǎo shí hòu wǒ hài pà hēi.",
-    "exampleEnglish": "Hour I be afraid."
+    "exampleEnglish": "When I was little, I was afraid of the dark."
   },
   {
     "id": "u12-e68095-778",
@@ -10891,7 +10891,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我怕迟到，先出门了。",
     "exampleTraditional": "我怕遲到，先出門了。",
     "examplePinyin": "Wǒ pà chí dào, xiān chū mén le.",
-    "exampleEnglish": "I fear be late, first exit door completed action."
+    "exampleEnglish": "I was afraid of being late, so I left early."
   },
   {
     "id": "u12-e7949fe6b094-779",
@@ -10903,9 +10903,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "shēngqì",
     "english": "to get angry",
     "exampleSimplified": "你别生气，我错了。",
-    "exampleTraditional": "你別生氣，我错了。",
+    "exampleTraditional": "你別生氣，我錯了。",
     "examplePinyin": "Nǐ bié shēng qì, wǒ cuò le.",
-    "exampleEnglish": "You do not get angry, I completed action."
+    "exampleEnglish": "Don't be angry. It was my fault."
   },
   {
     "id": "u12-e593ad-780",
@@ -10919,7 +10919,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "电影看得她哭了。",
     "exampleTraditional": "電影看得她哭了。",
     "examplePinyin": "Diàn yǐng kàn dé tā kū le.",
-    "exampleEnglish": "Movie so she cry completed action."
+    "exampleEnglish": "The film made her cry."
   },
   {
     "id": "u12-e7ac91-781",
@@ -10933,7 +10933,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他笑起来很好看。",
     "exampleTraditional": "他笑起來很好看。",
     "examplePinyin": "Tā xiào qǐ lái hěn hǎo kàn.",
-    "exampleEnglish": "He laugh come very good-looking."
+    "exampleEnglish": "He has a lovely smile."
   },
   {
     "id": "u12-e6849fe8b0a2-782",
@@ -10947,7 +10947,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "感谢大家的帮助。",
     "exampleTraditional": "感謝大家的幫助。",
     "examplePinyin": "Gǎn xiè dà jiā de bāng zhù.",
-    "exampleEnglish": "Thank everyone of."
+    "exampleEnglish": "Thank you all for your help."
   },
   {
     "id": "u12-e98193e6ad89-783",
@@ -10961,7 +10961,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "他向我道歉了。",
     "exampleTraditional": "他向我道歉了。",
     "examplePinyin": "Tā xiàng wǒ dào qiàn le.",
-    "exampleEnglish": "He I apologize completed action."
+    "exampleEnglish": "He apologised to me."
   },
   {
     "id": "u12-e5908ce6848f-784",
@@ -10973,9 +10973,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "tóngyì",
     "english": "to agree",
     "exampleSimplified": "爸爸同意我养狗了。",
-    "exampleTraditional": "爸爸同意我养狗了。",
+    "exampleTraditional": "爸爸同意我養狗了。",
     "examplePinyin": "Bà ba tóng yì wǒ yǎng gǒu le.",
-    "exampleEnglish": "Dad agree I dog completed action."
+    "exampleEnglish": "Dad agreed to let me have a dog."
   },
   {
     "id": "u12-e58f8de5afb9-785",
@@ -10987,9 +10987,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "fǎnduì",
     "english": "to oppose",
     "exampleSimplified": "没有人反对这个计划。",
-    "exampleTraditional": "没有人反對這個计劃。",
+    "exampleTraditional": "沒有人反對這個計劃。",
     "examplePinyin": "Méi yǒu rén fǎn duì zhè ge jì huà.",
-    "exampleEnglish": "Not have person oppose this plan."
+    "exampleEnglish": "No one objected to this plan."
   },
   {
     "id": "u12-e9aa82-786",
@@ -11001,9 +11001,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "mà",
     "english": "to scold",
     "exampleSimplified": "他从来不骂人。",
-    "exampleTraditional": "他从來不罵人。",
+    "exampleTraditional": "他從來不罵人。",
     "examplePinyin": "Tā cóng lái bú mà rén.",
-    "exampleEnglish": "He from come not scold person."
+    "exampleEnglish": "He never swears at people."
   },
   {
     "id": "u12-e5a4b8-787",
@@ -11015,9 +11015,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "kuā",
     "english": "to praise",
     "exampleSimplified": "老师夸我进步很大。",
-    "exampleTraditional": "老师誇我进步很大。",
+    "exampleTraditional": "老師誇我進步很大。",
     "examplePinyin": "Lǎo shī kuā wǒ jìn bù hěn dà.",
-    "exampleEnglish": "Teacher praise I enter very big."
+    "exampleEnglish": "The teacher praised me for making a lot of progress."
   },
   {
     "id": "u12-e58a9d-788",
@@ -11031,7 +11031,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "我劝他早点休息。",
     "exampleTraditional": "我勸他早點休息。",
     "examplePinyin": "Wǒ quàn tā zǎo diǎn xiū xi.",
-    "exampleEnglish": "I advise he early order rest."
+    "exampleEnglish": "I advised him to get some rest early."
   },
   {
     "id": "u12-e7a59d-789",
@@ -11043,9 +11043,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "zhù",
     "english": "to wish",
     "exampleSimplified": "祝你们一路顺风！",
-    "exampleTraditional": "祝你們一路顺風！",
+    "exampleTraditional": "祝你們一路順風！",
     "examplePinyin": "Zhù nǐ men yí lù shùn fēng!",
-    "exampleEnglish": "Wish you one road wind."
+    "exampleEnglish": "Have a safe journey!"
   },
   {
     "id": "u12-e9ab98e585b4-790",
@@ -11057,9 +11057,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "gāoxìng",
     "english": "happy",
     "exampleSimplified": "见到你真高兴。",
-    "exampleTraditional": "见到你真高興。",
+    "exampleTraditional": "見到你真高興。",
     "examplePinyin": "Jiàn dào nǐ zhēn gāo xìng.",
-    "exampleEnglish": "To you really happy."
+    "exampleEnglish": "I'm very happy to see you."
   },
   {
     "id": "u12-e5bc80e5bf83-791",
@@ -11073,7 +11073,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "今天玩得很开心。",
     "exampleTraditional": "今天玩得很開心。",
     "examplePinyin": "Jīn tiān wán dé hěn kāi xīn.",
-    "exampleEnglish": "Today so very happy."
+    "exampleEnglish": "We had a great time today."
   },
   {
     "id": "u12-e5bfabe4b990-792",
@@ -11081,13 +11081,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "情感·沟通·社会",
     "partOfSpeech": "形容词",
     "simplified": "快乐",
-    "traditional": "快乐",
+    "traditional": "快樂",
     "pinyin": "kuàilè",
     "english": "happy",
     "exampleSimplified": "祝你新年快乐！",
-    "exampleTraditional": "祝你新年快乐！",
+    "exampleTraditional": "祝你新年快樂！",
     "examplePinyin": "Zhù nǐ xīn nián kuài lè!",
-    "exampleEnglish": "Wish you new year happy."
+    "exampleEnglish": "Happy New Year!"
   },
   {
     "id": "u12-e99abee8bf87-793",
@@ -11101,7 +11101,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "别难过，下次再努力。",
     "exampleTraditional": "別難過，下次再努力。",
     "examplePinyin": "Bié nán guò, xià cì zài nǔ lì.",
-    "exampleEnglish": "Do not sad, down again work hard."
+    "exampleEnglish": "Don't be upset. Try harder next time."
   },
   {
     "id": "u12-e4bca4e5bf83-794",
@@ -11115,7 +11115,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "她伤心地哭了。",
     "exampleTraditional": "她傷心地哭了。",
     "examplePinyin": "Tā shāng xīn dì kū le.",
-    "exampleEnglish": "She sad adverb marker cry completed action."
+    "exampleEnglish": "She cried sadly."
   },
   {
     "id": "u12-e7b4a7e5bca0-795",
@@ -11129,7 +11129,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "第一次上台演讲，我很紧张。",
     "exampleTraditional": "第一次上臺演講，我很緊張。",
     "examplePinyin": "Dì yī cì shàng tái yǎn jiǎng, wǒ hěn jǐn zhāng.",
-    "exampleEnglish": "One up speak, I very nervous."
+    "exampleEnglish": "I was very nervous the first time I gave a speech on stage."
   },
   {
     "id": "u12-e5a587e680aa-796",
@@ -11141,9 +11141,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "qíguài",
     "english": "strange",
     "exampleSimplified": "真奇怪，钥匙怎么不见了？",
-    "exampleTraditional": "真奇怪，鑰匙怎麼不见了？",
+    "exampleTraditional": "真奇怪，鑰匙怎麼不見了？",
     "examplePinyin": "Zhēn qí guài, yào shi zěn me bú jiàn le?",
-    "exampleEnglish": "Really strange, key how not completed action."
+    "exampleEnglish": "That's strange. Where have the keys gone?"
   },
   {
     "id": "u12-e789b9e588ab-797",
@@ -11157,7 +11157,7 @@ export const vocabulary: VocabEntry[] = [
     "exampleSimplified": "这家店的味道很特别。",
     "exampleTraditional": "這家店的味道很特別。",
     "examplePinyin": "Zhè jiā diàn de wèi dào hěn tè bié.",
-    "exampleEnglish": "This home of taste very special."
+    "exampleEnglish": "The food at this restaurant is very distinctive."
   },
   {
     "id": "u12-e699aee9809a-798",
@@ -11169,9 +11169,9 @@ export const vocabulary: VocabEntry[] = [
     "pinyin": "pǔtōng",
     "english": "ordinary",
     "exampleSimplified": "他只是一个普通的上班族。",
-    "exampleTraditional": "他隻是一個普通的上班族。",
+    "exampleTraditional": "他只是一個普通的上班族。",
     "examplePinyin": "Tā zhǐ shì yí gè pǔ tōng de shàng bān zú.",
-    "exampleEnglish": "He only be one ordinary of go to work."
+    "exampleEnglish": "He's just an ordinary office worker."
   },
   {
     "id": "u12-e5ae89e99d99-799",
@@ -11179,13 +11179,13 @@ export const vocabulary: VocabEntry[] = [
     "theme": "情感·沟通·社会",
     "partOfSpeech": "形容词",
     "simplified": "安静",
-    "traditional": "安静",
+    "traditional": "安靜",
     "pinyin": "ānjìng",
     "english": "quiet",
     "exampleSimplified": "请保持安静。",
-    "exampleTraditional": "請保持安静。",
+    "exampleTraditional": "請保持安靜。",
     "examplePinyin": "Qǐng bǎo chí ān jìng.",
-    "exampleEnglish": "Quiet."
+    "exampleEnglish": "Please keep quiet."
   },
   {
     "id": "u12-e783ade997b9-800",
@@ -11193,12 +11193,12 @@ export const vocabulary: VocabEntry[] = [
     "theme": "情感·沟通·社会",
     "partOfSpeech": "形容词",
     "simplified": "热闹",
-    "traditional": "热鬧",
+    "traditional": "熱鬧",
     "pinyin": "rènao",
     "english": "lively",
     "exampleSimplified": "过年的时候街上特别热闹。",
-    "exampleTraditional": "過年的時候街上特別热鬧。",
+    "exampleTraditional": "過年的時候街上特別熱鬧。",
     "examplePinyin": "Guò nián de shí hòu jiē shàng tè bié rè nào.",
-    "exampleEnglish": "Before year of time street up special lively."
+    "exampleEnglish": "The streets are especially lively during the New Year."
   }
 ];

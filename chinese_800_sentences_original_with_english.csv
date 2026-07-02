@@ -1,0 +1,801 @@
+﻿unit,theme,词类,词,pinyin,例句,English translation
+1,身份·人称·数,代词,我,wǒ,我很高兴见到你！,I'm very glad to see you.
+1,身份·人称·数,代词,你,nǐ,你想喝点什么？,What would you like to drink?
+1,身份·人称·数,代词,您,nín,您慢走，欢迎再来。,Take care on your way home. Please come again.
+1,身份·人称·数,代词,他,tā,他是我的中文老师。,He's my Chinese teacher.
+1,身份·人称·数,代词,她,tā,她在纽约工作。,She works in New York.
+1,身份·人称·数,代词,它,tā,小猫饿了，它一直叫。,The kitten is hungry and keeps meowing.
+1,身份·人称·数,代词,我们,wǒmen,我们一起去吃饭吧。,Let's go and get something to eat.
+1,身份·人称·数,代词,你们,nǐmen,你们是从哪里来的？,Where are you all from?
+1,身份·人称·数,代词,他们,tāmen,他们都会说英语。,They can all speak English.
+1,身份·人称·数,代词,自己,zìjǐ,这是我自己做的蛋糕。,I made this cake myself.
+1,身份·人称·数,代词,大家,dàjiā,大家好，请坐。,"Hello, everyone. Please have a seat."
+1,身份·人称·数,代词,别人,biéren,别拿别人的东西。,Don't take other people's things.
+1,身份·人称·数,代词,这,zhè,这是我的行李。,This is my luggage.
+1,身份·人称·数,代词,那,nà,那是谁的手机？,Whose phone is that?
+1,身份·人称·数,代词,谁,shéi,门口站着的人是谁？,Who is standing at the door?
+1,身份·人称·数,代词,什么,shénme,你周末想做什么？,What do you want to do this weekend?
+1,身份·人称·数,代词,哪,nǎ,你喜欢哪件衣服？,Which item of clothing do you like?
+1,身份·人称·数,代词,哪儿,nǎr,洗手间在哪儿？,Where is the restroom?
+1,身份·人称·数,数词,一,yī,我要一杯咖啡。,"I'd like a coffee, please."
+1,身份·人称·数,数词,二,èr,请到二楼等我。,Please wait for me on the second floor.
+1,身份·人称·数,数词,三,sān,我们三点见面。,Let's meet at three.
+1,身份·人称·数,数词,四,sì,他家有四口人。,There are four people in his family.
+1,身份·人称·数,数词,五,wǔ,现在是下午五点。,It's five o'clock in the afternoon.
+1,身份·人称·数,数词,六,liù,我六月去里斯本。,I'm going to Lisbon in June.
+1,身份·人称·数,数词,七,qī,一个星期有七天。,There are seven days in a week.
+1,身份·人称·数,数词,八,bā,我晚上八点到家。,I get home at eight in the evening.
+1,身份·人称·数,数词,九,jiǔ,他儿子今年九岁。,His son is nine years old this year.
+1,身份·人称·数,数词,十,shí,他这次考了第十名。,He came tenth in this exam.
+1,身份·人称·数,数词,百,bǎi,这里能坐一百个人。,This place seats one hundred people.
+1,身份·人称·数,数词,千,qiān,这台电脑八千块。,This computer costs eight thousand yuan.
+1,身份·人称·数,数词,万,wàn,这辆车要十万。,This car costs one hundred thousand yuan.
+1,身份·人称·数,数词,亿,yì,中国有十四亿人。,China has 1.4 billion people.
+1,身份·人称·数,数词,零,líng,我的房间号是三零五。,My room number is 305.
+1,身份·人称·数,数词,两,liǎng,我买了两张票。,I bought two tickets.
+1,身份·人称·数,数词,半,bàn,我们十点半出发。,We leave at half past ten.
+1,身份·人称·数,量词,个,gè,我有三个问题。,I have three questions.
+1,身份·人称·数,量词,些,xiē,冰箱里有一些水果。,There's some fruit in the fridge.
+1,身份·人称·数,量词,位,wèi,这位是我们的新同事。,This is our new colleague.
+1,身份·人称·数,量词,名,míng,我们班有二十名学生。,There are twenty students in our class.
+1,身份·人称·数,量词,次,cì,我去过一次北京。,I've been to Beijing once.
+1,身份·人称·数,量词,回,huí,这是我第一回坐飞机。,This is my first time flying.
+1,身份·人称·数,量词,遍,biàn,请再说一遍。,Please say that again.
+1,身份·人称·数,动词,是,shì,他是葡萄牙人。,He's Portuguese.
+1,身份·人称·数,动词,有,yǒu,我有两个妹妹。,I have two younger sisters.
+1,身份·人称·数,动词,在,zài,我爸妈都在上海。,My parents are both in Shanghai.
+1,身份·人称·数,动词,叫,jiào,我叫王明。,My name is Wang Ming.
+1,身份·人称·数,动词,姓,xìng,我姓李，你呢？,My surname is Li. What about you?
+1,身份·人称·数,动词,住,zhù,我住在波尔图。,I live in Porto.
+1,身份·人称·数,动词,出生,chūshēng,我1990年出生在广州。,I was born in Guangzhou in 1990.
+1,身份·人称·数,动词,长大,zhǎngdà,我在海边的小城长大。,I grew up in a small town by the sea.
+1,身份·人称·数,动词,来自,láizì,她来自法国。,She's from France.
+1,身份·人称·数,名词,名字,míngzi,你的名字很好听。,Your name sounds lovely.
+1,身份·人称·数,名词,人,rén,车上人太多了。,There are too many people in the car.
+1,身份·人称·数,名词,国家,guójiā,你去过哪些国家？,Which countries have you been to?
+1,身份·人称·数,名词,国籍,guójí,请写一下您的国籍。,Please write down your nationality.
+1,身份·人称·数,名词,家乡,jiāxiāng,我的家乡在南方。,My hometown is in the south.
+1,身份·人称·数,名词,老家,lǎojiā,过年我要回老家。,I'm going back to my hometown for the New Year.
+1,身份·人称·数,名词,护照,hùzhào,我的护照下个月到期。,My passport expires next month.
+1,身份·人称·数,名词,签证,qiānzhèng,我在办去美国的签证。,I'm applying for a visa to the United States.
+1,身份·人称·数,名词,身份证,shēnfènzhèng,买火车票要带身份证。,You need to bring your ID to buy a train ticket.
+1,身份·人称·数,名词,外国人,wàiguórén,这里有很多外国人。,There are many foreigners here.
+1,身份·人称·数,名词,中国人,zhōngguórén,那家店的老板是中国人。,The owner of that shop is Chinese.
+1,身份·人称·数,名词,欧洲人,ōuzhōurén,很多欧洲人喜欢喝咖啡。,Many Europeans like drinking coffee.
+1,身份·人称·数,名词,美国人,měiguórén,我的邻居是美国人。,My neighbour is American.
+1,身份·人称·数,名词,华人,huárén,这个城市有不少华人。,There is quite a large Chinese community in this city.
+1,身份·人称·数,名词,移民,yímín,他们十年前移民到了加拿大。,They emigrated to Canada ten years ago.
+1,身份·人称·数,名词,游客,yóukè,夏天这里游客特别多。,There are especially many tourists here in summer.
+1,身份·人称·数,名词,留学生,liúxuéshēng,她是来自韩国的留学生。,She's an international student from Korea.
+1,身份·人称·数,名词,身份,shēnfèn,他的身份是记者。,He's a journalist.
+1,身份·人称·数,动词,旅游,lǚyóu,我们打算去意大利旅游。,We're planning to travel to Italy.
+1,身份·人称·数,动词,旅行,lǚxíng,一个人旅行很自由。,Travelling alone gives you a lot of freedom.
+1,身份·人称·数,动词,出国,chūguó,他明年想出国读书。,He wants to study abroad next year.
+1,身份·人称·数,动词,回国,huíguó,她下星期回国看父母。,She's going home next week to see her parents.
+1,身份·人称·数,动词,搬家,bānjiā,我们上个月刚搬家。,We moved house just last month.
+1,身份·人称·数,动词,定居,dìngjū,他们决定在里斯本定居。,They have decided to settle in Lisbon.
+2,家庭·关系,名词,爸爸,bàba,我爸爸会做很多菜。,My dad can cook lots of dishes.
+2,家庭·关系,名词,妈妈,māma,妈妈每天送我上学。,My mum takes me to school every day.
+2,家庭·关系,名词,爷爷,yéye,爷爷喜欢早上散步。,Grandpa likes taking a walk in the morning.
+2,家庭·关系,名词,奶奶,nǎinai,奶奶做的饺子最好吃。,Grandma makes the best dumplings.
+2,家庭·关系,名词,外公,wàigōng,外公教我下棋。,My maternal grandfather taught me to play Chinese chess.
+2,家庭·关系,名词,外婆,wàipó,外婆住在乡下。,My maternal grandmother lives in the countryside.
+2,家庭·关系,名词,哥哥,gēge,我哥哥比我高。,My older brother is taller than I am.
+2,家庭·关系,名词,姐姐,jiějie,姐姐在医院当护士。,My older sister works as a nurse at a hospital.
+2,家庭·关系,名词,弟弟,dìdi,弟弟今年上小学。,My younger brother starts primary school this year.
+2,家庭·关系,名词,妹妹,mèimei,妹妹喜欢画画。,My younger sister likes drawing.
+2,家庭·关系,名词,儿子,érzi,他儿子会说三种语言。,His son can speak three languages.
+2,家庭·关系,名词,女儿,nǚ'ér,我女儿刚学会走路。,My daughter has just learned to walk.
+2,家庭·关系,名词,丈夫,zhàngfu,她丈夫是工程师。,Her husband is an engineer.
+2,家庭·关系,名词,妻子,qīzi,他和妻子一起开店。,He runs a shop with his wife.
+2,家庭·关系,名词,老公,lǎogōng,我老公不爱吃辣。,My husband doesn't like spicy food.
+2,家庭·关系,名词,老婆,lǎopó,他给老婆买了花。,He bought flowers for his wife.
+2,家庭·关系,名词,家人,jiārén,周末我想多陪陪家人。,I want to spend more time with my family this weekend.
+2,家庭·关系,名词,家庭,jiātíng,她有一个幸福的家庭。,She has a happy family.
+2,家庭·关系,名词,亲戚,qīnqi,春节我们去亲戚家吃饭。,We visit relatives for a meal during the Spring Festival.
+2,家庭·关系,名词,叔叔,shūshu,叔叔送了我一辆自行车。,My uncle gave me a bicycle.
+2,家庭·关系,名词,阿姨,āyí,楼下的阿姨人很好。,The auntie downstairs is very kind.
+2,家庭·关系,名词,大人,dàren,这部电影大人小孩都爱看。,Both adults and children love this film.
+2,家庭·关系,名词,小孩,xiǎohái,公园里有很多小孩在玩。,Many children are playing in the park.
+2,家庭·关系,名词,宝宝,bǎobao,宝宝睡着了，小声一点。,"The baby is asleep, so please keep your voice down."
+2,家庭·关系,名词,夫妻,fūqī,这对夫妻结婚二十年了。,This couple have been married for twenty years.
+2,家庭·关系,名词,老人,lǎorén,请给老人让个座。,Please give up your seat for an older person.
+2,家庭·关系,名词,年轻人,niánqīngrén,现在的年轻人喜欢点外卖。,Young people today like ordering takeaway.
+2,家庭·关系,名词,邻居,línjū,我们和邻居关系很好。,We get along very well with our neighbours.
+2,家庭·关系,名词,同学,tóngxué,我和老同学吃了个饭。,I had a meal with an old classmate.
+2,家庭·关系,名词,同事,tóngshì,同事们都很热心。,My colleagues are all very helpful.
+2,家庭·关系,名词,老师,lǎoshī,老师让我们多练口语。,The teacher told us to practise speaking more.
+2,家庭·关系,名词,领导,lǐngdǎo,领导今天不在办公室。,The manager isn't in the office today.
+2,家庭·关系,名词,老板,lǎobǎn,老板同意给我加工资了。,My boss agreed to give me a pay rise.
+2,家庭·关系,名词,朋友,péngyou,好朋友要互相帮助。,Good friends should help each other.
+2,家庭·关系,名词,男朋友,nánpéngyou,她男朋友很会做饭。,Her boyfriend is a very good cook.
+2,家庭·关系,名词,女朋友,nǚpéngyou,他送女朋友回家了。,He walked his girlfriend home.
+2,家庭·关系,动词,爱,ài,我很爱我的家人。,I love my family very much.
+2,家庭·关系,动词,喜欢,xǐhuan,我特别喜欢秋天。,I especially like autumn.
+2,家庭·关系,动词,照顾,zhàogù,谢谢你照顾我的猫。,Thank you for looking after my cat.
+2,家庭·关系,动词,关心,guānxīn,妈妈总是关心我的身体。,Mum is always concerned about my health.
+2,家庭·关系,动词,结婚,jiéhūn,他们打算明年结婚。,They plan to get married next year.
+2,家庭·关系,动词,离婚,líhūn,他们去年离婚了。,They got divorced last year.
+2,家庭·关系,动词,认识,rènshi,很高兴认识你。,It's very nice to meet you.
+2,家庭·关系,动词,帮忙,bāngmáng,需要我帮忙吗？,Do you need a hand?
+2,家庭·关系,动词,陪,péi,晚上我陪你去医院。,I'll go to the hospital with you tonight.
+2,家庭·关系,动词,想念,xiǎngniàn,我很想念家乡的味道。,I really miss the flavours of my hometown.
+2,家庭·关系,形容词,亲,qīn,她和外婆最亲。,She's closest to her grandmother.
+2,家庭·关系,形容词,熟,shú,我们俩很熟，别客气。,"We know each other well, so don't be formal."
+2,家庭·关系,形容词,年轻,niánqīng,你看起来真年轻。,You look so young.
+2,家庭·关系,形容词,可爱,kě'ài,这只小狗太可爱了。,This puppy is so cute.
+2,家庭·关系,形容词,好,hǎo,这里的咖啡真好喝。,The coffee here is really good.
+2,家庭·关系,形容词,单身,dānshēn,他现在还是单身。,He's still single.
+3,身体·健康,名词,头,tóu,我头有点疼。,I have a bit of a headache.
+3,身体·健康,名词,脸,liǎn,她的脸红了。,Her face turned red.
+3,身体·健康,名词,眼睛,yǎnjing,看书太久，眼睛很累。,My eyes are tired from reading for too long.
+3,身体·健康,名词,鼻子,bízi,感冒了，鼻子不通气。,"I have a cold, and my nose is blocked."
+3,身体·健康,名词,嘴,zuǐ,他嘴里吃着东西，说不了话。,"His mouth is full, so he can't talk."
+3,身体·健康,名词,耳朵,ěrduo,兔子的耳朵长长的。,Rabbits have long ears.
+3,身体·健康,名词,牙,yá,我一颗牙坏了，得去看牙医。,"One of my teeth is bad, so I need to see a dentist."
+3,身体·健康,名词,舌头,shétou,汤太烫，烫到舌头了。,The soup was so hot that I burned my tongue.
+3,身体·健康,名词,脖子,bózi,坐久了，脖子很酸。,My neck is sore from sitting too long.
+3,身体·健康,名词,肩膀,jiānbǎng,他拍了拍我的肩膀。,He patted me on the shoulder.
+3,身体·健康,名词,手,shǒu,吃饭前要洗手。,You should wash your hands before eating.
+3,身体·健康,名词,手指,shǒuzhǐ,她的手指又细又长。,Her fingers are long and slender.
+3,身体·健康,名词,胳膊,gēbo,我打球伤了胳膊。,I hurt my arm playing ball.
+3,身体·健康,名词,腿,tuǐ,走了一天，腿都软了。,"After walking all day, my legs feel weak."
+3,身体·健康,名词,脚,jiǎo,这双鞋有点挤脚。,These shoes are a bit tight.
+3,身体·健康,名词,肚子,dùzi,我肚子饿得咕咕叫。,My stomach is growling because I'm hungry.
+3,身体·健康,名词,背,bèi,他的背晒黑了。,His back got tanned in the sun.
+3,身体·健康,名词,腰,yāo,搬东西的时候小心腰。,Be careful with your back when lifting things.
+3,身体·健康,名词,心,xīn,听到这个消息，我心里难受。,That news made me feel terrible.
+3,身体·健康,名词,皮肤,pífū,冬天皮肤容易干。,Skin gets dry easily in winter.
+3,身体·健康,名词,头发,tóufa,她剪短了头发。,She cut her hair short.
+3,身体·健康,名词,血,xuè,手指破了，流了一点血。,I cut my finger and it bled a little.
+3,身体·健康,名词,骨头,gǔtou,狗最爱啃骨头。,Dogs love chewing bones.
+3,身体·健康,名词,身体,shēntǐ,爷爷的身体一直不错。,Grandpa has always been in good health.
+3,身体·健康,名词,个子,gèzi,他个子高，坐后排吧。,"He's tall, so he should sit in the back row."
+3,身体·健康,名词,力气,lìqi,这箱子太重，我没力气搬。,This box is too heavy for me to move.
+3,身体·健康,名词,病,bìng,他的病已经好了。,He's recovered from his illness.
+3,身体·健康,名词,感冒,gǎnmào,天冷了，小心感冒。,"It's getting cold, so be careful not to catch a cold."
+3,身体·健康,名词,药,yào,这个药一天吃三次。,Take this medicine three times a day.
+3,身体·健康,名词,医院,yīyuàn,医院就在地铁站旁边。,The hospital is right next to the metro station.
+3,身体·健康,名词,医生,yīshēng,医生让我多喝水。,The doctor told me to drink more water.
+3,身体·健康,名词,护士,hùshi,护士帮我量了体温。,The nurse took my temperature.
+3,身体·健康,名词,精神,jīngshén,今天精神很好。,I feel full of energy today.
+3,身体·健康,名词,命,mìng,医生救了他的命。,The doctor saved his life.
+3,身体·健康,名词,气,qì,他跑上五楼，喘不过气。,He ran up to the fifth floor and was out of breath.
+3,身体·健康,名词,汗,hàn,他跑完步，满头是汗。,"After running, his head was covered in sweat."
+3,身体·健康,名词,病人,bìngrén,这位病人需要休息。,This patient needs to rest.
+3,身体·健康,名词,体检,tǐjiǎn,公司每年安排一次体检。,The company arranges an annual health check-up.
+3,身体·健康,名词,口罩,kǒuzhào,医院里要戴口罩。,You need to wear a mask in the hospital.
+3,身体·健康,动词,睡,shuì,昨晚我十一点才睡。,I didn't go to bed until eleven last night.
+3,身体·健康,动词,醒,xǐng,我今天六点就醒了。,I woke up at six today.
+3,身体·健康,动词,休息,xiūxi,累了就休息一会儿。,Rest for a while when you're tired.
+3,身体·健康,动词,生病,shēngbìng,他生病了，今天不来上课。,"He's ill, so he isn't coming to class today."
+3,身体·健康,动词,看病,kànbìng,网上也可以预约看病。,You can book a doctor's appointment online too.
+3,身体·健康,动词,咳嗽,késou,他咳嗽了一整夜。,He coughed all night.
+3,身体·健康,动词,发烧,fāshāo,孩子发烧了。,The child has a fever. 
+3,身体·健康,动词,受伤,shòushāng,踢球的时候他受伤了。,He was injured while playing football.
+3,身体·健康,动词,洗澡,xǐzǎo,我习惯晚上洗澡。,I'm used to taking a shower at night.
+3,身体·健康,动词,刷牙,shuāyá,睡前别忘了刷牙。,Don't forget to brush your teeth before bed.
+3,身体·健康,动词,运动,yùndòng,每周运动三次对身体好。,Exercising three times a week is good for your health.
+3,身体·健康,动词,锻炼,duànliàn,爷爷每天早上去锻炼。,Grandpa goes to exercise every morning.
+3,身体·健康,动词,长,zhǎng,这孩子长得像妈妈。,This child looks like his mother.
+3,身体·健康,动词,健身,jiànshēn,他下班后去健身房健身。,He goes to the gym after work.
+3,身体·健康,形容词,疼,téng,牙疼起来吃不下饭。,"When my tooth hurts, I can't eat."
+3,身体·健康,形容词,累,lèi,今天开了一天会，好累。,I've had meetings all day. I'm exhausted.
+3,身体·健康,形容词,困,kùn,中午不睡，下午就困。,"If I don't nap at midday, I get sleepy in the afternoon."
+3,身体·健康,形容词,饿,è,我饿了，先吃点东西吧。,I'm hungry. Let's eat something first.
+3,身体·健康,形容词,渴,kě,跑完步特别渴。,I'm especially thirsty after running.
+3,身体·健康,形容词,饱,bǎo,我吃饱了，你们慢用。,I'm full. Please enjoy your meal.
+3,身体·健康,形容词,舒服,shūfu,这张沙发坐着真舒服。,This sofa is really comfortable.
+3,身体·健康,形容词,健康,jiànkāng,祝你身体健康。,I wish you good health.
+3,身体·健康,形容词,胖,pàng,假期一过，我又胖了。,I gained weight again over the holiday.
+3,身体·健康,形容词,瘦,shòu,她最近瘦了很多。,She has lost a lot of weight recently.
+3,身体·健康,形容词,高,gāo,那栋楼真高。,That building is really tall.
+3,身体·健康,形容词,矮,ǎi,我比哥哥矮一点。,I'm a little shorter than my older brother.
+3,身体·健康,形容词,壮,zhuàng,他天天锻炼，身体很壮。,He works out every day and is very strong.
+3,身体·健康,形容词,难受,nánshòu,晕车的感觉很难受。,Feeling carsick is awful.
+4,饮食,名词,饭,fàn,饭好了，快来吃。,The food is ready. Come and eat.
+4,饮食,名词,米饭,mǐfàn,再来一碗米饭。,I'd like another bowl of rice.
+4,饮食,名词,面,miàn,我中午吃了一碗牛肉面。,I had a bowl of beef noodles for lunch.
+4,饮食,名词,面条,miàntiáo,妈妈煮的面条特别香。,The noodles Mum cooked smell wonderful.
+4,饮食,名词,菜,cài,今天的菜有点咸。,Today's dishes are a little salty.
+4,饮食,名词,肉,ròu,他不吃肉，只吃素。,He doesn't eat meat; he's vegetarian.
+4,饮食,名词,鱼,yú,这条鱼很新鲜。,This fish is very fresh.
+4,饮食,名词,鸡,jī,外婆养了几只鸡。,Grandma keeps several chickens.
+4,饮食,名词,鸡蛋,jīdàn,我早上吃了两个鸡蛋。,I ate two eggs this morning.
+4,饮食,名词,猪肉,zhūròu,猪肉最近涨价了。,Pork has gone up in price recently.
+4,饮食,名词,牛肉,niúròu,这家店的牛肉很嫩。,The beef at this restaurant is very tender.
+4,饮食,名词,羊肉,yángròu,冬天吃羊肉火锅最舒服。,Hotpot with lamb is especially comforting in winter.
+4,饮食,名词,虾,xiā,我对虾过敏。,I'm allergic to shrimp.
+4,饮食,名词,青菜,qīngcài,多吃点青菜吧。,Eat some more green vegetables.
+4,饮食,名词,蔬菜,shūcài,市场的蔬菜很便宜。,The vegetables at the market are very cheap.
+4,饮食,名词,水果,shuǐguǒ,饭后吃点水果。,Have some fruit after your meal.
+4,饮食,名词,苹果,píngguǒ,这个苹果很脆。,This apple is very crisp.
+4,饮食,名词,香蕉,xiāngjiāo,香蕉熟得太快了。,Bananas ripen too quickly.
+4,饮食,名词,橘子,júzi,橘子有点酸。,These oranges are a little sour.
+4,饮食,名词,西瓜,xīguā,夏天就要吃冰西瓜。,Summer is the time for chilled watermelon.
+4,饮食,名词,葡萄,pútao,这串葡萄真甜。,This bunch of grapes is so sweet.
+4,饮食,名词,汤,tāng,先喝口汤吧。,Have some soup first.
+4,饮食,名词,粥,zhōu,生病的时候喝点粥。,Have some porridge when you're ill.
+4,饮食,名词,包子,bāozi,早上我买了两个肉包子。,I bought two meat buns this morning.
+4,饮食,名词,饺子,jiǎozi,过年全家一起包饺子。,"At New Year, the whole family makes dumplings together."
+4,饮食,名词,馒头,mántou,北方人爱吃馒头。,People in northern China like steamed buns.
+4,饮食,名词,面包,miànbāo,面包刚烤好，还热着呢。,The bread has just come out of the oven and is still warm.
+4,饮食,名词,蛋糕,dàngāo,生日蛋糕上有草莓。,There's a strawberry on the birthday cake.
+4,饮食,名词,糖,táng,咖啡里要加糖吗？,Would you like sugar in your coffee?
+4,饮食,名词,盐,yán,汤里盐放多了。,I put too much salt in the soup.
+4,饮食,名词,油,yóu,少放点油更健康。,Using less oil is healthier.
+4,饮食,名词,酱油,jiàngyóu,蘸一点酱油更好吃。,It tastes better with a little soy sauce for dipping.
+4,饮食,名词,醋,cù,吃饺子我喜欢加醋。,I like adding vinegar when I eat dumplings.
+4,饮食,名词,水,shuǐ,请给我一杯水。,Please give me a glass of water.
+4,饮食,名词,茶,chá,我爸爱喝绿茶。,My dad likes drinking green tea.
+4,饮食,名词,咖啡,kāfēi,早上不喝咖啡我没精神。,I have no energy in the morning without coffee.
+4,饮食,名词,牛奶,niúnǎi,睡前喝杯牛奶。,Have a glass of milk before bed.
+4,饮食,名词,果汁,guǒzhī,这杯果汁是鲜榨的。,This juice is freshly squeezed.
+4,饮食,名词,酒,jiǔ,开车不能喝酒。,Don't drink alcohol if you're driving.
+4,饮食,名词,啤酒,píjiǔ,天热来杯冰啤酒。,Have an ice-cold beer when it's hot.
+4,饮食,名词,饮料,yǐnliào,少喝甜饮料。,Drink fewer sugary drinks.
+4,饮食,名词,味道,wèidào,这道菜味道不错。,This dish tastes good.
+4,饮食,名词,早餐,zǎocān,早餐一定要吃好。,You should have a good breakfast.
+4,饮食,名词,午餐,wǔcān,我们午餐吃什么？,What shall we have for lunch?
+4,饮食,名词,晚餐,wǎncān,今天的晚餐我来做。,I'll make dinner today.
+4,饮食,名词,零食,língshí,看电影少不了零食。,You can't watch a film without snacks.
+4,饮食,名词,餐厅,cāntīng,这家餐厅要排队。,You have to queue at this restaurant.
+4,饮食,名词,饭店,fàndiàn,楼下新开了一家饭店。,A new restaurant has opened downstairs.
+4,饮食,名词,食堂,shítáng,学校食堂的菜挺便宜。,The food in the school cafeteria is quite cheap.
+4,饮食,名词,厨房,chúfáng,厨房里飘出香味。,A delicious smell is coming from the kitchen.
+4,饮食,名词,外卖,wàimài,下雨天我们点外卖吧。,Let's order takeaway on this rainy day.
+4,饮食,动词,吃,chī,你早饭吃了吗？,Have you had breakfast?
+4,饮食,动词,喝,hē,天热要多喝水。,Drink plenty of water when it's hot.
+4,饮食,动词,尝,cháng,你尝尝这个汤。,Try this soup.
+4,饮食,动词,做饭,zuòfàn,今天轮到我做饭。,It's my turn to cook today.
+4,饮食,动词,煮,zhǔ,我去煮点面。,I'll go and cook some noodles.
+4,饮食,动词,炒,chǎo,这个菜要大火快炒。,This dish needs to be stir-fried quickly over high heat.
+4,饮食,动词,蒸,zhēng,鱼蒸十分钟就熟了。,The fish will be done after steaming for ten minutes.
+4,饮食,动词,烤,kǎo,周末我们烤肉吧。,Let's have a barbecue this weekend.
+4,饮食,动词,切,qiē,小心别切到手。,Be careful not to cut your hand.
+4,饮食,动词,点,diǎn,你来点菜吧。,You can order the dishes.
+4,饮食,动词,请客,qǐngkè,今天我请客，随便点。,"It's my treat today, so order whatever you like."
+4,饮食,量词,杯,bēi,请来两杯咖啡。,"Two coffees, please."
+4,饮食,量词,碗,wǎn,我能再来一碗吗？,Could I have another bowl?
+4,饮食,量词,盘,pán,桌上有一盘水果。,There's a plate of fruit on the table.
+4,饮食,量词,瓶,píng,买一瓶矿泉水。,Buy a bottle of mineral water.
+4,饮食,量词,份,fèn,我们要了两份炒饭。,We ordered two portions of fried rice.
+4,饮食,量词,片,piàn,面包上放两片火腿。,Put two slices of ham on the bread.
+4,饮食,量词,口,kǒu,我就尝了一口。,I only had one bite.
+4,饮食,量词,顿,dùn,我们好好吃一顿吧。,Let's have a proper meal together.
+4,饮食,形容词,甜,tián,这个西瓜真甜。,This watermelon is really sweet.
+4,饮食,形容词,咸,xián,火腿有点咸。,The ham is a little salty.
+4,饮食,形容词,辣,là,四川菜太辣了。,Sichuan food is too spicy.
+4,饮食,形容词,酸,suān,柠檬特别酸。,Lemons are very sour.
+4,饮食,形容词,苦,kǔ,这个药有点苦。,This medicine is a little bitter.
+4,饮食,形容词,香,xiāng,米饭闻起来真香。,The rice smells delicious.
+4,饮食,形容词,好吃,hǎochī,你做的菜真好吃。,The food you made is really tasty.
+4,饮食,形容词,新鲜,xīnxiān,早市的鱼最新鲜。,The fish at the morning market is the freshest.
+4,饮食,形容词,烫,tàng,小心，汤很烫。,"Be careful, the soup is very hot."
+5,居家·物品,名词,家,jiā,我到家了，你放心吧。,"I'm home, so don't worry."
+5,居家·物品,名词,房子,fángzi,他们在看新房子。,They're looking at new houses.
+5,居家·物品,名词,房间,fángjiān,我的房间朝南，很亮。,My room faces south and gets lots of light.
+5,居家·物品,名词,屋子,wūzi,屋子里暖和多了。,The room feels much warmer now.
+5,居家·物品,名词,门,mén,出门记得锁门。,Remember to lock the door when you leave.
+5,居家·物品,名词,窗户,chuānghu,打开窗户透透气。,Open the window to let in some fresh air.
+5,居家·物品,名词,墙,qiáng,墙上挂着全家福。,A family portrait hangs on the wall.
+5,居家·物品,名词,楼,lóu,我住在五楼。,I live on the fifth floor.
+5,居家·物品,名词,楼梯,lóutī,电梯坏了，走楼梯吧。,"The lift is broken, so let's take the stairs."
+5,居家·物品,名词,客厅,kètīng,客人都坐在客厅里。,The guests are all sitting in the living room.
+5,居家·物品,名词,卧室,wòshì,卧室里只有一张床。,There's only one bed in the bedroom.
+5,居家·物品,名词,厕所,cèsuǒ,请问厕所怎么走？,"Excuse me, how do I get to the toilet?"
+5,居家·物品,名词,卫生间,wèishēngjiān,卫生间刚打扫过。,The bathroom has just been cleaned.
+5,居家·物品,名词,床,chuáng,这张床太软了。,This bed is too soft.
+5,居家·物品,名词,桌子,zhuōzi,把书放在桌子上吧。,Put the book on the table.
+5,居家·物品,名词,椅子,yǐzi,这把椅子有点晃。,This chair wobbles a little.
+5,居家·物品,名词,沙发,shāfā,猫在沙发上睡觉。,The cat is sleeping on the sofa.
+5,居家·物品,名词,柜子,guìzi,碗都在柜子里。,The bowls are all in the cupboard.
+5,居家·物品,名词,灯,dēng,出门前记得关灯。,Remember to turn off the lights before you leave.
+5,居家·物品,名词,电视,diànshì,爷爷在看电视新闻。,Grandpa is watching the TV news.
+5,居家·物品,名词,冰箱,bīngxiāng,冰箱里还有西瓜。,There's still watermelon in the fridge.
+5,居家·物品,名词,空调,kōngtiáo,太热了，开空调吧。,It's too hot. Let's turn on the air conditioning.
+5,居家·物品,名词,洗衣机,xǐyījī,洗衣机响了，衣服洗好了。,The washing machine has finished; the clothes are done.
+5,居家·物品,名词,钟,zhōng,墙上的钟慢了五分钟。,The clock on the wall is five minutes slow.
+5,居家·物品,名词,表,biǎo,他的表是爷爷留下的。,This watch was left to him by his grandfather.
+5,居家·物品,名词,镜子,jìngzi,她照着镜子试帽子。,She's trying on hats in front of the mirror.
+5,居家·物品,名词,毛巾,máojīn,用干净的毛巾擦手。,Use a clean towel to dry your hands.
+5,居家·物品,名词,牙刷,yáshuā,我的牙刷该换了。,I need to replace my toothbrush.
+5,居家·物品,名词,肥皂,féizào,用肥皂好好洗手。,Wash your hands thoroughly with soap.
+5,居家·物品,名词,被子,bèizi,天冷了，换厚被子吧。,It's getting cold. Let's change to a thicker quilt.
+5,居家·物品,名词,枕头,zhěntou,这个枕头太高了。,This pillow is too high.
+5,居家·物品,名词,刀,dāo,这把刀不太快了。,This knife isn't very sharp anymore.
+5,居家·物品,名词,勺子,sháozi,宝宝会自己用勺子了。,The baby can use a spoon by herself now.
+5,居家·物品,名词,筷子,kuàizi,你会用筷子吗？,Can you use chopsticks?
+5,居家·物品,名词,盘子,pánzi,盘子洗好了放在架子上。,Put the washed plates on the rack.
+5,居家·物品,名词,杯子,bēizi,我的杯子是蓝色的。,My cup is blue.
+5,居家·物品,名词,瓶子,píngzi,空瓶子可以回收。,Empty bottles can be recycled.
+5,居家·物品,名词,锅,guō,锅里还热着菜呢。,There's still hot food in the pot.
+5,居家·物品,名词,垃圾,lājī,出门时顺便扔垃圾。,Take out the rubbish on your way out.
+5,居家·物品,名词,纸,zhǐ,桌上有纸和笔。,There's paper and a pen on the table.
+5,居家·物品,名词,笔,bǐ,我的笔没水了。,My pen has run out of ink.
+5,居家·物品,名词,书,shū,这本书我看了两遍。,I've read this book twice.
+5,居家·物品,名词,钥匙,yàoshi,糟糕，钥匙忘在家里了。,"Oh no, I left my keys at home."
+5,居家·物品,名词,锁,suǒ,这个锁有点难开。,This lock is a bit hard to open.
+5,居家·物品,名词,电脑,diànnǎo,我的电脑需要更新了。,My computer needs an update.
+5,居家·物品,名词,手机,shǒujī,手机快没电了。,My phone is about to run out of battery.
+5,居家·物品,名词,充电器,chōngdiànqì,你带充电器了吗？,Did you bring a charger?
+5,居家·物品,名词,插座,chāzuò,沙发旁边有个插座。,There's a socket beside the sofa.
+5,居家·物品,动词,用,yòng,这个词怎么用？,How do you use this word?
+5,居家·物品,动词,放,fàng,牛奶放冰箱里了。,I put the milk in the fridge.
+5,居家·物品,动词,拿,ná,帮我拿一下快递。,Please get the delivery for me.
+5,居家·物品,动词,收拾,shōushi,出发前把行李收拾好。,Pack your luggage before you leave.
+5,居家·物品,动词,打扫,dǎsǎo,周末我要打扫房间。,I'm going to clean my room this weekend.
+5,居家·物品,动词,扫,sǎo,我先扫一下地。,I'll sweep the floor first.
+5,居家·物品,动词,擦,cā,把桌子擦干净。,Wipe the table clean.
+5,居家·物品,动词,洗,xǐ,这件衣服要用手洗。,This garment needs to be washed by hand.
+5,居家·物品,动词,修,xiū,我的自行车该修了。,My bicycle needs repairing.
+5,居家·物品,动词,开,kāi,帮我开一下门。,Please open the door for me.
+5,居家·物品,动词,关,guān,睡觉前把窗户关好。,Close the window properly before going to sleep.
+5,居家·物品,动词,搬,bān,我们把沙发搬到窗边吧。,Let's move the sofa by the window.
+5,居家·物品,动词,丢,diū,我的伞丢在地铁上了。,I left my umbrella on the metro.
+5,居家·物品,动词,找,zhǎo,我在找我的眼镜。,I'm looking for my glasses.
+5,居家·物品,量词,张,zhāng,请给我一张纸。,Please give me a sheet of paper.
+5,居家·物品,量词,把,bǎ,家里有三把伞。,There are three umbrellas at home.
+5,居家·物品,量词,件,jiàn,她买了一件新外套。,She bought a new coat.
+5,居家·物品,量词,台,tái,客厅里有一台电视。,There's a TV in the living room.
+5,居家·物品,量词,部,bù,他换了一部新手机。,He got a new phone.
+5,居家·物品,量词,间,jiān,这套房子有三间卧室。,This flat has three bedrooms.
+5,居家·物品,形容词,干净,gānjìng,地板擦得很干净。,The floor is very clean.
+5,居家·物品,形容词,脏,zāng,鞋子踩得很脏。,My shoes got very dirty.
+5,居家·物品,形容词,乱,luàn,桌子上乱七八糟的。,The desk is a complete mess.
+5,居家·物品,形容词,整齐,zhěngqí,书架上的书摆得很整齐。,The books on the shelf are arranged very neatly.
+5,居家·物品,形容词,新,xīn,他穿了一双新鞋。,He's wearing a new pair of shoes.
+5,居家·物品,形容词,旧,jiù,这台洗衣机太旧了。,This washing machine is too old.
+5,居家·物品,形容词,空,kōng,瓶子已经空了。,The bottle is already empty.
+5,居家·物品,形容词,满,mǎn,冰箱塞得满满的。,The fridge is crammed full.
+5,居家·物品,形容词,亮,liàng,这盏灯很亮。,This lamp is very bright.
+5,居家·物品,形容词,暗,àn,屋里太暗，开灯吧。,It's too dark in here. Turn on the light.
+5,居家·物品,形容词,软,ruǎn,这个枕头很软。,This pillow is very soft.
+5,居家·物品,形容词,硬,yìng,这个面包放硬了。,This bread has gone hard.
+6,衣着·外貌,名词,衣服,yīfu,换季了，该买衣服了。,It's time to buy clothes for the new season.
+6,衣着·外貌,名词,裤子,kùzi,这条裤子有点长。,These trousers are a little too long.
+6,衣着·外貌,名词,裙子,qúnzi,她穿裙子很好看。,She looks good in a skirt.
+6,衣着·外貌,名词,鞋,xié,新鞋有点磨脚。,New shoes are rubbing my feet a little.
+6,衣着·外貌,名词,袜子,wàzi,我找不到另一只袜子。,I can't find the other sock.
+6,衣着·外貌,名词,帽子,màozi,太阳大，戴上帽子吧。,"It's sunny, so put on a hat."
+6,衣着·外貌,名词,手套,shǒutào,骑车记得戴手套。,Remember to wear gloves when cycling.
+6,衣着·外貌,名词,围巾,wéijīn,这条围巾真暖和。,This scarf is really warm.
+6,衣着·外貌,名词,外套,wàitào,晚上凉，带件外套。,"It's cool at night, so bring a coat."
+6,衣着·外貌,名词,毛衣,máoyī,这件毛衣是奶奶织的。,My grandmother knitted this sweater.
+6,衣着·外貌,名词,衬衫,chènshān,他的衬衫烫得很平。,His shirt has been ironed smooth.
+6,衣着·外貌,名词,包,bāo,她的包里什么都有。,She has everything in her bag.
+6,衣着·外貌,名词,书包,shūbāo,书包太重，孩子背不动。,The schoolbag is too heavy for the child to carry.
+6,衣着·外貌,名词,钱包,qiánbāo,我的钱包里没多少现金。,There isn't much cash in my wallet.
+6,衣着·外貌,名词,伞,sǎn,天阴了，带把伞吧。,"It's cloudy, so take an umbrella."
+6,衣着·外貌,名词,颜色,yánsè,你最喜欢什么颜色？,What colour do you like best?
+6,衣着·外貌,名词,造型,zàoxíng,她今天的造型很特别。,Her look today is very distinctive.
+6,衣着·外貌,动词,穿,chuān,今天穿什么好呢？,What should I wear today?
+6,衣着·外貌,动词,戴,dài,他戴上了新眼镜。,He put on his new glasses.
+6,衣着·外貌,动词,脱,tuō,进门请脱鞋。,Please take off your shoes when you come in.
+6,衣着·外貌,动词,换,huàn,这件太小了，能换一件吗？,This one is too small. Can I exchange it?
+6,衣着·外貌,动词,试,shì,这条裙子可以试穿吗？,Can I try on this skirt?
+6,衣着·外貌,动词,化妆,huàzhuāng,她出门前要化妆。,She puts on make-up before going out.
+6,衣着·外貌,量词,套,tào,他买了一套西装。,He bought a suit.
+6,衣着·外貌,量词,双,shuāng,这双袜子破了个洞。,There's a hole in this pair of socks.
+6,衣着·外貌,形容词,漂亮,piàoliang,今天的晚霞真漂亮。,The sunset is beautiful today.
+6,衣着·外貌,形容词,美,měi,湖边的风景美极了。,The scenery by the lake is beautiful.
+6,衣着·外貌,形容词,丑,chǒu,他觉得自己的字很丑。,He thinks his handwriting is ugly.
+6,衣着·外貌,形容词,好看,hǎokàn,这个颜色很好看。,This colour looks great.
+6,衣着·外貌,形容词,长,cháng,她的头发很长。,Her hair is long.
+6,衣着·外貌,形容词,短,duǎn,夏天他喜欢穿短裤。,He likes wearing shorts in summer.
+6,衣着·外貌,形容词,大,dà,这双鞋大了一号。,These shoes are one size too big.
+6,衣着·外貌,形容词,小,xiǎo,这件衬衫小了点。,This shirt is a bit too small.
+6,衣着·外貌,形容词,宽,kuān,新买的牛仔裤有点宽。,The jeans I bought are a little loose.
+6,衣着·外貌,形容词,窄,zhǎi,这条路很窄，小心开。,"This road is very narrow, so drive carefully."
+6,衣着·外貌,形容词,厚,hòu,冬天要穿厚外套。,You need a thick coat in winter.
+6,衣着·外貌,形容词,薄,báo,这条被子太薄了。,This quilt is too thin.
+6,衣着·外貌,名词,红色,hóngsè,中国人结婚喜欢用红色。,Chinese people like to use red for weddings.
+6,衣着·外貌,名词,黄色,huángsè,秋天的树叶变成了黄色。,The leaves turn yellow in autumn.
+6,衣着·外貌,名词,蓝色,lánsè,天空是蓝色的。,The sky is blue.
+6,衣着·外貌,名词,绿色,lǜsè,春天到处都是绿色。,Spring makes everything green.
+6,衣着·外貌,名词,黑色,hēisè,他只穿黑色的T恤。,He only wears black T-shirts.
+6,衣着·外貌,名词,白色,báisè,婚纱一般是白色的。,Wedding dresses are usually white.
+6,衣着·外貌,名词,灰色,huīsè,这件灰色大衣很配你。,This grey coat suits you very well.
+6,衣着·外貌,名词,紫色,zǐsè,她染了紫色的头发。,She dyed her hair purple.
+6,衣着·外貌,名词,粉色,fěnsè,小女孩喜欢粉色的书包。,Little girls like pink schoolbags.
+7,时间·日期,名词,年,nián,新的一年开始了。,A new year has begun.
+7,时间·日期,名词,月,yuè,我上个月很忙。,I was very busy last month.
+7,时间·日期,名词,日,rì,今天是几月几日？,What date is it today?
+7,时间·日期,名词,天,tiān,我在北京住了三天。,I stayed in Beijing for three days.
+7,时间·日期,名词,星期,xīngqī,下星期我们考试。,We have an exam next week.
+7,时间·日期,名词,周,zhōu,这周的工作特别多。,There's a lot of work this week.
+7,时间·日期,名词,小时,xiǎoshí,这部电影两个小时。,This film is two hours long.
+7,时间·日期,名词,分钟,fēnzhōng,再等我五分钟。,Wait another five minutes for me.
+7,时间·日期,名词,秒,miǎo,还有十秒就到零点了。,There are ten seconds left until midnight.
+7,时间·日期,名词,岁,suì,我女儿今年五岁。,My daughter is five years old this year.
+7,时间·日期,名词,点,diǎn,我们几点出发？,What time are we leaving?
+7,时间·日期,名词,早上,zǎoshang,早上的空气真好。,The air is so fresh in the morning.
+7,时间·日期,名词,上午,shàngwǔ,上午我有一个会。,I have a meeting this morning.
+7,时间·日期,名词,中午,zhōngwǔ,中午食堂人特别多。,The cafeteria is especially crowded at midday.
+7,时间·日期,名词,下午,xiàwǔ,下午三点开会。,The meeting starts at three in the afternoon.
+7,时间·日期,名词,晚上,wǎnshang,晚上早点睡。,Go to bed early tonight.
+7,时间·日期,名词,夜,yè,他工作到半夜。,He worked until midnight.
+7,时间·日期,名词,白天,báitiān,白天他要上班。,He has to work during the day.
+7,时间·日期,名词,今天,jīntiān,今天是我第一天上班。,Today is my first day at work.
+7,时间·日期,名词,明天,míngtiān,明天可能下雨。,It might rain tomorrow.
+7,时间·日期,名词,昨天,zuótiān,昨天我们去爬山了。,We went hiking yesterday.
+7,时间·日期,名词,后天,hòutiān,后天就放假了。,The holiday starts the day after tomorrow.
+7,时间·日期,名词,前天,qiántiān,前天他刚回国。,He just returned home from abroad the day before yesterday.
+7,时间·日期,名词,现在,xiànzài,现在几点了？,What time is it now?
+7,时间·日期,名词,刚才,gāngcái,刚才有人找你。,Someone was looking for you just now.
+7,时间·日期,名词,以前,yǐqián,我以前住在南京。,I used to live in Nanjing.
+7,时间·日期,名词,以后,yǐhòu,以后有空常来玩。,Come and visit whenever you have time.
+7,时间·日期,名词,最近,zuìjìn,最近天气变化很大。,The weather has been changing a lot recently.
+7,时间·日期,名词,时候,shíhou,小时候我最怕打针。,"When I was little, I was most afraid of injections."
+7,时间·日期,名词,时间,shíjiān,时间过得真快。,Time passes so quickly.
+7,时间·日期,名词,日子,rìzi,搬家的日子定了吗？,Have you set a date for the move?
+7,时间·日期,名词,季节,jìjié,秋天是我最喜欢的季节。,Autumn is my favourite season.
+7,时间·日期,名词,春,chūn,春天来了，花都开了。,"Spring is here, and all the flowers are blooming."
+7,时间·日期,名词,夏,xià,今年夏天特别热。,This summer has been especially hot.
+7,时间·日期,名词,秋,qiū,秋天的枫叶红了。,The maple leaves have turned red in autumn.
+7,时间·日期,名词,冬,dōng,北方的冬天很冷。,Winters in northern China are very cold.
+7,时间·日期,名词,周末,zhōumò,周末我们去海边吧。,Let's go to the seaside this weekend.
+7,时间·日期,名词,假期,jiàqī,假期你有什么安排？,What are your plans for the holiday?
+7,时间·日期,名词,生日,shēngrì,明天是我妈妈的生日。,Tomorrow is my mum's birthday.
+7,时间·日期,名词,节日,jiérì,中秋是团圆的节日。,The Mid-Autumn Festival is a time for family reunions.
+7,时间·日期,名词,平时,píngshí,我平时很少喝酒。,I rarely drink alcohol normally.
+7,时间·日期,名词,当时,dāngshí,当时我不知道该说什么。,"At the time, I didn't know what to say."
+7,时间·日期,名词,未来,wèilái,谁也说不准未来的事。,No one can predict the future.
+7,时间·日期,名词,过去,guòqù,过去的事就让它过去吧。,Let the past stay in the past.
+7,时间·日期,动词,等,děng,我在门口等你。,I'll wait for you at the door.
+7,时间·日期,动词,迟到,chídào,对不起，我迟到了。,Sorry I'm late.
+7,时间·日期,动词,开始,kāishǐ,电影马上开始了。,The film is about to start.
+7,时间·日期,动词,结束,jiéshù,会议五点才结束。,The meeting didn't finish until five.
+7,时间·日期,动词,起床,qǐchuáng,我每天七点起床。,I get up at seven every day.
+7,时间·日期,动词,出发,chūfā,我们明天一早出发。,We leave early tomorrow morning.
+7,时间·日期,动词,来得及,láidejí,别急，时间还来得及。,Don't worry; there's still enough time.
+7,时间·日期,形容词,早,zǎo,你今天来得真早。,You came really early today.
+7,时间·日期,形容词,晚,wǎn,现在去还不算晚。,It's not too late to go now.
+7,时间·日期,形容词,快,kuài,高铁比火车快多了。,High-speed rail is much faster than regular trains.
+7,时间·日期,形容词,慢,màn,请说慢一点。,Please speak a little more slowly.
+7,时间·日期,形容词,忙,máng,他最近忙得没时间吃饭。,He's been so busy lately that he has no time to eat.
+7,时间·日期,形容词,闲,xián,退休后他闲不下来。,He can't sit still after retiring.
+7,时间·日期,形容词,久,jiǔ,好久不见！,Long time no see!
+8,学习·工作·数字生活,名词,学校,xuéxiào,学校离我家很近。,The school is very close to my home.
+8,学习·工作·数字生活,名词,教室,jiàoshì,教室里很安静。,It's very quiet in the classroom.
+8,学习·工作·数字生活,名词,办公室,bàngōngshì,他在办公室加班。,He's working overtime in the office.
+8,学习·工作·数字生活,名词,图书馆,túshūguǎn,图书馆周一闭馆。,The library is closed on Mondays.
+8,学习·工作·数字生活,名词,课,kè,我下午没有课。,I don't have class this afternoon.
+8,学习·工作·数字生活,名词,作业,zuòyè,今天的作业不多。,There isn't much homework today.
+8,学习·工作·数字生活,名词,考试,kǎoshì,考试前别熬夜。,Don't stay up late before an exam.
+8,学习·工作·数字生活,名词,成绩,chéngjì,她这次成绩不错。,She did quite well in this exam.
+8,学习·工作·数字生活,名词,字,zì,这个字怎么读？,How do you pronounce this character?
+8,学习·工作·数字生活,名词,词,cí,这个词我不会用。,I don't know how to use this word.
+8,学习·工作·数字生活,名词,句子,jùzi,请用这个词造一个句子。,Please make a sentence using this word.
+8,学习·工作·数字生活,名词,文章,wénzhāng,这篇文章写得真好。,This article is very well written.
+8,学习·工作·数字生活,名词,知识,zhīshi,多读书能学到知识。,Reading more helps you gain knowledge.
+8,学习·工作·数字生活,名词,专业,zhuānyè,你大学学的什么专业？,What did you study at university?
+8,学习·工作·数字生活,名词,笔记,bǐjì,上课要记笔记。,Take notes in class.
+8,学习·工作·数字生活,名词,公司,gōngsī,我们公司在市中心。,Our company is in the city centre.
+8,学习·工作·数字生活,名词,单位,dānwèi,他单位的福利不错。,The benefits at his workplace are good.
+8,学习·工作·数字生活,名词,工作,gōngzuò,她找到了新工作。,She found a new job.
+8,学习·工作·数字生活,名词,工作室,gōngzuòshì,他开了一家设计工作室。,He runs a design studio.
+8,学习·工作·数字生活,名词,项目,xiàngmù,这个项目下个月上线。,This project goes live next month.
+8,学习·工作·数字生活,名词,会议,huìyì,会议改到明天上午了。,The meeting has been moved to tomorrow morning.
+8,学习·工作·数字生活,名词,任务,rènwu,今天的任务有点重。,Today's workload is a bit heavy.
+8,学习·工作·数字生活,名词,计划,jìhuà,我们的计划变了。,Our plan has changed.
+8,学习·工作·数字生活,名词,经验,jīngyàn,他有十年的教学经验。,He has ten years of teaching experience.
+8,学习·工作·数字生活,名词,技术,jìshù,他的技术在公司数一数二。,His technical skills are among the best at the company.
+8,学习·工作·数字生活,名词,能力,nénglì,她的学习能力很强。,She has a strong ability to learn.
+8,学习·工作·数字生活,名词,面试,miànshì,我明天有一个面试。,I have a job interview tomorrow.
+8,学习·工作·数字生活,名词,简历,jiǎnlì,请把简历发到我的邮箱。,Please email your CV to me.
+8,学习·工作·数字生活,名词,实习,shíxí,她在一家银行实习。,She's doing an internship at a bank.
+8,学习·工作·数字生活,名词,培训,péixùn,新员工要参加培训。,New employees have to attend training.
+8,学习·工作·数字生活,名词,收入,shōurù,他的收入比去年高。,His income is higher than last year.
+8,学习·工作·数字生活,名词,创业,chuàngyè,大学毕业后他选择创业。,He chose to start his own business after graduating from university.
+8,学习·工作·数字生活,名词,同行,tóngháng,我们是同行，多多交流。,"We work in the same field, so let's stay in touch."
+8,学习·工作·数字生活,名词,网络,wǎngluò,这里的网络信号不好。,The internet signal here is poor.
+8,学习·工作·数字生活,名词,网上,wǎngshàng,这本书网上更便宜。,This book is cheaper online.
+8,学习·工作·数字生活,名词,网站,wǎngzhàn,这个网站打不开了。,This website won't open.
+8,学习·工作·数字生活,名词,软件,ruǎnjiàn,手机里装了太多软件。,There are too many apps installed on my phone.
+8,学习·工作·数字生活,名词,视频,shìpín,这个视频太好笑了。,This video is hilarious.
+8,学习·工作·数字生活,名词,邮件,yóujiàn,我给你发了一封邮件。,I sent you an email.
+8,学习·工作·数字生活,名词,文件,wénjiàn,请把文件打印两份。,Please print two copies of the document.
+8,学习·工作·数字生活,名词,消息,xiāoxi,有消息马上告诉我。,Tell me as soon as you hear anything.
+8,学习·工作·数字生活,名词,密码,mìmǎ,我又忘了密码。,I forgot my password again.
+8,学习·工作·数字生活,名词,账号,zhànghào,我的账号被锁了。,My account has been locked.
+8,学习·工作·数字生活,名词,流量,liúliàng,这个月的流量用完了。,I've used up this month's mobile data.
+8,学习·工作·数字生活,名词,平板,píngbǎn,孩子用平板上网课。,The child uses a tablet for online classes.
+8,学习·工作·数字生活,名词,耳机,ěrjī,我的耳机找不到了。,I can't find my earphones.
+8,学习·工作·数字生活,名词,微信,wēixìn,加个微信吧。,Let's add each other on WeChat.
+8,学习·工作·数字生活,名词,APP,ēipìpì,这个APP很好用。,This app is very useful.
+8,学习·工作·数字生活,名词,表情包,biǎoqíngbāo,他发了一个搞笑的表情包。,He sent a funny meme.
+8,学习·工作·数字生活,名词,直播,zhíbō,她每天晚上八点直播。,She livestreams every evening at eight.
+8,学习·工作·数字生活,名词,博主,bózhǔ,这位博主专门介绍美食。,This blogger specialises in introducing food.
+8,学习·工作·数字生活,名词,粉丝,fěnsī,她有一百万粉丝。,She has one million followers.
+8,学习·工作·数字生活,名词,视频通话,shìpín tōnghuà,我每周和爸妈视频通话。,I video-call my parents every week.
+8,学习·工作·数字生活,名词,点赞,diǎnzàn,记得给我点赞哦。,Remember to give me a like.
+8,学习·工作·数字生活,名词,关注,guānzhù,欢迎关注我的账号。,Follow my account.
+8,学习·工作·数字生活,名词,分享,fēnxiǎng,谢谢你的分享。,Thank you for sharing.
+8,学习·工作·数字生活,动词,学,xué,我在学葡萄牙语。,I'm learning Portuguese.
+8,学习·工作·数字生活,动词,教,jiāo,王老师教我们数学。,Ms Wang teaches us maths.
+8,学习·工作·数字生活,动词,读,dú,请大声读课文。,Please read the text aloud.
+8,学习·工作·数字生活,动词,写,xiě,他会写毛笔字。,He can write calligraphy.
+8,学习·工作·数字生活,动词,问,wèn,不懂就问。,"If you don't understand, ask."
+8,学习·工作·数字生活,动词,答,dá,这道题他答对了。,He got this question right.
+8,学习·工作·数字生活,动词,考,kǎo,明天考听力。,We have a listening test tomorrow.
+8,学习·工作·数字生活,动词,记,jì,我记不住这么多单词。,I can't remember so many words.
+8,学习·工作·数字生活,动词,算,suàn,你算一下一共花了多少。,Work out how much we spent altogether.
+8,学习·工作·数字生活,动词,查,chá,不认识的词可以查词典。,You can look up unfamiliar words in a dictionary.
+8,学习·工作·数字生活,动词,练,liàn,口语要天天练。,You need to practise speaking every day.
+8,学习·工作·数字生活,动词,复习,fùxí,考前好好复习。,Review carefully before the exam.
+8,学习·工作·数字生活,动词,上课,shàngkè,上课别玩手机。,Don't play on your phone in class.
+8,学习·工作·数字生活,动词,上班,shàngbān,我坐地铁上班。,I take the metro to work.
+8,学习·工作·数字生活,动词,下班,xiàbān,他今天下班很晚。,He finishes work very late today.
+8,学习·工作·数字生活,动词,毕业,bìyè,我2018年大学毕业。,I graduated from university in 2018.
+8,学习·工作·数字生活,动词,努力,nǔlì,他学习很努力。,He works very hard at his studies.
+8,学习·工作·数字生活,动词,完成,wánchéng,报告我已经完成了。,I've already completed the report.
+8,学习·工作·数字生活,动词,负责,fùzé,这个项目由她负责。,She's in charge of this project.
+8,学习·工作·数字生活,动词,参加,cānjiā,你参加明天的会议吗？,Are you attending tomorrow's meeting?
+8,学习·工作·数字生活,动词,上网,shàngwǎng,爷爷也学会上网了。,Even Grandpa has learned to go online.
+8,学习·工作·数字生活,动词,注册,zhùcè,先注册一个账号。,Register an account first.
+8,学习·工作·数字生活,动词,下载,xiàzài,这个软件在哪儿下载？,Where can I download this software?
+8,学习·工作·数字生活,动词,打印,dǎyìn,帮我打印一下这份合同。,Please print this contract for me.
+8,学习·工作·数字生活,量词,本,běn,我买了三本词典。,I bought three dictionaries.
+8,学习·工作·数字生活,量词,节,jié,今天上了四节课。,We had four classes today.
+8,学习·工作·数字生活,量词,门,mén,这学期我选了五门课。,I chose five courses this semester.
+8,学习·工作·数字生活,形容词,难,nán,中文的声调有点难。,Chinese tones are a little difficult.
+8,学习·工作·数字生活,形容词,容易,róngyì,这次考试比较容易。,This exam is relatively easy.
+8,学习·工作·数字生活,形容词,简单,jiǎndān,这道题很简单。,This question is very simple.
+8,学习·工作·数字生活,形容词,复杂,fùzá,事情比我想的复杂。,The situation is more complicated than I thought.
+8,学习·工作·数字生活,形容词,重要,zhòngyào,健康比什么都重要。,Health is more important than anything else.
+8,学习·工作·数字生活,形容词,认真,rènzhēn,他做事一直很认真。,He's always very conscientious.
+8,学习·工作·数字生活,形容词,聪明,cōngming,这孩子聪明又用功。,This child is clever and hardworking.
+8,学习·工作·数字生活,形容词,清楚,qīngchu,老师讲得很清楚。,The teacher explained it very clearly.
+9,出行·交通·方位,名词,车,chē,路上车太多了。,There are too many cars on the road.
+9,出行·交通·方位,名词,汽车,qìchē,他们家买了新汽车。,They bought a new car.
+9,出行·交通·方位,名词,出租车,chūzūchē,我们打出租车去吧。,Let's take a taxi.
+9,出行·交通·方位,名词,网约车,wǎngyuēchē,网约车几分钟就到了。,The ride-hailing car will be here in a few minutes.
+9,出行·交通·方位,名词,公交车,gōngjiāochē,这趟公交车直达机场。,This bus goes directly to the airport.
+9,出行·交通·方位,名词,火车,huǒchē,我坐夜里的火车走。,I'm taking the overnight train.
+9,出行·交通·方位,名词,高铁,gāotiě,高铁上有插座，很方便。,"There's a socket on the high-speed train, which is very convenient."
+9,出行·交通·方位,名词,飞机,fēijī,飞机晚点了一个小时。,The flight was delayed by an hour.
+9,出行·交通·方位,名词,自行车,zìxíngchē,他每天骑自行车上学。,He cycles to school every day.
+9,出行·交通·方位,名词,共享单车,gòngxiǎng dānchē,街上到处是共享单车。,There are shared bikes everywhere on the street.
+9,出行·交通·方位,名词,电动车,diàndòngchē,骑电动车要戴头盔。,You need to wear a helmet when riding an e-bike.
+9,出行·交通·方位,名词,摩托车,mótuōchē,摩托车声音太大了。,Motorcycles are too noisy.
+9,出行·交通·方位,名词,地铁,dìtiě,坐地铁比开车快。,Taking the metro is faster than driving.
+9,出行·交通·方位,名词,船,chuán,我们坐船去了那个小岛。,We took a boat to that small island.
+9,出行·交通·方位,名词,票,piào,演唱会的票卖完了。,The concert tickets are sold out.
+9,出行·交通·方位,名词,车站,chēzhàn,车站离这儿不远。,The station isn't far from here.
+9,出行·交通·方位,名词,机场,jīchǎng,提前两小时到机场。,Get to the airport two hours early.
+9,出行·交通·方位,名词,路,lù,这条路修好了。,This road has been repaired.
+9,出行·交通·方位,名词,马路,mǎlù,过马路要看红绿灯。,Look at the traffic lights before crossing the road.
+9,出行·交通·方位,名词,桥,qiáo,桥下有人在钓鱼。,Someone is fishing under the bridge.
+9,出行·交通·方位,名词,酒店,jiǔdiàn,我们订了海边的酒店。,We booked a hotel by the sea.
+9,出行·交通·方位,名词,地图,dìtú,打开地图看看怎么走。,Open the map and see how to get there.
+9,出行·交通·方位,名词,导航,dǎoháng,跟着导航走就行。,Just follow the navigation.
+9,出行·交通·方位,名词,城市,chéngshì,这座城市变化很大。,This city has changed a lot.
+9,出行·交通·方位,名词,农村,nóngcūn,农村的空气特别好。,The air in the countryside is especially fresh.
+9,出行·交通·方位,名词,村,cūn,这个村只有几十户人家。,There are only a few dozen households in this village.
+9,出行·交通·方位,名词,街,jiē,这条街晚上很热闹。,This street is very lively at night.
+9,出行·交通·方位,名词,公园,gōngyuán,公园里有人在跳舞。,People are dancing in the park.
+9,出行·交通·方位,名词,广场,guǎngchǎng,广场上聚了很多人。,A lot of people have gathered in the square.
+9,出行·交通·方位,名词,方向,fāngxiàng,我们好像走错方向了。,I think we're going in the wrong direction.
+9,出行·交通·方位,名词,红绿灯,hónglǜdēng,前面的红绿灯坏了。,The traffic lights ahead are broken.
+9,出行·交通·方位,名词,停车场,tíngchēchǎng,停车场已经满了。,The car park is already full.
+9,出行·交通·方位,名词,加油站,jiāyóuzhàn,前面有个加油站，先加油吧。,There's a petrol station ahead. Let's fill up first.
+9,出行·交通·方位,方位词,上,shàng,墙上贴着一张海报。,There's a poster on the wall.
+9,出行·交通·方位,方位词,下,xià,猫躲在床下。,The cat is hiding under the bed.
+9,出行·交通·方位,方位词,前,qián,学校前面有家书店。,There's a bookshop in front of the school.
+9,出行·交通·方位,方位词,后,hòu,房子后面是一座山。,There's a mountain behind the house.
+9,出行·交通·方位,方位词,左,zuǒ,到路口往左拐。,Turn left at the junction.
+9,出行·交通·方位,方位词,右,yòu,超市在银行右边。,The supermarket is to the right of the bank.
+9,出行·交通·方位,方位词,里,lǐ,抽屉里有个手电筒。,There's a torch in the drawer.
+9,出行·交通·方位,方位词,外,wài,门外有人敲门。,Someone is knocking at the door.
+9,出行·交通·方位,方位词,中,zhōng,他站在队伍中间。,He's standing in the middle of the queue.
+9,出行·交通·方位,方位词,旁边,pángbiān,我家旁边有个地铁站。,There's a metro station next to my home.
+9,出行·交通·方位,方位词,对面,duìmiàn,对面新开了一家咖啡店。,A new coffee shop has opened opposite.
+9,出行·交通·方位,方位词,附近,fùjìn,附近有药店吗？,Is there a pharmacy nearby?
+9,出行·交通·方位,方位词,东,dōng,太阳从东边升起。,The sun rises in the east.
+9,出行·交通·方位,方位词,南,nán,冬天很多鸟飞去南方。,Many birds fly south for the winter.
+9,出行·交通·方位,方位词,西,xī,往西走十分钟就到了。,Walk west for ten minutes and you'll be there.
+9,出行·交通·方位,方位词,北,běi,我老家在北方。,My hometown is in the north.
+9,出行·交通·方位,动词,走,zǒu,我们走路去吧。,Let's walk there.
+9,出行·交通·方位,动词,跑,pǎo,他每天早上跑五公里。,He runs five kilometres every morning.
+9,出行·交通·方位,动词,来,lái,你什么时候来我家？,When are you coming to my home?
+9,出行·交通·方位,动词,去,qù,我去趟超市。,I'm going to the supermarket.
+9,出行·交通·方位,动词,到,dào,火车马上就到了。,The train is arriving soon.
+9,出行·交通·方位,动词,回,huí,我先回家了。,I'm going home first.
+9,出行·交通·方位,动词,进,jìn,请进，别客气。,"Come in, make yourself at home."
+9,出行·交通·方位,动词,出,chū,他刚出门。,He has just gone out.
+9,出行·交通·方位,动词,坐,zuò,坐高铁两个小时就能到。,It only takes two hours by high-speed train.
+9,出行·交通·方位,动词,骑,qí,他骑车去买菜。,He rode his bike to buy groceries.
+9,出行·交通·方位,动词,开车,kāichē,他开车送我回家。,He drove me home.
+9,出行·交通·方位,动词,停,tíng,车不能停在这里。,You can't park here.
+9,出行·交通·方位,动词,离开,líkāi,他十八岁就离开了家乡。,He left his hometown when he was eighteen.
+9,出行·交通·方位,动词,带,dài,出门别忘带钥匙。,Don't forget to take your keys when you go out.
+9,出行·交通·方位,动词,打车,dǎchē,太晚了，我们打车回去吧。,It's too late. Let's take a taxi home.
+9,出行·交通·方位,量词,辆,liàng,门口停着一辆红色的车。,There's a red car parked at the entrance.
+9,出行·交通·方位,量词,趟,tàng,我去了一趟银行。,I went to the bank.
+9,出行·交通·方位,量词,班,bān,我赶上了最后一班地铁。,I caught the last metro.
+10,购物·金钱,名词,商店,shāngdiàn,这家商店周日不开门。,This shop is closed on Sundays.
+10,购物·金钱,名词,超市,chāoshì,超市在搞活动。,The supermarket is having a promotion.
+10,购物·金钱,名词,市场,shìchǎng,早上的市场很热闹。,The morning market is very lively.
+10,购物·金钱,名词,银行,yínháng,银行下午五点关门。,The bank closes at five in the afternoon.
+10,购物·金钱,名词,钱,qián,我带的钱不够。,I didn't bring enough money.
+10,购物·金钱,名词,价格,jiàgé,这个价格很合理。,That price is reasonable.
+10,购物·金钱,名词,工资,gōngzī,每月十号发工资。,Payday is the tenth of every month.
+10,购物·金钱,名词,生意,shēngyi,他家的生意越来越好。,His family business is getting better and better.
+10,购物·金钱,名词,产品,chǎnpǐn,这款产品卖得很火。,This product is selling very well.
+10,购物·金钱,名词,顾客,gùkè,顾客就是上帝。,The customer is always right.
+10,购物·金钱,名词,快递,kuàidì,你的快递到了。,Your delivery has arrived.
+10,购物·金钱,名词,网购,wǎnggòu,她喜欢深夜网购。,She likes shopping online late at night.
+10,购物·金钱,名词,现金,xiànjīn,现在很少有人带现金。,Very few people carry cash these days.
+10,购物·金钱,名词,银行卡,yínhángkǎ,我的银行卡不见了。,My bank card is missing.
+10,购物·金钱,名词,红包,hóngbāo,过年孩子们都收红包。,Children receive red envelopes at New Year.
+10,购物·金钱,名词,余额,yú'é,卡里余额不多了。,There's not much left in the account.
+10,购物·金钱,名词,优惠,yōuhuì,新用户有优惠。,New users get a discount.
+10,购物·金钱,名词,订单,dìngdān,你的订单已经发货了。,Your order has already been dispatched.
+10,购物·金钱,名词,发票,fāpiào,请给我开张发票。,Please issue me an invoice.
+10,购物·金钱,名词,网店,wǎngdiàn,她开了一家网店卖衣服。,She runs an online shop selling clothes.
+10,购物·金钱,名词,店员,diànyuán,店员帮我找了合适的尺码。,The shop assistant helped me find the right size.
+10,购物·金钱,量词,元,yuán,这本书三十元。,This book costs thirty yuan.
+10,购物·金钱,量词,块,kuài,苹果五块钱一斤。,Apples are five yuan a jin.
+10,购物·金钱,量词,毛,máo,找您五毛钱。,Here's fifty fen in change.
+10,购物·金钱,量词,斤,jīn,我买了两斤香蕉。,I bought two jin of bananas.
+10,购物·金钱,量词,公斤,gōngjīn,行李不能超过二十公斤。,Luggage must not exceed twenty kilograms.
+10,购物·金钱,量词,米,mǐ,他身高一米八。,He's 1.8 metres tall.
+10,购物·金钱,动词,买,mǎi,我想买个新手机。,I want to buy a new phone.
+10,购物·金钱,动词,卖,mài,这家店只卖水果。,This shop only sells fruit.
+10,购物·金钱,动词,付,fù,这次我来付。,I'll pay this time.
+10,购物·金钱,动词,花,huā,装修花了不少钱。,The renovation cost quite a lot.
+10,购物·金钱,动词,省,shěng,拼车能省不少钱。,Carpooling can save a lot of money.
+10,购物·金钱,动词,存,cún,她每月存两千块。,She saves two thousand yuan a month.
+10,购物·金钱,动词,借,jiè,我能借你的充电器吗？,Can I borrow your charger?
+10,购物·金钱,动词,还,huán,借的书下周要还。,The book I borrowed must be returned next week.
+10,购物·金钱,动词,退,tuì,不合适可以七天退货。,You can return it within seven days if it doesn't fit.
+10,购物·金钱,动词,挑,tiāo,妈妈在挑西红柿。,Mum is picking out tomatoes.
+10,购物·金钱,动词,选,xuǎn,两个颜色，你选一个。,There are two colours. Choose one.
+10,购物·金钱,动词,打折,dǎzhé,这双鞋正在打折。,These shoes are on sale.
+10,购物·金钱,动词,扫码,sǎomǎ,扫码就能点餐。,You can order food by scanning the code.
+10,购物·金钱,动词,付款,fùkuǎn,请到前台付款。,Please pay at the counter.
+10,购物·金钱,动词,下单,xiàdān,我昨晚下单，今天就到了。,"I placed the order last night, and it arrived today."
+10,购物·金钱,动词,转账,zhuǎnzhàng,我把房租转账给你。,I transferred the rent to you.
+10,购物·金钱,动词,刷卡,shuākǎ,这里可以刷卡吗？,Can I pay by card here?
+10,购物·金钱,动词,支付,zhīfù,现在大家都用手机支付。,Everyone uses mobile payments these days.
+10,购物·金钱,形容词,贵,guì,这家餐厅有点贵。,This restaurant is a bit expensive.
+10,购物·金钱,形容词,便宜,piányi,换季的衣服很便宜。,Clothes are cheap at the end of the season.
+10,购物·金钱,形容词,值,zhí,这钱花得值。,It was money well spent.
+10,购物·金钱,形容词,富,fù,这个村靠种茶富了起来。,This village became prosperous by growing tea.
+10,购物·金钱,形容词,穷,qióng,他小时候家里很穷。,His family was very poor when he was little.
+10,购物·金钱,形容词,免费,miǎnfèi,展览今天免费参观。,Entry to the exhibition is free today.
+10,购物·金钱,短语,多少钱,duōshao qián,老板，这个多少钱？,How much is this?
+11,自然·天气·动物,名词,阳光,yángguāng,今天阳光真好。,The sunshine is lovely today.
+11,自然·天气·动物,名词,天空,tiānkōng,天空中一朵云也没有。,There's not a cloud in the sky.
+11,自然·天气·动物,名词,太阳,tàiyáng,太阳出来了，晒晒被子吧。,The sun is out. Let's air the quilts.
+11,自然·天气·动物,名词,月亮,yuèliang,今晚的月亮又大又圆。,The moon is big and round tonight.
+11,自然·天气·动物,名词,星星,xīngxing,山里能看到满天星星。,You can see a sky full of stars in the mountains.
+11,自然·天气·动物,名词,云,yún,天上的云像棉花糖。,The clouds look like candy floss.
+11,自然·天气·动物,名词,风,fēng,今天风很大，戴好帽子。,It's very windy today. Keep your hat on.
+11,自然·天气·动物,名词,雨,yǔ,雨下了一整天。,It rained all day.
+11,自然·天气·动物,名词,雪,xuě,昨晚下了今年第一场雪。,It snowed for the first time this year last night.
+11,自然·天气·动物,名词,雷,léi,打雷了，别站在树下。,It's thundering. Don't stand under a tree.
+11,自然·天气·动物,名词,天气,tiānqì,明天天气怎么样？,What's the weather forecast for tomorrow?
+11,自然·天气·动物,名词,气温,qìwēn,今天气温降到零下了。,Temperatures have dropped below zero today.
+11,自然·天气·动物,名词,温度,wēndù,空调温度别开太低。,Don't set the air-conditioning temperature too low.
+11,自然·天气·动物,名词,空气,kōngqì,雨后的空气很清新。,The air is very fresh after the rain.
+11,自然·天气·动物,名词,火,huǒ,做饭时别离开火。,Don't leave the stove unattended while cooking.
+11,自然·天气·动物,名词,光,guāng,月光照进了房间。,Moonlight shines into the room.
+11,自然·天气·动物,名词,河,hé,小时候我常在河里游泳。,I often swam in the river when I was little.
+11,自然·天气·动物,名词,海,hǎi,我还没见过海。,I've never seen the sea.
+11,自然·天气·动物,名词,湖,hú,湖水清得能看到鱼。,The lake water is so clear that you can see the fish.
+11,自然·天气·动物,名词,山,shān,这座山不高，很好爬。,This mountain isn't high and is easy to climb.
+11,自然·天气·动物,名词,石头,shítou,孩子往水里扔石头玩。,The child is throwing stones into the water for fun.
+11,自然·天气·动物,名词,土,tǔ,花盆里的土干了。,The soil in the flowerpot has dried out.
+11,自然·天气·动物,名词,树,shù,院子里有一棵老树。,There's an old tree in the courtyard.
+11,自然·天气·动物,名词,草,cǎo,春天的草绿油油的。,The grass is lush and green in spring.
+11,自然·天气·动物,名词,花,huā,阳台上的花开了。,The flowers on the balcony are blooming.
+11,自然·天气·动物,名词,叶子,yèzi,秋天叶子落了一地。,"In autumn, leaves cover the ground."
+11,自然·天气·动物,名词,森林,sēnlín,我们在森林里迷了路。,We got lost in the forest.
+11,自然·天气·动物,名词,地,dì,地上都是落叶。,The ground is covered with fallen leaves.
+11,自然·天气·动物,名词,环境,huánjìng,这里的环境很安静。,It's very peaceful here.
+11,自然·天气·动物,名词,地球,dìqiú,地球是我们共同的家。,The Earth is our shared home.
+11,自然·天气·动物,名词,世界,shìjiè,我想去看看世界。,I want to see the world.
+11,自然·天气·动物,名词,狗,gǒu,邻居家的狗很凶。,The neighbour's dog is very fierce.
+11,自然·天气·动物,名词,猫,māo,我家的猫怕水。,My cat is afraid of water.
+11,自然·天气·动物,名词,鸟,niǎo,早上被鸟叫醒了。,I was woken up by birds singing this morning.
+11,自然·天气·动物,名词,猪,zhū,猪其实很聪明。,Pigs are actually very clever.
+11,自然·天气·动物,名词,牛,niú,田里有几头牛。,There are several cows in the field.
+11,自然·天气·动物,名词,羊,yáng,山坡上有一群羊。,There's a flock of sheep on the hillside.
+11,自然·天气·动物,名词,马,mǎ,她第一次骑马有点紧张。,She was a little nervous the first time she rode a horse.
+11,自然·天气·动物,名词,兔子,tùzi,兔子爱吃胡萝卜。,Rabbits like eating carrots.
+11,自然·天气·动物,名词,老鼠,lǎoshǔ,猫抓住了一只老鼠。,The cat caught a mouse.
+11,自然·天气·动物,名词,虫,chóng,叶子上有一只小虫。,There's a little bug on the leaf.
+11,自然·天气·动物,名词,蛇,shé,他最怕蛇。,He's most afraid of snakes.
+11,自然·天气·动物,名词,宠物,chǒngwù,这栋楼不让养宠物。,Pets are not allowed in this building.
+11,自然·天气·动物,动词,下,xià,外面下雨了。,It's raining outside.
+11,自然·天气·动物,动词,刮,guā,晚上要刮大风。,There will be strong winds tonight.
+11,自然·天气·动物,动词,流,liú,河水慢慢地流。,The river flows slowly.
+11,自然·天气·动物,动词,吹,chuī,海边的风吹得很舒服。,The sea breeze feels very pleasant.
+11,自然·天气·动物,形容词,冷,lěng,今天冷，多穿点。,It's cold today. Put on more clothes.
+11,自然·天气·动物,形容词,热,rè,屋里比外面热。,It's warmer indoors than outside.
+11,自然·天气·动物,形容词,暖,nuǎn,三月的天开始暖起来了。,The weather starts to warm up in March.
+11,自然·天气·动物,形容词,凉,liáng,汤凉了，我热一下。,"The soup has gone cold, so I'll heat it up."
+11,自然·天气·动物,形容词,晴,qíng,明天是个大晴天。,"Tomorrow will be a bright, sunny day."
+11,自然·天气·动物,形容词,阴,yīn,天阴得要下雨了。,It's overcast; it looks like it might rain.
+11,自然·天气·动物,形容词,干,gān,洗的衣服还没干。,The clothes I washed haven't dried yet.
+11,自然·天气·动物,形容词,湿,shī,鞋子被雨淋湿了。,My shoes got wet in the rain.
+11,自然·天气·动物,量词,只,zhī,树上有两只鸟。,There are two birds in the tree.
+11,自然·天气·动物,量词,条,tiáo,他钓到了一条大鱼。,He caught a big fish.
+11,自然·天气·动物,量词,头,tóu,农场里养了十头猪。,The farm has ten pigs.
+11,自然·天气·动物,量词,棵,kē,门前种了一棵桃树。,A peach tree was planted in front of the door.
+11,自然·天气·动物,量词,朵,duǒ,她头上戴了一朵花。,She's wearing a flower in her hair.
+11,自然·天气·动物,量词,座,zuò,城里新修了一座大桥。,A large bridge has just been built in the city.
+12,情感·沟通·社会,名词,心情,xīnqíng,今天我心情特别好。,I'm in a particularly good mood today.
+12,情感·沟通·社会,名词,感情,gǎnqíng,他们的感情一直很好。,They have always had a good relationship.
+12,情感·沟通·社会,名词,爱情,àiqíng,这部电影讲的是爱情故事。,This film is a love story.
+12,情感·沟通·社会,名词,友谊,yǒuyì,干杯，为我们的友谊！,Cheers to our friendship!
+12,情感·沟通·社会,名词,脾气,píqi,他脾气好，从不着急。,He's easy-going and never gets impatient.
+12,情感·沟通·社会,名词,性格,xìnggé,她性格开朗，朋友很多。,She's outgoing and has many friends.
+12,情感·沟通·社会,名词,习惯,xíguàn,我习惯早睡早起。,I'm used to going to bed and getting up early.
+12,情感·沟通·社会,名词,态度,tàidù,他的态度突然变了。,His attitude suddenly changed.
+12,情感·沟通·社会,名词,想法,xiǎngfǎ,我有一个新想法。,I have a new idea.
+12,情感·沟通·社会,名词,意思,yìsi,这句话是什么意思？,What does this sentence mean?
+12,情感·沟通·社会,名词,新闻,xīnwén,今天有条新闻很有意思。,There's an interesting news story today.
+12,情感·沟通·社会,名词,原因,yuányīn,迟到的原因是堵车。,I was late because of a traffic jam.
+12,情感·沟通·社会,名词,结果,jiéguǒ,检查结果一切正常。,The test results are all normal.
+12,情感·沟通·社会,名词,希望,xīwàng,别放弃，还有希望。,Don't give up; there's still hope.
+12,情感·沟通·社会,名词,梦,mèng,我昨晚做了个奇怪的梦。,I had a strange dream last night.
+12,情感·沟通·社会,名词,关系,guānxi,没关系，慢慢来。,That's all right. Take your time.
+12,情感·沟通·社会,名词,社会,shèhuì,大学生要多了解社会。,University students should learn more about society.
+12,情感·沟通·社会,名词,政府,zhèngfǔ,政府新建了一个公园。,The government has built a new park.
+12,情感·沟通·社会,名词,人民,rénmín,人民的生活越来越好。,People's lives are getting better and better.
+12,情感·沟通·社会,名词,声音,shēngyīn,隔壁的声音太大了。,The noise next door is too loud.
+12,情感·沟通·社会,名词,机会,jīhuì,这是个难得的机会。,This is a rare opportunity.
+12,情感·沟通·社会,名词,办法,bànfǎ,总会有办法的，别急。,There's always a way. Don't worry.
+12,情感·沟通·社会,名词,信心,xìnxīn,我对你有信心。,I have confidence in you.
+12,情感·沟通·社会,名词,压力,yālì,他最近工作压力很大。,He's been under a lot of pressure at work recently.
+12,情感·沟通·社会,名词,感觉,gǎnjué,我感觉今天会下雨。,I have a feeling it will rain today.
+12,情感·沟通·社会,名词,印象,yìnxiàng,我对他印象不错。,I have a good impression of him.
+12,情感·沟通·社会,名词,误会,wùhuì,这是一场误会。,This is a misunderstanding.
+12,情感·沟通·社会,动词,说,shuō,你说得对。,You're right.
+12,情感·沟通·社会,动词,讲,jiǎng,爷爷爱讲过去的故事。,Grandpa likes telling stories about the past.
+12,情感·沟通·社会,动词,谈,tán,我们找时间谈一谈。,Let's find time to talk.
+12,情感·沟通·社会,动词,聊,liáo,我们聊了一下午。,We chatted all afternoon.
+12,情感·沟通·社会,动词,告诉,gàosu,别告诉别人这件事。,Don't tell anyone else about this.
+12,情感·沟通·社会,动词,回答,huídá,这个问题我不知道怎么回答。,I don't know how to answer this question.
+12,情感·沟通·社会,动词,解释,jiěshì,你听我解释。,Listen to my explanation.
+12,情感·沟通·社会,动词,介绍,jièshào,我来介绍一下我自己。,Let me introduce myself.
+12,情感·沟通·社会,动词,商量,shāngliang,这事我得跟家人商量。,I need to discuss this with my family.
+12,情感·沟通·社会,动词,讨论,tǎolùn,我们下午讨论这个方案。,We'll discuss this proposal this afternoon.
+12,情感·沟通·社会,动词,决定,juédìng,我决定开始学画画。,I've decided to start learning to draw.
+12,情感·沟通·社会,动词,想,xiǎng,我想家了。,I miss home.
+12,情感·沟通·社会,动词,觉得,juéde,我觉得这个主意不错。,I think this is a good idea.
+12,情感·沟通·社会,动词,知道,zhīdào,这件事我早就知道了。,I've known about this for a long time.
+12,情感·沟通·社会,动词,明白,míngbai,现在我明白了。,Now I understand.
+12,情感·沟通·社会,动词,懂,dǒng,这句话你懂了吗？,Do you understand this sentence?
+12,情感·沟通·社会,动词,了解,liǎojiě,我们先了解一下情况。,Let's first find out what is going on.
+12,情感·沟通·社会,动词,相信,xiāngxìn,我相信你能做到。,I believe you can do it.
+12,情感·沟通·社会,动词,记得,jìde,你还记得我吗？,Do you still remember me?
+12,情感·沟通·社会,动词,忘,wàng,我忘了带伞。,I forgot to bring an umbrella.
+12,情感·沟通·社会,动词,担心,dānxīn,妈妈很担心你的安全。,Mum is very worried about your safety.
+12,情感·沟通·社会,动词,害怕,hàipà,小时候我害怕黑。,"When I was little, I was afraid of the dark."
+12,情感·沟通·社会,动词,怕,pà,我怕迟到，先出门了。,"I was afraid of being late, so I left early."
+12,情感·沟通·社会,动词,生气,shēngqì,你别生气，我错了。,Don't be angry. It was my fault.
+12,情感·沟通·社会,动词,哭,kū,电影看得她哭了。,The film made her cry.
+12,情感·沟通·社会,动词,笑,xiào,他笑起来很好看。,He has a lovely smile.
+12,情感·沟通·社会,动词,感谢,gǎnxiè,感谢大家的帮助。,Thank you all for your help.
+12,情感·沟通·社会,动词,道歉,dàoqiàn,他向我道歉了。,He apologised to me.
+12,情感·沟通·社会,动词,同意,tóngyì,爸爸同意我养狗了。,Dad agreed to let me have a dog.
+12,情感·沟通·社会,动词,反对,fǎnduì,没有人反对这个计划。,No one objected to this plan.
+12,情感·沟通·社会,动词,骂,mà,他从来不骂人。,He never swears at people.
+12,情感·沟通·社会,动词,夸,kuā,老师夸我进步很大。,The teacher praised me for making a lot of progress.
+12,情感·沟通·社会,动词,劝,quàn,我劝他早点休息。,I advised him to get some rest early.
+12,情感·沟通·社会,动词,祝,zhù,祝你们一路顺风！,Have a safe journey!
+12,情感·沟通·社会,形容词,高兴,gāoxìng,见到你真高兴。,I'm very happy to see you.
+12,情感·沟通·社会,形容词,开心,kāixīn,今天玩得很开心。,We had a great time today.
+12,情感·沟通·社会,形容词,快乐,kuàilè,祝你新年快乐！,Happy New Year!
+12,情感·沟通·社会,形容词,难过,nánguò,别难过，下次再努力。,Don't be upset. Try harder next time.
+12,情感·沟通·社会,形容词,伤心,shāngxīn,她伤心地哭了。,She cried sadly.
+12,情感·沟通·社会,形容词,紧张,jǐnzhāng,第一次上台演讲，我很紧张。,I was very nervous the first time I gave a speech on stage.
+12,情感·沟通·社会,形容词,奇怪,qíguài,真奇怪，钥匙怎么不见了？,That's strange. Where have the keys gone?
+12,情感·沟通·社会,形容词,特别,tèbié,这家店的味道很特别。,The food at this restaurant is very distinctive.
+12,情感·沟通·社会,形容词,普通,pǔtōng,他只是一个普通的上班族。,He's just an ordinary office worker.
+12,情感·沟通·社会,形容词,安静,ānjìng,请保持安静。,Please keep quiet.
+12,情感·沟通·社会,形容词,热闹,rènao,过年的时候街上特别热闹。,The streets are especially lively during the New Year.

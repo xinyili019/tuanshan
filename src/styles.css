@@ -426,6 +426,9 @@ input {
 
 .example-translation {
   color: var(--ink-soft);
+  font-size: 0.9em;
+  line-height: 1.18;
+  overflow-wrap: anywhere;
 }
 
 .example-block {
@@ -523,6 +526,20 @@ input {
 
 .example-toggle[open] .example-chevron {
   transform: rotate(180deg);
+}
+
+.fan-back:has(.example-toggle[open]) {
+  gap: 5px;
+}
+
+.fan-back:has(.example-toggle[open]) .example-block {
+  margin-top: 4px;
+  gap: 3px;
+}
+
+.fan-back:has(.example-toggle[open]) .example-pinyin {
+  font-size: 0.8rem;
+  line-height: 1.12;
 }
 
 .card-toolbar,
