@@ -1,0 +1,114 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1180 808" width="1180" height="808" role="img" aria-labelledby="title desc">
+  <title id="title">Tuanshan heading background, refined</title>
+  <desc id="desc">Rounded cream panel with minimalist lower-corner mountains, golden mountain contours, and golden cloud and river lines, leaving open space for a heading layout.</desc>
+
+  <defs>
+    <linearGradient id="paper" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#F5EFE0"/>
+      <stop offset="100%" stop-color="#EEE7D8"/>
+    </linearGradient>
+
+    <linearGradient id="mountLight" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C9D8C2"/>
+      <stop offset="100%" stop-color="#B3C7AA"/>
+    </linearGradient>
+    <linearGradient id="mountMid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#BFD1BA"/>
+      <stop offset="100%" stop-color="#A7BFA2"/>
+    </linearGradient>
+    <linearGradient id="mountDark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#B7CCC6"/>
+      <stop offset="100%" stop-color="#9CB8B1"/>
+    </linearGradient>
+
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#D8BA73"/>
+      <stop offset="50%" stop-color="#C9A75A"/>
+      <stop offset="100%" stop-color="#E3C987"/>
+    </linearGradient>
+
+    <filter id="mistBlur" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10"/>
+    </filter>
+
+    <linearGradient id="bottomEdgeSoftener" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#EEE7D8" stop-opacity="0"/>
+      <stop offset="70%" stop-color="#EEE7D8" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#EEE7D8" stop-opacity="0.8"/>
+    </linearGradient>
+
+    <filter id="bottomEdgeBlur" x="-8%" y="-80%" width="116%" height="260%">
+      <feGaussianBlur stdDeviation="5"/>
+    </filter>
+
+    <clipPath id="panelClip">
+      <rect x="30" y="34" width="1120" height="740" rx="46"/>
+    </clipPath>
+  </defs>
+
+  <!-- main card -->
+  <rect x="30" y="34" width="1120" height="740" rx="46" fill="url(#paper)"/>
+
+  <g clip-path="url(#panelClip)">
+    <!-- preserve clear title space in upper half -->
+
+    <!-- subtle distant mist behind right-side mountain cluster -->
+    <path d="M670 392 C734 344 812 338 888 364 C946 384 1017 396 1128 376 L1128 498 L636 498 C634 452 642 414 670 392 Z" fill="#DDE6D7" opacity="0.23" filter="url(#mistBlur)" transform="translate(0 42)"/>
+
+    <!-- upper cloud lines, light and elegant -->
+    <g fill="none" stroke="url(#gold)" stroke-width="2.8" stroke-linecap="round" opacity="0.9">
+      <path d="M878 180 C920 180 954 180 988 180 C1014 180 1027 164 1013 150 C1000 137 970 136 938 136"/>
+      <path d="M968 148 C1006 148 1037 148 1068 148 C1092 148 1104 132 1091 120 C1078 108 1051 108 1022 108"/>
+      <path d="M1034 212 C1070 212 1100 212 1128 212 C1150 212 1160 198 1149 187 C1139 177 1115 176 1087 176"/>
+      <path d="M320 286 C366 286 402 286 438 286 C462 286 474 272 462 260 C450 248 422 248 392 248"/>
+      <path d="M402 314 C446 314 480 314 514 314 C538 314 548 301 538 290 C528 280 502 279 474 279"/>
+    </g>
+
+    <!-- very pale distant mountain suggestion, centered but faint -->
+    <path d="M514 356 C544 329 571 309 602 294 C623 284 643 286 656 304 C667 319 682 327 700 325 C719 323 737 332 752 347 L752 388 L498 388 Z" fill="#D5DFCE" opacity="0.36"/>
+    <path d="M514 356 C544 329 571 309 602 294 C623 284 643 286 656 304 C667 319 682 327 700 325 C719 323 737 332 752 347" fill="none" stroke="#CDB879" stroke-width="1.8" opacity="0.55"/>
+
+    <!-- LOWER LEFT anchored mountains -->
+    <g transform="translate(0 60)">
+      <path d="M84 640 C120 607 158 590 198 594 C230 597 253 623 283 627 C321 632 353 614 397 620 C438 626 470 651 494 681 L494 714 L84 714 Z" fill="url(#mountLight)" opacity="0.72"/>
+      <path d="M84 640 C120 607 158 590 198 594 C230 597 253 623 283 627 C321 632 353 614 397 620 C438 626 470 651 494 681" fill="none" stroke="#768C72" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <!-- golden ridge / contour -->
+      <path d="M214 618 C268 610 322 612 372 626 C406 635 442 637 474 630" fill="none" stroke="url(#gold)" stroke-width="2.4" stroke-linecap="round" opacity="0.92"/>
+    </g>
+
+    <!-- LOWER RIGHT anchored mountain cluster, shaped like reference -->
+    <g transform="translate(0 60)">
+      <!-- back range -->
+      <path d="M762 506 C804 454 844 415 886 380 C914 357 939 360 957 408 C969 442 993 456 1023 446 C1053 436 1086 447 1115 482 C1134 506 1157 516 1194 512 L1194 648 L762 648 Z" fill="url(#mountLight)" opacity="0.66"/>
+      <path d="M762 506 C804 454 844 415 886 380 C914 357 939 360 957 408 C969 442 993 456 1023 446 C1053 436 1086 447 1115 482 C1134 506 1157 516 1194 512" fill="none" stroke="#7B906F" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <!-- middle tall mountain group -->
+      <path d="M638 618 C688 576 727 528 777 477 C818 435 866 436 899 489 C922 527 954 545 987 531 C1019 518 1045 533 1066 572 C1081 602 1104 620 1140 619 L1140 714 L626 714 C624 678 627 642 638 618 Z" fill="url(#mountMid)" opacity="0.84"/>
+      <path d="M638 618 C688 576 727 528 777 477 C818 435 866 436 899 489 C922 527 954 545 987 531 C1019 518 1045 533 1066 572 C1081 602 1104 620 1140 619" fill="none" stroke="#667E62" stroke-width="3.7" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <!-- front dark mountain -->
+      <path d="M808 636 C846 612 878 575 915 530 C944 496 979 495 1000 536 C1016 566 1039 584 1069 584 C1095 584 1118 594 1139 618 C1151 632 1168 640 1193 640 L1193 714 L804 714 Z" fill="url(#mountDark)" opacity="0.92"/>
+      <path d="M808 636 C846 612 878 575 915 530 C944 496 979 495 1000 536 C1016 566 1039 584 1069 584 C1095 584 1118 594 1139 618 C1151 632 1168 640 1193 640" fill="none" stroke="#566C57" stroke-width="3.7" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <!-- front-right foothill -->
+      <path d="M1038 666 C1065 649 1087 631 1111 618 C1140 603 1169 605 1197 633 L1197 714 L1038 714 Z" fill="url(#mountLight)" opacity="0.84"/>
+      <path d="M1038 666 C1065 649 1087 631 1111 618 C1140 603 1169 605 1197 633" fill="none" stroke="#768D73" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+      <!-- gold mountain contour accents -->
+      <g fill="none" stroke="url(#gold)" stroke-width="2.2" stroke-linecap="round" opacity="0.96">
+        <path d="M886 454 C916 437 948 438 977 455 C998 468 1021 470 1051 460"/>
+        <path d="M968 566 C999 551 1029 552 1062 569 C1084 581 1110 583 1140 576"/>
+        <path d="M1037 621 C1070 611 1104 611 1138 624"/>
+      </g>
+    </g>
+
+    <g fill="none" stroke="url(#gold)" stroke-width="2.1" stroke-linecap="round" opacity="0.85" transform="translate(0 60)">
+      <path d="M1104 618 C1142 618 1174 618 1204 618"/>
+      <path d="M1086 675 C1122 675 1154 675 1184 675"/>
+      <path d="M86 694 C158 694 218 694 272 700"/>
+    </g>
+
+    <rect x="30" y="744" width="1120" height="30" fill="url(#bottomEdgeSoftener)" filter="url(#bottomEdgeBlur)" opacity="0.72"/>
+  </g>
+</svg>

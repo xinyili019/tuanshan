@@ -22,6 +22,21 @@ const UNIT_SUMMARIES: Record<string, string> = {
   "12": "feelings, communication, society"
 };
 
+const UNIT_PROGRESS_LABELS: Record<string, string> = {
+  "1": "Identity",
+  "2": "Family",
+  "3": "Body and health",
+  "4": "Food and dining",
+  "5": "Home and objects",
+  "6": "Appearance",
+  "7": "Time and dates",
+  "8": "Study and work",
+  "9": "Travel and transport",
+  "10": "Shopping",
+  "11": "Nature",
+  "12": "Feelings and communication"
+};
+
 const TRADITIONAL_UNIT_TITLES: Record<string, string> = {
   "1": "身份·人稱·數",
   "2": "家庭·關係",
@@ -79,6 +94,18 @@ export default function App() {
       : activeEntries.length
         ? Math.min(100, (cardIndex / activeEntries.length) * 100)
         : 0;
+  const unitProgress = useMemo(
+    () =>
+      unitOptions.map((option) => ({
+        ...option,
+        progressLabel: UNIT_PROGRESS_LABELS[option.id] ?? `Unit ${option.id}`,
+        ...summarizeProgress(
+          vocabulary.filter((entry) => entry.unit === option.id),
+          progress
+        )
+      })),
+    [progress, unitOptions]
+  );
 
   useEffect(() => {
     setPhase("study");
@@ -246,7 +273,7 @@ export default function App() {
 
         {phase === "moveOn" && (
           <Milestone
-            title="Session review complete."
+            title="Session review complete!"
             body="Move to the next session, or review these words once more."
             primary={reviewEntries.length ? "Review new words" : "Start next session"}
             secondary={reviewEntries.length ? "Start next session" : undefined}
@@ -268,11 +295,39 @@ export default function App() {
         )}
       </section>
 
-      <aside className="progress-panel">
-        <p className="eyebrow">Session progress</p>
-        <div className="progress-line" aria-label="Current session progress">
-          <span style={{ width: `${sessionProgress}%` }} />
-        </div>
+      <aside className="progress-panel" aria-label="Study progress">
+        <section className="progress-section">
+          <div className="progress-heading">
+            <p className="eyebrow">Session progress</p>
+            <span>{formatPercent(sessionProgress)}</span>
+          </div>
+          <div className="progress-line" aria-label="Current session progress">
+            <span style={{ width: `${sessionProgress}%` }} />
+          </div>
+        </section>
+
+        <section className="progress-section">
+          <p className="eyebrow">Unit progress</p>
+          <div className="unit-progress-list">
+            {unitProgress.map((item) => (
+              <div
+                className={`unit-progress-item${unit === item.id ? " is-active" : ""}`}
+                key={item.id}
+                aria-current={unit === item.id ? "true" : undefined}
+              >
+                <div className="unit-progress-heading">
+                  <span className="unit-progress-title">
+                    Unit {item.id} {item.progressLabel}
+                  </span>
+                  <span className="unit-progress-value">{formatPercent(item.percent)}</span>
+                </div>
+                <div className="progress-line progress-line-unit" aria-label={`Unit ${item.id} progress`}>
+                  <span style={{ width: `${item.percent}%` }} />
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
       </aside>
     </main>
   );
@@ -318,4 +373,18 @@ function chunk<T>(items: T[], size: number): T[][] {
     chunks.push(items.slice(index, index + size));
   }
   return chunks;
+}
+
+function summarizeProgress(items: VocabEntry[], progress: ProgressState) {
+  const known = items.filter((entry) => getProgress(progress, entry.id).status === "known").length;
+  const total = items.length;
+  return {
+    known,
+    total,
+    percent: total ? (known / total) * 100 : 0
+  };
+}
+
+function formatPercent(value: number) {
+  return `${Math.round(value)}%`;
 }

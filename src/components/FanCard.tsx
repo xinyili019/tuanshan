@@ -50,6 +50,10 @@ export function FanCard({
     setFirstWordTipDismissed(false);
   }, [entry.id, scriptMode]);
 
+  useEffect(() => {
+    if (!revealed) setShowStrokeOrder(false);
+  }, [revealed]);
+
   function activateFan() {
     if (!revealed && autoPlayAudio) speak(headword, speechLang);
     onFlip();
@@ -57,7 +61,7 @@ export function FanCard({
 
   return (
     <section className="study-card" aria-label="Chinese vocabulary card">
-      <p className="card-hint">Tap the fan to flip.</p>
+      <p className="card-hint">Know this word? Tap the fan to see!</p>
       <div
         className={`fan ${revealed ? "is-revealed" : ""}`}
         role="button"
@@ -79,7 +83,7 @@ export function FanCard({
             <span className="translation">{displayEnglish}</span>
             <span className="example-block">
               <span className="example-line">
-                <span>{example}</span>
+                <span className="example-text">{example}</span>
                 <button
                   className="example-audio"
                   type="button"
@@ -127,13 +131,14 @@ export function FanCard({
         </div>
       )}
 
+      {revealed && onGoBack && (
+        <button className="secondary back-button review-back-floating" type="button" onClick={onGoBack}>
+          <ArrowLeft size={17} aria-hidden="true" />
+          Back
+        </button>
+      )}
+
       <div className="card-toolbar">
-        {onGoBack && (
-          <button className="secondary back-button" type="button" onClick={onGoBack}>
-            <ArrowLeft size={17} aria-hidden="true" />
-            Back
-          </button>
-        )}
         <button className="secondary" type="button" onClick={onPrevious} disabled={!canGoPrevious}>
           Previous
         </button>
@@ -141,13 +146,15 @@ export function FanCard({
           <Volume2 size={17} aria-hidden="true" />
           Listen
         </button>
-        <button className="secondary" type="button" onClick={() => setShowStrokeOrder((current) => !current)}>
-          <BookOpen size={17} aria-hidden="true" />
-          Strokes
-        </button>
+        {revealed && (
+          <button className="secondary" type="button" onClick={() => setShowStrokeOrder((current) => !current)}>
+            <BookOpen size={17} aria-hidden="true" />
+            Strokes
+          </button>
+        )}
       </div>
 
-      <StrokeOrder character={headword} visible={showStrokeOrder} />
+      <StrokeOrder character={headword} visible={revealed && showStrokeOrder} />
 
       {revealed && (
         <div className="review-actions">

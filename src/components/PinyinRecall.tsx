@@ -1,4 +1,4 @@
-import { ArrowLeft, Eye, Volume2 } from "lucide-react";
+import { ArrowLeft, ChevronDown, Eye, Volume2 } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { isPinyinMatch, normalizePinyin } from "../lib/pinyin";
 import type { ScriptMode, VocabEntry } from "../types";
@@ -21,11 +21,13 @@ export function PinyinRecall({ entries, scriptMode, onComplete, onGoBack }: Piny
   const inputRef = useRef<HTMLInputElement | null>(null);
   const active = queue[index];
   const headword = active ? (scriptMode === "traditional" ? active.traditional : active.simplified) : "";
+  const example = active ? (scriptMode === "traditional" ? active.exampleTraditional : active.exampleSimplified) : "";
   const speechLang = "zh-CN";
   const correct = active ? isPinyinMatch(input, active.pinyin) : false;
+  const showResult = submitted || revealed;
   const slotCharacters = useMemo(
-    () => (active ? buildSlotCharacters(input, active.pinyin, submitted || revealed) : []),
-    [active, input, revealed, submitted]
+    () => (active ? buildSlotCharacters(input, active.pinyin, showResult) : []),
+    [active, input, showResult]
   );
 
   useEffect(() => {
@@ -53,6 +55,9 @@ export function PinyinRecall({ entries, scriptMode, onComplete, onGoBack }: Piny
       onComplete(nextTrouble);
       return;
     }
+    setInput("");
+    setSubmitted(false);
+    setRevealed(false);
     setIndex((current) => current + 1);
   }
 
@@ -63,48 +68,52 @@ export function PinyinRecall({ entries, scriptMode, onComplete, onGoBack }: Piny
         Back
       </button>
 
-      <div className="recall-cue">
+      <div className="recall-core">
         <div className="recall-cue-copy">
           <span className="recall-english">{active.english}</span>
           <span className="recall-hanzi-cue">{headword}</span>
+
+          <div className="pinyin-entry" onClick={() => inputRef.current?.focus()}>
+            <input
+              ref={inputRef}
+              className="pinyin-ghost-input"
+              aria-label="Type the full pinyin"
+              value={input}
+              onChange={(event) => setInput(event.target.value)}
+              onKeyDown={(event) => {
+                if (event.key === "Enter" && input.trim()) setSubmitted(true);
+              }}
+              disabled={showResult}
+              autoCapitalize="none"
+              autoCorrect="off"
+              spellCheck={false}
+              autoFocus
+            />
+            <div className={`pinyin-slots ${showResult ? "has-result" : ""}`} aria-hidden="true">
+              {slotCharacters.map((slot, charIndex) => (
+                <span key={`${active.id}-${charIndex}`} className={slot.status ? `is-${slot.status}` : undefined}>
+                  {slot.char === " " || slot.char === "" ? "\u00a0" : slot.char}
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
         <button className="icon-button" type="button" onClick={() => speak(headword, speechLang)} aria-label="Listen">
           <Volume2 size={18} aria-hidden="true" />
         </button>
       </div>
 
-      <div className="pinyin-entry" onClick={() => inputRef.current?.focus()}>
-        <input
-          ref={inputRef}
-          className="pinyin-ghost-input"
-          aria-label="Type the full pinyin"
-          value={input}
-          onChange={(event) => setInput(event.target.value)}
-          onKeyDown={(event) => {
-            if (event.key === "Enter" && input.trim()) setSubmitted(true);
-          }}
-          disabled={submitted || revealed}
-          autoCapitalize="none"
-          autoCorrect="off"
-          spellCheck={false}
-          autoFocus
-        />
-        <div
-          className={`pinyin-slots ${submitted || revealed ? "has-result" : ""}`}
-          aria-hidden="true"
-        >
-          {slotCharacters.map((slot, charIndex) => (
-            <span key={`${active.id}-${charIndex}`} className={slot.status ? `is-${slot.status}` : undefined}>
-              {slot.char === " " || slot.char === "" ? "\u00a0" : slot.char}
-            </span>
-          ))}
-        </div>
-      </div>
-
-      {revealed && (
-        <div className="recall-answer">
-          <span className="recall-hanzi">{headword}</span>
-          <span>{active.exampleSimplified}</span>
+      {showResult && (
+        <div className={`recall-example${submitted && correct && !revealed ? " is-correct" : ""}`}>
+          <span className="recall-example-line">{example}</span>
+          <details className="recall-example-toggle">
+            <summary>
+              <ChevronDown className="example-chevron" size={14} aria-hidden="true" />
+              Translation & pinyin
+            </summary>
+            <span>{active.exampleEnglish}</span>
+            <span className="recall-example-pinyin">{active.examplePinyin}</span>
+          </details>
         </div>
       )}
 
@@ -127,6 +136,8 @@ export function PinyinRecall({ entries, scriptMode, onComplete, onGoBack }: Piny
       </div>
 
       {submitted && correct && !revealed && <p className="recall-feedback is-correct">Correct</p>}
+      {submitted && !correct && !revealed && <p className="recall-feedback is-incorrect">Incorrect</p>}
+      {revealed && <p className="recall-feedback is-answer">Answer</p>}
     </section>
   );
 }

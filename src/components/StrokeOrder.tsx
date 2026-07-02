@@ -17,9 +17,9 @@ export function StrokeOrder({ character, visible }: StrokeOrderProps) {
 
     writerRefs.current = characters.map((char, index) =>
       HanziWriter.create(`${targetId}-${index}`, char, {
-        width: 128,
-        height: 128,
-        padding: 9,
+        width: 144,
+        height: 144,
+        padding: 10,
         showOutline: true,
         strokeAnimationSpeed: 1,
         delayBetweenStrokes: 120,
