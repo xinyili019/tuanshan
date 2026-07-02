@@ -1,12 +1,12 @@
 {
-  "name": "Azulejo",
-  "short_name": "Azulejo",
-  "description": "European Portuguese vocabulary, tile by tile.",
+  "name": "Tuanshan",
+  "short_name": "Tuanshan",
+  "description": "Chinese vocabulary with round fan cards.",
   "start_url": ".",
   "scope": ".",
   "display": "standalone",
-  "background_color": "#f7fbff",
-  "theme_color": "#0047AB",
+  "background_color": "#F5EFE0",
+  "theme_color": "#C1440E",
   "icons": [
     {
       "src": "app-icon-192.png",
