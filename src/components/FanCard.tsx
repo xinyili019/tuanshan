@@ -50,11 +50,10 @@ export function FanCard({
     setFirstWordTipDismissed(false);
   }, [entry.id, scriptMode]);
 
-  useEffect(() => {
-    if (!revealed || !autoPlayAudio) return;
-    const timeout = window.setTimeout(() => speak(headword, speechLang), 220);
-    return () => window.clearTimeout(timeout);
-  }, [autoPlayAudio, revealed, headword, speechLang]);
+  function activateFan() {
+    if (!revealed && autoPlayAudio) speak(headword, speechLang);
+    onFlip();
+  }
 
   return (
     <section className="study-card" aria-label="Chinese vocabulary card">
@@ -63,11 +62,11 @@ export function FanCard({
         className={`fan ${revealed ? "is-revealed" : ""}`}
         role="button"
         tabIndex={0}
-        onClick={onFlip}
+        onClick={activateFan}
         onKeyDown={(event) => {
           if (event.key !== "Enter" && event.key !== " ") return;
           event.preventDefault();
-          onFlip();
+          activateFan();
         }}
       >
         <span className="fan-inner">
@@ -191,7 +190,9 @@ export function speak(text: string, lang: string) {
 
   utterance.lang = voice?.lang ?? lang;
   utterance.voice = voice ?? null;
+  utterance.rate = 0.92;
   window.speechSynthesis.cancel();
+  window.speechSynthesis.resume();
   window.speechSynthesis.speak(utterance);
 }
 

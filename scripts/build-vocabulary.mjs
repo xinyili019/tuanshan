@@ -1,7 +1,8 @@
 import fs from "node:fs";
 import path from "node:path";
+import { pinyin as sentencePinyin } from "pinyin-pro";
 
-const source = process.argv[2] ?? "/Users/lixinyi/Developer/Tuanshan/simplified_chinese_800.csv";
+const source = process.argv[2] ?? path.resolve("chinese 800 sentences.csv");
 const outFile = path.resolve("src/data/vocabulary.ts");
 
 const glossary = makeGlossary(`
@@ -973,6 +974,232 @@ function fixedExample(value) {
   return { zh, pinyin, en: () => english };
 }
 
+const commonExampleTranslations = makeGlossary(`
+了=completed action
+的=of
+地=adverb marker
+得=so
+着=ongoing
+过=before
+把=disposal marker
+被=by
+让=let
+给=to
+从=from
+到=to
+和=and
+也=also
+都=all
+很=very
+太=too
+真=really
+不=not
+没=not
+别=do not
+再=again
+还=still
+就=then
+只=only
+先=first
+已经=already
+一直=continuously
+一起=together
+一下=a moment
+一点=a little
+一点儿=a little
+有点=a little
+怎么=how
+为什么=why
+因为=because
+所以=so
+如果=if
+但是=but
+然后=then
+现在=now
+今天=today
+明天=tomorrow
+昨天=yesterday
+周末=weekend
+这里=here
+那里=there
+哪里=where
+这个=this
+那个=that
+这位=this person
+一杯=a cup of
+一碗=a bowl of
+一盘=a plate of
+一瓶=a bottle of
+一份=a portion of
+一片=a slice of
+一口=a bite
+一顿=a meal
+一张=a sheet of
+一把=a handle of
+一件=a piece of
+一台=a machine of
+一部=a device of
+一间=a room of
+一套=a set of
+一双=a pair of
+一本=a book of
+一节=a class period of
+一门=a course of
+一辆=a vehicle of
+一趟=a trip of
+一班=a scheduled service
+一只=one animal
+一条=one long item
+一头=one large animal
+一棵=one plant
+一朵=one flower
+一座=one structure
+再见=goodbye
+欢迎=welcome
+慢走=take care
+请坐=please sit
+门口=doorway
+洗手间=restroom
+下棋=play chess
+好觉=good sleep
+声音=sound
+电影=movie
+少不了=cannot do without
+行李=luggage
+手机=mobile phone
+中文=Chinese language
+老师=teacher
+英语=English
+蛋糕=cake
+东西=thing
+衣服=clothing
+咖啡=coffee
+问题=question
+学生=student
+水果=fruit
+冰箱=refrigerator
+同事=colleague
+北京=Beijing
+飞机=airplane
+矿泉水=mineral water
+炒饭=fried rice
+火腿=ham
+纸=paper
+客厅=living room
+电视=television
+卧室=bedroom
+西装=suit
+袜子=socks
+词典=dictionary
+地铁=subway
+香蕉=banana
+桃树=peach tree
+大桥=bridge
+葡萄牙=Portugal
+波尔图=Porto
+法国=France
+广州=Guangzhou
+里斯本=Lisbon
+上海=Shanghai
+中国=China
+王明=Wang Ming
+李=Li
+`);
+
+const sentenceEnglishOverrides = new Map(
+  [...specialExamples.values(), ...classifierExamples.values(), ...numberExamples.values()].map((value) => [
+    value[0],
+    value[value.length - 1]
+  ])
+);
+
+function buildCsvExample(row, word, wordPinyin, partOfSpeech, theme, english) {
+  const sentence = row["例句"]?.trim();
+  if (!sentence) return buildExample(word, wordPinyin, partOfSpeech, theme);
+
+  return {
+    zh: sentence,
+    traditional: toTraditional(sentence),
+    pinyin: formatSentencePinyin(sentence),
+    en: () => translateSentence(sentence, english)
+  };
+}
+
+function formatSentencePinyin(sentence) {
+  return normalizeMandarinPinyin(sentencePinyin(sentence, { toneType: "symbol", type: "string" }))
+    .replace(/\bnǎ ér\b/g, "nǎr")
+    .replace(/\s+([，。！？、；：,.!?;:])/g, "$1")
+    .replace(/，/g, ",")
+    .replace(/。/g, ".")
+    .replace(/！/g, "!")
+    .replace(/？/g, "?")
+    .replace(/、/g, ",")
+    .replace(/；/g, ";")
+    .replace(/：/g, ":")
+    .replace(/\s+/g, " ")
+    .replace(/^\p{Ll}/u, (char) => char.toLocaleUpperCase())
+    .trim();
+}
+
+function normalizeMandarinPinyin(value) {
+  return value.normalize("NFC").replace(/shuí/gi, (match) => (match[0] === match[0].toLocaleUpperCase() ? "Shéi" : "shéi"));
+}
+
+function translateSentence(sentence, entryEnglish) {
+  const override = sentenceEnglishOverrides.get(sentence);
+  if (override) return override;
+
+  const translationMap = new Map([...glossary, ...commonExampleTranslations]);
+  const keys = [...translationMap.keys()].sort((a, b) => b.length - a.length);
+  const chunks = [];
+
+  for (const clause of sentence.split(/([，。！？；])/u)) {
+    if (!clause || /^[，。！？；]$/u.test(clause)) continue;
+    const words = [];
+    for (let index = 0; index < clause.length;) {
+      const char = clause[index];
+      if (/[\s“”‘’"《》（）()]/u.test(char)) {
+        index += 1;
+        continue;
+      }
+
+      let match = "";
+      for (const key of keys) {
+        if (clause.startsWith(key, index)) {
+          match = key;
+          break;
+        }
+      }
+
+      if (match) {
+        words.push(cleanEnglish(translationMap.get(match)));
+        index += match.length;
+      } else {
+        index += 1;
+      }
+    }
+
+    if (words.length) chunks.push(words.join(" "));
+  }
+
+  const literal = chunks.join(", ").replace(/\s+/g, " ").trim();
+  if (literal) return sentenceCase(literal) + ".";
+  return `Example sentence using ${entryEnglish}.`;
+}
+
+function cleanEnglish(value) {
+  return value
+    .replace(/^to /, "")
+    .replace(/;.*$/, "")
+    .replace(/,.*$/, "")
+    .replace(/\bclassifier\b/i, "classifier")
+    .trim();
+}
+
+function sentenceCase(value) {
+  return value.charAt(0).toLocaleUpperCase() + value.slice(1);
+}
+
 function buildExample(word, wordPinyin, partOfSpeech, theme) {
   if (specialExamples.has(word)) {
     return fixedExample(specialExamples.get(word));
@@ -1188,13 +1415,13 @@ const entries = rows.map((row, index) => {
   const rawSimplified = row["词"]?.trim() ?? "";
   const partOfSpeech = row["词类"]?.trim() ?? "";
   const simplified = rawSimplified === "些" && partOfSpeech === "量词" ? "一些" : rawSimplified;
-  const pinyin = rawSimplified === "些" && partOfSpeech === "量词" ? "yìxiē" : row.pinyin;
+  const pinyin = rawSimplified === "些" && partOfSpeech === "量词" ? "yìxiē" : normalizeMandarinPinyin(row.pinyin);
   const english =
     partOfSpeech === "量词"
       ? classifierMeanings.get(simplified) ?? "classifier"
       : glossary.get(simplified) ?? `${partOfSpeech || "word"}: ${row.theme}`;
   const traditional = toTraditional(simplified);
-  const example = buildExample(simplified, pinyin, partOfSpeech, row.theme);
+  const example = buildCsvExample(row, simplified, pinyin, partOfSpeech, row.theme, english);
   return {
     id: `u${row.unit}-${slug(simplified)}-${index + 1}`,
     unit: row.unit,

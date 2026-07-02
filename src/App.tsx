@@ -22,6 +22,21 @@ const UNIT_SUMMARIES: Record<string, string> = {
   "12": "feelings, communication, society"
 };
 
+const TRADITIONAL_UNIT_TITLES: Record<string, string> = {
+  "1": "身份·人稱·數",
+  "2": "家庭·關係",
+  "3": "身體·健康",
+  "4": "飲食",
+  "5": "居家·物品",
+  "6": "服裝·外貌",
+  "7": "時間·日期",
+  "8": "學習·工作·數字生活",
+  "9": "出行·交通·方位",
+  "10": "購物·金錢",
+  "11": "自然·天氣·動物",
+  "12": "情感·溝通·社會"
+};
+
 export default function App() {
   const [progress, setProgress] = useState<ProgressState>(() => loadProgress());
   const [scriptMode, setScriptMode] = useState<ScriptMode>("simplified");
@@ -40,10 +55,13 @@ export default function App() {
     () =>
       units.map((item) => ({
         id: item,
-        title: vocabulary.find((entry) => entry.unit === item)?.theme ?? `Unit ${item}`,
+        title:
+          scriptMode === "traditional"
+            ? TRADITIONAL_UNIT_TITLES[item] ?? vocabulary.find((entry) => entry.unit === item)?.theme ?? `Unit ${item}`
+            : vocabulary.find((entry) => entry.unit === item)?.theme ?? `Unit ${item}`,
         summary: UNIT_SUMMARIES[item] ?? "vocabulary"
       })),
-    [units]
+    [scriptMode, units]
   );
   const entries = useMemo(
     () => (unit === "all" ? vocabulary : vocabulary.filter((entry) => entry.unit === unit)),

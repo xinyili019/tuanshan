@@ -229,7 +229,7 @@ input {
 }
 
 .fan {
-  width: min(78vw, 400px);
+  width: min(80vw, 420px);
   aspect-ratio: 400 / 520;
   margin-bottom: clamp(-64px, -8vw, -42px);
   border: 0;
@@ -243,6 +243,7 @@ input {
   align-items: start;
   padding: 18% 14% 0;
   position: relative;
+  z-index: 1;
   isolation: isolate;
   overflow: visible;
   perspective: 1100px;
@@ -379,7 +380,8 @@ input {
 }
 
 .fan-back {
-  gap: 6px;
+  width: 64%;
+  gap: 7px;
   transform: translateX(-50%) rotateY(180deg);
 }
 
@@ -409,14 +411,14 @@ input {
 .translation {
   max-width: 96%;
   color: var(--ink);
-  font-size: clamp(1.08rem, 2.2vw, 1.38rem);
+  font-size: clamp(1.2rem, 2.5vw, 1.55rem);
   font-weight: 700;
   line-height: 1.08;
 }
 
 .pinyin {
   color: var(--cinnabar);
-  font-size: clamp(1.1rem, 2vw, 1.25rem);
+  font-size: clamp(1.24rem, 2.25vw, 1.45rem);
   font-weight: 700;
   justify-self: center;
   text-align: center;
@@ -431,14 +433,14 @@ input {
   gap: 4px;
   margin-top: 6px;
   color: var(--ink);
-  font-size: clamp(0.78rem, 1.45vw, 0.94rem);
+  font-size: clamp(0.9rem, 1.62vw, 1.08rem);
   width: 100%;
   min-width: 0;
 }
 
 .example-line {
   display: grid;
-  grid-template-columns: 23px minmax(0, auto) 23px;
+  grid-template-columns: 23px minmax(0, 1fr) 23px;
   align-items: center;
   justify-content: center;
   gap: 5px;
@@ -449,6 +451,7 @@ input {
   grid-column: 2;
   min-width: 0;
   text-align: center;
+  overflow-wrap: anywhere;
 }
 
 .example-audio {
@@ -507,6 +510,7 @@ input {
   display: block;
   max-width: 100%;
   color: var(--cinnabar);
+  font-size: 0.86rem;
   font-weight: 700;
   line-height: 1.2;
   overflow-wrap: anywhere;
@@ -533,7 +537,7 @@ input {
 
 .card-toolbar {
   position: relative;
-  z-index: 20;
+  z-index: 40;
   max-width: min(100%, 430px);
   margin-top: clamp(-88px, -12vw, -62px);
   padding: 2px 8px;
@@ -546,7 +550,7 @@ input {
 
 .first-word-tip {
   position: relative;
-  z-index: 30;
+  z-index: 35;
   width: min(560px, calc(100% - 32px));
   margin-top: clamp(-26px, -3vw, -14px);
   padding: 10px 12px;
@@ -556,9 +560,13 @@ input {
   text-align: left;
   border: 1px solid rgba(184, 154, 94, 0.46);
   border-radius: 14px;
-  background: rgba(255, 250, 241, 0.78);
+  background: rgba(255, 250, 241, 0.75);
   box-shadow: 0 14px 32px rgba(55, 34, 18, 0.16);
   backdrop-filter: blur(7px);
+}
+
+.first-word-tip + .card-toolbar {
+  margin-top: 8px;
 }
 
 .first-word-tip p {
@@ -588,6 +596,7 @@ input {
     radial-gradient(ellipse at 50% 0%, rgba(193, 68, 14, 0.08), transparent 72%);
   box-shadow: 0 10px 28px rgba(55, 34, 18, 0.08);
   backdrop-filter: blur(8px);
+  opacity: 0.75;
 }
 
 button {
@@ -918,18 +927,18 @@ button:disabled {
   }
 
   .fan {
-    width: min(91vw, 352px);
+    width: min(94vw, 366px);
     padding: 18% 14% 0;
     margin-bottom: -56px;
   }
 
   .fan-back {
-    width: 64%;
+    width: 66%;
     gap: 7px;
   }
 
   .pinyin {
-    font-size: clamp(1.15rem, 3.5vw, 1.34rem);
+    font-size: clamp(1.24rem, 4vw, 1.48rem);
   }
 
   .hanzi-answer {
@@ -937,11 +946,11 @@ button:disabled {
   }
 
   .translation {
-    font-size: clamp(1.14rem, 3.4vw, 1.48rem);
+    font-size: clamp(1.22rem, 3.7vw, 1.58rem);
   }
 
   .example-block {
-    font-size: clamp(0.84rem, 2.5vw, 1rem);
+    font-size: clamp(0.92rem, 2.75vw, 1.08rem);
   }
 
   .example-toggle {
@@ -949,8 +958,8 @@ button:disabled {
   }
 
   .example-pinyin {
-    max-width: 17ch;
-    font-size: 0.68rem;
+    max-width: 20ch;
+    font-size: 0.76rem;
   }
 
   .pinyin-slots {
@@ -968,7 +977,7 @@ button:disabled {
   }
 
   .fan-back:has(.example-toggle[open]) .translation {
-    font-size: clamp(1rem, 2vw, 1.2rem);
+    font-size: clamp(1.08rem, 3vw, 1.32rem);
   }
 
   .fan-back:has(.example-toggle[open]) .example-block {
@@ -1017,7 +1026,7 @@ button:disabled {
   }
 
   .fan {
-    width: min(94vw, 344px);
+    width: min(96vw, 354px);
     margin-bottom: -52px;
   }
 
