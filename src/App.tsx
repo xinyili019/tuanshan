@@ -74,6 +74,7 @@ export default function App() {
           scriptMode === "traditional"
             ? TRADITIONAL_UNIT_TITLES[item] ?? vocabulary.find((entry) => entry.unit === item)?.theme ?? `Unit ${item}`
             : vocabulary.find((entry) => entry.unit === item)?.theme ?? `Unit ${item}`,
+        progressLabel: UNIT_PROGRESS_LABELS[item] ?? `Unit ${item}`,
         summary: UNIT_SUMMARIES[item] ?? "vocabulary"
       })),
     [scriptMode, units]
@@ -181,6 +182,15 @@ export default function App() {
     setPhase("moveOn");
   }
 
+  function startOver() {
+    setProgress({});
+    setPhase("study");
+    setSessionIndex(0);
+    setCardIndex(0);
+    setRevealed(false);
+    setAgainIds([]);
+  }
+
   return (
     <main className="app-shell">
       <header className="app-header">
@@ -202,7 +212,7 @@ export default function App() {
               <option value="all">All units</option>
               {unitOptions.map((item) => (
                 <option key={item.id} value={item.id}>
-                  Unit {item.id}: {item.title} - {item.summary}
+                  Unit {item.id} {item.progressLabel} · {item.title}
                 </option>
               ))}
             </select>
@@ -217,6 +227,8 @@ export default function App() {
           </label>
         </div>
       </header>
+
+      <p className="app-tagline">The {vocabulary.length} words you will actually say.</p>
 
       <section className="workspace">
         <span className="workspace-ornament ornament-top-left" aria-hidden="true" />
@@ -319,7 +331,7 @@ export default function App() {
                   <span className="unit-progress-title">
                     Unit {item.id} {item.progressLabel}
                   </span>
-                  <span className="unit-progress-value">{formatPercent(item.percent)}</span>
+                  <span className="unit-progress-value">{item.known}/{item.total}</span>
                 </div>
                 <div className="progress-line progress-line-unit" aria-label={`Unit ${item.id} progress`}>
                   <span style={{ width: `${item.percent}%` }} />
@@ -328,6 +340,10 @@ export default function App() {
             ))}
           </div>
         </section>
+
+        <button className="start-over-button" type="button" onClick={startOver}>
+          Start over
+        </button>
       </aside>
     </main>
   );

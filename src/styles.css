@@ -97,6 +97,16 @@ input {
     );
 }
 
+.app-tagline {
+  grid-column: 1 / -1;
+  margin: -8px 0 -4px;
+  color: var(--ink);
+  font-family: var(--display-latin);
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  font-weight: 700;
+  text-align: center;
+}
+
 .workspace {
   min-height: 680px;
   border-radius: 32px;
@@ -219,6 +229,19 @@ input {
   font-size: 0.82rem;
   font-weight: 800;
   line-height: 1.2;
+}
+
+.start-over-button {
+  width: 100%;
+  min-height: 38px;
+  background: rgba(195, 121, 127, 0.18);
+  color: var(--ink);
+  border-color: rgba(195, 121, 127, 0.45);
+  box-shadow: none;
+}
+
+.start-over-button:hover {
+  background: rgba(195, 121, 127, 0.26);
 }
 
 .eyebrow {
@@ -697,7 +720,7 @@ input {
   position: absolute;
   z-index: 42;
   top: clamp(54px, 9vw, 82px);
-  right: calc(50% - min(50vw, 310px));
+  left: calc(50% - min(50vw, 310px));
   min-height: 34px;
   padding: 0 12px;
 }
@@ -1076,6 +1099,12 @@ button:disabled {
     height: 86px;
   }
 
+  .app-tagline {
+    margin: -2px 0 0;
+    padding: 0 8px;
+    font-size: 1rem;
+  }
+
   .app-header h1 {
     font-size: clamp(2.55rem, 13vw, 3.35rem);
     line-height: 0.95;
@@ -1195,7 +1224,7 @@ button:disabled {
 
   .review-back-floating {
     top: 52px;
-    right: 0;
+    left: 0;
   }
 
   .card-toolbar button,
