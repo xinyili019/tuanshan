@@ -1,145 +1,138 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024" role="img" aria-label="Tuanshan fan icon">
   <defs>
-    <filter id="shadow" x="-18%" y="-18%" width="136%" height="140%">
-      <feDropShadow dx="0" dy="12" stdDeviation="16" flood-color="#b9af9d" flood-opacity="0.28" />
+    <filter id="softShadow" x="-18%" y="-18%" width="136%" height="140%">
+      <feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#a99c86" flood-opacity="0.23" />
     </filter>
 
-    <radialGradient id="fanFill" cx="50%" cy="42%" r="62%">
-      <stop offset="0%" stop-color="#fffaf1" />
-      <stop offset="68%" stop-color="#f7f1e6" />
-      <stop offset="100%" stop-color="#eee3cf" />
+    <radialGradient id="paperGlow" cx="50%" cy="42%" r="67%">
+      <stop offset="0%" stop-color="#fffaf0" />
+      <stop offset="68%" stop-color="#f7f0e2" />
+      <stop offset="100%" stop-color="#eee2cc" />
     </radialGradient>
 
-    <linearGradient id="mountainA" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#dbe7d6" />
-      <stop offset="100%" stop-color="#bfd2bf" />
+    <linearGradient id="rimGold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d4c4a5" />
+      <stop offset="45%" stop-color="#a88f61" />
+      <stop offset="100%" stop-color="#d8c9aa" />
     </linearGradient>
 
-    <linearGradient id="mountainB" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#c8ddd3" />
-      <stop offset="100%" stop-color="#a8c4ba" />
+    <linearGradient id="mountainPale" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#dfe9d7" stop-opacity="0.92" />
+      <stop offset="100%" stop-color="#b8cab4" stop-opacity="0.82" />
     </linearGradient>
 
-    <linearGradient id="stickFill" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="#2f2f2f" />
-      <stop offset="46%" stop-color="#56524d" />
-      <stop offset="100%" stop-color="#222222" />
+    <linearGradient id="mountainJade" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#cddfd6" stop-opacity="0.9" />
+      <stop offset="100%" stop-color="#93b4a8" stop-opacity="0.86" />
+    </linearGradient>
+
+    <linearGradient id="handleFill" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#2f2e29" />
+      <stop offset="48%" stop-color="#55514a" />
+      <stop offset="100%" stop-color="#22211e" />
     </linearGradient>
 
     <clipPath id="fanClip">
-      <path d="M512 132
-               C706 132 864 289 864 483
-               C864 677 706 834 512 834
-               C318 834 160 677 160 483
-               C160 289 318 132 512 132Z" />
+      <circle cx="512" cy="458" r="352" />
     </clipPath>
   </defs>
 
   <rect width="1024" height="1024" rx="170" fill="#F5EFE0" />
+  <rect width="1024" height="1024" rx="170" fill="url(#paperGlow)" opacity="0.38" />
 
-  <g filter="url(#shadow)">
-    <path d="M512 132
-             C706 132 864 289 864 483
-             C864 677 706 834 512 834
-             C318 834 160 677 160 483
-             C160 289 318 132 512 132Z"
-          fill="url(#fanFill)"
-          stroke="#b89a5e"
-          stroke-width="18"
-          stroke-linejoin="round" />
-
-    <path d="M512 158
-             C692 158 838 304 838 483
-             C838 663 692 808 512 808
-             C332 808 186 663 186 483
-             C186 304 332 158 512 158Z"
-          fill="none"
-          stroke="#5d5a55"
-          stroke-width="3"
-          opacity="0.86" />
+  <g filter="url(#softShadow)">
+    <circle cx="512" cy="458" r="360" fill="url(#rimGold)" />
+    <circle cx="512" cy="458" r="348" fill="url(#paperGlow)" stroke="#2B2B2B" stroke-width="3.2" opacity="0.88" />
+    <circle cx="512" cy="458" r="337" fill="none" stroke="#e4d6bb" stroke-width="2" opacity="0.7" />
 
     <g clip-path="url(#fanClip)">
-      <rect x="145" y="120" width="734" height="730" fill="#F6F0E4" />
+      <rect x="145" y="90" width="734" height="740" fill="#fff8ec" />
 
-      <g opacity="0.22" stroke="#b89a5e" stroke-width="2.5">
-        <path d="M512 834 L172 427" />
-        <path d="M512 834 L235 268" />
-        <path d="M512 834 L365 166" />
-        <path d="M512 834 L512 132" />
-        <path d="M512 834 L659 166" />
-        <path d="M512 834 L789 268" />
-        <path d="M512 834 L852 427" />
+      <circle cx="454" cy="320" r="17" fill="#C1440E" />
+
+      <g fill="none" stroke="#bd9851" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round" opacity="0.92">
+        <path d="M206 438 H340" />
+        <path d="M254 392 C235 392 222 402 222 417 C222 432 235 442 256 442 H401 C433 442 455 451 455 466 C455 480 432 489 399 489 H186" />
+        <path d="M293 411 H451 C480 411 497 421 497 435 C497 449 478 458 445 458 H325" />
+
+        <path d="M650 382 C694 380 742 380 786 380 C811 380 825 389 825 402 C825 414 813 420 792 420 H742" />
+        <path d="M702 402 H862" />
+        <path d="M739 454 C774 454 813 454 848 454" />
+        <path d="M772 516 C806 516 838 516 869 516" />
+        <path d="M720 558 H858" />
       </g>
 
-      <circle cx="480" cy="330" r="18" fill="#C1440E" />
-
-      <g fill="none" stroke="#c6a053" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M236 470 H374 C408 470 432 460 432 443 C432 428 410 419 374 419 H226 C201 419 187 432 187 448 C187 465 201 477 226 477 H319" />
-        <path d="M570 397 C628 397 682 397 737 397 C766 397 787 388 787 374 C787 360 770 353 741 353 H628" />
-        <path d="M702 578 H875" />
-        <path d="M712 450 C758 450 794 450 840 450" />
-        <path d="M795 374 C827 374 856 374 880 374" opacity="0.55" />
+      <g fill="none" stroke="#bd9851" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" opacity="0.9">
+        <path d="M242 640 C322 640 394 639 455 650 C497 657 514 673 514 689 C514 706 489 715 428 715 C343 715 300 731 300 754 C300 768 328 779 402 779 C502 779 570 779 646 788 C704 795 746 800 790 800" />
+        <path d="M339 713 C414 713 484 716 550 731 C603 743 615 761 615 778 C615 797 585 808 520 808" />
+        <path d="M423 762 C472 762 523 768 578 779" />
+        <path d="M531 742 C587 742 636 742 686 747" />
+        <path d="M693 731 C755 731 814 731 866 731" />
       </g>
 
-      <g>
-        <path d="M326 468 C354 468 377 455 392 434 C408 409 426 394 451 394 C474 394 497 415 518 468Z"
-              fill="url(#mountainA)"
-              stroke="#c9b45d"
-              stroke-width="3"
-              stroke-linejoin="round" />
-        <path d="M615 458 C639 458 660 437 672 397 C686 355 707 330 742 328 C765 328 792 346 805 390 C815 425 840 458 867 458Z"
-              fill="url(#mountainA)"
-              stroke="#c9b45d"
-              stroke-width="3"
-              stroke-linejoin="round" />
+      <g stroke-linecap="round" stroke-linejoin="round">
+        <path d="M314 409 C345 409 367 397 386 373 C404 351 424 338 445 338 C468 338 488 356 509 409 Z"
+              fill="url(#mountainPale)"
+              stroke="#bd9851"
+              stroke-width="2.5"
+              opacity="0.7" />
+
+        <path d="M571 548 C602 548 627 522 648 471 C671 414 697 346 733 335 C765 326 781 379 794 438 C806 493 836 526 878 528 C891 529 905 528 918 527 L918 572 C814 572 708 571 571 572 Z"
+              fill="url(#mountainPale)"
+              stroke="#3f4d3f"
+              stroke-width="4" />
+
+        <path d="M409 619 C438 600 460 589 491 590 C533 591 562 556 584 509 C603 468 624 438 657 437 C691 436 713 482 734 538 C752 585 778 609 816 612 C840 614 862 611 884 610 L884 657 C722 657 556 657 409 657 Z"
+              fill="url(#mountainPale)"
+              stroke="#3f4d3f"
+              stroke-width="4" />
+
+        <path d="M530 654 C562 626 591 614 631 617 C671 620 689 589 706 552 C725 510 746 490 776 495 C808 501 827 545 847 586 C866 626 895 648 930 648 L930 704 C780 704 652 703 530 703 Z"
+              fill="url(#mountainJade)"
+              stroke="#3f4d3f"
+              stroke-width="4" />
+
+        <path d="M134 607 C171 600 193 579 225 559 C251 542 277 537 302 548 C329 560 345 586 367 604 C389 622 425 625 465 625 L465 666 C356 666 238 667 134 667 Z"
+              fill="url(#mountainPale)"
+              stroke="#3f4d3f"
+              stroke-width="4" />
+
+        <path d="M690 779 C723 766 748 760 779 762 C807 764 830 777 850 792 C875 811 903 817 936 816 L936 850 C840 850 760 850 690 850 Z"
+              fill="url(#mountainJade)"
+              stroke="#3f4d3f"
+              stroke-width="4" />
       </g>
 
-      <g fill="none" stroke="#586656" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M151 642 C184 640 213 620 242 596 C268 574 291 563 318 563 C353 563 377 585 399 620 C417 647 448 664 486 666"
-              fill="url(#mountainA)" />
-        <path d="M398 618 C432 616 458 590 481 550 C504 512 529 489 561 489 C594 489 622 516 641 557 C657 591 680 612 716 618"
-              fill="url(#mountainA)" />
-        <path d="M506 508 C545 506 581 477 616 415 C642 367 670 331 710 331 C752 331 782 371 798 439 C807 477 827 503 867 506"
-              fill="url(#mountainA)" />
-        <path d="M538 682 C571 680 600 655 631 611 C657 575 681 557 714 557 C748 557 776 583 794 625 C809 657 834 680 874 682"
-              fill="url(#mountainB)" />
+      <g fill="none" stroke="#bd9851" stroke-width="2.7" stroke-linecap="round" stroke-linejoin="round" opacity="0.82">
+        <path d="M480 590 C520 586 551 556 577 500" />
+        <path d="M601 548 C635 543 662 515 688 461" />
+        <path d="M694 414 C723 414 742 435 756 476" />
+        <path d="M760 558 C795 558 821 578 838 615" />
+        <path d="M237 622 C304 622 371 624 431 633" />
       </g>
 
-      <g fill="none" stroke="#c6a053" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M484 666 C511 663 531 646 551 616 C576 578 600 556 628 552" />
-        <path d="M556 618 C587 615 615 594 643 554 C663 525 687 506 710 505" />
-        <path d="M617 505 C648 502 673 473 692 427 C706 394 724 374 748 371" />
-        <path d="M702 558 C736 558 766 581 783 622" />
+      <g fill="#E8B4B8" opacity="0.95">
+        <circle cx="288" cy="528" r="9" />
+        <circle cx="305" cy="512" r="9" />
+        <circle cx="321" cy="537" r="9" />
+        <circle cx="305" cy="555" r="9" />
+        <circle cx="338" cy="577" r="9" />
       </g>
 
-      <g fill="none" stroke="#c6a053" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-        <path d="M226 730 C309 730 381 729 437 739 C475 746 490 759 490 774 C490 790 465 799 405 799 C320 799 279 814 279 839 C279 854 307 866 382 866 C496 866 562 864 637 874 C688 881 733 886 782 886" />
-        <path d="M344 794 C405 794 467 794 533 808 C586 820 598 838 598 855 C598 876 570 886 505 886" />
-        <path d="M177 696 C242 696 312 696 382 708" />
-        <path d="M704 817 C764 817 818 817 878 817" />
-      </g>
-
-      <g fill="#E8B4B8">
-        <circle cx="221" cy="588" r="10" />
-        <circle cx="242" cy="601" r="10" />
-        <circle cx="204" cy="619" r="10" />
-        <circle cx="238" cy="636" r="10" />
-      </g>
-
-      <g fill="#A8C3A0">
-        <circle cx="430" cy="660" r="9" />
-        <circle cx="451" cy="651" r="9" />
-        <circle cx="470" cy="668" r="9" />
-        <circle cx="748" cy="752" r="9" />
-        <circle cx="769" cy="769" r="9" />
-        <circle cx="734" cy="783" r="9" />
-        <circle cx="787" cy="789" r="9" />
+      <g fill="#A8C3A0" opacity="0.95">
+        <circle cx="418" cy="604" r="8" />
+        <circle cx="438" cy="594" r="8" />
+        <circle cx="456" cy="608" r="8" />
+        <circle cx="719" cy="712" r="8" />
+        <circle cx="742" cy="706" r="8" />
+        <circle cx="733" cy="730" r="8" />
+        <circle cx="763" cy="728" r="8" />
       </g>
     </g>
 
-    <path d="M470 834 C483 816 500 806 512 806 C524 806 541 816 554 834Z" fill="#3b3935" />
-    <rect x="492" y="830" width="40" height="150" rx="17" fill="url(#stickFill)" />
-    <rect x="501" y="848" width="22" height="105" rx="11" fill="#fff8ee" opacity="0.12" />
-    <rect x="493" y="898" width="38" height="9" rx="4.5" fill="#C1440E" opacity="0.78" />
+    <path d="M469 802 C484 781 501 774 512 774 C523 774 540 781 555 802 C564 815 558 833 540 841 H484 C466 833 460 815 469 802Z"
+          fill="#2f2e29" />
+    <rect x="495" y="828" width="34" height="134" rx="14" fill="url(#handleFill)" />
+    <rect x="503" y="844" width="13" height="93" rx="7" fill="#fffaf0" opacity="0.12" />
   </g>
 </svg>
