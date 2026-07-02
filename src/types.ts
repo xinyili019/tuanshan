@@ -1,5 +1,5 @@
 export type ScriptMode = "simplified" | "traditional";
-export type StudyPhase = "study" | "sessionChoice" | "review" | "recall" | "complete";
+export type StudyPhase = "study" | "sessionChoice" | "review" | "recall" | "moveOn" | "complete";
 export type CardStatus = "new" | "again" | "known";
 
 export interface VocabEntry {

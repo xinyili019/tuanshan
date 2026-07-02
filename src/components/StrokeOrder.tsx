@@ -27,9 +27,20 @@ export function StrokeOrder({ character, visible }: StrokeOrderProps) {
       })
     );
 
-    writerRefs.current.forEach((writer, index) => {
-      window.setTimeout(() => writer.animateCharacter(), index * 240);
-    });
+    let cancelled = false;
+
+    async function animateCharacters() {
+      for (const writer of writerRefs.current) {
+        if (cancelled) return;
+        await writer.animateCharacter();
+      }
+    }
+
+    void animateCharacters();
+
+    return () => {
+      cancelled = true;
+    };
   }, [targetId, characters, visible]);
 
   if (!visible || characters.length === 0) return null;

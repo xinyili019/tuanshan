@@ -9,6 +9,7 @@ interface FanCardProps {
   revealed: boolean;
   canGoPrevious: boolean;
   showFirstWordTip?: boolean;
+  autoPlayAudio: boolean;
   onFlip: () => void;
   onPrevious: () => void;
   onGoBack?: () => void;
@@ -22,6 +23,7 @@ export function FanCard({
   revealed,
   canGoPrevious,
   showFirstWordTip = false,
+  autoPlayAudio,
   onFlip,
   onPrevious,
   onGoBack,
@@ -49,10 +51,10 @@ export function FanCard({
   }, [entry.id, scriptMode]);
 
   useEffect(() => {
-    if (!revealed) return;
+    if (!revealed || !autoPlayAudio) return;
     const timeout = window.setTimeout(() => speak(headword, speechLang), 220);
     return () => window.clearTimeout(timeout);
-  }, [revealed, headword, speechLang]);
+  }, [autoPlayAudio, revealed, headword, speechLang]);
 
   return (
     <section className="study-card" aria-label="Chinese vocabulary card">
@@ -117,8 +119,8 @@ export function FanCard({
       {showFirstWordTip && revealed && !firstWordTipDismissed && (
         <div className="first-word-tip" role="status" aria-live="polite">
           <p>
-            Tap the fan again to flip back. Strokes shows how to write the character. Again saves this word for review
-            and pinyin recall. Known moves on.
+            Strokes shows how to write the character. Again saves this word for review and pinyin recall. Known moves
+            on.
           </p>
           <button className="primary first-word-tip-dismiss" type="button" onClick={() => setFirstWordTipDismissed(true)}>
             Got it
@@ -128,7 +130,7 @@ export function FanCard({
 
       <div className="card-toolbar">
         {onGoBack && (
-          <button className="secondary" type="button" onClick={onGoBack}>
+          <button className="secondary back-button" type="button" onClick={onGoBack}>
             <ArrowLeft size={17} aria-hidden="true" />
             Back
           </button>

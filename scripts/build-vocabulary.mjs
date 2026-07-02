@@ -833,29 +833,29 @@ function toTraditional(text) {
 }
 
 const specialExamples = new Map(Object.entries({
-  我: ["我今天很忙。", "Wǒ jīntiān hěn máng.", "I am busy today."],
-  你: ["你明天有空吗？", "Nǐ míngtiān yǒu kòng ma?", "Are you free tomorrow?"],
-  您: ["您好，请问您贵姓？", "Nín hǎo, qǐngwèn nín guìxìng?", "Hello, may I ask your surname?"],
-  他: ["他在学校上课。", "Tā zài xuéxiào shàngkè.", "He is in class at school."],
-  她: ["她喜欢喝茶。", "Tā xǐhuan hē chá.", "She likes drinking tea."],
-  它: ["它在桌子下面。", "Tā zài zhuōzi xiàmiàn.", "It is under the table."],
-  我们: ["我们一起吃晚饭。", "Wǒmen yìqǐ chī wǎnfàn.", "We eat dinner together."],
-  你们: ["你们几点出发？", "Nǐmen jǐ diǎn chūfā?", "What time do you leave?"],
-  他们: ["他们正在开会。", "Tāmen zhèngzài kāihuì.", "They are having a meeting."],
-  自己: ["我想自己做饭。", "Wǒ xiǎng zìjǐ zuòfàn.", "I want to cook by myself."],
-  大家: ["大家都听懂了吗？", "Dàjiā dōu tīngdǒng le ma?", "Did everyone understand?"],
-  别人: ["不要拿别人的东西。", "Bú yào ná biérén de dōngxi.", "Do not take other people's things."],
-  这: ["这本书很好看。", "Zhè běn shū hěn hǎokàn.", "This book is very good."],
-  那: ["那家餐厅很安静。", "Nà jiā cāntīng hěn ānjìng.", "That restaurant is quiet."],
-  谁: ["谁在门口？", "Shéi zài ménkǒu?", "Who is at the door?"],
-  什么: ["你想喝什么？", "Nǐ xiǎng hē shénme?", "What would you like to drink?"],
-  哪: ["你住在哪个城市？", "Nǐ zhù zài nǎ ge chéngshì?", "Which city do you live in?"],
-  哪儿: ["洗手间在哪儿？", "Xǐshǒujiān zài nǎr?", "Where is the restroom?"],
-  是: ["今天是星期五。", "Jīntiān shì xīngqīwǔ.", "Today is Friday."],
-  有: ["我有一个问题。", "Wǒ yǒu yí ge wèntí.", "I have a question."],
-  在: ["我在图书馆学习。", "Wǒ zài túshūguǎn xuéxí.", "I am studying in the library."],
-  叫: ["我叫心怡。", "Wǒ jiào Xīnyí.", "My name is Xinyi."],
-  姓: ["他姓李。", "Tā xìng Lǐ.", "His surname is Li."],
+  我: ["我先走了，再见。", "我先走了，再見。", "Wǒ xiān zǒu le, zàijiàn.", "I am leaving first. Goodbye."],
+  你: ["你想喝点什么？", "你想喝點什麼？", "Nǐ xiǎng hē diǎn shénme?", "What would you like to drink?"],
+  您: ["您慢走，欢迎再来。", "您慢走，歡迎再來。", "Nín màn zǒu, huānyíng zài lái.", "Take care, and please come again."],
+  他: ["他是我的中文老师。", "他是我的中文老師。", "Tā shì wǒ de Zhōngwén lǎoshī.", "He is my Chinese teacher."],
+  她: ["她在葡萄牙工作。", "她在葡萄牙工作。", "Tā zài Pútáoyá gōngzuò.", "She works in Portugal."],
+  它: ["小猫饿了，它一直叫。", "小貓餓了，它一直叫。", "Xiǎo māo è le, tā yìzhí jiào.", "The kitten is hungry, and it keeps meowing."],
+  我们: ["我们一起去吃饭吧。", "我們一起去吃飯吧。", "Wǒmen yìqǐ qù chīfàn ba.", "Let's go eat together."],
+  你们: ["你们是从哪里来的？", "你們是從哪裡來的？", "Nǐmen shì cóng nǎlǐ lái de?", "Where are you all from?"],
+  他们: ["他们都会说英语。", "他們都會說英語。", "Tāmen dōu huì shuō Yīngyǔ.", "They all can speak English."],
+  自己: ["这是我自己做的蛋糕。", "這是我自己做的蛋糕。", "Zhè shì wǒ zìjǐ zuò de dàngāo.", "This is a cake I made myself."],
+  大家: ["大家好，请坐。", "大家好，請坐。", "Dàjiā hǎo, qǐng zuò.", "Hello everyone, please sit down."],
+  别人: ["别拿别人的东西。", "別拿別人的東西。", "Bié ná biérén de dōngxi.", "Do not take other people's things."],
+  这: ["这是我的行李。", "這是我的行李。", "Zhè shì wǒ de xíngli.", "This is my luggage."],
+  那: ["那是谁的手机？", "那是誰的手機？", "Nà shì shéi de shǒujī?", "Whose phone is that?"],
+  谁: ["门口站着的人是谁？", "門口站著的人是誰？", "Ménkǒu zhànzhe de rén shì shéi?", "Who is the person standing at the door?"],
+  什么: ["你周末想做什么？", "你週末想做什麼？", "Nǐ zhōumò xiǎng zuò shénme?", "What do you want to do this weekend?"],
+  哪: ["你喜欢哪件衣服？", "你喜歡哪件衣服？", "Nǐ xǐhuan nǎ jiàn yīfu?", "Which piece of clothing do you like?"],
+  哪儿: ["洗手间在哪儿？", "洗手間在哪兒？", "Xǐshǒujiān zài nǎr?", "Where is the restroom?"],
+  是: ["他是葡萄牙人。", "他是葡萄牙人。", "Tā shì Pútáoyá rén.", "He is Portuguese."],
+  有: ["我有两个妹妹。", "我有兩個妹妹。", "Wǒ yǒu liǎng ge mèimei.", "I have two younger sisters."],
+  在: ["我爸妈都在上海。", "我爸媽都在上海。", "Wǒ bà mā dōu zài Shànghǎi.", "My parents are both in Shanghai."],
+  叫: ["我叫王明。", "我叫王明。", "Wǒ jiào Wáng Míng.", "My name is Wang Ming."],
+  姓: ["我姓李，你呢？", "我姓李，你呢？", "Wǒ xìng Lǐ, nǐ ne?", "My surname is Li. What about you?"],
   上: ["书在桌子上。", "Shū zài zhuōzi shàng.", "The book is on the table."],
   下: ["猫在椅子下。", "Māo zài yǐzi xià.", "The cat is under the chair."],
   前: ["车站在学校前面。", "Chēzhàn zài xuéxiào qiánmiàn.", "The station is in front of the school."],
@@ -885,41 +885,47 @@ const weatherWords = new Set("阳光 天空 太阳 月亮 星星 云 风 雨 雪
 const colorWords = new Set("红色 黄色 蓝色 绿色 黑色 白色 灰色 紫色 粉色".split(" "));
 const timeWords = new Set("年 月 日 天 星期 周 小时 分钟 秒 岁 早上 上午 中午 下午 晚上 夜 白天 今天 明天 昨天 后天 前天 现在 刚才 以前 以后 最近 时候 时间 日子 季节 春 夏 秋 冬 周末 假期 生日 节日 平时 当时 未来 过去".split(" "));
 const classifierExamples = new Map(Object.entries({
-  个: ["这是一个美丽的地区。", "Zhè shì yí ge měilì de dìqū.", "This is a beautiful area."],
-  一些: ["我买了一些新鲜水果。", "Wǒ mǎi le yìxiē xīnxiān shuǐguǒ.", "I bought some fresh fruit."],
-  位: ["这位老师很认真。", "Zhè wèi lǎoshī hěn rènzhēn.", "This teacher is very dedicated."],
-  名: ["学校有一名新学生。", "Xuéxiào yǒu yì míng xīn xuéshēng.", "The school has one new student."],
-  次: ["我去过中国两次。", "Wǒ qùguo Zhōngguó liǎng cì.", "I have been to China twice."],
-  回: ["我听了一回这个故事。", "Wǒ tīng le yì huí zhège gùshi.", "I listened to this story once."],
-  遍: ["请再读一遍。", "Qǐng zài dú yí biàn.", "Please read it one more time."],
-  杯: ["我喝了一杯热茶。", "Wǒ hē le yì bēi rè chá.", "I drank a cup of hot tea."],
-  碗: ["他点了一碗面。", "Tā diǎn le yì wǎn miàn.", "He ordered a bowl of noodles."],
-  盘: ["桌上有一盘饺子。", "Zhuō shàng yǒu yì pán jiǎozi.", "There is a plate of dumplings on the table."],
-  瓶: ["我买了一瓶水。", "Wǒ mǎi le yì píng shuǐ.", "I bought a bottle of water."],
-  份: ["我点了一份午餐。", "Wǒ diǎn le yí fèn wǔcān.", "I ordered one lunch set."],
-  片: ["她吃了一片面包。", "Tā chī le yí piàn miànbāo.", "She ate a slice of bread."],
-  口: ["我只喝了一口水。", "Wǒ zhǐ hē le yì kǒu shuǐ.", "I only took one sip of water."],
-  顿: ["我们一起吃了一顿饭。", "Wǒmen yìqǐ chī le yí dùn fàn.", "We had a meal together."],
-  张: ["桌上有一张地图。", "Zhuō shàng yǒu yì zhāng dìtú.", "There is a map on the table."],
-  把: ["我带了一把伞。", "Wǒ dài le yì bǎ sǎn.", "I brought an umbrella."],
-  件: ["她买了一件外套。", "Tā mǎi le yí jiàn wàitào.", "She bought a coat."],
-  台: ["办公室有一台电脑。", "Bàngōngshì yǒu yì tái diànnǎo.", "There is a computer in the office."],
-  部: ["我换了一部手机。", "Wǒ huàn le yí bù shǒujī.", "I changed to a new phone."],
-  间: ["我们订了一间房。", "Wǒmen dìng le yì jiān fáng.", "We booked a room."],
-  套: ["他穿了一套西装。", "Tā chuān le yí tào xīzhuāng.", "He wore a suit."],
-  双: ["我买了一双鞋。", "Wǒ mǎi le yì shuāng xié.", "I bought a pair of shoes."],
-  本: ["我借了一本书。", "Wǒ jiè le yì běn shū.", "I borrowed a book."],
-  节: ["今天有一节中文课。", "Jīntiān yǒu yì jié Zhōngwén kè.", "There is one Chinese class today."],
-  门: ["我选了一门新课。", "Wǒ xuǎn le yì mén xīn kè.", "I chose a new course."],
-  辆: ["门口停着一辆车。", "Ménkǒu tíngzhe yí liàng chē.", "A car is parked at the entrance."],
-  趟: ["我坐了一趟高铁。", "Wǒ zuò le yí tàng gāotiě.", "I took a high-speed train trip."],
-  班: ["下一班车快到了。", "Xià yì bān chē kuài dào le.", "The next bus is arriving soon."],
-  只: ["公园里有一只猫。", "Gōngyuán lǐ yǒu yì zhī māo.", "There is a cat in the park."],
-  条: ["我买了一条围巾。", "Wǒ mǎi le yì tiáo wéijīn.", "I bought a scarf."],
-  头: ["草地上有一头牛。", "Cǎodì shàng yǒu yì tóu niú.", "There is a cow on the grass."],
-  棵: ["院子里有一棵树。", "Yuànzi lǐ yǒu yì kē shù.", "There is a tree in the yard."],
-  朵: ["桌上放着一朵花。", "Zhuō shàng fàngzhe yì duǒ huā.", "There is a flower on the table."],
-  座: ["远处有一座山。", "Yuǎnchù yǒu yí zuò shān.", "There is a mountain in the distance."]
+  个: ["我有三个问题。", "我有三個問題。", "Wǒ yǒu sān ge wèntí.", "I have three questions."],
+  一些: ["冰箱里还有一些水果。", "冰箱裡還有一些水果。", "Bīngxiāng lǐ hái yǒu yìxiē shuǐguǒ.", "There is still some fruit in the refrigerator."],
+  位: ["这位是我们的新同事。", "這位是我們的新同事。", "Zhè wèi shì wǒmen de xīn tóngshì.", "This person is our new colleague."],
+  名: ["我们班有二十名学生。", "我們班有二十名學生。", "Wǒmen bān yǒu èrshí míng xuésheng.", "Our class has twenty students."],
+  次: ["我去过一次北京。", "我去過一次北京。", "Wǒ qùguo yí cì Běijīng.", "I have been to Beijing once."],
+  回: ["这是我第一回坐飞机。", "這是我第一回坐飛機。", "Zhè shì wǒ dì yī huí zuò fēijī.", "This is my first time taking a plane."],
+  遍: ["请再说一遍。", "請再說一遍。", "Qǐng zài shuō yí biàn.", "Please say it again."],
+  杯: ["请来两杯咖啡。", "請來兩杯咖啡。", "Qǐng lái liǎng bēi kāfēi.", "Two cups of coffee, please."],
+  碗: ["我能再来一碗吗？", "我能再來一碗嗎？", "Wǒ néng zài lái yì wǎn ma?", "Can I have another bowl?"],
+  盘: ["桌上有一盘水果。", "桌上有一盤水果。", "Zhuō shàng yǒu yì pán shuǐguǒ.", "There is a plate of fruit on the table."],
+  瓶: ["买一瓶矿泉水。", "買一瓶礦泉水。", "Mǎi yì píng kuàngquánshuǐ.", "Buy a bottle of mineral water."],
+  份: ["我们要了两份炒饭。", "我們要了兩份炒飯。", "Wǒmen yào le liǎng fèn chǎofàn.", "We ordered two portions of fried rice."],
+  片: ["面包上放两片火腿。", "麵包上放兩片火腿。", "Miànbāo shàng fàng liǎng piàn huǒtuǐ.", "Put two slices of ham on the bread."],
+  口: ["我就尝了一口。", "我就嘗了一口。", "Wǒ jiù cháng le yì kǒu.", "I only tasted one bite."],
+  顿: ["我们好好吃一顿吧。", "我們好好吃一頓吧。", "Wǒmen hǎohǎo chī yí dùn ba.", "Let's have a proper meal."],
+  张: ["请给我一张纸。", "請給我一張紙。", "Qǐng gěi wǒ yì zhāng zhǐ.", "Please give me a sheet of paper."],
+  把: ["家里有三把伞。", "家裡有三把傘。", "Jiā lǐ yǒu sān bǎ sǎn.", "There are three umbrellas at home."],
+  件: ["她买了一件新外套。", "她買了一件新外套。", "Tā mǎi le yí jiàn xīn wàitào.", "She bought a new coat."],
+  台: ["客厅里有一台电视。", "客廳裡有一台電視。", "Kètīng lǐ yǒu yì tái diànshì.", "There is a television in the living room."],
+  部: ["他换了一部新手机。", "他換了一部新手機。", "Tā huàn le yí bù xīn shǒujī.", "He switched to a new mobile phone."],
+  间: ["这套房子有三间卧室。", "這套房子有三間臥室。", "Zhè tào fángzi yǒu sān jiān wòshì.", "This apartment has three bedrooms."],
+  套: ["他买了一套西装。", "他買了一套西裝。", "Tā mǎi le yí tào xīzhuāng.", "He bought a suit."],
+  双: ["这双袜子破了个洞。", "這雙襪子破了個洞。", "Zhè shuāng wàzi pò le ge dòng.", "This pair of socks has a hole."],
+  本: ["我买了三本词典。", "我買了三本詞典。", "Wǒ mǎi le sān běn cídiǎn.", "I bought three dictionaries."],
+  节: ["今天上了四节课。", "今天上了四節課。", "Jīntiān shàng le sì jié kè.", "We had four classes today."],
+  门: ["这学期我选了五门课。", "這學期我選了五門課。", "Zhè xuéqī wǒ xuǎn le wǔ mén kè.", "I chose five courses this semester."],
+  辆: ["门口停着一辆红色的车。", "門口停著一輛紅色的車。", "Ménkǒu tíngzhe yí liàng hóngsè de chē.", "A red car is parked at the entrance."],
+  趟: ["我去了一趟银行。", "我去了一趟銀行。", "Wǒ qù le yí tàng yínháng.", "I made a trip to the bank."],
+  班: ["我赶上了最后一班地铁。", "我趕上了最後一班地鐵。", "Wǒ gǎnshàng le zuìhòu yì bān dìtiě.", "I caught the last subway train."],
+  元: ["这本书三十元。", "這本書三十元。", "Zhè běn shū sānshí yuán.", "This book is thirty yuan."],
+  块: ["苹果五块钱一斤。", "蘋果五塊錢一斤。", "Píngguǒ wǔ kuài qián yì jīn.", "Apples are five yuan per jin."],
+  毛: ["找您五毛钱。", "找您五毛錢。", "Zhǎo nín wǔ máo qián.", "Here is fifty cents in change."],
+  斤: ["我买了两斤香蕉。", "我買了兩斤香蕉。", "Wǒ mǎi le liǎng jīn xiāngjiāo.", "I bought two jin of bananas."],
+  公斤: ["行李不能超过二十公斤。", "行李不能超過二十公斤。", "Xíngli bù néng chāoguò èrshí gōngjīn.", "The luggage cannot exceed twenty kilograms."],
+  米: ["他身高一米八。", "他身高一米八。", "Tā shēngāo yì mǐ bā.", "He is 1.8 meters tall."],
+  只: ["树上有两只鸟。", "樹上有兩隻鳥。", "Shù shàng yǒu liǎng zhī niǎo.", "There are two birds in the tree."],
+  条: ["他钓到了一条大鱼。", "他釣到了一條大魚。", "Tā diào dào le yì tiáo dà yú.", "He caught a big fish."],
+  头: ["农场里养了十头猪。", "農場裡養了十頭豬。", "Nóngchǎng lǐ yǎng le shí tóu zhū.", "The farm raises ten pigs."],
+  棵: ["门前种了一棵桃树。", "門前種了一棵桃樹。", "Mén qián zhòng le yì kē táoshù.", "A peach tree was planted in front of the door."],
+  朵: ["她头上戴了一朵花。", "她頭上戴了一朵花。", "Tā tóu shàng dài le yì duǒ huā.", "She is wearing a flower in her hair."],
+  座: ["城里新修了一座大桥。", "城裡新修了一座大橋。", "Chéng lǐ xīn xiū le yí zuò dàqiáo.", "A large bridge was newly built in the city."]
 }));
 
 const classifierMeanings = new Map(Object.entries({
@@ -928,39 +934,53 @@ const classifierMeanings = new Map(Object.entries({
   回: "time; occurrence",
   遍: "time; occurrence",
   位: "person; honorific classifier",
-  名: "person; classifier for people"
+  名: "person; classifier for people",
+  元: "yuan",
+  块: "colloquial yuan",
+  毛: "jiao; dime",
+  斤: "jin, 500 grams",
+  公斤: "kilogram",
+  米: "meter"
 }));
 
 const numberExamples = new Map(Object.entries({
-  一: ["我写了一遍。", "Wǒ xiě le yí biàn.", "I wrote it once."],
-  二: ["她吃了两个苹果。", "Tā chī le liǎng ge píngguǒ.", "She ate two apples."],
-  三: ["这里有三个学生。", "Zhèlǐ yǒu sān ge xuéshēng.", "There are three students here."],
-  四: ["桌上有四本书。", "Zhuō shàng yǒu sì běn shū.", "There are four books on the table."],
-  五: ["我们有五分钟。", "Wǒmen yǒu wǔ fēnzhōng.", "We have five minutes."],
-  六: ["她写了六个汉字。", "Tā xiě le liù ge Hànzì.", "She wrote six Chinese characters."],
-  七: ["他等了七天。", "Tā děng le qī tiān.", "He waited seven days."],
-  八: ["这里有八个人。", "Zhèlǐ yǒu bā ge rén.", "There are eight people here."],
-  九: ["我看见九只鸟。", "Wǒ kànjiàn jiǔ zhī niǎo.", "I see nine birds."],
-  十: ["班里有十个学生。", "Bān lǐ yǒu shí ge xuéshēng.", "There are ten students in class."],
-  百: ["这里有几百人。", "Zhèlǐ yǒu jǐ bǎi rén.", "There are a few hundred people here."],
-  千: ["这座城市有几千人。", "Zhè zuò chéngshì yǒu jǐ qiān rén.", "This city has a few thousand people."],
-  万: ["这个城市有十万人。", "Zhège chéngshì yǒu shí wàn rén.", "This city has one hundred thousand people."],
-  亿: ["中国的人口超过十亿。", "Zhōngguó de rénkǒu chāoguò shí yì.", "China's population exceeds one billion."],
-  零: ["我考了零分。", "Wǒ kǎo le líng fēn.", "I got zero points."],
-  两: ["她买了两本书。", "Tā mǎi le liǎng běn shū.", "She bought two books."],
-  半: ["我喝了半杯茶。", "Wǒ hē le bàn bēi chá.", "I drank half a cup of tea."]
+  一: ["我要一杯咖啡。", "我要一杯咖啡。", "Wǒ yào yì bēi kāfēi.", "I want a cup of coffee."],
+  二: ["请到二楼等我。", "請到二樓等我。", "Qǐng dào èr lóu děng wǒ.", "Please wait for me on the second floor."],
+  三: ["我们三点见面。", "我們三點見面。", "Wǒmen sān diǎn jiànmiàn.", "We will meet at three o'clock."],
+  四: ["他家有四口人。", "他家有四口人。", "Tā jiā yǒu sì kǒu rén.", "There are four people in his family."],
+  五: ["现在是下午五点。", "現在是下午五點。", "Xiànzài shì xiàwǔ wǔ diǎn.", "It is five o'clock in the afternoon now."],
+  六: ["我六月去里斯本。", "我六月去里斯本。", "Wǒ liù yuè qù Lǐsīběn.", "I am going to Lisbon in June."],
+  七: ["一个星期有七天。", "一個星期有七天。", "Yí ge xīngqī yǒu qī tiān.", "A week has seven days."],
+  八: ["我晚上八点到家。", "我晚上八點到家。", "Wǒ wǎnshang bā diǎn dào jiā.", "I get home at eight in the evening."],
+  九: ["他儿子今年九岁。", "他兒子今年九歲。", "Tā érzi jīnnián jiǔ suì.", "His son is nine years old this year."],
+  十: ["他这次考了第十名。", "他這次考了第十名。", "Tā zhè cì kǎo le dì shí míng.", "He ranked tenth on this exam."],
+  百: ["这里能坐一百个人。", "這裡能坐一百個人。", "Zhèlǐ néng zuò yì bǎi ge rén.", "This place can seat one hundred people."],
+  千: ["这台电脑八千块。", "這台電腦八千塊。", "Zhè tái diànnǎo bā qiān kuài.", "This computer costs eight thousand yuan."],
+  万: ["这辆车要十万。", "這輛車要十萬。", "Zhè liàng chē yào shí wàn.", "This car costs one hundred thousand."],
+  亿: ["中国有十四亿人。", "中國有十四億人。", "Zhōngguó yǒu shísì yì rén.", "China has 1.4 billion people."],
+  零: ["我的房间号是三零五。", "我的房間號是三零五。", "Wǒ de fángjiān hào shì sān líng wǔ.", "My room number is 305."],
+  两: ["我买了两张票。", "我買了兩張票。", "Wǒ mǎi le liǎng zhāng piào.", "I bought two tickets."],
+  半: ["我们十点半出发。", "我們十點半出發。", "Wǒmen shí diǎn bàn chūfā.", "We set off at half past ten."]
 }));
+
+function fixedExample(value) {
+  if (value.length === 4) {
+    const [zh, traditional, pinyin, english] = value;
+    return { zh, traditional, pinyin, en: () => english };
+  }
+
+  const [zh, pinyin, english] = value;
+  return { zh, pinyin, en: () => english };
+}
 
 function buildExample(word, wordPinyin, partOfSpeech, theme) {
   if (specialExamples.has(word)) {
-    const [zh, pinyin, en] = specialExamples.get(word);
-    return { zh, pinyin, en: () => en };
+    return fixedExample(specialExamples.get(word));
   }
 
   if (partOfSpeech === "量词") {
     if (classifierExamples.has(word)) {
-      const [zh, pinyin, en] = classifierExamples.get(word);
-      return { zh, pinyin, en: () => en };
+      return fixedExample(classifierExamples.get(word));
     }
 
     return {
@@ -980,8 +1000,7 @@ function buildExample(word, wordPinyin, partOfSpeech, theme) {
 
   if (partOfSpeech === "数词") {
     if (numberExamples.has(word)) {
-      const [zh, pinyin, en] = numberExamples.get(word);
-      return { zh, pinyin, en: () => en };
+      return fixedExample(numberExamples.get(word));
     }
 
     return {
@@ -993,10 +1012,10 @@ function buildExample(word, wordPinyin, partOfSpeech, theme) {
 
   if (partOfSpeech === "动词") {
     const verbExamples = new Map(Object.entries({
-      住: ["我住在市中心。", "Wǒ zhù zài shì zhōngxīn.", "I live in the city center."],
-      来自: ["她来自中国。", "Tā láizì Zhōngguó.", "She comes from China."],
-      出生: ["我出生在春天。", "Wǒ chūshēng zài chūntiān.", "I was born in spring."],
-      长大: ["他在北京长大。", "Tā zài Běijīng zhǎngdà.", "He grew up in Beijing."],
+      住: ["我住在波尔图。", "我住在波爾圖。", "Wǒ zhù zài Bōěrtú.", "I live in Porto."],
+      来自: ["她来自法国。", "她來自法國。", "Tā láizì Fǎguó.", "She comes from France."],
+      出生: ["我1990年出生在广州。", "我1990年出生在廣州。", "Wǒ yī jiǔ jiǔ líng nián chūshēng zài Guǎngzhōu.", "I was born in Guangzhou in 1990."],
+      长大: ["我在海边的小城长大。", "我在海邊的小城長大。", "Wǒ zài hǎibiān de xiǎo chéng zhǎngdà.", "I grew up in a small seaside town."],
       旅游: ["我们周末去旅游。", "Wǒmen zhōumò qù lǚyóu.", "We travel on the weekend."],
       旅行: ["她喜欢一个人旅行。", "Tā xǐhuan yí ge rén lǚxíng.", "She likes traveling alone."],
       出国: ["他明年想出国。", "Tā míngnián xiǎng chūguó.", "He wants to go abroad next year."],
@@ -1019,8 +1038,7 @@ function buildExample(word, wordPinyin, partOfSpeech, theme) {
     }));
 
     if (verbExamples.has(word)) {
-      const [zh, pinyin, en] = verbExamples.get(word);
-      return { zh, pinyin, en: () => en };
+      return fixedExample(verbExamples.get(word));
     }
 
     return {
@@ -1187,7 +1205,7 @@ const entries = rows.map((row, index) => {
     pinyin,
     english,
     exampleSimplified: example.zh,
-    exampleTraditional: toTraditional(example.zh),
+    exampleTraditional: example.traditional ?? toTraditional(example.zh),
     examplePinyin: example.pinyin,
     exampleEnglish: example.en(english)
   };

@@ -23,9 +23,8 @@ export function PinyinRecall({ entries, scriptMode, onComplete, onGoBack }: Piny
   const headword = active ? (scriptMode === "traditional" ? active.traditional : active.simplified) : "";
   const speechLang = "zh-CN";
   const correct = active ? isPinyinMatch(input, active.pinyin) : false;
-  const inputLocked = revealed || (submitted && correct);
   const slotCharacters = useMemo(
-    () => (active ? buildSlotCharacters(input, active.pinyin, submitted || revealed, revealed) : []),
+    () => (active ? buildSlotCharacters(input, active.pinyin, submitted || revealed) : []),
     [active, input, revealed, submitted]
   );
 
@@ -59,7 +58,7 @@ export function PinyinRecall({ entries, scriptMode, onComplete, onGoBack }: Piny
 
   return (
     <section className="recall-panel fan-panel">
-      <button className="go-back" type="button" onClick={onGoBack}>
+      <button className="go-back back-button" type="button" onClick={onGoBack}>
         <ArrowLeft size={17} aria-hidden="true" />
         Back
       </button>
@@ -84,7 +83,7 @@ export function PinyinRecall({ entries, scriptMode, onComplete, onGoBack }: Piny
           onKeyDown={(event) => {
             if (event.key === "Enter" && input.trim()) setSubmitted(true);
           }}
-          disabled={inputLocked}
+          disabled={submitted || revealed}
           autoCapitalize="none"
           autoCorrect="off"
           spellCheck={false}
@@ -96,7 +95,7 @@ export function PinyinRecall({ entries, scriptMode, onComplete, onGoBack }: Piny
         >
           {slotCharacters.map((slot, charIndex) => (
             <span key={`${active.id}-${charIndex}`} className={slot.status ? `is-${slot.status}` : undefined}>
-              {slot.char === " " ? "\u00a0" : slot.char}
+              {slot.char === " " || slot.char === "" ? "\u00a0" : slot.char}
             </span>
           ))}
         </div>
@@ -105,13 +104,12 @@ export function PinyinRecall({ entries, scriptMode, onComplete, onGoBack }: Piny
       {revealed && (
         <div className="recall-answer">
           <span className="recall-hanzi">{headword}</span>
-          <span>{active.pinyin}</span>
           <span>{active.exampleSimplified}</span>
         </div>
       )}
 
       <div className="recall-actions">
-        {!revealed && (!submitted || !correct) ? (
+        {!submitted && !revealed ? (
           <>
             <button className="secondary" type="button" onClick={() => setRevealed(true)}>
               <Eye size={18} aria-hidden="true" />
@@ -123,18 +121,12 @@ export function PinyinRecall({ entries, scriptMode, onComplete, onGoBack }: Piny
           </>
         ) : (
           <button className="primary" type="button" onClick={() => finishPrompt(revealed || !correct)}>
-            {index >= queue.length - 1 ? "Finish" : "Next"}
+            {index >= queue.length - 1 ? "Continue" : "Next"}
           </button>
         )}
       </div>
 
       {submitted && correct && !revealed && <p className="recall-feedback is-correct">Correct</p>}
-
-      {revealed && (
-        <p className="recall-feedback is-answer">
-          Answer: {active.pinyin}
-        </p>
-      )}
     </section>
   );
 }
@@ -143,21 +135,18 @@ function shuffle<T>(items: T[]) {
   return [...items].sort(() => Math.random() - 0.5);
 }
 
-function buildSlotCharacters(input: string, answer: string, showResult: boolean, revealed: boolean) {
+function buildSlotCharacters(input: string, answer: string, showResult: boolean) {
   const typed = Array.from(normalizePinyin(input).replace(/\s/g, ""));
+  const answerChars = Array.from(answer);
   let typedIndex = 0;
 
-  return Array.from(answer).map((char) => {
+  return answerChars.map((char) => {
     if (char === " ") return { char: " ", status: null };
     const typedChar = typed[typedIndex];
     typedIndex += 1;
-    if (!showResult) return { char: typedChar ?? "_", status: null };
+    if (!showResult) return { char: typedChar ?? "", status: null };
 
-    if (!typedChar) {
-      return { char: revealed ? normalizePinyin(char) || char : "_", status: "incorrect" };
-    }
-
-    const status = normalizePinyin(typedChar) === normalizePinyin(char) ? "correct" : "incorrect";
-    return { char: typedChar, status };
+    const status = typedChar && normalizePinyin(typedChar) === normalizePinyin(char) ? "correct" : "incorrect";
+    return { char, status };
   });
 }

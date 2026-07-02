@@ -178,6 +178,26 @@ label {
   font-weight: 700;
 }
 
+.checkbox-control {
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  align-self: end;
+  gap: 8px;
+  padding: 0 14px;
+  border: 1px solid rgba(168, 195, 160, 0.48);
+  border-radius: 999px;
+  background: rgba(255, 250, 241, 0.68);
+  color: var(--ink);
+}
+
+.checkbox-control input {
+  width: 16px;
+  height: 16px;
+  min-height: 0;
+  accent-color: var(--jade);
+}
+
 select,
 input {
   min-height: 42px;
@@ -607,6 +627,13 @@ button:disabled {
   border-color: rgba(43, 43, 43, 0.18);
 }
 
+.back-button,
+.go-back {
+  background: rgba(168, 195, 160, 0.28);
+  color: var(--ink);
+  border-color: rgba(72, 101, 62, 0.24);
+}
+
 .again {
   background: var(--pink);
   color: #fffaf1;
@@ -699,8 +726,6 @@ button:disabled {
   left: 18px;
   min-height: 34px;
   padding: 0 12px;
-  background: transparent;
-  border-color: rgba(43, 43, 43, 0.18);
 }
 
 .recall-cue {
@@ -780,12 +805,10 @@ button:disabled {
 }
 
 .pinyin-slots span.is-correct {
-  border-color: var(--jade);
   color: var(--jade);
 }
 
 .pinyin-slots span.is-incorrect {
-  border-color: var(--incorrect);
   color: var(--incorrect);
 }
 
@@ -863,6 +886,11 @@ button:disabled {
     justify-content: stretch;
   }
 
+  .checkbox-control {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+
   label {
     min-width: 0;
   }
@@ -890,9 +918,30 @@ button:disabled {
   }
 
   .fan {
-    width: min(86vw, 328px);
+    width: min(91vw, 352px);
     padding: 18% 14% 0;
-    margin-bottom: -48px;
+    margin-bottom: -56px;
+  }
+
+  .fan-back {
+    width: 64%;
+    gap: 7px;
+  }
+
+  .pinyin {
+    font-size: clamp(1.15rem, 3.5vw, 1.34rem);
+  }
+
+  .hanzi-answer {
+    font-size: clamp(4rem, 11.2vw, 5.7rem);
+  }
+
+  .translation {
+    font-size: clamp(1.14rem, 3.4vw, 1.48rem);
+  }
+
+  .example-block {
+    font-size: clamp(0.84rem, 2.5vw, 1rem);
   }
 
   .example-toggle {
@@ -915,7 +964,7 @@ button:disabled {
   }
 
   .fan-back:has(.example-toggle[open]) .hanzi-answer {
-    font-size: clamp(3.3rem, 9vw, 4.65rem);
+    font-size: clamp(3.55rem, 10vw, 5rem);
   }
 
   .fan-back:has(.example-toggle[open]) .translation {
@@ -968,8 +1017,8 @@ button:disabled {
   }
 
   .fan {
-    width: min(88vw, 306px);
-    margin-bottom: -44px;
+    width: min(94vw, 344px);
+    margin-bottom: -52px;
   }
 
   .card-toolbar {

@@ -31,6 +31,7 @@ export default function App() {
   const [cardIndex, setCardIndex] = useState(0);
   const [revealed, setRevealed] = useState(false);
   const [againIds, setAgainIds] = useState<string[]>([]);
+  const [autoPlayAudio, setAutoPlayAudio] = useState(true);
 
   useEffect(() => saveProgress(progress), [progress]);
 
@@ -55,7 +56,7 @@ export default function App() {
   const activeEntry = activeEntries[cardIndex];
   const knownCount = entries.filter((entry) => getProgress(progress, entry.id).status === "known").length;
   const sessionProgress =
-    phase === "sessionChoice" || phase === "complete"
+    phase === "sessionChoice" || phase === "moveOn" || phase === "complete"
       ? 100
       : activeEntries.length
         ? Math.min(100, (cardIndex / activeEntries.length) * 100)
@@ -77,7 +78,8 @@ export default function App() {
     }
 
     if (phase === "review") {
-      nextSession();
+      setPhase("moveOn");
+      setCardIndex(0);
       return;
     }
 
@@ -126,7 +128,12 @@ export default function App() {
 
   function finishRecall(troubleIds: string[]) {
     setProgress((current) => troubleIds.reduce((state, id) => recordRecallTrouble(state, id), current));
-    nextSession();
+    if (troubleIds.length) {
+      setAgainIds(troubleIds);
+    }
+    setCardIndex(0);
+    setRevealed(false);
+    setPhase("moveOn");
   }
 
   return (
@@ -155,6 +162,14 @@ export default function App() {
               ))}
             </select>
           </label>
+          <label className="checkbox-control">
+            <input
+              type="checkbox"
+              checked={autoPlayAudio}
+              onChange={(event) => setAutoPlayAudio(event.target.checked)}
+            />
+            <span>Auto audio</span>
+          </label>
         </div>
       </header>
 
@@ -172,6 +187,7 @@ export default function App() {
               revealed={revealed}
               canGoPrevious={cardIndex > 0}
               showFirstWordTip={phase === "study" && sessionIndex === 0 && cardIndex === 0}
+              autoPlayAudio={autoPlayAudio}
               onFlip={() => setRevealed((current) => !current)}
               onPrevious={() => {
                 setRevealed(false);
@@ -207,6 +223,17 @@ export default function App() {
             scriptMode={scriptMode}
             onComplete={finishRecall}
             onGoBack={() => setPhase("sessionChoice")}
+          />
+        )}
+
+        {phase === "moveOn" && (
+          <Milestone
+            title="Session review complete."
+            body="Move to the next session, or review these words once more."
+            primary={reviewEntries.length ? "Review new words" : "Start next session"}
+            secondary={reviewEntries.length ? "Start next session" : undefined}
+            onPrimary={reviewEntries.length ? startReview : nextSession}
+            onSecondary={reviewEntries.length ? nextSession : undefined}
           />
         )}
 
