@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 72" width="72" height="72">
+  <ellipse cx="34" cy="10" rx="22" ry="40" fill="#A8C3A0" opacity="0.35" transform="rotate(28 34 10)"/>
+  <ellipse cx="10" cy="34" rx="40" ry="20" fill="#2B2B2B" opacity="0.12" transform="rotate(-18 10 34)"/>
+  <path d="M0,0 L70,0 A70,70 0 0,1 0,70 Z" fill="#C1440E" opacity="0.06"/>
+  <g stroke="#2B2B2B" stroke-width="1" opacity="0.45">
+    <line x1="14" y1="14" x2="4" y2="60"/>
+    <line x1="14" y1="14" x2="18" y2="66"/>
+    <line x1="14" y1="14" x2="34" y2="70"/>
+    <line x1="14" y1="14" x2="50" y2="66"/>
+    <line x1="14" y1="14" x2="60" y2="52"/>
+    <line x1="14" y1="14" x2="66" y2="34"/>
+    <line x1="14" y1="14" x2="66" y2="18"/>
+    <line x1="14" y1="14" x2="60" y2="4"/>
+  </g>
+  <path d="M62,2 A62,62 0 0,1 2,62" fill="none" stroke="#B89A5E" stroke-width="1.5" opacity="0.6"/>
+  <circle cx="46" cy="10" r="3.5" fill="#C1440E" opacity="0.85"/>
+  <circle cx="10" cy="46" r="2.5" fill="#C1440E" opacity="0.6"/>
+</svg>
