@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700;800&family=Noto+Serif+TC:wght@400;500;700;800&family=Inter:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cormorant:wght@500;600;700&family=Noto+Serif+SC:wght@400;500;700;800&family=Noto+Serif+TC:wght@400;500;700;800&family=Inter:wght@400;500;600;700&display=swap");
 
 :root {
   --paper: #f5efe0;
@@ -15,6 +15,7 @@
   --incorrect-soft: rgba(183, 53, 53, 0.16);
   --gold-rim: #b89a5e;
   --shadow: rgba(55, 34, 18, 0.18);
+  --display-latin: Cormorant, "Cormorant Garamond", Georgia, serif;
   color: var(--ink);
   background:
     radial-gradient(circle at 12% 14%, rgba(193, 68, 14, 0.1), transparent 26%),
@@ -189,6 +190,7 @@ input {
   color: var(--cinnabar);
   font-size: 0.82rem;
   font-weight: 800;
+  font-variant-numeric: lining-nums tabular-nums;
   white-space: nowrap;
 }
 
@@ -238,9 +240,10 @@ h2,
 
 h1 {
   margin: 6px 0 0;
+  font-family: var(--display-latin);
   font-size: clamp(2.5rem, 7vw, 5.8rem);
   line-height: 0.92;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .controls {
