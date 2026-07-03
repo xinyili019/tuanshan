@@ -61,7 +61,7 @@ export function FanCard({
 
   return (
     <section className="study-card" aria-label="Chinese vocabulary card">
-      <p className="card-hint">Know this word? Tap the fan to see!</p>
+      <p className="card-hint">Know this word? Tap the fan to check!</p>
       <div
         className={`fan ${revealed ? "is-revealed" : ""}`}
         role="button"
