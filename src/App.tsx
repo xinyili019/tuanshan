@@ -1,9 +1,28 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import type { ChangeEvent } from "react";
+import { BrowseMode } from "./components/BrowseMode";
 import { FanCard } from "./components/FanCard";
 import { PinyinRecall } from "./components/PinyinRecall";
+import { Quiz } from "./components/Quiz";
 import { vocabulary } from "./data/vocabulary";
-import { getProgress, loadProgress, recordCard, recordRecallTrouble, saveProgress } from "./lib/progress";
-import type { ProgressState, ScriptMode, StudyPhase, VocabEntry } from "./types";
+import {
+  createEmptyProgress,
+  demoteQuizMisses,
+  demoteToAgain,
+  getProgressRecord,
+  recordCard,
+  recordQuizCompleted,
+  recordRecallTrouble
+} from "./lib/progress";
+import { selectQuizEntries, shouldStartQuizBeforeNextSession, SMALL_UNIT_QUIZ_LIMIT } from "./lib/quiz";
+import {
+  clearProgress as clearStoredProgress,
+  exportProgress,
+  getProgress as getStoredProgress,
+  importProgress,
+  setProgress as setStoredProgress
+} from "./lib/storage";
+import type { ProgressState, QuizResult, ScriptMode, StudyPhase, VocabEntry } from "./types";
 import "./styles.css";
 
 const SESSION_SIZE = 20;
@@ -53,7 +72,9 @@ const TRADITIONAL_UNIT_TITLES: Record<string, string> = {
 };
 
 export default function App() {
-  const [progress, setProgress] = useState<ProgressState>(() => loadProgress());
+  const [progress, setProgress] = useState<ProgressState>(() => createEmptyProgress());
+  const [isProgressReady, setIsProgressReady] = useState(false);
+  const [progressMessage, setProgressMessage] = useState<string | null>(null);
   const [scriptMode, setScriptMode] = useState<ScriptMode>("simplified");
   const [unit, setUnit] = useState("all");
   const [phase, setPhase] = useState<StudyPhase>("study");
@@ -62,8 +83,35 @@ export default function App() {
   const [revealed, setRevealed] = useState(false);
   const [againIds, setAgainIds] = useState<string[]>([]);
   const [autoPlayAudio, setAutoPlayAudio] = useState(true);
+  const [view, setView] = useState<"study" | "browse">("study");
+  const [quizEntries, setQuizEntries] = useState<VocabEntry[]>([]);
+  const [quizContinueTarget, setQuizContinueTarget] = useState<"nextSession" | "complete">("nextSession");
+  const importInputRef = useRef<HTMLInputElement>(null);
 
-  useEffect(() => saveProgress(progress), [progress]);
+  useEffect(() => {
+    let isCurrent = true;
+
+    getStoredProgress()
+      .then((storedProgress: ProgressState) => {
+        if (!isCurrent) return;
+        setProgress(storedProgress);
+      })
+      .catch((error: unknown) => {
+        console.warn("Could not load progress.", error);
+      })
+      .finally(() => {
+        if (isCurrent) setIsProgressReady(true);
+      });
+
+    return () => {
+      isCurrent = false;
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!isProgressReady) return;
+    void setStoredProgress(progress);
+  }, [isProgressReady, progress]);
 
   const units = useMemo(() => Array.from(new Set(vocabulary.map((entry) => entry.unit))), []);
   const unitOptions = useMemo(
@@ -88,9 +136,11 @@ export default function App() {
   const reviewEntries = currentSession.filter((entry) => againIds.includes(entry.id));
   const activeEntries = phase === "review" ? reviewEntries : currentSession;
   const activeEntry = activeEntries[cardIndex];
-  const knownCount = entries.filter((entry) => getProgress(progress, entry.id).status === "known").length;
+  const knownCount = entries.filter((entry) => getProgressRecord(progress, entry.id).status === "known").length;
+  const knownThisSession = currentSession.filter((entry) => getProgressRecord(progress, entry.id).status === "known").length;
+  const againThisSession = reviewEntries.length;
   const sessionProgress =
-    phase === "sessionChoice" || phase === "moveOn" || phase === "complete"
+    phase === "summary" || phase === "quiz" || phase === "complete"
       ? 100
       : activeEntries.length
         ? Math.min(100, (cardIndex / activeEntries.length) * 100)
@@ -114,6 +164,7 @@ export default function App() {
     setCardIndex(0);
     setRevealed(false);
     setAgainIds([]);
+    setQuizEntries([]);
   }, [unit]);
 
   function advance() {
@@ -124,34 +175,62 @@ export default function App() {
     }
 
     if (phase === "review") {
-      setPhase("moveOn");
+      setPhase("summary");
       setCardIndex(0);
       return;
     }
 
-    setPhase("sessionChoice");
+    setPhase("summary");
     setCardIndex(0);
   }
 
   function mark(status: "again" | "known") {
     if (!activeEntry) return;
-    setProgress((current) => recordCard(current, activeEntry.id, status));
+    setProgress((current) => recordCard(current, activeEntry.id, status, { countStudied: phase === "study" }));
     if (status === "again") {
       setAgainIds((current) => (current.includes(activeEntry.id) ? current : [...current, activeEntry.id]));
+    } else {
+      setAgainIds((current) => current.filter((id) => id !== activeEntry.id));
     }
     advance();
   }
 
   function nextSession() {
-    if (sessionIndex >= sessions.length - 1) {
+    const isEndOfUnit = sessionIndex >= sessions.length - 1;
+
+    if (shouldStartQuizBeforeNextSession({ progress, unit, entries, isEndOfUnit })) {
+      startQuiz(isEndOfUnit ? "complete" : "nextSession");
+      return;
+    }
+
+    if (isEndOfUnit) {
       setPhase("complete");
       return;
     }
+
+    goToNextStudySession();
+  }
+
+  function goToNextStudySession() {
     setSessionIndex((current) => current + 1);
     setCardIndex(0);
     setRevealed(false);
     setAgainIds([]);
     setPhase("study");
+  }
+
+  function startQuiz(target: "nextSession" | "complete") {
+    const selected = selectQuizEntries(progress, entries, vocabulary);
+    if (selected.length === 0) {
+      target === "complete" ? setPhase("complete") : goToNextStudySession();
+      return;
+    }
+
+    setQuizEntries(selected);
+    setQuizContinueTarget(target);
+    setCardIndex(0);
+    setRevealed(false);
+    setPhase("quiz");
   }
 
   function startReview() {
@@ -165,30 +244,88 @@ export default function App() {
   }
 
   function startRecall() {
-    if (reviewEntries.length === 0) {
-      nextSession();
-      return;
-    }
     setPhase("recall");
   }
 
   function finishRecall(troubleIds: string[]) {
     setProgress((current) => troubleIds.reduce((state, id) => recordRecallTrouble(state, id), current));
     if (troubleIds.length) {
-      setAgainIds(troubleIds);
+      setAgainIds((current) => Array.from(new Set([...current, ...troubleIds])));
     }
     setCardIndex(0);
     setRevealed(false);
-    setPhase("moveOn");
+    setPhase("summary");
+  }
+
+  function finishQuiz(result: QuizResult) {
+    const missedIds = result.missedEntries.map((entry) => entry.id);
+    const quizUnitId = unit !== "all" && entries.length < SMALL_UNIT_QUIZ_LIMIT ? unit : undefined;
+    setProgress((current) => recordQuizCompleted(demoteQuizMisses(current, missedIds), quizUnitId));
+    setQuizEntries([]);
+
+    if (quizContinueTarget === "complete") {
+      setPhase("complete");
+      return;
+    }
+
+    goToNextStudySession();
   }
 
   function startOver() {
-    setProgress({});
+    setProgress(createEmptyProgress());
+    setProgressMessage("Progress cleared.");
+    void clearStoredProgress();
+    setView("study");
     setPhase("study");
     setSessionIndex(0);
     setCardIndex(0);
     setRevealed(false);
     setAgainIds([]);
+    setQuizEntries([]);
+  }
+
+  function markForgotten(id: string) {
+    setProgress((current) => demoteToAgain(current, id));
+  }
+
+  function handleExportProgress() {
+    try {
+      const blob = new Blob([exportProgress(progress)], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement("a");
+      link.href = url;
+      link.download = `tuanshan-progress-${new Date().toISOString().slice(0, 10)}.json`;
+      link.click();
+      URL.revokeObjectURL(url);
+      setProgressMessage("Progress exported.");
+    } catch (error) {
+      console.warn("Could not export progress.", error);
+      setProgressMessage("Progress export failed.");
+    }
+  }
+
+  async function handleImportProgress(event: ChangeEvent<HTMLInputElement>) {
+    const file = event.target.files?.[0];
+    event.target.value = "";
+    if (!file) return;
+
+    try {
+      const hasExistingProgress =
+        Object.keys(progress.words).length > 0 ||
+        progress.session.totalStudiedWords > 0 ||
+        progress.session.quizCount > 0;
+      if (hasExistingProgress && !window.confirm("Importing progress will overwrite your current Tuanshan progress.")) {
+        setProgressMessage("Progress import cancelled.");
+        return;
+      }
+
+      const importedProgress = await importProgress(await file.text());
+      setProgress(importedProgress);
+      setProgressMessage("Progress imported.");
+    } catch (error) {
+      console.warn("Could not import progress.", error);
+      setProgressMessage("Progress import failed.");
+    }
   }
 
   return (
@@ -225,6 +362,13 @@ export default function App() {
             />
             <span>Auto audio</span>
           </label>
+          <button
+            className={`secondary header-browse-button${view === "browse" ? " is-active" : ""}`}
+            type="button"
+            onClick={() => setView((current) => (current === "browse" ? "study" : "browse"))}
+          >
+            {view === "browse" ? "Back to study" : "Browse"}
+          </button>
         </div>
       </header>
 
@@ -236,7 +380,18 @@ export default function App() {
         <span className="workspace-ornament ornament-bottom-left" aria-hidden="true" />
         <span className="workspace-ornament ornament-bottom-right" aria-hidden="true" />
 
-        {phase === "study" || phase === "review" ? (
+        {view === "browse" ? (
+          <BrowseMode
+            entries={vocabulary}
+            progress={progress}
+            scriptMode={scriptMode}
+            units={unitOptions.map((item) => ({ id: item.id, title: `Unit ${item.id} ${item.progressLabel}` }))}
+            onBack={() => setView("study")}
+            onMarkForgotten={markForgotten}
+          />
+        ) : null}
+
+        {view === "study" && (phase === "study" || phase === "review") ? (
           activeEntry ? (
             <FanCard
               entry={activeEntry}
@@ -250,7 +405,7 @@ export default function App() {
                 setRevealed(false);
                 setCardIndex((current) => Math.max(0, current - 1));
               }}
-              onGoBack={phase === "review" ? () => setPhase("sessionChoice") : undefined}
+              onGoBack={phase === "review" ? () => setPhase("summary") : undefined}
               onAgain={() => mark("again")}
               onKnown={() => mark("known")}
             />
@@ -259,42 +414,32 @@ export default function App() {
           )
         ) : null}
 
-        {phase === "sessionChoice" && (
-          <Milestone
-            title={`Session complete. You have recognized ${knownCount} words.`}
-            body={
-              reviewEntries.length
-                ? "Review the words you marked Again, or recall their pinyin from the English cue."
-                : "No Again words in this session. Move on when ready."
-            }
-            primary={reviewEntries.length ? "Review new words" : "Next session"}
-            secondary={reviewEntries.length ? "Recall pinyin" : undefined}
-            onPrimary={reviewEntries.length ? startReview : nextSession}
-            onSecondary={reviewEntries.length ? startRecall : undefined}
+        {view === "study" && phase === "summary" && (
+          <SessionSummary
+            sessionNumber={sessionIndex + 1}
+            wordsStudied={currentSession.length}
+            knownCount={knownThisSession}
+            againCount={againThisSession}
+            onReviewAgain={startReview}
+            onRecall={startRecall}
+            onNextSession={nextSession}
           />
         )}
 
-        {phase === "recall" && (
+        {view === "study" && phase === "recall" && (
           <PinyinRecall
-            entries={reviewEntries}
+            entries={currentSession}
             scriptMode={scriptMode}
             onComplete={finishRecall}
-            onGoBack={() => setPhase("sessionChoice")}
+            onGoBack={() => setPhase("summary")}
           />
         )}
 
-        {phase === "moveOn" && (
-          <Milestone
-            title="Session review complete!"
-            body="Move to the next session, or review these words once more."
-            primary={reviewEntries.length ? "Review new words" : "Start next session"}
-            secondary={reviewEntries.length ? "Start next session" : undefined}
-            onPrimary={reviewEntries.length ? startReview : nextSession}
-            onSecondary={reviewEntries.length ? nextSession : undefined}
-          />
+        {view === "study" && phase === "quiz" && (
+          <Quiz entries={quizEntries} allEntries={vocabulary} scriptMode={scriptMode} onContinue={finishQuiz} />
         )}
 
-        {phase === "complete" && (
+        {view === "study" && phase === "complete" && (
           <Milestone
             title={`All done. You have recognized ${knownCount} words.`}
             body="You can switch units or reset browser progress for a fresh pass."
@@ -344,8 +489,76 @@ export default function App() {
         <button className="start-over-button" type="button" onClick={startOver}>
           Start over
         </button>
+        <div className="progress-actions" aria-label="Progress file actions">
+          <button className="secondary" type="button" onClick={handleExportProgress}>
+            Export progress
+          </button>
+          <button className="secondary" type="button" onClick={() => importInputRef.current?.click()}>
+            Import progress
+          </button>
+          <input
+            ref={importInputRef}
+            className="file-import-input"
+            type="file"
+            accept="application/json,.json"
+            onChange={handleImportProgress}
+          />
+        </div>
+        {progressMessage && <p className="progress-status">{progressMessage}</p>}
       </aside>
     </main>
+  );
+}
+
+function SessionSummary({
+  sessionNumber,
+  wordsStudied,
+  knownCount,
+  againCount,
+  onReviewAgain,
+  onRecall,
+  onNextSession
+}: {
+  sessionNumber: number;
+  wordsStudied: number;
+  knownCount: number;
+  againCount: number;
+  onReviewAgain: () => void;
+  onRecall: () => void;
+  onNextSession: () => void;
+}) {
+  return (
+    <section className="milestone session-summary fan-panel">
+      <p className="eyebrow">Session summary</p>
+      <h2>
+        Session {sessionNumber} · {wordsStudied} words studied
+      </h2>
+      <div className="session-summary-stats" aria-label="Session counts">
+        <span>
+          <strong>{knownCount}</strong>
+          Known
+        </span>
+        <span>
+          <strong>{againCount}</strong>
+          Again
+        </span>
+      </div>
+      <div className="session-summary-actions">
+        <div className={`session-summary-secondary-row${againCount === 0 ? " is-single" : ""}`}>
+          <button className="secondary" type="button" onClick={onRecall}>
+            Pinyin recall
+          </button>
+          {againCount > 0 && (
+            <button className="secondary" type="button" onClick={onReviewAgain}>
+              Review ({againCount})
+            </button>
+          )}
+        </div>
+        <button className="primary session-summary-next" type="button" onClick={onNextSession}>
+          Next session
+        </button>
+      </div>
+    </section>
   );
 }
 
@@ -392,7 +605,7 @@ function chunk<T>(items: T[], size: number): T[][] {
 }
 
 function summarizeProgress(items: VocabEntry[], progress: ProgressState) {
-  const known = items.filter((entry) => getProgress(progress, entry.id).status === "known").length;
+  const known = items.filter((entry) => getProgressRecord(progress, entry.id).status === "known").length;
   const total = items.length;
   return {
     known,

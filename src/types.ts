@@ -1,6 +1,7 @@
 export type ScriptMode = "simplified" | "traditional";
-export type StudyPhase = "study" | "sessionChoice" | "review" | "recall" | "moveOn" | "complete";
+export type StudyPhase = "study" | "summary" | "review" | "recall" | "quiz" | "browse" | "complete";
 export type CardStatus = "new" | "again" | "known";
+export type QuizMode = "audioMeaning" | "sentenceCloze";
 
 export interface VocabEntry {
   id: string;
@@ -24,4 +25,37 @@ export interface ProgressRecord {
   recallTroubleCount: number;
 }
 
-export type ProgressState = Record<string, ProgressRecord>;
+export interface ProgressSessionCounters {
+  totalStudiedWords: number;
+  studiedSinceQuizIds: string[];
+  lastQuizAtStudiedCount: number;
+  quizCount: number;
+  quizCompletedUnitIds: string[];
+}
+
+export interface ProgressState {
+  words: Record<string, ProgressRecord>;
+  session: ProgressSessionCounters;
+}
+
+export interface QuizOption {
+  id: string;
+  label: string;
+}
+
+export interface QuizQuestion {
+  id: string;
+  mode: QuizMode;
+  entry: VocabEntry;
+  prompt: string;
+  context?: string;
+  options: QuizOption[];
+  correctOptionId: string;
+}
+
+export interface QuizResult {
+  accuracy: number;
+  correctFirstTry: number;
+  total: number;
+  missedEntries: VocabEntry[];
+}

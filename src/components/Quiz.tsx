@@ -1,0 +1,214 @@
+import { ArrowRight, RotateCcw, Volume2 } from "lucide-react";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { buildQuizQuestions, getHeadword, reinsertQuestion } from "../lib/quiz";
+import type { QuizQuestion, QuizResult, ScriptMode, VocabEntry } from "../types";
+import { speak } from "./FanCard";
+
+interface QuizProps {
+  entries: VocabEntry[];
+  allEntries: VocabEntry[];
+  scriptMode: ScriptMode;
+  onContinue: (result: QuizResult) => void;
+}
+
+interface Feedback {
+  selectedOptionId: string;
+  correct: boolean;
+}
+
+export function Quiz({ entries, allEntries, scriptMode, onContinue }: QuizProps) {
+  const [queue, setQueue] = useState<QuizQuestion[]>(() => buildQuizQuestions(entries, allEntries, scriptMode));
+  const [questionCount, setQuestionCount] = useState(queue.length);
+  const [answeredQuestionIds, setAnsweredQuestionIds] = useState<Set<string>>(() => new Set());
+  const [firstTryCorrectIds, setFirstTryCorrectIds] = useState<Set<string>>(() => new Set());
+  const [missedEntryIds, setMissedEntryIds] = useState<Set<string>>(() => new Set());
+  const [feedback, setFeedback] = useState<Feedback | null>(null);
+  const feedbackTimeout = useRef<number | null>(null);
+  const active = queue[0];
+  const speechLang = scriptMode === "traditional" ? "zh-TW" : "zh-CN";
+  const activeHeadword = active ? getHeadword(active.entry, scriptMode) : "";
+  const activeExample = active
+    ? scriptMode === "traditional"
+      ? active.entry.exampleTraditional
+      : active.entry.exampleSimplified
+    : "";
+
+  useEffect(() => {
+    const questions = buildQuizQuestions(entries, allEntries, scriptMode);
+    setQueue(questions);
+    setQuestionCount(questions.length);
+    setAnsweredQuestionIds(new Set());
+    setFirstTryCorrectIds(new Set());
+    setMissedEntryIds(new Set());
+    setFeedback(null);
+  }, [allEntries, entries, scriptMode]);
+
+  useEffect(() => {
+    return () => {
+      if (feedbackTimeout.current) window.clearTimeout(feedbackTimeout.current);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!active || active.mode !== "audioMeaning" || feedback) return;
+    speak(activeHeadword, speechLang);
+  }, [active, activeHeadword, feedback, speechLang]);
+
+  useEffect(() => {
+    if (!active || active.mode !== "sentenceCloze" || feedback) return;
+    speak(activeExample, speechLang);
+  }, [active, activeExample, feedback, speechLang]);
+
+  const result = useMemo<QuizResult>(() => {
+    const missedEntries = entries.filter((entry) => missedEntryIds.has(entry.id));
+    const correctFirstTry = firstTryCorrectIds.size;
+    return {
+      accuracy: questionCount ? correctFirstTry / questionCount : 1,
+      correctFirstTry,
+      total: questionCount,
+      missedEntries
+    };
+  }, [entries, firstTryCorrectIds, missedEntryIds, questionCount]);
+
+  if (!active) {
+    return (
+      <section className="quiz-panel fan-panel" aria-label="Quiz results">
+        <p className="eyebrow">Quiz results</p>
+        <h2>{Math.round(result.accuracy * 100)}% first try</h2>
+        <p className="quiz-result-summary">
+          {result.correctFirstTry}/{result.total} correct on the first attempt
+        </p>
+
+        {result.missedEntries.length > 0 ? (
+          <div className="quiz-missed-list">
+            <p className="eyebrow">Marked Again</p>
+            <div>
+              {result.missedEntries.map((entry) => (
+                <span className="quiz-missed-word" key={entry.id}>
+                  <span>{getHeadword(entry, scriptMode)}</span>
+                  <span>{entry.english}</span>
+                </span>
+              ))}
+            </div>
+          </div>
+        ) : (
+          <p className="quiz-result-summary">No missed words.</p>
+        )}
+
+        <button className="primary" type="button" onClick={() => onContinue(result)}>
+          Continue
+          <ArrowRight size={18} aria-hidden="true" />
+        </button>
+      </section>
+    );
+  }
+
+  const completed = questionCount - queue.length;
+  const progress = questionCount ? Math.min(100, (completed / questionCount) * 100) : 0;
+  const isAudioQuestion = active.mode === "audioMeaning";
+
+  function answer(optionId: string) {
+    if (!active || feedback) return;
+
+    const correct = optionId === active.correctOptionId;
+    const firstAttempt = !answeredQuestionIds.has(active.id);
+    const nextFeedback = { selectedOptionId: optionId, correct };
+
+    setFeedback(nextFeedback);
+    setAnsweredQuestionIds((current) => new Set(current).add(active.id));
+    if (firstAttempt && correct) setFirstTryCorrectIds((current) => new Set(current).add(active.id));
+    if (!correct) setMissedEntryIds((current) => new Set(current).add(active.entry.id));
+
+    if (feedbackTimeout.current) window.clearTimeout(feedbackTimeout.current);
+    feedbackTimeout.current = window.setTimeout(() => {
+      setQueue((current) => {
+        const [currentQuestion, ...rest] = current;
+        if (!currentQuestion) return current;
+        return correct ? rest : reinsertQuestion(rest, currentQuestion);
+      });
+      setFeedback(null);
+    }, correct ? 620 : 1050);
+  }
+
+  return (
+    <section className="quiz-panel fan-panel" aria-label="Quiz">
+      <div className="quiz-topline">
+        <p className="eyebrow">{isAudioQuestion ? "Audio" : "Sentence"}</p>
+        <span>{completed}/{questionCount}</span>
+      </div>
+
+      <div className="progress-line quiz-progress" aria-label="Quiz progress">
+        <span style={{ width: `${progress}%` }} />
+      </div>
+
+      {isAudioQuestion ? (
+        <div className="quiz-audio-cue">
+          <button
+            className="quiz-listen-button"
+            type="button"
+            onClick={() => speak(activeHeadword, speechLang)}
+          >
+            <Volume2 size={26} aria-hidden="true" />
+            Replay
+          </button>
+          <p>Choose the meaning</p>
+        </div>
+      ) : (
+        <div className="quiz-cloze-cue">
+          <p className="quiz-cloze-line">{active.prompt}</p>
+          {active.context && <p className="quiz-context">{active.context}</p>}
+          <button className="secondary quiz-sentence-audio" type="button" onClick={() => speak(activeExample, speechLang)}>
+            <Volume2 size={16} aria-hidden="true" />
+            Replay sentence
+          </button>
+        </div>
+      )}
+
+      <div className={`quiz-options ${isAudioQuestion ? "has-four" : "has-three"}`}>
+        {active.options.map((option) => {
+          const isSelected = feedback?.selectedOptionId === option.id;
+          const isCorrect = option.id === active.correctOptionId;
+          const className = [
+            "quiz-option",
+            feedback && isCorrect ? "is-correct" : "",
+            feedback && isSelected && !isCorrect ? "is-incorrect" : ""
+          ]
+            .filter(Boolean)
+            .join(" ");
+
+          return (
+            <button
+              className={className}
+              type="button"
+              key={option.id}
+              onClick={() => answer(option.id)}
+              disabled={Boolean(feedback)}
+            >
+              {option.label}
+            </button>
+          );
+        })}
+      </div>
+
+      {feedback && (
+        <div className={`quiz-feedback ${feedback.correct ? "is-correct" : "is-incorrect"}`} aria-live="polite">
+          <span>{feedback.correct ? "Correct" : "Try it again"}</span>
+          <span className="quiz-answer-reveal">
+            {activeHeadword} · {active.entry.pinyin} · {active.entry.english}
+          </span>
+        </div>
+      )}
+
+      {!isAudioQuestion && feedback && (
+        <button
+          className="secondary quiz-replay-small"
+          type="button"
+          onClick={() => speak(activeHeadword, speechLang)}
+        >
+          <RotateCcw size={16} aria-hidden="true" />
+          Replay word
+        </button>
+      )}
+    </section>
+  );
+}
