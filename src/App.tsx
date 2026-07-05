@@ -56,6 +56,21 @@ const UNIT_PROGRESS_LABELS: Record<string, string> = {
   "12": "Feelings and communication"
 };
 
+const UNIT_SELECT_LABELS: Record<string, string> = {
+  "1": "Identity",
+  "2": "Family",
+  "3": "Body/health",
+  "4": "Food",
+  "5": "Home",
+  "6": "Appearance",
+  "7": "Time",
+  "8": "Study/work",
+  "9": "Travel",
+  "10": "Shopping",
+  "11": "Nature",
+  "12": "Feelings"
+};
+
 const TRADITIONAL_UNIT_TITLES: Record<string, string> = {
   "1": "身份·人稱·數",
   "2": "家庭·關係",
@@ -124,6 +139,7 @@ export default function App() {
             ? TRADITIONAL_UNIT_TITLES[item] ?? vocabulary.find((entry) => entry.unit === item)?.theme ?? `Unit ${item}`
             : vocabulary.find((entry) => entry.unit === item)?.theme ?? `Unit ${item}`,
         progressLabel: UNIT_PROGRESS_LABELS[item] ?? `Unit ${item}`,
+        selectLabel: UNIT_SELECT_LABELS[item] ?? UNIT_PROGRESS_LABELS[item] ?? `Unit ${item}`,
         summary: UNIT_SUMMARIES[item] ?? "vocabulary"
       })),
     [scriptMode, units]
@@ -341,20 +357,24 @@ export default function App() {
           <h1>Chinese Vocabulary</h1>
         </div>
         <div className="controls" aria-label="Study controls">
-          <label>
-            <span>Script</span>
-            <select value={scriptMode} onChange={(event) => setScriptMode(event.target.value as ScriptMode)}>
+          <label className="select-pill script-select-pill">
+            <span className="select-pill-label">Script</span>
+            <select
+              aria-label="Script"
+              value={scriptMode}
+              onChange={(event) => setScriptMode(event.target.value as ScriptMode)}
+            >
               <option value="simplified">Simplified</option>
               <option value="traditional">Traditional</option>
             </select>
           </label>
-          <label>
-            <span>Unit</span>
-            <select value={unit} onChange={(event) => setUnit(event.target.value)}>
+          <label className="select-pill unit-select-pill">
+            <span className="select-pill-label">Unit</span>
+            <select aria-label="Unit" value={unit} onChange={(event) => setUnit(event.target.value)}>
               <option value="all">All units</option>
               {unitOptions.map((item) => (
                 <option key={item.id} value={item.id}>
-                  Unit {item.id} {item.progressLabel} · {item.title}
+                  Unit {item.id} {item.selectLabel}
                 </option>
               ))}
             </select>
@@ -365,6 +385,7 @@ export default function App() {
               checked={autoPlayAudio}
               onChange={(event) => setAutoPlayAudio(event.target.checked)}
             />
+            <span className="checkbox-icon" aria-hidden="true" />
             <span>Auto audio</span>
           </label>
           <button
@@ -372,7 +393,7 @@ export default function App() {
             type="button"
             onClick={() => setView((current) => (current === "browse" ? "study" : "browse"))}
           >
-            {view === "browse" ? "Back to study" : "Browse"}
+            Browse
           </button>
         </div>
       </header>

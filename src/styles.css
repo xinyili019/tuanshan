@@ -302,9 +302,11 @@ h1 {
 
 .controls {
   display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  justify-content: end;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  flex: 0 0 auto;
 }
 
 label {
@@ -315,32 +317,117 @@ label {
   font-weight: 700;
 }
 
-.checkbox-control {
+.select-pill {
+  position: relative;
   min-height: 42px;
   display: inline-flex;
   align-items: center;
-  align-self: end;
+  gap: 7px;
+  width: fit-content;
+  max-width: 100%;
+  padding: 0 14px;
+  border: 1px solid rgba(43, 43, 43, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 250, 241, 0.78);
+  overflow: hidden;
+  cursor: pointer;
+  color: var(--ink);
+  font-size: 0.82rem;
+  font-weight: 800;
+}
+
+.select-pill::after {
+  content: "⌄";
+  flex: 0 0 auto;
+  color: var(--ink);
+  font-weight: 800;
+  line-height: 1;
+  transform: translateY(-1px);
+}
+
+.select-pill-label {
+  flex: 0 0 auto;
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.select-pill select {
+  position: absolute;
+  inset: 0;
+  min-height: 100%;
+  width: 100%;
+  min-width: 100%;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: transparent;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkbox-control {
+  position: relative;
+  min-height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
   gap: 8px;
   padding: 0 14px;
+  width: fit-content;
   border: 1px solid rgba(168, 195, 160, 0.48);
   border-radius: 999px;
   background: rgba(255, 250, 241, 0.68);
   color: var(--ink);
+  font-weight: 800;
 }
 
 .checkbox-control input {
-  width: 16px;
-  height: 16px;
-  min-height: 0;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
   accent-color: var(--jade);
 }
 
+.checkbox-icon {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  border: 1.5px solid rgba(72, 101, 62, 0.58);
+  border-radius: 4px;
+  background: rgba(255, 250, 241, 0.74);
+}
+
+.checkbox-control input:checked + .checkbox-icon {
+  background: var(--jade);
+  border-color: var(--jade);
+}
+
+.checkbox-control input:checked + .checkbox-icon::after {
+  content: "";
+  display: block;
+  width: 7px;
+  height: 4px;
+  margin: 4px auto 0;
+  border-left: 2px solid #fffaf1;
+  border-bottom: 2px solid #fffaf1;
+  transform: rotate(-45deg);
+}
+
 .header-browse-button {
-  align-self: end;
   min-height: 42px;
+  width: fit-content;
+  padding: 0 14px;
   background: rgba(255, 250, 241, 0.68);
   border-color: rgba(168, 195, 160, 0.48);
   box-shadow: 0 10px 22px rgba(55, 34, 18, 0.08);
+  color: var(--ink);
+  font-weight: 800;
 }
 
 .header-browse-button.is-active {
@@ -349,7 +436,8 @@ label {
 }
 
 .checkbox-control,
-.header-browse-button {
+.header-browse-button,
+.select-pill {
   font-size: 0.82rem;
 }
 
@@ -1642,35 +1730,33 @@ button:disabled {
   }
 
   .controls {
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 6px 8px;
-    justify-content: stretch;
-    align-items: end;
+    width: fit-content;
+    max-width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .select-pill {
+    min-height: 32px;
+    padding: 0 7px;
   }
 
   .checkbox-control {
-    grid-column: 1;
-    justify-self: stretch;
-    justify-content: center;
+    justify-content: flex-start;
     min-height: 32px;
-    padding: 0 8px;
+    gap: 8px;
+    padding: 0 6px;
   }
 
   .header-browse-button {
-    grid-column: 2;
-    justify-self: stretch;
     min-height: 32px;
-    padding: 0 8px;
+    padding: 0 7px;
   }
 
   label {
-    min-width: 0;
-  }
-
-  select {
-    width: 100%;
     min-width: 0;
   }
 
@@ -1902,11 +1988,5 @@ button:disabled {
 
   .first-word-tip {
     font-size: 0.9rem;
-  }
-}
-
-@media (max-width: 350px) {
-  .controls {
-    grid-template-columns: minmax(0, 1fr);
   }
 }
