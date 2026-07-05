@@ -85,6 +85,7 @@ export default function App() {
   const [autoPlayAudio, setAutoPlayAudio] = useState(true);
   const [view, setView] = useState<"study" | "browse">("study");
   const [quizEntries, setQuizEntries] = useState<VocabEntry[]>([]);
+  const [recallEntries, setRecallEntries] = useState<VocabEntry[]>([]);
   const [quizContinueTarget, setQuizContinueTarget] = useState<"nextSession" | "complete">("nextSession");
   const importInputRef = useRef<HTMLInputElement>(null);
 
@@ -165,6 +166,7 @@ export default function App() {
     setRevealed(false);
     setAgainIds([]);
     setQuizEntries([]);
+    setRecallEntries([]);
   }, [unit]);
 
   function advance() {
@@ -244,6 +246,7 @@ export default function App() {
   }
 
   function startRecall() {
+    setRecallEntries(selectRecallEntries(currentSession, reviewEntries));
     setPhase("recall");
   }
 
@@ -254,6 +257,7 @@ export default function App() {
     }
     setCardIndex(0);
     setRevealed(false);
+    setRecallEntries([]);
     setPhase("summary");
   }
 
@@ -282,6 +286,7 @@ export default function App() {
     setRevealed(false);
     setAgainIds([]);
     setQuizEntries([]);
+    setRecallEntries([]);
   }
 
   function markForgotten(id: string) {
@@ -428,7 +433,7 @@ export default function App() {
 
         {view === "study" && phase === "recall" && (
           <PinyinRecall
-            entries={currentSession}
+            entries={recallEntries}
             scriptMode={scriptMode}
             onComplete={finishRecall}
             onGoBack={() => setPhase("summary")}
@@ -602,6 +607,19 @@ function chunk<T>(items: T[], size: number): T[][] {
     chunks.push(items.slice(index, index + size));
   }
   return chunks;
+}
+
+function selectRecallEntries(sessionEntries: VocabEntry[], againEntries: VocabEntry[]) {
+  if (againEntries.length > 8) return shuffle(againEntries);
+  if (againEntries.length === 0) return shuffle(sessionEntries).slice(0, 8);
+
+  const againIds = new Set(againEntries.map((entry) => entry.id));
+  const fillers = shuffle(sessionEntries.filter((entry) => !againIds.has(entry.id))).slice(0, 8 - againEntries.length);
+  return shuffle([...againEntries, ...fillers]);
+}
+
+function shuffle<T>(items: T[]) {
+  return [...items].sort(() => Math.random() - 0.5);
 }
 
 function summarizeProgress(items: VocabEntry[], progress: ProgressState) {

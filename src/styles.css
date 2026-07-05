@@ -1543,6 +1543,12 @@ button:disabled {
   min-height: 36px;
 }
 
+.quiz-next-button {
+  justify-self: center;
+  min-height: 36px;
+  margin-top: 2px;
+}
+
 .quiz-missed-list {
   display: grid;
   gap: 8px;
@@ -1611,9 +1617,9 @@ button:disabled {
   .app-header {
     order: -2;
     border-radius: 18px;
-    padding: 13px 14px;
+    padding: 12px 14px;
     display: grid;
-    gap: 10px;
+    gap: 8px;
     background:
       linear-gradient(90deg, rgba(245, 239, 224, 0.92) 0%, rgba(245, 239, 224, 0.76) 42%, rgba(245, 239, 224, 0.5) 100%),
       url("/tuanshan_heading_background.svg") -18px calc(100% + 10px) / 112% auto no-repeat;
@@ -1639,23 +1645,24 @@ button:disabled {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 8px;
+    gap: 6px 8px;
     justify-content: stretch;
+    align-items: end;
   }
 
   .checkbox-control {
     grid-column: 1;
     justify-self: stretch;
     justify-content: center;
-    min-height: 34px;
-    padding: 0 9px;
+    min-height: 32px;
+    padding: 0 8px;
   }
 
   .header-browse-button {
     grid-column: 2;
     justify-self: stretch;
-    min-height: 34px;
-    padding: 0 9px;
+    min-height: 32px;
+    padding: 0 8px;
   }
 
   label {

@@ -1,5 +1,5 @@
 import { ArrowRight, RotateCcw, Volume2 } from "lucide-react";
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { buildQuizQuestions, getHeadword, reinsertQuestion } from "../lib/quiz";
 import type { QuizQuestion, QuizResult, ScriptMode, VocabEntry } from "../types";
 import { speak } from "./FanCard";
@@ -12,6 +12,7 @@ interface QuizProps {
 }
 
 interface Feedback {
+  questionId: string;
   selectedOptionId: string;
   correct: boolean;
 }
@@ -23,7 +24,6 @@ export function Quiz({ entries, allEntries, scriptMode, onContinue }: QuizProps)
   const [firstTryCorrectIds, setFirstTryCorrectIds] = useState<Set<string>>(() => new Set());
   const [missedEntryIds, setMissedEntryIds] = useState<Set<string>>(() => new Set());
   const [feedback, setFeedback] = useState<Feedback | null>(null);
-  const feedbackTimeout = useRef<number | null>(null);
   const active = queue[0];
   const speechLang = scriptMode === "traditional" ? "zh-TW" : "zh-CN";
   const activeHeadword = active ? getHeadword(active.entry, scriptMode) : "";
@@ -42,12 +42,6 @@ export function Quiz({ entries, allEntries, scriptMode, onContinue }: QuizProps)
     setMissedEntryIds(new Set());
     setFeedback(null);
   }, [allEntries, entries, scriptMode]);
-
-  useEffect(() => {
-    return () => {
-      if (feedbackTimeout.current) window.clearTimeout(feedbackTimeout.current);
-    };
-  }, []);
 
   useEffect(() => {
     if (!active || active.mode !== "audioMeaning" || feedback) return;
@@ -112,22 +106,24 @@ export function Quiz({ entries, allEntries, scriptMode, onContinue }: QuizProps)
 
     const correct = optionId === active.correctOptionId;
     const firstAttempt = !answeredQuestionIds.has(active.id);
-    const nextFeedback = { selectedOptionId: optionId, correct };
+    const nextFeedback = { questionId: active.id, selectedOptionId: optionId, correct };
 
     setFeedback(nextFeedback);
     setAnsweredQuestionIds((current) => new Set(current).add(active.id));
     if (firstAttempt && correct) setFirstTryCorrectIds((current) => new Set(current).add(active.id));
     if (!correct) setMissedEntryIds((current) => new Set(current).add(active.entry.id));
+  }
 
-    if (feedbackTimeout.current) window.clearTimeout(feedbackTimeout.current);
-    feedbackTimeout.current = window.setTimeout(() => {
-      setQueue((current) => {
-        const [currentQuestion, ...rest] = current;
-        if (!currentQuestion) return current;
-        return correct ? rest : reinsertQuestion(rest, currentQuestion);
-      });
-      setFeedback(null);
-    }, correct ? 620 : 1050);
+  function advance() {
+    if (!feedback) return;
+
+    setQueue((current) => {
+      const [currentQuestion, ...rest] = current;
+      if (!currentQuestion) return current;
+      if (currentQuestion.id !== feedback.questionId) return current;
+      return feedback.correct ? rest : reinsertQuestion(rest, currentQuestion);
+    });
+    setFeedback(null);
   }
 
   return (
@@ -196,6 +192,10 @@ export function Quiz({ entries, allEntries, scriptMode, onContinue }: QuizProps)
           <span className="quiz-answer-reveal">
             {activeHeadword} · {active.entry.pinyin} · {active.entry.english}
           </span>
+          <button className="primary quiz-next-button" type="button" onClick={advance}>
+            Next
+            <ArrowRight size={18} aria-hidden="true" />
+          </button>
         </div>
       )}
 
