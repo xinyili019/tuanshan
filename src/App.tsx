@@ -16,16 +16,32 @@ import {
 } from "./lib/progress";
 import { selectQuizEntries, shouldStartQuizBeforeNextSession, SMALL_UNIT_QUIZ_LIMIT } from "./lib/quiz";
 import {
+  clearActiveSession as clearStoredActiveSession,
+  clearLastLocation as clearStoredLastLocation,
   clearProgress as clearStoredProgress,
   exportProgress,
+  flushProgress as flushStoredProgress,
+  getActiveSession as getStoredActiveSession,
+  getLastLocation as getStoredLastLocation,
   getProgress as getStoredProgress,
   importProgress,
+  setActiveSession as setStoredActiveSession,
+  setLastLocation as setStoredLastLocation,
   setProgress as setStoredProgress
 } from "./lib/storage";
-import type { ProgressState, QuizResult, ScriptMode, StudyPhase, VocabEntry } from "./types";
+import type {
+  ActiveSessionState,
+  LastLocationState,
+  ProgressState,
+  QuizResult,
+  ScriptMode,
+  StudyPhase,
+  VocabEntry
+} from "./types";
 import "./styles.css";
 
 const SESSION_SIZE = 20;
+const RESUME_MAX_AGE_MS = 48 * 60 * 60 * 1000;
 const UNIT_SUMMARIES: Record<string, string> = {
   "1": "identity, pronouns, numbers",
   "2": "family and relationships",
@@ -71,6 +87,8 @@ const UNIT_SELECT_LABELS: Record<string, string> = {
   "12": "Feelings"
 };
 
+type QuizContinueTarget = "nextSession" | "nextUnit" | "complete";
+
 const TRADITIONAL_UNIT_TITLES: Record<string, string> = {
   "1": "身份·人稱·數",
   "2": "家庭·關係",
@@ -101,19 +119,25 @@ export default function App() {
   const [view, setView] = useState<"study" | "browse">("study");
   const [quizEntries, setQuizEntries] = useState<VocabEntry[]>([]);
   const [recallEntries, setRecallEntries] = useState<VocabEntry[]>([]);
-  const [quizContinueTarget, setQuizContinueTarget] = useState<"nextSession" | "complete">("nextSession");
+  const [quizContinueTarget, setQuizContinueTarget] = useState<QuizContinueTarget>("nextSession");
+  const [sessionQueueIds, setSessionQueueIds] = useState<string[]>([]);
+  const [pendingResume, setPendingResume] = useState<ActiveSessionState | null>(null);
   const importInputRef = useRef<HTMLInputElement>(null);
+  const activeSessionRef = useRef<ActiveSessionState | null>(null);
+  const progressRef = useRef<ProgressState>(progress);
+  const skipUnitResetRef = useRef(false);
 
   useEffect(() => {
     let isCurrent = true;
 
-    getStoredProgress()
-      .then((storedProgress: ProgressState) => {
+    Promise.all([getStoredProgress(), getStoredActiveSession(), getStoredLastLocation()])
+      .then(([storedProgress, activeSession, lastLocation]: [ProgressState, ActiveSessionState | null, LastLocationState | null]) => {
         if (!isCurrent) return;
         setProgress(storedProgress);
+        restoreSavedNavigation(activeSession, lastLocation);
       })
       .catch((error: unknown) => {
-        console.warn("Could not load progress.", error);
+        console.warn("Could not load stored app state.", error);
       })
       .finally(() => {
         if (isCurrent) setIsProgressReady(true);
@@ -127,7 +151,12 @@ export default function App() {
   useEffect(() => {
     if (!isProgressReady) return;
     void setStoredProgress(progress);
+    progressRef.current = progress;
   }, [isProgressReady, progress]);
+
+  useEffect(() => {
+    progressRef.current = progress;
+  }, [progress]);
 
   const units = useMemo(() => Array.from(new Set(vocabulary.map((entry) => entry.unit))), []);
   const unitOptions = useMemo(
@@ -149,7 +178,18 @@ export default function App() {
     [unit]
   );
   const sessions = useMemo(() => chunk(entries, SESSION_SIZE), [entries]);
-  const currentSession = sessions[sessionIndex] ?? [];
+  const entriesById = useMemo(() => new Map(vocabulary.map((entry) => [entry.id, entry])), []);
+  const currentSession = useMemo(() => {
+    const baseSession = sessions[sessionIndex] ?? [];
+    if (sessionQueueIds.length === 0) return baseSession;
+
+    const restoredSession = sessionQueueIds.flatMap((id) => {
+      const entry = entriesById.get(id);
+      return entry && (unit === "all" || entry.unit === unit) ? [entry] : [];
+    });
+
+    return restoredSession.length > 0 ? restoredSession : baseSession;
+  }, [entriesById, sessionIndex, sessionQueueIds, sessions, unit]);
   const reviewEntries = currentSession.filter((entry) => againIds.includes(entry.id));
   const activeEntries = phase === "review" ? reviewEntries : currentSession;
   const activeEntry = activeEntries[cardIndex];
@@ -176,14 +216,95 @@ export default function App() {
   );
 
   useEffect(() => {
-    setPhase("study");
-    setSessionIndex(0);
-    setCardIndex(0);
-    setRevealed(false);
-    setAgainIds([]);
-    setQuizEntries([]);
-    setRecallEntries([]);
+    if (skipUnitResetRef.current) {
+      skipUnitResetRef.current = false;
+      return;
+    }
+
+    let isCurrent = true;
+
+    getStoredActiveSession()
+      .then((storedSession: ActiveSessionState | null) => {
+        if (!isCurrent) return;
+        if (storedSession && isFresh(storedSession.updatedAt) && storedSession.moduleOrScenarioId === unit) {
+          activeSessionRef.current = storedSession;
+          setScriptMode(storedSession.direction === "traditional" ? "traditional" : "simplified");
+          setSessionIndex(storedSession.sessionIndex);
+          setCardIndex(storedSession.position);
+          setRevealed(false);
+          setAgainIds(storedSession.againQueue);
+          setQuizEntries([]);
+          setRecallEntries([]);
+          setSessionQueueIds(storedSession.queue);
+          setPhase(storedSession.mode);
+          setPendingResume(storedSession);
+          return;
+        }
+
+        setPhase("study");
+        setSessionIndex(0);
+        setCardIndex(0);
+        setRevealed(false);
+        setAgainIds([]);
+        setQuizEntries([]);
+        setRecallEntries([]);
+        setSessionQueueIds([]);
+        setPendingResume(null);
+      })
+      .catch((error: unknown) => {
+        console.warn("Could not check active session.", error);
+      });
+
+    return () => {
+      isCurrent = false;
+    };
   }, [unit]);
+
+  useEffect(() => {
+    if (!isProgressReady) return;
+
+    void setStoredLastLocation({
+      view,
+      params: { unit, phase, sessionIndex },
+      updatedAt: Date.now()
+    });
+  }, [isProgressReady, phase, sessionIndex, unit, view]);
+
+  useEffect(() => {
+    if (!isProgressReady || pendingResume || view !== "study") return;
+
+    if (phase !== "study" && phase !== "review") {
+      if (phase === "summary" || phase === "complete") clearActiveSessionState();
+      return;
+    }
+
+    if (!activeEntries.length || cardIndex >= activeEntries.length) return;
+    persistActiveSession(buildActiveSession(cardIndex, againIds));
+  }, [activeEntries, againIds, cardIndex, isProgressReady, pendingResume, phase, scriptMode, sessionIndex, unit, view]);
+
+  useEffect(() => {
+    function flushSessionState() {
+      void flushStoredProgress();
+      const activeSession = activeSessionRef.current;
+      if (activeSession) {
+        const updatedSession = { ...activeSession, updatedAt: Date.now() };
+        activeSessionRef.current = updatedSession;
+        void setStoredActiveSession(updatedSession);
+      }
+    }
+
+    function handleVisibilityChange() {
+      if (document.visibilityState === "hidden") flushSessionState();
+    }
+
+    document.addEventListener("visibilitychange", handleVisibilityChange);
+    window.addEventListener("pagehide", flushSessionState);
+
+    return () => {
+      document.removeEventListener("visibilitychange", handleVisibilityChange);
+      window.removeEventListener("pagehide", flushSessionState);
+    };
+  }, []);
 
   function advance() {
     setRevealed(false);
@@ -204,24 +325,78 @@ export default function App() {
 
   function mark(status: "again" | "known") {
     if (!activeEntry) return;
-    setProgress((current) => recordCard(current, activeEntry.id, status, { countStudied: phase === "study" }));
-    if (status === "again") {
-      setAgainIds((current) => (current.includes(activeEntry.id) ? current : [...current, activeEntry.id]));
+
+    setProgress((current) => {
+      const nextProgress = recordCard(current, activeEntry.id, status, { countStudied: phase === "study" });
+      progressRef.current = nextProgress;
+      void setStoredProgress(nextProgress);
+      void flushStoredProgress();
+      return nextProgress;
+    });
+
+    const nextAgainIds =
+      status === "again"
+        ? againIds.includes(activeEntry.id)
+          ? againIds
+          : [...againIds, activeEntry.id]
+        : againIds.filter((id) => id !== activeEntry.id);
+
+    setAgainIds(nextAgainIds);
+
+    const nextPosition = cardIndex + 1;
+    if (nextPosition < activeEntries.length) {
+      persistActiveSession(buildActiveSession(nextPosition, nextAgainIds));
     } else {
-      setAgainIds((current) => current.filter((id) => id !== activeEntry.id));
+      clearActiveSessionState();
     }
+
     advance();
+  }
+
+  function buildActiveSession(position: number, nextAgainIds: string[]): ActiveSessionState {
+    const now = Date.now();
+    const queue = activeEntries.map((entry) => entry.id);
+    const current = activeSessionRef.current;
+    const isSameSession =
+      current?.mode === phase &&
+      current.moduleOrScenarioId === unit &&
+      current.sessionIndex === sessionIndex &&
+      arraysEqual(current.queue, queue);
+
+    return {
+      mode: phase === "review" ? "review" : "study",
+      moduleOrScenarioId: unit,
+      direction: scriptMode,
+      sessionIndex,
+      queue,
+      position: Math.min(position, Math.max(0, queue.length - 1)),
+      againQueue: nextAgainIds,
+      startedAt: isSameSession ? current.startedAt : now,
+      updatedAt: now
+    };
+  }
+
+  function persistActiveSession(session: ActiveSessionState) {
+    activeSessionRef.current = session;
+    void setStoredActiveSession(session);
+  }
+
+  function clearActiveSessionState() {
+    activeSessionRef.current = null;
+    void clearStoredActiveSession();
   }
 
   function nextSession() {
     const isEndOfUnit = sessionIndex >= sessions.length - 1;
+    const endOfUnitTarget = getNextUnitId() ? "nextUnit" : "complete";
 
     if (shouldStartQuizBeforeNextSession({ progress, unit, entries, isEndOfUnit })) {
-      startQuiz(isEndOfUnit ? "complete" : "nextSession");
+      startQuiz(isEndOfUnit ? endOfUnitTarget : "nextSession");
       return;
     }
 
     if (isEndOfUnit) {
+      if (goToNextUnit()) return;
       setPhase("complete");
       return;
     }
@@ -234,12 +409,44 @@ export default function App() {
     setCardIndex(0);
     setRevealed(false);
     setAgainIds([]);
+    setSessionQueueIds([]);
+    setPendingResume(null);
     setPhase("study");
   }
 
-  function startQuiz(target: "nextSession" | "complete") {
+  function getNextUnitId() {
+    if (unit === "all") return null;
+    const currentIndex = units.indexOf(unit);
+    return currentIndex >= 0 ? units[currentIndex + 1] ?? null : null;
+  }
+
+  function goToNextUnit() {
+    const nextUnitId = getNextUnitId();
+    if (!nextUnitId) return false;
+    setUnit(nextUnitId);
+    setSessionIndex(0);
+    setCardIndex(0);
+    setRevealed(false);
+    setAgainIds([]);
+    setQuizEntries([]);
+    setRecallEntries([]);
+    setSessionQueueIds([]);
+    setPendingResume(null);
+    setPhase("study");
+    return true;
+  }
+
+  function isKnownUnit(unitId: string) {
+    return unitId === "all" || units.includes(unitId);
+  }
+
+  function startQuiz(target: QuizContinueTarget) {
     const selected = selectQuizEntries(progress, entries, vocabulary);
     if (selected.length === 0) {
+      if (target === "nextUnit") {
+        if (!goToNextUnit()) setPhase("complete");
+        return;
+      }
       target === "complete" ? setPhase("complete") : goToNextStudySession();
       return;
     }
@@ -283,6 +490,11 @@ export default function App() {
     setProgress((current) => recordQuizCompleted(demoteQuizMisses(current, missedIds), quizUnitId));
     setQuizEntries([]);
 
+    if (quizContinueTarget === "nextUnit") {
+      if (!goToNextUnit()) setPhase("complete");
+      return;
+    }
+
     if (quizContinueTarget === "complete") {
       setPhase("complete");
       return;
@@ -291,10 +503,67 @@ export default function App() {
     goToNextStudySession();
   }
 
+  function restoreSavedNavigation(activeSession: ActiveSessionState | null, lastLocation: LastLocationState | null) {
+    if (activeSession && isFresh(activeSession.updatedAt) && isKnownUnit(activeSession.moduleOrScenarioId)) {
+      skipUnitResetRef.current = true;
+      activeSessionRef.current = activeSession;
+      setView("study");
+      setUnit(activeSession.moduleOrScenarioId);
+      setScriptMode(activeSession.direction === "traditional" ? "traditional" : "simplified");
+      setSessionIndex(activeSession.sessionIndex);
+      setSessionQueueIds(activeSession.queue);
+      setAgainIds(activeSession.againQueue);
+      setCardIndex(activeSession.position);
+      setRevealed(false);
+      setPhase(activeSession.mode);
+      setPendingResume(activeSession);
+      return;
+    }
+
+    if (activeSession && !isFresh(activeSession.updatedAt)) {
+      void clearStoredActiveSession();
+    }
+
+    if (!lastLocation || !isFresh(lastLocation.updatedAt) || !isKnownUnit(lastLocation.params.unit)) {
+      if (lastLocation && !isFresh(lastLocation.updatedAt)) void clearStoredLastLocation();
+      return;
+    }
+
+    skipUnitResetRef.current = true;
+    setView(lastLocation.view);
+    setUnit(lastLocation.params.unit);
+    setSessionIndex(lastLocation.params.sessionIndex);
+    setCardIndex(0);
+    setRevealed(false);
+    setAgainIds([]);
+    setSessionQueueIds([]);
+    setPhase(getRestorablePhase(lastLocation.params.phase));
+  }
+
+  function continueResumeSession() {
+    if (!pendingResume) return;
+    const updatedSession = { ...pendingResume, updatedAt: Date.now() };
+    setPendingResume(null);
+    persistActiveSession(updatedSession);
+  }
+
+  function restartResumeSession() {
+    if (!pendingResume) return;
+    clearActiveSessionState();
+    setPendingResume(null);
+    setPhase("study");
+    setCardIndex(0);
+    setRevealed(false);
+    setAgainIds([]);
+    setSessionQueueIds([]);
+  }
+
   function startOver() {
     setProgress(createEmptyProgress());
     setProgressMessage("Progress cleared.");
     void clearStoredProgress();
+    clearActiveSessionState();
+    void clearStoredLastLocation();
     setView("study");
     setPhase("study");
     setSessionIndex(0);
@@ -303,6 +572,8 @@ export default function App() {
     setAgainIds([]);
     setQuizEntries([]);
     setRecallEntries([]);
+    setSessionQueueIds([]);
+    setPendingResume(null);
   }
 
   function markForgotten(id: string) {
@@ -417,7 +688,11 @@ export default function App() {
           />
         ) : null}
 
-        {view === "study" && (phase === "study" || phase === "review") ? (
+        {view === "study" && pendingResume && (phase === "study" || phase === "review") ? (
+          <ResumePrompt session={pendingResume} onContinue={continueResumeSession} onRestart={restartResumeSession} />
+        ) : null}
+
+        {view === "study" && !pendingResume && (phase === "study" || phase === "review") ? (
           activeEntry ? (
             <FanCard
               entry={activeEntry}
@@ -462,7 +737,13 @@ export default function App() {
         )}
 
         {view === "study" && phase === "quiz" && (
-          <Quiz entries={quizEntries} allEntries={vocabulary} scriptMode={scriptMode} onContinue={finishQuiz} />
+          <Quiz
+            entries={quizEntries}
+            allEntries={vocabulary}
+            scriptMode={scriptMode}
+            continueLabel={getQuizContinueLabel(quizContinueTarget)}
+            onContinue={finishQuiz}
+          />
         )}
 
         {view === "study" && phase === "complete" && (
@@ -588,6 +869,34 @@ function SessionSummary({
   );
 }
 
+function ResumePrompt({
+  session,
+  onContinue,
+  onRestart
+}: {
+  session: ActiveSessionState;
+  onContinue: () => void;
+  onRestart: () => void;
+}) {
+  const position = Math.min(session.position + 1, session.queue.length);
+
+  return (
+    <section className="resume-prompt fan-panel" aria-label="Resume session">
+      <p className="eyebrow">Session saved</p>
+      <h2>Continue session ({position}/{session.queue.length})</h2>
+      <p>Pick up exactly where you left off.</p>
+      <div className="resume-actions">
+        <button className="primary" type="button" onClick={onContinue}>
+          Continue session
+        </button>
+        <button className="secondary" type="button" onClick={onRestart}>
+          Restart
+        </button>
+      </div>
+    </section>
+  );
+}
+
 function Milestone({
   title,
   body,
@@ -637,6 +946,26 @@ function selectRecallEntries(sessionEntries: VocabEntry[], againEntries: VocabEn
   const againIds = new Set(againEntries.map((entry) => entry.id));
   const fillers = shuffle(sessionEntries.filter((entry) => !againIds.has(entry.id))).slice(0, 8 - againEntries.length);
   return shuffle([...againEntries, ...fillers]);
+}
+
+function getQuizContinueLabel(target: QuizContinueTarget) {
+  if (target === "nextUnit") return "Continue to next unit";
+  if (target === "complete") return "Finish";
+  return "Continue to next session";
+}
+
+function getRestorablePhase(phase: StudyPhase) {
+  if (phase === "summary" || phase === "complete") return phase;
+  return "study";
+}
+
+function isFresh(updatedAt: number) {
+  return Date.now() - updatedAt < RESUME_MAX_AGE_MS;
+}
+
+function arraysEqual(first: string[], second: string[]) {
+  if (first.length !== second.length) return false;
+  return first.every((item, index) => item === second[index]);
 }
 
 function shuffle<T>(items: T[]) {

@@ -1,8 +1,13 @@
 const STORAGE_KEY = "tuanshan-progress";
 const LEGACY_STORAGE_KEY = "tuanshan-progress-v1";
+const ACTIVE_SESSION_KEY = "activeSession";
+const LAST_LOCATION_KEY = "lastLocation";
 const WRITE_DEBOUNCE_MS = 500;
 const VALID_STATUSES = new Set(["new", "again", "known"]);
 const VALID_FIRST_PASS_STATUSES = new Set(["again", "known"]);
+const VALID_ACTIVE_SESSION_MODES = new Set(["study", "review"]);
+const VALID_LOCATION_VIEWS = new Set(["study", "browse"]);
+const VALID_LOCATION_PHASES = new Set(["study", "summary", "review", "recall", "quiz", "browse", "complete"]);
 
 const DEFAULT_SESSION = {
   totalStudiedWords: 0,
@@ -13,6 +18,8 @@ const DEFAULT_SESSION = {
 };
 
 let memoryProgress = createEmptyProgress();
+let memoryActiveSession = null;
+let memoryLastLocation = null;
 let pendingProgress = null;
 let pendingWrite = null;
 let preferencesPromise = null;
@@ -65,6 +72,20 @@ export async function setProgress(progress) {
   });
 }
 
+export async function flushProgress() {
+  if (!pendingWrite && !pendingProgress) return;
+
+  if (pendingWrite) {
+    window.clearTimeout(pendingWrite.timer);
+    pendingWrite.resolve();
+    pendingWrite = null;
+  }
+
+  const progressToWrite = pendingProgress ?? memoryProgress;
+  pendingProgress = null;
+  await writeProgressToPreferredStorage(progressToWrite);
+}
+
 export async function clearProgress() {
   if (pendingWrite) {
     window.clearTimeout(pendingWrite.timer);
@@ -75,6 +96,62 @@ export async function clearProgress() {
   pendingProgress = null;
   memoryProgress = createEmptyProgress();
   await removeProgressFromPreferredStorage();
+}
+
+export async function getActiveSession() {
+  const raw = await readRaw(ACTIVE_SESSION_KEY);
+  if (!raw) return cloneValue(memoryActiveSession);
+
+  const parsed = parseStoredJson(raw, ACTIVE_SESSION_KEY);
+  const normalized = normalizeActiveSession(parsed);
+  if (!normalized) return cloneValue(memoryActiveSession);
+
+  memoryActiveSession = normalized;
+  return cloneValue(normalized);
+}
+
+export async function setActiveSession(session) {
+  const normalized = normalizeActiveSession(session);
+  if (!normalized) {
+    console.warn("Tuanshan active session was not saved because it has an invalid shape.");
+    return;
+  }
+
+  memoryActiveSession = normalized;
+  await writeRaw(ACTIVE_SESSION_KEY, JSON.stringify(normalized));
+}
+
+export async function clearActiveSession() {
+  memoryActiveSession = null;
+  await removeRaw(ACTIVE_SESSION_KEY);
+}
+
+export async function getLastLocation() {
+  const raw = await readRaw(LAST_LOCATION_KEY);
+  if (!raw) return cloneValue(memoryLastLocation);
+
+  const parsed = parseStoredJson(raw, LAST_LOCATION_KEY);
+  const normalized = normalizeLastLocation(parsed);
+  if (!normalized) return cloneValue(memoryLastLocation);
+
+  memoryLastLocation = normalized;
+  return cloneValue(normalized);
+}
+
+export async function setLastLocation(location) {
+  const normalized = normalizeLastLocation(location);
+  if (!normalized) {
+    console.warn("Tuanshan location was not saved because it has an invalid shape.");
+    return;
+  }
+
+  memoryLastLocation = normalized;
+  await writeRaw(LAST_LOCATION_KEY, JSON.stringify(normalized));
+}
+
+export async function clearLastLocation() {
+  memoryLastLocation = null;
+  await removeRaw(LAST_LOCATION_KEY);
 }
 
 export function exportProgress(progress) {
@@ -128,21 +205,24 @@ async function readProgressFromPreferredStorage() {
 }
 
 async function writeProgressToPreferredStorage(progress) {
-  const raw = JSON.stringify(progress);
+  await writeRaw(STORAGE_KEY, JSON.stringify(progress), "progress");
+}
+
+async function writeRaw(key, raw, label = key) {
   const preferences = await getCapacitorPreferences();
   if (preferences) {
     try {
-      await preferences.set({ key: STORAGE_KEY, value: raw });
+      await preferences.set({ key, value: raw });
       return;
     } catch (error) {
-      console.warn("Could not save progress with Capacitor Preferences. Falling back to localStorage.", error);
+      console.warn(`Could not save ${label} with Capacitor Preferences. Falling back to localStorage.`, error);
     }
   }
 
   try {
-    window.localStorage.setItem(STORAGE_KEY, raw);
+    window.localStorage.setItem(key, raw);
   } catch (error) {
-    console.warn("Could not save progress with localStorage. Falling back to in-memory progress.", error);
+    console.warn(`Could not save ${label} with localStorage. Falling back to in-memory state.`, error);
   }
 }
 
@@ -161,6 +241,23 @@ async function removeProgressFromPreferredStorage() {
     window.localStorage.removeItem(LEGACY_STORAGE_KEY);
   } catch (error) {
     console.warn("Could not clear progress with localStorage. Falling back to in-memory progress.", error);
+  }
+}
+
+async function removeRaw(key, label = key) {
+  const preferences = await getCapacitorPreferences();
+  if (preferences) {
+    try {
+      await preferences.remove({ key });
+    } catch (error) {
+      console.warn(`Could not clear ${label} with Capacitor Preferences. Falling back to localStorage.`, error);
+    }
+  }
+
+  try {
+    window.localStorage.removeItem(key);
+  } catch (error) {
+    console.warn(`Could not clear ${label} with localStorage. Falling back to in-memory state.`, error);
   }
 }
 
@@ -233,6 +330,15 @@ function parseStoredProgress(raw, source) {
   return null;
 }
 
+function parseStoredJson(raw, source) {
+  try {
+    return JSON.parse(raw);
+  } catch (error) {
+    console.warn(`Could not parse ${source}. Falling back to in-memory state.`, error);
+    return null;
+  }
+}
+
 function normalizeProgress(value) {
   if (!isPlainObject(value)) return null;
 
@@ -284,6 +390,51 @@ function normalizeSession(session) {
   };
 }
 
+function normalizeActiveSession(session) {
+  if (!isPlainObject(session)) return null;
+  if (!VALID_ACTIVE_SESSION_MODES.has(session.mode)) return null;
+  if (typeof session.moduleOrScenarioId !== "string") return null;
+  if (typeof session.direction !== "string") return null;
+  if (!isNonNegativeInteger(session.sessionIndex)) return null;
+  if (!isStringArray(session.queue)) return null;
+  if (!isNonNegativeInteger(session.position)) return null;
+  if (!isStringArray(session.againQueue)) return null;
+  if (!isNonNegativeInteger(session.startedAt)) return null;
+  if (!isNonNegativeInteger(session.updatedAt)) return null;
+
+  return {
+    mode: session.mode,
+    moduleOrScenarioId: session.moduleOrScenarioId,
+    direction: session.direction,
+    sessionIndex: session.sessionIndex,
+    queue: [...session.queue],
+    position: Math.min(session.position, Math.max(0, session.queue.length - 1)),
+    againQueue: [...session.againQueue],
+    startedAt: session.startedAt,
+    updatedAt: session.updatedAt
+  };
+}
+
+function normalizeLastLocation(location) {
+  if (!isPlainObject(location)) return null;
+  if (!VALID_LOCATION_VIEWS.has(location.view)) return null;
+  if (!isPlainObject(location.params)) return null;
+  if (typeof location.params.unit !== "string") return null;
+  if (!VALID_LOCATION_PHASES.has(location.params.phase)) return null;
+  if (!isNonNegativeInteger(location.params.sessionIndex)) return null;
+  if (!isNonNegativeInteger(location.updatedAt)) return null;
+
+  return {
+    view: location.view,
+    params: {
+      unit: location.params.unit,
+      phase: location.params.phase,
+      sessionIndex: location.params.sessionIndex
+    },
+    updatedAt: location.updatedAt
+  };
+}
+
 function createEmptyProgress() {
   return {
     words: {},
@@ -309,4 +460,8 @@ function isStringArray(value) {
 
 function cloneProgress(progress) {
   return JSON.parse(JSON.stringify(progress));
+}
+
+function cloneValue(value) {
+  return value == null ? null : JSON.parse(JSON.stringify(value));
 }

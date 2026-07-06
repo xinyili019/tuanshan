@@ -1,5 +1,5 @@
 import { ArrowRight, RotateCcw, Volume2 } from "lucide-react";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { buildQuizQuestions, getHeadword, reinsertQuestion } from "../lib/quiz";
 import type { QuizQuestion, QuizResult, ScriptMode, VocabEntry } from "../types";
 import { speak } from "./FanCard";
@@ -9,6 +9,7 @@ interface QuizProps {
   allEntries: VocabEntry[];
   scriptMode: ScriptMode;
   onContinue: (result: QuizResult) => void;
+  continueLabel?: string;
 }
 
 interface Feedback {
@@ -17,13 +18,16 @@ interface Feedback {
   correct: boolean;
 }
 
-export function Quiz({ entries, allEntries, scriptMode, onContinue }: QuizProps) {
+export function Quiz({ entries, allEntries, scriptMode, onContinue, continueLabel = "Continue" }: QuizProps) {
   const [queue, setQueue] = useState<QuizQuestion[]>(() => buildQuizQuestions(entries, allEntries, scriptMode));
   const [questionCount, setQuestionCount] = useState(queue.length);
   const [answeredQuestionIds, setAnsweredQuestionIds] = useState<Set<string>>(() => new Set());
+  const [retriedQuestionIds, setRetriedQuestionIds] = useState<Set<string>>(() => new Set());
   const [firstTryCorrectIds, setFirstTryCorrectIds] = useState<Set<string>>(() => new Set());
   const [missedEntryIds, setMissedEntryIds] = useState<Set<string>>(() => new Set());
   const [feedback, setFeedback] = useState<Feedback | null>(null);
+  const didMountRef = useRef(false);
+  const lastAutoPlayedQuestionRef = useRef<string | null>(null);
   const active = queue[0];
   const speechLang = scriptMode === "traditional" ? "zh-TW" : "zh-CN";
   const activeHeadword = active ? getHeadword(active.entry, scriptMode) : "";
@@ -34,22 +38,33 @@ export function Quiz({ entries, allEntries, scriptMode, onContinue }: QuizProps)
     : "";
 
   useEffect(() => {
+    if (!didMountRef.current) {
+      didMountRef.current = true;
+      return;
+    }
+
     const questions = buildQuizQuestions(entries, allEntries, scriptMode);
     setQueue(questions);
     setQuestionCount(questions.length);
     setAnsweredQuestionIds(new Set());
+    setRetriedQuestionIds(new Set());
     setFirstTryCorrectIds(new Set());
     setMissedEntryIds(new Set());
     setFeedback(null);
+    lastAutoPlayedQuestionRef.current = null;
   }, [allEntries, entries, scriptMode]);
 
   useEffect(() => {
     if (!active || active.mode !== "audioMeaning" || feedback) return;
+    if (lastAutoPlayedQuestionRef.current === active.id) return;
+    lastAutoPlayedQuestionRef.current = active.id;
     speak(activeHeadword, speechLang);
   }, [active, activeHeadword, feedback, speechLang]);
 
   useEffect(() => {
     if (!active || active.mode !== "sentenceCloze" || feedback) return;
+    if (lastAutoPlayedQuestionRef.current === active.id) return;
+    lastAutoPlayedQuestionRef.current = active.id;
     speak(activeExample, speechLang);
   }, [active, activeExample, feedback, speechLang]);
 
@@ -75,7 +90,7 @@ export function Quiz({ entries, allEntries, scriptMode, onContinue }: QuizProps)
 
         {result.missedEntries.length > 0 ? (
           <div className="quiz-missed-list">
-            <p className="eyebrow">Marked Again</p>
+            <p className="eyebrow">Practiced once · Marked Again</p>
             <div>
               {result.missedEntries.map((entry) => (
                 <span className="quiz-missed-word" key={entry.id}>
@@ -90,7 +105,7 @@ export function Quiz({ entries, allEntries, scriptMode, onContinue }: QuizProps)
         )}
 
         <button className="primary" type="button" onClick={() => onContinue(result)}>
-          Continue
+          {continueLabel}
           <ArrowRight size={18} aria-hidden="true" />
         </button>
       </section>
@@ -116,13 +131,16 @@ export function Quiz({ entries, allEntries, scriptMode, onContinue }: QuizProps)
 
   function advance() {
     if (!feedback) return;
+    const shouldRetry = !feedback.correct && !retriedQuestionIds.has(feedback.questionId);
 
     setQueue((current) => {
       const [currentQuestion, ...rest] = current;
       if (!currentQuestion) return current;
       if (currentQuestion.id !== feedback.questionId) return current;
-      return feedback.correct ? rest : reinsertQuestion(rest, currentQuestion);
+      if (feedback.correct) return rest;
+      return shouldRetry ? reinsertQuestion(rest, currentQuestion) : rest;
     });
+    if (shouldRetry) setRetriedQuestionIds((currentIds) => new Set(currentIds).add(feedback.questionId));
     setFeedback(null);
   }
 

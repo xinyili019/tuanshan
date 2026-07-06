@@ -3,6 +3,28 @@ export type StudyPhase = "study" | "summary" | "review" | "recall" | "quiz" | "b
 export type CardStatus = "new" | "again" | "known";
 export type QuizMode = "audioMeaning" | "sentenceCloze";
 
+export interface ActiveSessionState {
+  mode: Extract<StudyPhase, "study" | "review">;
+  moduleOrScenarioId: string;
+  direction: ScriptMode;
+  sessionIndex: number;
+  queue: string[];
+  position: number;
+  againQueue: string[];
+  startedAt: number;
+  updatedAt: number;
+}
+
+export interface LastLocationState {
+  view: "study" | "browse";
+  params: {
+    unit: string;
+    phase: StudyPhase;
+    sessionIndex: number;
+  };
+  updatedAt: number;
+}
+
 export interface VocabEntry {
   id: string;
   unit: string;
