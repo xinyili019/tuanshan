@@ -1339,19 +1339,19 @@ button:disabled {
 
 .recall-core {
   width: min(100%, 500px);
-  display: grid;
-  grid-template-columns: 42px minmax(0, 1fr) 42px;
-  align-items: start;
-  gap: 10px;
+  display: block;
+  position: relative;
 }
 
 .recall-cue-copy {
-  grid-column: 2;
+  width: 100%;
   display: grid;
   justify-items: center;
   gap: 7px;
   text-align: center;
   min-width: 0;
+  margin: 0 auto;
+  padding: 0 52px;
 }
 
 .recall-english {
@@ -1368,7 +1368,10 @@ button:disabled {
 }
 
 .icon-button {
-  grid-column: 3;
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
   width: 42px;
   padding: 0;
   background: rgba(168, 195, 160, 0.24);
@@ -1899,6 +1902,18 @@ button:disabled {
   .pinyin-slots {
     min-height: 40px;
     font-size: clamp(1.55rem, 8vw, 2.1rem);
+    max-width: 100%;
+    flex-wrap: wrap;
+    row-gap: 6px;
+  }
+
+  .recall-cue-copy {
+    padding: 0 34px;
+  }
+
+  .recall-core .icon-button {
+    width: 34px;
+    min-height: 34px;
   }
 
   .fan-back:has(.example-toggle[open]) {
