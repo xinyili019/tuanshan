@@ -1,9 +1,9 @@
 import { ChevronDown, RotateCcw, Search, Volume2 } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
+import { speakEntryAudio } from "../lib/audio";
 import { normalizePinyin } from "../lib/pinyin";
 import { getProgressRecord } from "../lib/progress";
 import type { ProgressState, ScriptMode, VocabEntry } from "../types";
-import { speak } from "./FanCard";
 
 interface BrowseUnit {
   id: string;
@@ -23,7 +23,6 @@ export function BrowseMode({ entries, progress, scriptMode, units, onBack, onMar
   const [query, setQuery] = useState("");
   const [expandedId, setExpandedId] = useState<string | null>(null);
   const [toast, setToast] = useState<{ id: string; text: string } | null>(null);
-  const speechLang = scriptMode === "traditional" ? "zh-TW" : "zh-CN";
 
   useEffect(() => {
     if (!toast) return;
@@ -115,7 +114,7 @@ export function BrowseMode({ entries, progress, scriptMode, units, onBack, onMar
                           <span className="browse-example-translation">{entry.exampleEnglish}</span>
                         </div>
                         <div className="browse-row-actions">
-                          <button className="secondary" type="button" onClick={() => speak(example, speechLang)}>
+                          <button className="secondary" type="button" onClick={() => void speakEntryAudio(entry, scriptMode, "example")}>
                             <Volume2 size={17} aria-hidden="true" />
                             Play audio
                           </button>

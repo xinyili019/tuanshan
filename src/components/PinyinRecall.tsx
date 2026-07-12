@@ -1,8 +1,8 @@
 import { ArrowLeft, ChevronDown, Eye, Volume2 } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { speakEntryAudio } from "../lib/audio";
 import { isPinyinMatch, normalizePinyin } from "../lib/pinyin";
 import type { ScriptMode, VocabEntry } from "../types";
-import { speak } from "./FanCard";
 
 interface PinyinRecallProps {
   entries: VocabEntry[];
@@ -22,7 +22,6 @@ export function PinyinRecall({ entries, scriptMode, onComplete, onGoBack }: Piny
   const active = queue[index];
   const headword = active ? (scriptMode === "traditional" ? active.traditional : active.simplified) : "";
   const example = active ? (scriptMode === "traditional" ? active.exampleTraditional : active.exampleSimplified) : "";
-  const speechLang = "zh-CN";
   const correct = active ? isPinyinMatch(input, active.pinyin) : false;
   const showResult = submitted || revealed;
   const slotCharacters = useMemo(
@@ -98,7 +97,7 @@ export function PinyinRecall({ entries, scriptMode, onComplete, onGoBack }: Piny
             </div>
           </div>
         </div>
-        <button className="icon-button" type="button" onClick={() => speak(headword, speechLang)} aria-label="Listen">
+        <button className="icon-button" type="button" onClick={() => void speakEntryAudio(active, scriptMode, "word")} aria-label="Listen">
           <Volume2 size={18} aria-hidden="true" />
         </button>
       </div>

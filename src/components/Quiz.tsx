@@ -1,8 +1,8 @@
 import { ArrowRight, RotateCcw, Volume2 } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { speakEntryAudio } from "../lib/audio";
 import { buildQuizQuestions, getHeadword, reinsertQuestion } from "../lib/quiz";
 import type { QuizQuestion, QuizResult, ScriptMode, VocabEntry } from "../types";
-import { speak } from "./FanCard";
 
 interface QuizProps {
   entries: VocabEntry[];
@@ -29,13 +29,7 @@ export function Quiz({ entries, allEntries, scriptMode, onContinue, continueLabe
   const didMountRef = useRef(false);
   const lastAutoPlayedQuestionRef = useRef<string | null>(null);
   const active = queue[0];
-  const speechLang = scriptMode === "traditional" ? "zh-TW" : "zh-CN";
   const activeHeadword = active ? getHeadword(active.entry, scriptMode) : "";
-  const activeExample = active
-    ? scriptMode === "traditional"
-      ? active.entry.exampleTraditional
-      : active.entry.exampleSimplified
-    : "";
 
   useEffect(() => {
     if (!didMountRef.current) {
@@ -58,15 +52,15 @@ export function Quiz({ entries, allEntries, scriptMode, onContinue, continueLabe
     if (!active || active.mode !== "audioMeaning" || feedback) return;
     if (lastAutoPlayedQuestionRef.current === active.id) return;
     lastAutoPlayedQuestionRef.current = active.id;
-    speak(activeHeadword, speechLang);
-  }, [active, activeHeadword, feedback, speechLang]);
+    void speakEntryAudio(active.entry, scriptMode, "word");
+  }, [active, feedback, scriptMode]);
 
   useEffect(() => {
     if (!active || active.mode !== "sentenceCloze" || feedback) return;
     if (lastAutoPlayedQuestionRef.current === active.id) return;
     lastAutoPlayedQuestionRef.current = active.id;
-    speak(activeExample, speechLang);
-  }, [active, activeExample, feedback, speechLang]);
+    void speakEntryAudio(active.entry, scriptMode, "example");
+  }, [active, feedback, scriptMode]);
 
   const result = useMemo<QuizResult>(() => {
     const missedEntries = entries.filter((entry) => missedEntryIds.has(entry.id));
@@ -160,7 +154,7 @@ export function Quiz({ entries, allEntries, scriptMode, onContinue, continueLabe
           <button
             className="quiz-listen-button"
             type="button"
-            onClick={() => speak(activeHeadword, speechLang)}
+            onClick={() => void speakEntryAudio(active.entry, scriptMode, "word")}
           >
             <Volume2 size={26} aria-hidden="true" />
             Replay
@@ -171,7 +165,7 @@ export function Quiz({ entries, allEntries, scriptMode, onContinue, continueLabe
         <div className="quiz-cloze-cue">
           <p className="quiz-cloze-line">{active.prompt}</p>
           {active.context && <p className="quiz-context">{active.context}</p>}
-          <button className="secondary quiz-sentence-audio" type="button" onClick={() => speak(activeExample, speechLang)}>
+          <button className="secondary quiz-sentence-audio" type="button" onClick={() => void speakEntryAudio(active.entry, scriptMode, "example")}>
             <Volume2 size={16} aria-hidden="true" />
             Replay sentence
           </button>
@@ -221,7 +215,7 @@ export function Quiz({ entries, allEntries, scriptMode, onContinue, continueLabe
         <button
           className="secondary quiz-replay-small"
           type="button"
-          onClick={() => speak(activeHeadword, speechLang)}
+          onClick={() => void speakEntryAudio(active.entry, scriptMode, "word")}
         >
           <RotateCcw size={16} aria-hidden="true" />
           Replay word

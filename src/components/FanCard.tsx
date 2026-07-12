@@ -1,5 +1,6 @@
 import { ArrowLeft, BookOpen, ChevronDown, RotateCcw, Sparkles, Volume2 } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
+import { speakEntryAudio, speakText } from "../lib/audio";
 import type { ScriptMode, VocabEntry } from "../types";
 import { StrokeOrder } from "./StrokeOrder";
 
@@ -55,7 +56,7 @@ export function FanCard({
   }, [revealed]);
 
   function activateFan() {
-    if (!revealed && autoPlayAudio) speak(headword, speechLang);
+    if (!revealed && autoPlayAudio) void speakEntryAudio(entry, scriptMode, "word");
     onFlip();
   }
 
@@ -91,7 +92,7 @@ export function FanCard({
                   title="Listen to example"
                   onClick={(event) => {
                     event.stopPropagation();
-                    speak(example, speechLang);
+                    void speakEntryAudio(entry, scriptMode, "example");
                   }}
                 >
                   <Volume2 size={13} aria-hidden="true" />
@@ -142,7 +143,7 @@ export function FanCard({
         <button className="secondary" type="button" onClick={onPrevious} disabled={!canGoPrevious}>
           Previous
         </button>
-        <button className="secondary listen" type="button" onClick={() => speak(headword, speechLang)}>
+        <button className="secondary listen" type="button" onClick={() => void speakEntryAudio(entry, scriptMode, "word")}>
           <Volume2 size={17} aria-hidden="true" />
           Listen
         </button>
@@ -188,44 +189,4 @@ function getDisplayEnglish(entry: VocabEntry) {
   return byWord[entry.simplified] ?? byWord[entry.traditional] ?? entry.english;
 }
 
-export function speak(text: string, lang: string) {
-  if (!("speechSynthesis" in window) || !("SpeechSynthesisUtterance" in window)) return;
-
-  const utterance = new SpeechSynthesisUtterance(text);
-  const voices = window.speechSynthesis.getVoices();
-  const voice = pickMandarinVoice(voices, lang);
-
-  utterance.lang = voice?.lang ?? lang;
-  utterance.voice = voice ?? null;
-  utterance.rate = 0.92;
-  window.speechSynthesis.cancel();
-  window.speechSynthesis.resume();
-  window.speechSynthesis.speak(utterance);
-}
-
-function pickMandarinVoice(voices: SpeechSynthesisVoice[], lang: string) {
-  const mandarinCandidates = voices.filter((voice) => /^zh/i.test(voice.lang) || /mandarin|putonghua|chinese/i.test(voice.name));
-
-  const rank = (voice: SpeechSynthesisVoice) => {
-    const normalizedLang = voice.lang.toLowerCase();
-    const normalizedName = voice.name.toLowerCase();
-    let score = 0;
-
-    if (normalizedLang === "zh-cn" || normalizedLang.startsWith("zh-hans")) score += 100;
-    if (normalizedLang.startsWith("zh-sg")) score += 80;
-    if (normalizedLang.startsWith("zh")) score += 60;
-    if (normalizedLang.startsWith(lang.toLowerCase())) score += 40;
-    if (normalizedName.includes("mandarin")) score += 30;
-    if (normalizedName.includes("putonghua")) score += 25;
-    if (normalizedName.includes("standard")) score += 10;
-    if (normalizedName.includes("taiwan") || normalizedName.includes("cantonese")) score -= 40;
-
-    return score;
-  };
-
-  const pool = mandarinCandidates.length ? mandarinCandidates : voices;
-  return pool.reduce<SpeechSynthesisVoice | null>((best, voice) => {
-    if (!best) return voice;
-    return rank(voice) > rank(best) ? voice : best;
-  }, null);
-}
+export const speak = speakText;

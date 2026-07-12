@@ -9,7 +9,8 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "e2e": "playwright test",
-    "build:data": "node scripts/build-vocabulary.mjs"
+    "build:data": "node scripts/build-vocabulary.mjs",
+    "generate:audio": "node scripts/generate-audio.mjs"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^5.0.0",
