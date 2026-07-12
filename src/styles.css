@@ -107,6 +107,13 @@ input {
   text-align: center;
 }
 
+.audio-disclosure {
+  grid-column: 1 / -1;
+  color: var(--ink-soft);
+  font-size: 0.75rem;
+  text-align: center;
+}
+
 .workspace {
   min-height: 680px;
   border-radius: 32px;

@@ -813,6 +813,8 @@ export default function App() {
         </div>
         {progressMessage && <p className="progress-status">{progressMessage}</p>}
       </aside>
+
+      <footer className="audio-disclosure">The voices you hear in Tuanshan are AI-generated and are not human voices.</footer>
     </main>
   );
 }

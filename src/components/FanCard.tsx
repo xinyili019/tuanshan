@@ -123,8 +123,8 @@ export function FanCard({
       {showFirstWordTip && revealed && !firstWordTipDismissed && (
         <div className="first-word-tip" role="status" aria-live="polite">
           <p>
-            Strokes shows how to write the character. Again saves this word for review and pinyin recall. Known moves
-            on.
+            Strokes shows how to write the character. Tap either Again or Known to move to the next word. Again means
+            you’ll see it again soon; Known means it comes back later.
           </p>
           <button className="primary first-word-tip-dismiss" type="button" onClick={() => setFirstWordTipDismissed(true)}>
             Got it
