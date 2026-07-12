@@ -108,7 +108,6 @@ input {
 }
 
 .audio-disclosure {
-  grid-column: 1 / -1;
   color: var(--ink-soft);
   font-size: 0.75rem;
   text-align: center;
