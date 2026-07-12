@@ -1,9 +1,9 @@
-import { ChevronDown, RotateCcw, Search, Volume2 } from "lucide-react";
+import { Check, ChevronDown, RotateCcw, Search, Volume2 } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { speakEntryAudio } from "../lib/audio";
 import { normalizePinyin } from "../lib/pinyin";
 import { getProgressRecord } from "../lib/progress";
-import type { ProgressState, ScriptMode, VocabEntry } from "../types";
+import type { CardStatus, ProgressState, ScriptMode, VocabEntry } from "../types";
 
 interface BrowseUnit {
   id: string;
@@ -16,10 +16,10 @@ interface BrowseModeProps {
   scriptMode: ScriptMode;
   units: BrowseUnit[];
   onBack: () => void;
-  onMarkForgotten: (id: string) => void;
+  onSetStatus: (id: string, status: Exclude<CardStatus, "new">) => void;
 }
 
-export function BrowseMode({ entries, progress, scriptMode, units, onBack, onMarkForgotten }: BrowseModeProps) {
+export function BrowseMode({ entries, progress, scriptMode, units, onBack, onSetStatus }: BrowseModeProps) {
   const [query, setQuery] = useState("");
   const [expandedId, setExpandedId] = useState<string | null>(null);
   const [toast, setToast] = useState<{ id: string; text: string } | null>(null);
@@ -48,9 +48,9 @@ export function BrowseMode({ entries, progress, scriptMode, units, onBack, onMar
 
   const resultCount = groups.reduce((count, group) => count + group.entries.length, 0);
 
-  function handleForgotten(entry: VocabEntry) {
-    onMarkForgotten(entry.id);
-    setToast({ id: entry.id, text: `${getHeadword(entry, scriptMode)} marked Again` });
+  function handleSetStatus(entry: VocabEntry, status: Exclude<CardStatus, "new">) {
+    onSetStatus(entry.id, status);
+    setToast({ id: entry.id, text: `${getHeadword(entry, scriptMode)} marked ${formatStatusLabel(status)}` });
   }
 
   return (
@@ -118,12 +118,14 @@ export function BrowseMode({ entries, progress, scriptMode, units, onBack, onMar
                             <Volume2 size={17} aria-hidden="true" />
                             Play audio
                           </button>
-                          {status === "known" && (
-                            <button className="again" type="button" onClick={() => handleForgotten(entry)}>
-                              <RotateCcw size={17} aria-hidden="true" />
-                              Mark as forgotten
-                            </button>
-                          )}
+                          <button className="again" type="button" onClick={() => handleSetStatus(entry, "again")}>
+                            <RotateCcw size={17} aria-hidden="true" />
+                            Again
+                          </button>
+                          <button className="known" type="button" onClick={() => handleSetStatus(entry, "known")}>
+                            <Check size={17} aria-hidden="true" />
+                            Known
+                          </button>
                         </div>
                         {toast?.id === entry.id && (
                           <p className="browse-toast" role="status" aria-live="polite">
@@ -187,4 +189,8 @@ function formatStatus(status: "new" | "again" | "known") {
   if (status === "known") return "✓ Known";
   if (status === "again") return "↻ Again";
   return "";
+}
+
+function formatStatusLabel(status: Exclude<CardStatus, "new">) {
+  return status === "known" ? "Known" : "Again";
 }

@@ -1,12 +1,13 @@
 import { ArrowLeft, BookOpen, ChevronDown, RotateCcw, Sparkles, Volume2 } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { speakEntryAudio, speakText } from "../lib/audio";
-import type { ScriptMode, VocabEntry } from "../types";
+import type { ScriptMode, StudyDirection, VocabEntry } from "../types";
 import { StrokeOrder } from "./StrokeOrder";
 
 interface FanCardProps {
   entry: VocabEntry;
   scriptMode: ScriptMode;
+  studyDirection: StudyDirection;
   revealed: boolean;
   canGoPrevious: boolean;
   showFirstWordTip?: boolean;
@@ -21,6 +22,7 @@ interface FanCardProps {
 export function FanCard({
   entry,
   scriptMode,
+  studyDirection,
   revealed,
   canGoPrevious,
   showFirstWordTip = false,
@@ -44,6 +46,12 @@ export function FanCard({
     if (length >= 3) return "is-medium";
     return "";
   }, [headword]);
+  const frontContent =
+    studyDirection === "meaningHanzi" ? (
+      <span className="fan-front-meaning">{displayEnglish}</span>
+    ) : (
+      <span className={`hanzi-main ${fontSizeClass}`}>{headword}</span>
+    );
 
   useEffect(() => {
     setShowStrokeOrder(false);
@@ -76,7 +84,7 @@ export function FanCard({
       >
         <span className="fan-inner">
           <span className="fan-front" aria-hidden={revealed}>
-            <span className={`hanzi-main ${fontSizeClass}`}>{headword}</span>
+            {frontContent}
           </span>
           <span className="fan-back" aria-hidden={!revealed}>
             <span className="pinyin">{entry.pinyin}</span>

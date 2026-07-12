@@ -5,6 +5,8 @@ const DEFAULT_SESSION: ProgressSessionCounters = {
   studiedSinceQuizIds: [],
   lastQuizAtStudiedCount: 0,
   quizCount: 0,
+  quizFirstTryCorrect: 0,
+  quizQuestions: 0,
   quizCompletedUnitIds: []
 };
 
@@ -34,6 +36,8 @@ export function normalizeProgress(value: unknown): ProgressState {
       studiedSinceQuizIds: safeStringArray(rawSession.studiedSinceQuizIds),
       lastQuizAtStudiedCount: safeNumber(rawSession.lastQuizAtStudiedCount),
       quizCount: safeNumber(rawSession.quizCount),
+      quizFirstTryCorrect: safeNumber(rawSession.quizFirstTryCorrect),
+      quizQuestions: safeNumber(rawSession.quizQuestions),
       quizCompletedUnitIds: safeStringArray(rawSession.quizCompletedUnitIds)
     }
   };
@@ -85,14 +89,24 @@ export function recordCard(
   };
 }
 
-export function markQuizComplete(progress: ProgressState, unitId?: string): ProgressState {
+export function markQuizComplete(
+  progress: ProgressState,
+  unitId?: string,
+  score: { correctFirstTry: number; total: number } = { correctFirstTry: 0, total: 0 },
+  options: { resetCadence?: boolean } = {}
+): ProgressState {
+  const resetCadence = options.resetCadence ?? true;
   return {
     ...progress,
     session: {
       ...progress.session,
-      studiedSinceQuizIds: [],
-      lastQuizAtStudiedCount: progress.session.totalStudiedWords,
+      studiedSinceQuizIds: resetCadence ? [] : progress.session.studiedSinceQuizIds,
+      lastQuizAtStudiedCount: resetCadence
+        ? progress.session.totalStudiedWords
+        : progress.session.lastQuizAtStudiedCount,
       quizCount: progress.session.quizCount + 1,
+      quizFirstTryCorrect: progress.session.quizFirstTryCorrect + score.correctFirstTry,
+      quizQuestions: progress.session.quizQuestions + score.total,
       quizCompletedUnitIds:
         unitId && !progress.session.quizCompletedUnitIds.includes(unitId)
           ? [...progress.session.quizCompletedUnitIds, unitId]

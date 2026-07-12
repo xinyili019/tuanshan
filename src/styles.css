@@ -250,6 +250,50 @@ input {
   background: rgba(195, 121, 127, 0.26);
 }
 
+.manual-quiz-button,
+.install-app-button {
+  width: 100%;
+  min-height: 38px;
+}
+
+.progress-quick-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.progress-quick-actions .manual-quiz-button,
+.progress-quick-actions .checkbox-control {
+  width: 100%;
+  min-height: 38px;
+  justify-content: center;
+  border-color: rgba(168, 195, 160, 0.48);
+  background: rgba(255, 250, 241, 0.68);
+  color: var(--ink);
+  font-size: 0.86rem;
+  font-weight: 800;
+}
+
+.install-app-control,
+.install-app-help {
+  display: grid;
+  gap: 8px;
+}
+
+.install-app-help {
+  padding: 10px;
+  border: 1px solid rgba(168, 195, 160, 0.48);
+  border-radius: 8px;
+  background: rgba(255, 250, 241, 0.68);
+}
+
+.install-app-help p {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 0.76rem;
+  line-height: 1.4;
+}
+
 .progress-actions {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -464,6 +508,25 @@ input {
   gap: 12px;
   position: relative;
   z-index: 1;
+}
+
+.fan-front-meaning,
+.fan-front-audio {
+  max-width: 72%;
+  color: var(--ink);
+  font-family: "Noto Serif SC", "Noto Serif TC", serif;
+  font-size: clamp(1.55rem, 4.4vw, 2.7rem);
+  font-weight: 700;
+  line-height: 1.12;
+  text-align: center;
+}
+
+.fan-front-audio {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  font-family: Inter, system-ui, sans-serif;
+  font-size: 1rem;
 }
 
 .card-hint {
@@ -793,6 +856,33 @@ input {
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
+}
+
+.completion-summary {
+  width: min(100%, 620px);
+  display: grid;
+  justify-items: center;
+  gap: 14px;
+}
+
+.completion-count,
+.completion-quiz-score {
+  margin: 0;
+  color: var(--ink-soft);
+  font-weight: 700;
+  text-align: center;
+}
+
+.completion-review-actions {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+}
+
+.completion-review-actions button,
+.completion-continue {
+  width: 100%;
 }
 
 .card-toolbar {
@@ -1528,6 +1618,16 @@ button:disabled {
   opacity: 0.12;
 }
 
+.quiz-exit-button {
+  justify-self: center;
+  margin-top: 8px;
+}
+
+.quiz-exit-button.is-armed {
+  border-color: var(--incorrect);
+  color: var(--incorrect);
+}
+
 .quiz-topline {
   display: flex;
   align-items: baseline;
@@ -1771,24 +1871,30 @@ button:disabled {
     flex-wrap: nowrap;
     justify-content: flex-start;
     align-items: center;
-    gap: 6px;
+    gap: 4px;
   }
 
   .select-pill {
     min-height: 32px;
-    padding: 0 7px;
+    padding: 0 5px;
   }
 
   .checkbox-control {
     justify-content: flex-start;
     min-height: 32px;
-    gap: 8px;
-    padding: 0 6px;
+    gap: 5px;
+    padding: 0 5px;
   }
 
   .header-browse-button {
     min-height: 32px;
-    padding: 0 7px;
+    padding: 0 5px;
+  }
+
+  .checkbox-control,
+  .header-browse-button,
+  .select-pill {
+    font-size: 0.74rem;
   }
 
   label {

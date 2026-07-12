@@ -1,5 +1,15 @@
 export type ScriptMode = "simplified" | "traditional";
-export type StudyPhase = "study" | "summary" | "review" | "recall" | "quiz" | "browse" | "complete";
+export type StudyDirection = "hanziMeaning" | "meaningHanzi";
+export type StudyPhase =
+  | "study"
+  | "summary"
+  | "unitSummary"
+  | "finalSummary"
+  | "review"
+  | "recall"
+  | "quiz"
+  | "browse"
+  | "complete";
 export type CardStatus = "new" | "again" | "known";
 export type QuizMode = "audioMeaning" | "sentenceCloze";
 
@@ -7,6 +17,7 @@ export interface ActiveSessionState {
   mode: Extract<StudyPhase, "study" | "review">;
   moduleOrScenarioId: string;
   direction: ScriptMode;
+  studyDirection?: StudyDirection;
   sessionIndex: number;
   queue: string[];
   position: number;
@@ -52,6 +63,8 @@ export interface ProgressSessionCounters {
   studiedSinceQuizIds: string[];
   lastQuizAtStudiedCount: number;
   quizCount: number;
+  quizFirstTryCorrect: number;
+  quizQuestions: number;
   quizCompletedUnitIds: string[];
 }
 

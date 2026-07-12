@@ -7,13 +7,25 @@ const VALID_STATUSES = new Set(["new", "again", "known"]);
 const VALID_FIRST_PASS_STATUSES = new Set(["again", "known"]);
 const VALID_ACTIVE_SESSION_MODES = new Set(["study", "review"]);
 const VALID_LOCATION_VIEWS = new Set(["study", "browse"]);
-const VALID_LOCATION_PHASES = new Set(["study", "summary", "review", "recall", "quiz", "browse", "complete"]);
+const VALID_LOCATION_PHASES = new Set([
+  "study",
+  "summary",
+  "unitSummary",
+  "finalSummary",
+  "review",
+  "recall",
+  "quiz",
+  "browse",
+  "complete"
+]);
 
 const DEFAULT_SESSION = {
   totalStudiedWords: 0,
   studiedSinceQuizIds: [],
   lastQuizAtStudiedCount: 0,
   quizCount: 0,
+  quizFirstTryCorrect: 0,
+  quizQuestions: 0,
   quizCompletedUnitIds: []
 };
 
@@ -379,6 +391,10 @@ function normalizeSession(session) {
   if (!isStringArray(session.studiedSinceQuizIds)) return null;
   if (!isNonNegativeInteger(session.lastQuizAtStudiedCount)) return null;
   if (!isNonNegativeInteger(session.quizCount)) return null;
+  const quizFirstTryCorrect = session.quizFirstTryCorrect ?? 0;
+  const quizQuestions = session.quizQuestions ?? 0;
+  if (!isNonNegativeInteger(quizFirstTryCorrect)) return null;
+  if (!isNonNegativeInteger(quizQuestions)) return null;
   if (!isStringArray(session.quizCompletedUnitIds)) return null;
 
   return {
@@ -386,6 +402,8 @@ function normalizeSession(session) {
     studiedSinceQuizIds: [...session.studiedSinceQuizIds],
     lastQuizAtStudiedCount: session.lastQuizAtStudiedCount,
     quizCount: session.quizCount,
+    quizFirstTryCorrect,
+    quizQuestions,
     quizCompletedUnitIds: [...session.quizCompletedUnitIds]
   };
 }
@@ -406,6 +424,7 @@ function normalizeActiveSession(session) {
     mode: session.mode,
     moduleOrScenarioId: session.moduleOrScenarioId,
     direction: session.direction,
+    ...(typeof session.studyDirection === "string" ? { studyDirection: session.studyDirection } : {}),
     sessionIndex: session.sessionIndex,
     queue: [...session.queue],
     position: Math.min(session.position, Math.max(0, session.queue.length - 1)),

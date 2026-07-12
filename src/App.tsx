@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import type { ChangeEvent } from "react";
 import { BrowseMode } from "./components/BrowseMode";
 import { FanCard } from "./components/FanCard";
+import InstallControl from "./components/InstallControl";
 import { PinyinRecall } from "./components/PinyinRecall";
 import { Quiz } from "./components/Quiz";
 import { vocabulary } from "./data/vocabulary";
@@ -35,6 +36,7 @@ import type {
   ProgressState,
   QuizResult,
   ScriptMode,
+  StudyDirection,
   StudyPhase,
   VocabEntry
 } from "./types";
@@ -87,7 +89,8 @@ const UNIT_SELECT_LABELS: Record<string, string> = {
   "12": "Feelings"
 };
 
-type QuizContinueTarget = "nextSession" | "nextUnit" | "complete";
+type QuizContinueTarget = "returnStudy" | "nextSession" | "unitSummary" | "finalSummary";
+type ReviewReturnPhase = Extract<StudyPhase, "summary" | "unitSummary" | "finalSummary">;
 
 const TRADITIONAL_UNIT_TITLES: Record<string, string> = {
   "1": "身份·人稱·數",
@@ -109,6 +112,7 @@ export default function App() {
   const [isProgressReady, setIsProgressReady] = useState(false);
   const [progressMessage, setProgressMessage] = useState<string | null>(null);
   const [scriptMode, setScriptMode] = useState<ScriptMode>("simplified");
+  const [studyDirection, setStudyDirection] = useState<StudyDirection>("hanziMeaning");
   const [unit, setUnit] = useState("all");
   const [phase, setPhase] = useState<StudyPhase>("study");
   const [sessionIndex, setSessionIndex] = useState(0);
@@ -120,12 +124,22 @@ export default function App() {
   const [quizEntries, setQuizEntries] = useState<VocabEntry[]>([]);
   const [recallEntries, setRecallEntries] = useState<VocabEntry[]>([]);
   const [quizContinueTarget, setQuizContinueTarget] = useState<QuizContinueTarget>("nextSession");
+  const [quizScopeUnitId, setQuizScopeUnitId] = useState<string | null>(null);
+  const [completedUnitId, setCompletedUnitId] = useState<string | null>(null);
+  const [reviewReturnPhase, setReviewReturnPhase] = useState<ReviewReturnPhase>("summary");
+  const [recallReturnPhase, setRecallReturnPhase] = useState<ReviewReturnPhase>("summary");
   const [sessionQueueIds, setSessionQueueIds] = useState<string[]>([]);
   const [pendingResume, setPendingResume] = useState<ActiveSessionState | null>(null);
   const importInputRef = useRef<HTMLInputElement>(null);
   const activeSessionRef = useRef<ActiveSessionState | null>(null);
   const progressRef = useRef<ProgressState>(progress);
   const skipUnitResetRef = useRef(false);
+  const manualQuizReturnRef = useRef<{
+    sessionIndex: number;
+    cardIndex: number;
+    queueIds: string[];
+    againIds: string[];
+  } | null>(null);
 
   useEffect(() => {
     let isCurrent = true;
@@ -177,7 +191,13 @@ export default function App() {
     () => (unit === "all" ? vocabulary : vocabulary.filter((entry) => entry.unit === unit)),
     [unit]
   );
-  const sessions = useMemo(() => chunk(entries, SESSION_SIZE), [entries]);
+  const sessions = useMemo(
+    () =>
+      unit === "all"
+        ? units.flatMap((unitId) => chunk(vocabulary.filter((entry) => entry.unit === unitId), SESSION_SIZE))
+        : chunk(entries, SESSION_SIZE),
+    [entries, unit, units]
+  );
   const entriesById = useMemo(() => new Map(vocabulary.map((entry) => [entry.id, entry])), []);
   const currentSession = useMemo(() => {
     const baseSession = sessions[sessionIndex] ?? [];
@@ -191,13 +211,17 @@ export default function App() {
     return restoredSession.length > 0 ? restoredSession : baseSession;
   }, [entriesById, sessionIndex, sessionQueueIds, sessions, unit]);
   const reviewEntries = currentSession.filter((entry) => againIds.includes(entry.id));
-  const activeEntries = phase === "review" ? reviewEntries : currentSession;
+  const currentSessionUnitId = currentSession[0]?.unit ?? (unit === "all" ? completedUnitId ?? units[0] : unit);
+  const currentUnitEntries = vocabulary.filter((entry) => entry.unit === currentSessionUnitId);
+  const summaryUnitId = completedUnitId ?? currentSessionUnitId;
+  const summaryUnitEntries = vocabulary.filter((entry) => entry.unit === summaryUnitId);
+  const activeEntries = currentSession;
   const activeEntry = activeEntries[cardIndex];
   const knownCount = entries.filter((entry) => getProgressRecord(progress, entry.id).status === "known").length;
   const knownThisSession = currentSession.filter((entry) => getProgressRecord(progress, entry.id).status === "known").length;
   const againThisSession = reviewEntries.length;
   const sessionProgress =
-    phase === "summary" || phase === "quiz" || phase === "complete"
+    phase === "summary" || phase === "unitSummary" || phase === "finalSummary" || phase === "quiz" || phase === "complete"
       ? 100
       : activeEntries.length
         ? Math.min(100, (cardIndex / activeEntries.length) * 100)
@@ -229,6 +253,7 @@ export default function App() {
         if (storedSession && isFresh(storedSession.updatedAt) && storedSession.moduleOrScenarioId === unit) {
           activeSessionRef.current = storedSession;
           setScriptMode(storedSession.direction === "traditional" ? "traditional" : "simplified");
+          if (storedSession.studyDirection) setStudyDirection(storedSession.studyDirection);
           setSessionIndex(storedSession.sessionIndex);
           setCardIndex(storedSession.position);
           setRevealed(false);
@@ -250,6 +275,7 @@ export default function App() {
         setRecallEntries([]);
         setSessionQueueIds([]);
         setPendingResume(null);
+        setCompletedUnitId(null);
       })
       .catch((error: unknown) => {
         console.warn("Could not check active session.", error);
@@ -280,7 +306,7 @@ export default function App() {
 
     if (!activeEntries.length || cardIndex >= activeEntries.length) return;
     persistActiveSession(buildActiveSession(cardIndex, againIds));
-  }, [activeEntries, againIds, cardIndex, isProgressReady, pendingResume, phase, scriptMode, sessionIndex, unit, view]);
+  }, [activeEntries, againIds, cardIndex, isProgressReady, pendingResume, phase, scriptMode, sessionIndex, studyDirection, unit, view]);
 
   useEffect(() => {
     function flushSessionState() {
@@ -314,7 +340,8 @@ export default function App() {
     }
 
     if (phase === "review") {
-      setPhase("summary");
+      setSessionQueueIds([]);
+      setPhase(reviewReturnPhase);
       setCardIndex(0);
       return;
     }
@@ -367,6 +394,7 @@ export default function App() {
       mode: phase === "review" ? "review" : "study",
       moduleOrScenarioId: unit,
       direction: scriptMode,
+      studyDirection,
       sessionIndex,
       queue,
       position: Math.min(position, Math.max(0, queue.length - 1)),
@@ -387,17 +415,21 @@ export default function App() {
   }
 
   function nextSession() {
-    const isEndOfUnit = sessionIndex >= sessions.length - 1;
-    const endOfUnitTarget = getNextUnitId() ? "nextUnit" : "complete";
+    const isFinalSession = sessionIndex >= sessions.length - 1;
+    const nextSessionUnitId = sessions[sessionIndex + 1]?.[0]?.unit;
+    const isEndOfUnit = isFinalSession || nextSessionUnitId !== currentSessionUnitId;
+    const endOfUnitTarget: QuizContinueTarget = "unitSummary";
+    const quizScope = currentUnitEntries;
 
-    if (shouldStartQuizBeforeNextSession({ progress, unit, entries, isEndOfUnit })) {
-      startQuiz(isEndOfUnit ? endOfUnitTarget : "nextSession");
+    if (shouldStartQuizBeforeNextSession({ progress, unit: currentSessionUnitId, entries: quizScope, isEndOfUnit })) {
+      if (isEndOfUnit) setCompletedUnitId(currentSessionUnitId);
+      startQuiz(isEndOfUnit ? endOfUnitTarget : "nextSession", quizScope);
       return;
     }
 
     if (isEndOfUnit) {
-      if (goToNextUnit()) return;
-      setPhase("complete");
+      setCompletedUnitId(currentSessionUnitId);
+      setPhase("unitSummary");
       return;
     }
 
@@ -411,6 +443,7 @@ export default function App() {
     setAgainIds([]);
     setSessionQueueIds([]);
     setPendingResume(null);
+    setCompletedUnitId(null);
     setPhase("study");
   }
 
@@ -432,6 +465,7 @@ export default function App() {
     setRecallEntries([]);
     setSessionQueueIds([]);
     setPendingResume(null);
+    setCompletedUnitId(null);
     setPhase("study");
     return true;
   }
@@ -440,18 +474,29 @@ export default function App() {
     return unitId === "all" || units.includes(unitId);
   }
 
-  function startQuiz(target: QuizContinueTarget) {
-    const selected = selectQuizEntries(progress, entries, vocabulary);
+  function startQuiz(target: QuizContinueTarget, requestedScope?: VocabEntry[]) {
+    const quizScope = requestedScope ?? (target === "finalSummary" ? vocabulary : entries);
+    const eligibleEntries =
+      target === "returnStudy"
+        ? quizScope.filter((entry) => getProgressRecord(progress, entry.id).reviewCount > 0)
+        : quizScope;
+    const selected = selectQuizEntries(progress, eligibleEntries, vocabulary);
     if (selected.length === 0) {
-      if (target === "nextUnit") {
-        if (!goToNextUnit()) setPhase("complete");
-        return;
-      }
-      target === "complete" ? setPhase("complete") : goToNextStudySession();
+      if (target === "unitSummary" || target === "finalSummary") setPhase(target);
       return;
     }
 
+    if (target === "returnStudy") {
+      manualQuizReturnRef.current = {
+        sessionIndex,
+        cardIndex,
+        queueIds: [...sessionQueueIds],
+        againIds: [...againIds]
+      };
+    }
+
     setQuizEntries(selected);
+    setQuizScopeUnitId(quizScope.length > 0 && quizScope.every((entry) => entry.unit === quizScope[0].unit) ? quizScope[0].unit : null);
     setQuizContinueTarget(target);
     setCardIndex(0);
     setRevealed(false);
@@ -463,44 +508,112 @@ export default function App() {
       nextSession();
       return;
     }
+    setReviewReturnPhase("summary");
+    setSessionQueueIds(reviewEntries.map((entry) => entry.id));
     setPhase("review");
     setCardIndex(0);
     setRevealed(false);
   }
 
   function startRecall() {
+    setRecallReturnPhase("summary");
     setRecallEntries(selectRecallEntries(currentSession, reviewEntries));
     setPhase("recall");
   }
 
   function finishRecall(troubleIds: string[]) {
-    setProgress((current) => troubleIds.reduce((state, id) => recordRecallTrouble(state, id), current));
+    setProgress((current) => {
+      const nextProgress = troubleIds.reduce((state, id) => recordRecallTrouble(state, id), current);
+      progressRef.current = nextProgress;
+      void setStoredProgress(nextProgress);
+      void flushStoredProgress();
+      return nextProgress;
+    });
     if (troubleIds.length) {
       setAgainIds((current) => Array.from(new Set([...current, ...troubleIds])));
     }
     setCardIndex(0);
     setRevealed(false);
     setRecallEntries([]);
-    setPhase("summary");
+    setPhase(recallReturnPhase);
   }
 
   function finishQuiz(result: QuizResult) {
     const missedIds = result.missedEntries.map((entry) => entry.id);
-    const quizUnitId = unit !== "all" && entries.length < SMALL_UNIT_QUIZ_LIMIT ? unit : undefined;
-    setProgress((current) => recordQuizCompleted(demoteQuizMisses(current, missedIds), quizUnitId));
+    const quizUnitId =
+      quizContinueTarget === "unitSummary" &&
+      quizScopeUnitId &&
+      vocabulary.filter((entry) => entry.unit === quizScopeUnitId).length < SMALL_UNIT_QUIZ_LIMIT
+        ? quizScopeUnitId
+        : undefined;
+    setProgress((current) =>
+      recordQuizCompleted(
+        demoteQuizMisses(current, missedIds),
+        quizUnitId,
+        { correctFirstTry: result.correctFirstTry, total: result.total },
+        { resetCadence: quizContinueTarget !== "returnStudy" }
+      )
+    );
     setQuizEntries([]);
+    setQuizScopeUnitId(null);
 
-    if (quizContinueTarget === "nextUnit") {
-      if (!goToNextUnit()) setPhase("complete");
+    if (quizContinueTarget === "returnStudy") {
+      returnFromManualQuiz();
       return;
     }
 
-    if (quizContinueTarget === "complete") {
-      setPhase("complete");
+    if (quizContinueTarget === "unitSummary" || quizContinueTarget === "finalSummary") {
+      setPhase(quizContinueTarget);
       return;
     }
 
     goToNextStudySession();
+  }
+
+  function exitQuiz() {
+    setQuizEntries([]);
+    setQuizScopeUnitId(null);
+    if (quizContinueTarget === "unitSummary" || quizContinueTarget === "finalSummary") {
+      setPhase(quizContinueTarget);
+      return;
+    }
+    if (quizContinueTarget === "returnStudy") {
+      returnFromManualQuiz();
+      return;
+    }
+    setPhase(quizContinueTarget === "nextSession" ? "summary" : "study");
+  }
+
+  function returnFromManualQuiz() {
+    const origin = manualQuizReturnRef.current;
+    manualQuizReturnRef.current = null;
+    if (origin) {
+      setSessionIndex(origin.sessionIndex);
+      setCardIndex(origin.cardIndex);
+      setSessionQueueIds(origin.queueIds);
+      setAgainIds(origin.againIds);
+    }
+    setRevealed(false);
+    setPhase("study");
+  }
+
+  function startScopedReview(scope: VocabEntry[], returnPhase: ReviewReturnPhase) {
+    const difficult = scope.filter((entry) => getProgressRecord(progress, entry.id).status === "again");
+    if (difficult.length === 0) return;
+    setReviewReturnPhase(returnPhase);
+    setAgainIds(difficult.map((entry) => entry.id));
+    setSessionQueueIds(difficult.map((entry) => entry.id));
+    setCardIndex(0);
+    setRevealed(false);
+    setPhase("review");
+  }
+
+  function startScopedRecall(scope: VocabEntry[], returnPhase: ReviewReturnPhase) {
+    const studied = scope.filter((entry) => getProgressRecord(progress, entry.id).reviewCount > 0);
+    const difficult = studied.filter((entry) => getProgressRecord(progress, entry.id).status === "again");
+    setRecallReturnPhase(returnPhase);
+    setRecallEntries(selectRecallEntries(studied, difficult));
+    setPhase("recall");
   }
 
   function restoreSavedNavigation(activeSession: ActiveSessionState | null, lastLocation: LastLocationState | null) {
@@ -510,6 +623,7 @@ export default function App() {
       setView("study");
       setUnit(activeSession.moduleOrScenarioId);
       setScriptMode(activeSession.direction === "traditional" ? "traditional" : "simplified");
+      if (activeSession.studyDirection) setStudyDirection(activeSession.studyDirection);
       setSessionIndex(activeSession.sessionIndex);
       setSessionQueueIds(activeSession.queue);
       setAgainIds(activeSession.againQueue);
@@ -574,10 +688,11 @@ export default function App() {
     setRecallEntries([]);
     setSessionQueueIds([]);
     setPendingResume(null);
+    setCompletedUnitId(null);
   }
 
-  function markForgotten(id: string) {
-    setProgress((current) => demoteToAgain(current, id));
+  function setBrowseStatus(id: string, status: "again" | "known") {
+    setProgress((current) => (status === "again" ? demoteToAgain(current, id) : recordCard(current, id, "known")));
   }
 
   function handleExportProgress() {
@@ -628,15 +743,22 @@ export default function App() {
           <h1>Chinese Vocabulary</h1>
         </div>
         <div className="controls" aria-label="Study controls">
-          <label className="select-pill script-select-pill">
-            <span className="select-pill-label">Script</span>
+          <label className="select-pill study-mode-select-pill">
+            <span className="select-pill-label">Study mode</span>
             <select
-              aria-label="Script"
-              value={scriptMode}
-              onChange={(event) => setScriptMode(event.target.value as ScriptMode)}
+              aria-label="Study mode"
+              value={`${scriptMode}:${studyDirection}`}
+              onChange={(event) => {
+                const [nextScript, nextDirection] = event.target.value.split(":") as [ScriptMode, StudyDirection];
+                setScriptMode(nextScript);
+                setStudyDirection(nextDirection);
+                setRevealed(false);
+              }}
             >
-              <option value="simplified">Simplified</option>
-              <option value="traditional">Traditional</option>
+              <option value="simplified:hanziMeaning">Simplified · Hanzi → meaning</option>
+              <option value="simplified:meaningHanzi">Simplified · Meaning → Hanzi</option>
+              <option value="traditional:hanziMeaning">Traditional · Hanzi → meaning</option>
+              <option value="traditional:meaningHanzi">Traditional · Meaning → Hanzi</option>
             </select>
           </label>
           <label className="select-pill unit-select-pill">
@@ -649,15 +771,6 @@ export default function App() {
                 </option>
               ))}
             </select>
-          </label>
-          <label className="checkbox-control">
-            <input
-              type="checkbox"
-              checked={autoPlayAudio}
-              onChange={(event) => setAutoPlayAudio(event.target.checked)}
-            />
-            <span className="checkbox-icon" aria-hidden="true" />
-            <span>Auto audio</span>
           </label>
           <button
             className={`secondary header-browse-button${view === "browse" ? " is-active" : ""}`}
@@ -684,7 +797,7 @@ export default function App() {
             scriptMode={scriptMode}
             units={unitOptions.map((item) => ({ id: item.id, title: `Unit ${item.id} ${item.progressLabel}` }))}
             onBack={() => setView("study")}
-            onMarkForgotten={markForgotten}
+            onSetStatus={setBrowseStatus}
           />
         ) : null}
 
@@ -697,6 +810,7 @@ export default function App() {
             <FanCard
               entry={activeEntry}
               scriptMode={scriptMode}
+              studyDirection={studyDirection}
               revealed={revealed}
               canGoPrevious={cardIndex > 0}
               showFirstWordTip={phase === "study" && sessionIndex === 0 && cardIndex === 0}
@@ -706,7 +820,14 @@ export default function App() {
                 setRevealed(false);
                 setCardIndex((current) => Math.max(0, current - 1));
               }}
-              onGoBack={phase === "review" ? () => setPhase("summary") : undefined}
+              onGoBack={
+                phase === "review"
+                  ? () => {
+                      setSessionQueueIds([]);
+                      setPhase(reviewReturnPhase);
+                    }
+                  : undefined
+              }
               onAgain={() => mark("again")}
               onKnown={() => mark("known")}
             />
@@ -732,7 +853,7 @@ export default function App() {
             entries={recallEntries}
             scriptMode={scriptMode}
             onComplete={finishRecall}
-            onGoBack={() => setPhase("summary")}
+            onGoBack={() => setPhase(recallReturnPhase)}
           />
         )}
 
@@ -743,6 +864,53 @@ export default function App() {
             scriptMode={scriptMode}
             continueLabel={getQuizContinueLabel(quizContinueTarget)}
             onContinue={finishQuiz}
+            onExit={exitQuiz}
+          />
+        )}
+
+        {view === "study" && phase === "unitSummary" && (
+          <CompletionSummary
+            eyebrow={`Unit ${summaryUnitId} complete`}
+            title={`${UNIT_PROGRESS_LABELS[summaryUnitId] ?? `Unit ${summaryUnitId}`} complete`}
+            knownCount={summaryUnitEntries.filter((entry) => getProgressRecord(progress, entry.id).status === "known").length}
+            totalCount={summaryUnitEntries.length}
+            difficultCount={summaryUnitEntries.filter((entry) => getProgressRecord(progress, entry.id).status === "again").length}
+            onReview={() => startScopedReview(summaryUnitEntries, "unitSummary")}
+            onRecall={() => startScopedRecall(summaryUnitEntries, "unitSummary")}
+            onQuiz={() => startQuiz("unitSummary", summaryUnitEntries)}
+            onContinue={() => {
+              setCompletedUnitId(null);
+              if (unit === "all") {
+                sessionIndex >= sessions.length - 1 ? setPhase("finalSummary") : goToNextStudySession();
+                return;
+              }
+              if (!goToNextUnit()) setPhase("finalSummary");
+            }}
+            continueLabel={unit === "all" ? (sessionIndex >= sessions.length - 1 ? "Finish course" : "Next unit") : getNextUnitId() ? "Next unit" : "Finish course"}
+          />
+        )}
+
+        {view === "study" && phase === "finalSummary" && (
+          <CompletionSummary
+            eyebrow="Course complete"
+            title={`You have recognized ${vocabulary.filter((entry) => getProgressRecord(progress, entry.id).status === "known").length} words.`}
+            knownCount={vocabulary.filter((entry) => getProgressRecord(progress, entry.id).status === "known").length}
+            totalCount={vocabulary.length}
+            difficultCount={vocabulary.filter((entry) => getProgressRecord(progress, entry.id).status === "again").length}
+            quizScore={`${progress.session.quizFirstTryCorrect}/${progress.session.quizQuestions} correct on first attempts across ${progress.session.quizCount} quizzes`}
+            onReview={() => startScopedReview(vocabulary, "finalSummary")}
+            onRecall={() => startScopedRecall(vocabulary, "finalSummary")}
+            onQuiz={() => startQuiz("finalSummary")}
+            onBrowse={() => setView("browse")}
+            onContinue={() => {
+              setUnit("all");
+              setSessionIndex(0);
+              setPhase("study");
+            }}
+            continueLabel="Back to start"
+            quizLabel="Final quiz"
+            reviewLabel="Review Again words"
+            recallLabel="Final pinyin recall"
           />
         )}
 
@@ -760,6 +928,27 @@ export default function App() {
       </section>
 
       <aside className="progress-panel" aria-label="Study progress">
+        <div className="progress-quick-actions" aria-label="Study options">
+          <button
+            className="secondary manual-quiz-button"
+            type="button"
+            disabled={phase !== "study" || !entries.some((entry) => getProgressRecord(progress, entry.id).reviewCount > 0)}
+            onClick={() => startQuiz("returnStudy")}
+          >
+            <span aria-hidden="true">💡</span>
+            Start quiz
+          </button>
+          <label className="checkbox-control">
+            <input
+              type="checkbox"
+              checked={autoPlayAudio}
+              onChange={(event) => setAutoPlayAudio(event.target.checked)}
+            />
+            <span className="checkbox-icon" aria-hidden="true" />
+            <span>Auto audio</span>
+          </label>
+        </div>
+
         <section className="progress-section">
           <div className="progress-heading">
             <p className="eyebrow">Session progress</p>
@@ -796,6 +985,7 @@ export default function App() {
         <button className="start-over-button" type="button" onClick={startOver}>
           Start over
         </button>
+        <InstallControl />
         <div className="progress-actions" aria-label="Progress file actions">
           <button className="secondary" type="button" onClick={handleExportProgress}>
             Export progress
@@ -815,6 +1005,70 @@ export default function App() {
         <footer className="audio-disclosure">The voices you hear in Tuanshan are AI-generated and are not human voices.</footer>
       </aside>
     </main>
+  );
+}
+
+function CompletionSummary({
+  eyebrow,
+  title,
+  knownCount,
+  totalCount,
+  difficultCount,
+  quizScore,
+  onReview,
+  onRecall,
+  onQuiz,
+  onBrowse,
+  onContinue,
+  continueLabel,
+  quizLabel = "Unit quiz",
+  reviewLabel = "Review difficult words",
+  recallLabel = "Pinyin recall"
+}: {
+  eyebrow: string;
+  title: string;
+  knownCount: number;
+  totalCount: number;
+  difficultCount: number;
+  quizScore?: string;
+  onReview: () => void;
+  onRecall: () => void;
+  onQuiz: () => void;
+  onBrowse?: () => void;
+  onContinue: () => void;
+  continueLabel: string;
+  quizLabel?: string;
+  reviewLabel?: string;
+  recallLabel?: string;
+}) {
+  return (
+    <section className="milestone completion-summary fan-panel">
+      <p className="eyebrow">{eyebrow}</p>
+      <h2>{title}</h2>
+      <p className="completion-count">{knownCount}/{totalCount} Known</p>
+      {quizScore && <p className="completion-quiz-score">{quizScore}</p>}
+      <div className="completion-review-actions">
+        {difficultCount > 0 && (
+          <button className="secondary" type="button" onClick={onReview}>
+            {reviewLabel} ({difficultCount})
+          </button>
+        )}
+        <button className="secondary" type="button" onClick={onRecall}>
+          {recallLabel}
+        </button>
+        <button className="secondary" type="button" onClick={onQuiz}>
+          {quizLabel}
+        </button>
+        {onBrowse && (
+          <button className="secondary" type="button" onClick={onBrowse}>
+            Browse all words
+          </button>
+        )}
+      </div>
+      <button className="primary completion-continue" type="button" onClick={onContinue}>
+        {continueLabel}
+      </button>
+    </section>
   );
 }
 
@@ -950,13 +1204,14 @@ function selectRecallEntries(sessionEntries: VocabEntry[], againEntries: VocabEn
 }
 
 function getQuizContinueLabel(target: QuizContinueTarget) {
-  if (target === "nextUnit") return "Continue to next unit";
-  if (target === "complete") return "Finish";
+  if (target === "unitSummary") return "Return to unit summary";
+  if (target === "finalSummary") return "Return to course summary";
+  if (target === "returnStudy") return "Return to study";
   return "Continue to next session";
 }
 
 function getRestorablePhase(phase: StudyPhase) {
-  if (phase === "summary" || phase === "complete") return phase;
+  if (phase === "summary" || phase === "unitSummary" || phase === "finalSummary" || phase === "complete") return phase;
   return "study";
 }
 

@@ -1,4 +1,4 @@
-import { ArrowRight, RotateCcw, Volume2 } from "lucide-react";
+import { ArrowRight, LogOut, RotateCcw, Volume2 } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { speakEntryAudio } from "../lib/audio";
 import { buildQuizQuestions, getHeadword, reinsertQuestion } from "../lib/quiz";
@@ -9,6 +9,7 @@ interface QuizProps {
   allEntries: VocabEntry[];
   scriptMode: ScriptMode;
   onContinue: (result: QuizResult) => void;
+  onExit: () => void;
   continueLabel?: string;
 }
 
@@ -18,7 +19,7 @@ interface Feedback {
   correct: boolean;
 }
 
-export function Quiz({ entries, allEntries, scriptMode, onContinue, continueLabel = "Continue" }: QuizProps) {
+export function Quiz({ entries, allEntries, scriptMode, onContinue, onExit, continueLabel = "Continue" }: QuizProps) {
   const [queue, setQueue] = useState<QuizQuestion[]>(() => buildQuizQuestions(entries, allEntries, scriptMode));
   const [questionCount, setQuestionCount] = useState(queue.length);
   const [answeredQuestionIds, setAnsweredQuestionIds] = useState<Set<string>>(() => new Set());
@@ -26,6 +27,7 @@ export function Quiz({ entries, allEntries, scriptMode, onContinue, continueLabe
   const [firstTryCorrectIds, setFirstTryCorrectIds] = useState<Set<string>>(() => new Set());
   const [missedEntryIds, setMissedEntryIds] = useState<Set<string>>(() => new Set());
   const [feedback, setFeedback] = useState<Feedback | null>(null);
+  const [exitArmed, setExitArmed] = useState(false);
   const didMountRef = useRef(false);
   const lastAutoPlayedQuestionRef = useRef<string | null>(null);
   const active = queue[0];
@@ -45,8 +47,13 @@ export function Quiz({ entries, allEntries, scriptMode, onContinue, continueLabe
     setFirstTryCorrectIds(new Set());
     setMissedEntryIds(new Set());
     setFeedback(null);
+    setExitArmed(false);
     lastAutoPlayedQuestionRef.current = null;
   }, [allEntries, entries, scriptMode]);
+
+  useEffect(() => {
+    setExitArmed(false);
+  }, [active?.id]);
 
   useEffect(() => {
     if (!active || active.mode !== "audioMeaning" || feedback) return;
@@ -113,6 +120,8 @@ export function Quiz({ entries, allEntries, scriptMode, onContinue, continueLabe
   function answer(optionId: string) {
     if (!active || feedback) return;
 
+    setExitArmed(false);
+
     const correct = optionId === active.correctOptionId;
     const firstAttempt = !answeredQuestionIds.has(active.id);
     const nextFeedback = { questionId: active.id, selectedOptionId: optionId, correct };
@@ -125,6 +134,7 @@ export function Quiz({ entries, allEntries, scriptMode, onContinue, continueLabe
 
   function advance() {
     if (!feedback) return;
+    setExitArmed(false);
     const shouldRetry = !feedback.correct && !retriedQuestionIds.has(feedback.questionId);
 
     setQueue((current) => {
@@ -136,6 +146,15 @@ export function Quiz({ entries, allEntries, scriptMode, onContinue, continueLabe
     });
     if (shouldRetry) setRetriedQuestionIds((currentIds) => new Set(currentIds).add(feedback.questionId));
     setFeedback(null);
+  }
+
+  function exitQuiz() {
+    if (exitArmed) {
+      onExit();
+      return;
+    }
+
+    setExitArmed(true);
   }
 
   return (
@@ -221,6 +240,11 @@ export function Quiz({ entries, allEntries, scriptMode, onContinue, continueLabe
           Replay word
         </button>
       )}
+
+      <button className={`secondary quiz-exit-button${exitArmed ? " is-armed" : ""}`} type="button" onClick={exitQuiz} aria-live="polite">
+        <LogOut size={16} aria-hidden="true" />
+        {exitArmed ? "Click again to exit quiz" : "Exit quiz"}
+      </button>
     </section>
   );
 }
