@@ -515,7 +515,7 @@ input {
   max-width: 72%;
   color: var(--ink);
   font-family: "Noto Serif SC", "Noto Serif TC", serif;
-  font-size: clamp(1.55rem, 4.4vw, 2.7rem);
+  font-size: clamp(3.1rem, 8.8vw, 5.4rem);
   font-weight: 700;
   line-height: 1.12;
   text-align: center;
@@ -590,7 +590,7 @@ input {
   inset: 0;
   z-index: 3;
   transform-style: preserve-3d;
-  transition: transform 0.7s cubic-bezier(0.2, 0.8, 0.18, 1);
+  transition: transform 0.7s cubic-bezier(0.42, 0, 0.58, 1);
 }
 
 .fan.is-revealed .fan-inner {
@@ -666,20 +666,62 @@ input {
   will-change: transform;
 }
 
+.fan-back.is-dense {
+  gap: 1px;
+}
+
+.fan-back.is-dense .translation {
+  font-size: clamp(1.45rem, 2.7vw, 1.75rem);
+}
+
+.fan-back.is-dense .example-block {
+  margin-top: 2px;
+}
+
 .fan-front {
   gap: 14px;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0s linear 0.35s, visibility 0s linear 0.35s;
 }
 
 .fan-back {
-  width: 64%;
+  width: 70%;
   gap: 7px;
   transform: translate3d(-50%, 0, 0) rotateY(180deg);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0s linear 0.35s, visibility 0s linear 0.35s;
+}
+
+.fan.is-revealed .fan-front {
+  opacity: 0;
+  visibility: hidden;
+  transition-delay: 0s;
+}
+
+.fan.is-revealed .fan-back {
+  opacity: 1;
+  visibility: visible;
+}
+
+.fan.is-advancing.has-swapped-card .fan-front {
+  opacity: 1;
+  visibility: visible;
+  transition: none;
+}
+
+.fan.is-advancing.has-swapped-card .fan-back {
+  opacity: 0;
+  visibility: hidden;
+  transition: none;
 }
 
 .hanzi-main,
 .hanzi-answer {
   display: block;
   width: 100%;
+  font-family: "Noto Serif SC", "Noto Serif TC", serif;
   font-synthesis-weight: none;
   -webkit-font-smoothing: antialiased;
   text-rendering: geometricPrecision;
@@ -703,22 +745,38 @@ input {
 }
 
 .hanzi-answer {
-  font-size: clamp(3.8rem, 10.4vw, 5.35rem);
+  font-size: clamp(4.6rem, 13vw, 5.75rem);
   line-height: 0.96;
   font-weight: 700;
+}
+
+.fan-back.is-heavy .hanzi-answer {
+  font-size: clamp(4.05rem, 11.5vw, 5rem);
+}
+
+.fan-back.is-heavy .hanzi-answer.is-medium {
+  font-size: clamp(3.25rem, 9vw, 4.25rem);
+}
+
+.fan-back.is-heavy .translation {
+  font-size: clamp(1.3rem, 2.35vw, 1.55rem);
+}
+
+.fan-back.is-heavy .example-toggle {
+  margin-top: -6px;
 }
 
 .translation {
   max-width: 96%;
   color: var(--ink);
-  font-size: clamp(1.2rem, 2.5vw, 1.55rem);
+  font-size: clamp(1.86rem, 3.375vw, 2.175rem);
   font-weight: 700;
   line-height: 1.08;
 }
 
 .pinyin {
   color: var(--cinnabar);
-  font-size: clamp(1.24rem, 2.25vw, 1.45rem);
+  font-size: clamp(1.86rem, 3.375vw, 2.175rem);
   font-weight: 700;
   justify-self: center;
   text-align: center;
@@ -729,6 +787,19 @@ input {
   font-size: 0.9em;
   line-height: 1.18;
   overflow-wrap: anywhere;
+}
+
+.example-translation.is-two-lines {
+  justify-self: center;
+}
+
+.example-translation.is-two-lines > span {
+  display: block;
+  white-space: nowrap;
+}
+
+.example-translation.is-extra-long {
+  font-size: 0.82em;
 }
 
 .example-block {
@@ -754,7 +825,10 @@ input {
 .example-text {
   min-width: 0;
   max-width: calc(100% - 28px);
+  line-height: 1.16;
   text-align: center;
+  word-break: break-all;
+  line-break: strict;
   overflow-wrap: anywhere;
 }
 
@@ -835,6 +909,7 @@ input {
 }
 
 .fan-back:has(.example-toggle[open]) {
+  top: 14%;
   gap: 5px;
 }
 
@@ -846,6 +921,10 @@ input {
 .fan-back:has(.example-toggle[open]) .example-pinyin {
   font-size: 0.8rem;
   line-height: 1.12;
+}
+
+.fan-back.is-dense:has(.example-toggle[open]) {
+  top: 13.5%;
 }
 
 .card-toolbar,
@@ -1978,20 +2057,41 @@ button:disabled {
   }
 
   .fan-back {
-    width: 68%;
+    width: 72%;
     gap: 6px;
   }
 
+  .fan-back.is-dense {
+    gap: 1px;
+  }
+
+  .fan-back.is-dense .translation {
+    font-size: clamp(1.45rem, 4.65vw, 1.75rem);
+  }
+
   .pinyin {
-    font-size: clamp(1.24rem, 4vw, 1.48rem);
+    font-size: clamp(1.86rem, 6vw, 2.22rem);
   }
 
   .hanzi-answer {
-    font-size: clamp(4rem, 11.2vw, 5.7rem);
+    font-size: clamp(4.6rem, 13vw, 5.75rem);
+  }
+
+  .fan-back.is-heavy .hanzi-answer {
+    font-size: clamp(4.05rem, 11.5vw, 5rem);
+  }
+
+  .fan-back.is-heavy .hanzi-answer.is-medium {
+    font-size: clamp(3.25rem, 9vw, 4.25rem);
+  }
+
+  .fan-back.is-heavy .translation,
+  .fan-back.is-heavy:has(.example-toggle[open]) .translation {
+    font-size: clamp(1.3rem, 4.2vw, 1.55rem);
   }
 
   .translation {
-    font-size: clamp(1.03rem, 3.1vw, 1.16rem);
+    font-size: clamp(1.86rem, 6vw, 2.22rem);
     line-height: 1.08;
   }
 
@@ -2029,8 +2129,12 @@ button:disabled {
   }
 
   .fan-back:has(.example-toggle[open]) {
-    top: 13.5%;
+    top: 14%;
     gap: 4px;
+  }
+
+  .fan-back.is-dense:has(.example-toggle[open]) {
+    top: 13.5%;
   }
 
   .fan-back:has(.example-toggle[open]) .hanzi-answer {
@@ -2038,7 +2142,7 @@ button:disabled {
   }
 
   .fan-back:has(.example-toggle[open]) .translation {
-    font-size: clamp(0.98rem, 2.8vw, 1.08rem);
+    font-size: clamp(1.86rem, 6vw, 2.22rem);
   }
 
   .fan-back:has(.example-toggle[open]) .example-block {
@@ -2049,6 +2153,14 @@ button:disabled {
   .fan-back:has(.example-toggle[open]) .example-toggle,
   .fan-back:has(.example-toggle[open]) .example-pinyin {
     font-size: clamp(0.98rem, 2.8vw, 1.08rem);
+  }
+
+  .fan-back.is-dense:has(.example-toggle[open]) .translation {
+    font-size: clamp(1.45rem, 4.65vw, 1.75rem);
+  }
+
+  .fan-back.is-heavy:has(.example-toggle[open]) .translation {
+    font-size: clamp(1.3rem, 4.2vw, 1.55rem);
   }
 
   .card-toolbar {

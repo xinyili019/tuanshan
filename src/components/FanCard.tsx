@@ -1,5 +1,5 @@
 import { ArrowLeft, BookOpen, ChevronDown, RotateCcw, Sparkles, Volume2 } from "lucide-react";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { speakEntryAudio, speakText } from "../lib/audio";
 import type { ScriptMode, StudyDirection, VocabEntry } from "../types";
 import { StrokeOrder } from "./StrokeOrder";
@@ -36,10 +36,24 @@ export function FanCard({
   const [showStrokeOrder, setShowStrokeOrder] = useState(false);
   const [showExamplePinyin, setShowExamplePinyin] = useState(false);
   const [firstWordTipDismissed, setFirstWordTipDismissed] = useState(false);
+  const [isAdvancing, setIsAdvancing] = useState(false);
+  const [hasSwappedCard, setHasSwappedCard] = useState(false);
+  const fanInnerRef = useRef<HTMLSpanElement>(null);
   const headword = scriptMode === "traditional" ? entry.traditional : entry.simplified;
   const example = scriptMode === "traditional" ? entry.exampleTraditional : entry.exampleSimplified;
   const speechLang = scriptMode === "traditional" ? "zh-TW" : "zh-CN";
   const displayEnglish = getDisplayEnglish(entry);
+  const backDensityClass =
+    displayEnglish.length > 15 || entry.exampleEnglish.length > 44 || entry.examplePinyin.length > 38 ? "is-dense" : "";
+  const backWeightClass =
+    displayEnglish.length > 20 || (Array.from(headword).length >= 4 && entry.pinyin.length > 12) ? "is-heavy" : "";
+  const exampleTranslationClass =
+    entry.exampleEnglish.length >= 58
+      ? "is-two-lines is-extra-long"
+      : entry.exampleEnglish.length >= 36
+        ? "is-two-lines"
+        : "";
+  const exampleTranslationLines = splitExampleTranslation(entry.exampleEnglish);
   const fontSizeClass = useMemo(() => {
     const length = Array.from(headword).length;
     if (length >= 5) return "is-compact";
@@ -64,15 +78,39 @@ export function FanCard({
   }, [revealed]);
 
   function activateFan() {
+    if (revealed || isAdvancing) return;
     if (!revealed && autoPlayAudio) void speakEntryAudio(entry, scriptMode, "word");
     onFlip();
+  }
+
+  function advanceWithFlip(onAdvance: () => void) {
+    const fanInner = fanInnerRef.current;
+    if (!revealed || isAdvancing || !fanInner) return;
+
+    setIsAdvancing(true);
+    const animation = fanInner.animate([{ transform: "rotateY(180deg)" }, { transform: "rotateY(360deg)" }], {
+      duration: 700,
+      easing: "cubic-bezier(0.42, 0, 0.58, 1)"
+    });
+
+    window.setTimeout(() => {
+      setHasSwappedCard(true);
+      onAdvance();
+    }, 350);
+
+    void animation.finished
+      .catch(() => undefined)
+      .finally(() => {
+        setIsAdvancing(false);
+        setHasSwappedCard(false);
+      });
   }
 
   return (
     <section className="study-card" aria-label="Chinese vocabulary card">
       <p className="card-hint">Know this word? Tap the fan to check!</p>
       <div
-        className={`fan ${revealed ? "is-revealed" : ""}`}
+        className={`fan ${revealed ? "is-revealed" : ""} ${isAdvancing ? "is-advancing" : ""} ${hasSwappedCard ? "has-swapped-card" : ""}`}
         role="button"
         tabIndex={0}
         onClick={activateFan}
@@ -82,11 +120,11 @@ export function FanCard({
           activateFan();
         }}
       >
-        <span className="fan-inner">
+        <span ref={fanInnerRef} className="fan-inner">
           <span className="fan-front" aria-hidden={revealed}>
             {frontContent}
           </span>
-          <span className="fan-back" aria-hidden={!revealed}>
+          <span className={`fan-back ${backDensityClass} ${backWeightClass}`} aria-hidden={!revealed}>
             <span className="pinyin">{entry.pinyin}</span>
             <span className={`hanzi-answer ${fontSizeClass}`}>{headword}</span>
             <span className="translation">{displayEnglish}</span>
@@ -106,7 +144,11 @@ export function FanCard({
                   <Volume2 size={13} aria-hidden="true" />
                 </button>
               </span>
-              <span className="example-translation">{entry.exampleEnglish}</span>
+              <span className={`example-translation ${exampleTranslationClass}`}>
+                {exampleTranslationLines.map((line, index) => (
+                  <span key={`${index}-${line}`}>{line}</span>
+                ))}
+              </span>
               <details
                 className="example-toggle"
                 open={showExamplePinyin}
@@ -167,11 +209,11 @@ export function FanCard({
 
       {revealed && (
         <div className="review-actions">
-          <button className="again" type="button" onClick={onAgain}>
+          <button className="again" type="button" onClick={() => advanceWithFlip(onAgain)} disabled={isAdvancing}>
             <RotateCcw size={18} aria-hidden="true" />
             Again
           </button>
-          <button className="known" type="button" onClick={onKnown}>
+          <button className="known" type="button" onClick={() => advanceWithFlip(onKnown)} disabled={isAdvancing}>
             <Sparkles size={18} aria-hidden="true" />
             Known
           </button>
@@ -195,6 +237,26 @@ function getDisplayEnglish(entry: VocabEntry) {
   };
 
   return byWord[entry.simplified] ?? byWord[entry.traditional] ?? entry.english;
+}
+
+function splitExampleTranslation(translation: string) {
+  if (translation.length < 36) return [translation];
+
+  const words = translation.split(" ");
+  let bestIndex = 1;
+  let smallestDifference = Number.POSITIVE_INFINITY;
+
+  for (let index = 1; index < words.length; index += 1) {
+    const firstLength = words.slice(0, index).join(" ").length;
+    const secondLength = words.slice(index).join(" ").length;
+    const difference = Math.abs(firstLength - secondLength);
+    if (difference < smallestDifference) {
+      bestIndex = index;
+      smallestDifference = difference;
+    }
+  }
+
+  return [words.slice(0, bestIndex).join(" "), words.slice(bestIndex).join(" ")];
 }
 
 export const speak = speakText;

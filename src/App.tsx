@@ -815,7 +815,7 @@ export default function App() {
               canGoPrevious={cardIndex > 0}
               showFirstWordTip={phase === "study" && sessionIndex === 0 && cardIndex === 0}
               autoPlayAudio={autoPlayAudio}
-              onFlip={() => setRevealed((current) => !current)}
+              onFlip={() => setRevealed(true)}
               onPrevious={() => {
                 setRevealed(false);
                 setCardIndex((current) => Math.max(0, current - 1));
