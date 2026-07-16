@@ -508,6 +508,7 @@ input {
   gap: 12px;
   position: relative;
   z-index: 1;
+  perspective: 1100px;
 }
 
 .fan-front-meaning,
@@ -558,13 +559,17 @@ input {
   z-index: 1;
   isolation: isolate;
   overflow: visible;
-  perspective: 1100px;
   transform-style: preserve-3d;
-  transition: transform 0.32s ease, box-shadow 0.32s ease;
+  transform: translateY(0) rotateY(0deg);
+  transition: transform 0.7s cubic-bezier(0.42, 0, 0.58, 1);
 }
 
-.fan:hover {
-  transform: translateY(-2px);
+.fan:not(.is-revealed):not(.is-advancing):hover {
+  transform: translateY(-2px) rotateY(0deg);
+}
+
+.fan.is-revealed {
+  transform: translateY(0) rotateY(180deg);
 }
 
 .fan::before {
@@ -590,11 +595,6 @@ input {
   inset: 0;
   z-index: 3;
   transform-style: preserve-3d;
-  transition: transform 0.7s cubic-bezier(0.42, 0, 0.58, 1);
-}
-
-.fan.is-revealed .fan-inner {
-  transform: rotateY(180deg);
 }
 
 .fan::after {
@@ -661,8 +661,8 @@ input {
   justify-items: center;
   align-content: center;
   text-align: center;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
+  backface-visibility: visible;
+  -webkit-backface-visibility: visible;
   will-change: transform;
 }
 
@@ -671,7 +671,7 @@ input {
 }
 
 .fan-back.is-dense .translation {
-  font-size: clamp(1.45rem, 2.7vw, 1.75rem);
+  font-size: clamp(1.305rem, 2.43vw, 1.575rem);
 }
 
 .fan-back.is-dense .example-block {
@@ -682,12 +682,13 @@ input {
   gap: 14px;
   opacity: 1;
   visibility: visible;
-  transition: opacity 0s linear 0.35s, visibility 0s linear 0.35s;
+  transition: opacity 0s linear, visibility 0s linear;
 }
 
 .fan-back {
   width: 70%;
   gap: 7px;
+  align-content: start;
   transform: translate3d(-50%, 0, 0) rotateY(180deg);
   opacity: 0;
   visibility: hidden;
@@ -697,12 +698,13 @@ input {
 .fan.is-revealed .fan-front {
   opacity: 0;
   visibility: hidden;
-  transition-delay: 0s;
+  transition: opacity 0.06s linear 0.32s, visibility 0s linear 0.38s;
 }
 
 .fan.is-revealed .fan-back {
   opacity: 1;
   visibility: visible;
+  transition: opacity 0.06s linear 0.32s, visibility 0s linear 0.32s;
 }
 
 .fan.is-advancing.has-swapped-card .fan-front {
@@ -725,6 +727,40 @@ input {
   font-synthesis-weight: none;
   -webkit-font-smoothing: antialiased;
   text-rendering: geometricPrecision;
+}
+
+.fan-back > .pinyin {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 42px;
+  display: grid;
+  place-items: center;
+}
+
+.fan-back > .hanzi-answer {
+  position: absolute;
+  top: 42%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.fan-front > .hanzi-main {
+  position: absolute;
+  top: 42%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.fan-back-details {
+  position: absolute;
+  top: calc(42% + 48px);
+  left: 0;
+  width: 100%;
+  display: grid;
+  justify-items: center;
+  gap: 0;
 }
 
 .hanzi-main {
@@ -754,12 +790,20 @@ input {
   font-size: clamp(4.05rem, 11.5vw, 5rem);
 }
 
+.fan-front.is-heavy .hanzi-main {
+  font-size: clamp(4.05rem, 11.5vw, 5rem);
+}
+
 .fan-back.is-heavy .hanzi-answer.is-medium {
   font-size: clamp(3.25rem, 9vw, 4.25rem);
 }
 
+.fan-front.is-heavy .hanzi-main.is-medium {
+  font-size: clamp(3.25rem, 9vw, 4.25rem);
+}
+
 .fan-back.is-heavy .translation {
-  font-size: clamp(1.3rem, 2.35vw, 1.55rem);
+  font-size: clamp(1.17rem, 2.115vw, 1.395rem);
 }
 
 .fan-back.is-heavy .example-toggle {
@@ -769,14 +813,14 @@ input {
 .translation {
   max-width: 96%;
   color: var(--ink);
-  font-size: clamp(1.86rem, 3.375vw, 2.175rem);
+  font-size: clamp(1.674rem, 3.0375vw, 1.9575rem);
   font-weight: 700;
   line-height: 1.08;
 }
 
 .pinyin {
   color: var(--cinnabar);
-  font-size: clamp(1.86rem, 3.375vw, 2.175rem);
+  font-size: clamp(1.674rem, 3.0375vw, 1.9575rem);
   font-weight: 700;
   justify-self: center;
   text-align: center;
@@ -890,12 +934,32 @@ input {
 .example-pinyin {
   display: block;
   max-width: 100%;
+  position: relative;
+  z-index: 0;
+  isolation: isolate;
   color: var(--cinnabar);
   font-size: 0.86rem;
   font-weight: 700;
   line-height: 1.2;
   overflow-wrap: anywhere;
   white-space: normal;
+}
+
+.example-pinyin::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -4px -9px;
+  border-radius: 7px;
+  background: rgba(250, 243, 231, 0.68);
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
+  opacity: 0;
+  transition: opacity 0.16s ease;
+}
+
+.example-toggle[open] .example-pinyin::before {
+  opacity: 1;
 }
 
 .example-chevron {
@@ -911,6 +975,14 @@ input {
 .fan-back:has(.example-toggle[open]) {
   top: 14%;
   gap: 5px;
+}
+
+.fan-back:has(.example-toggle[open]) > .hanzi-answer {
+  top: 39%;
+}
+
+.fan-back:has(.example-toggle[open]) .fan-back-details {
+  top: calc(39% + 48px);
 }
 
 .fan-back:has(.example-toggle[open]) .example-block {
@@ -989,7 +1061,7 @@ input {
   text-align: left;
   border: 1px solid rgba(184, 154, 94, 0.46);
   border-radius: 14px;
-  background: rgba(255, 250, 241, 0.75);
+  background: rgba(255, 250, 241, 0.68);
   box-shadow: 0 14px 32px rgba(55, 34, 18, 0.16);
   backdrop-filter: blur(7px);
 }
@@ -2061,16 +2133,20 @@ button:disabled {
     gap: 6px;
   }
 
+  .fan-back-details {
+    top: calc(42% + 40px);
+  }
+
   .fan-back.is-dense {
     gap: 1px;
   }
 
   .fan-back.is-dense .translation {
-    font-size: clamp(1.45rem, 4.65vw, 1.75rem);
+    font-size: clamp(1.305rem, 4.185vw, 1.575rem);
   }
 
   .pinyin {
-    font-size: clamp(1.86rem, 6vw, 2.22rem);
+    font-size: clamp(1.674rem, 5.4vw, 1.998rem);
   }
 
   .hanzi-answer {
@@ -2081,17 +2157,25 @@ button:disabled {
     font-size: clamp(4.05rem, 11.5vw, 5rem);
   }
 
+  .fan-front.is-heavy .hanzi-main {
+    font-size: clamp(4.05rem, 11.5vw, 5rem);
+  }
+
   .fan-back.is-heavy .hanzi-answer.is-medium {
+    font-size: clamp(3.25rem, 9vw, 4.25rem);
+  }
+
+  .fan-front.is-heavy .hanzi-main.is-medium {
     font-size: clamp(3.25rem, 9vw, 4.25rem);
   }
 
   .fan-back.is-heavy .translation,
   .fan-back.is-heavy:has(.example-toggle[open]) .translation {
-    font-size: clamp(1.3rem, 4.2vw, 1.55rem);
+    font-size: clamp(1.17rem, 3.78vw, 1.395rem);
   }
 
   .translation {
-    font-size: clamp(1.86rem, 6vw, 2.22rem);
+    font-size: clamp(1.674rem, 5.4vw, 1.998rem);
     line-height: 1.08;
   }
 
@@ -2106,7 +2190,7 @@ button:disabled {
   }
 
   .example-pinyin {
-    max-width: 19ch;
+    max-width: 100%;
     font-size: clamp(1.03rem, 3.1vw, 1.16rem);
     line-height: 1.08;
   }
@@ -2133,6 +2217,10 @@ button:disabled {
     gap: 4px;
   }
 
+  .fan-back:has(.example-toggle[open]) .fan-back-details {
+    top: calc(39% + 40px);
+  }
+
   .fan-back.is-dense:has(.example-toggle[open]) {
     top: 13.5%;
   }
@@ -2142,7 +2230,7 @@ button:disabled {
   }
 
   .fan-back:has(.example-toggle[open]) .translation {
-    font-size: clamp(1.86rem, 6vw, 2.22rem);
+    font-size: clamp(1.674rem, 5.4vw, 1.998rem);
   }
 
   .fan-back:has(.example-toggle[open]) .example-block {
@@ -2156,11 +2244,11 @@ button:disabled {
   }
 
   .fan-back.is-dense:has(.example-toggle[open]) .translation {
-    font-size: clamp(1.45rem, 4.65vw, 1.75rem);
+    font-size: clamp(1.305rem, 4.185vw, 1.575rem);
   }
 
   .fan-back.is-heavy:has(.example-toggle[open]) .translation {
-    font-size: clamp(1.3rem, 4.2vw, 1.55rem);
+    font-size: clamp(1.17rem, 3.78vw, 1.395rem);
   }
 
   .card-toolbar {

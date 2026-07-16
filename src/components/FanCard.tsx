@@ -38,7 +38,7 @@ export function FanCard({
   const [firstWordTipDismissed, setFirstWordTipDismissed] = useState(false);
   const [isAdvancing, setIsAdvancing] = useState(false);
   const [hasSwappedCard, setHasSwappedCard] = useState(false);
-  const fanInnerRef = useRef<HTMLSpanElement>(null);
+  const fanRef = useRef<HTMLDivElement>(null);
   const headword = scriptMode === "traditional" ? entry.traditional : entry.simplified;
   const example = scriptMode === "traditional" ? entry.exampleTraditional : entry.exampleSimplified;
   const speechLang = scriptMode === "traditional" ? "zh-TW" : "zh-CN";
@@ -47,13 +47,13 @@ export function FanCard({
     displayEnglish.length > 15 || entry.exampleEnglish.length > 44 || entry.examplePinyin.length > 38 ? "is-dense" : "";
   const backWeightClass =
     displayEnglish.length > 20 || (Array.from(headword).length >= 4 && entry.pinyin.length > 12) ? "is-heavy" : "";
-  const exampleTranslationClass =
-    entry.exampleEnglish.length >= 58
-      ? "is-two-lines is-extra-long"
-      : entry.exampleEnglish.length >= 36
-        ? "is-two-lines"
-        : "";
   const exampleTranslationLines = splitExampleTranslation(entry.exampleEnglish);
+  const exampleTranslationClass =
+    exampleTranslationLines.length > 1
+      ? entry.exampleEnglish.length >= 58
+        ? "is-two-lines is-extra-long"
+        : "is-two-lines"
+      : "";
   const fontSizeClass = useMemo(() => {
     const length = Array.from(headword).length;
     if (length >= 5) return "is-compact";
@@ -84,14 +84,20 @@ export function FanCard({
   }
 
   function advanceWithFlip(onAdvance: () => void) {
-    const fanInner = fanInnerRef.current;
-    if (!revealed || isAdvancing || !fanInner) return;
+    const fan = fanRef.current;
+    if (!revealed || isAdvancing || !fan) return;
 
     setIsAdvancing(true);
-    const animation = fanInner.animate([{ transform: "rotateY(180deg)" }, { transform: "rotateY(360deg)" }], {
-      duration: 700,
-      easing: "cubic-bezier(0.42, 0, 0.58, 1)"
-    });
+    const animation = fan.animate(
+      [
+        { transform: "translateY(0) rotateY(180deg)" },
+        { transform: "translateY(0) rotateY(360deg)" }
+      ],
+      {
+        duration: 700,
+        easing: "cubic-bezier(0.42, 0, 0.58, 1)"
+      }
+    );
 
     window.setTimeout(() => {
       setHasSwappedCard(true);
@@ -110,6 +116,7 @@ export function FanCard({
     <section className="study-card" aria-label="Chinese vocabulary card">
       <p className="card-hint">Know this word? Tap the fan to check!</p>
       <div
+        ref={fanRef}
         className={`fan ${revealed ? "is-revealed" : ""} ${isAdvancing ? "is-advancing" : ""} ${hasSwappedCard ? "has-swapped-card" : ""}`}
         role="button"
         tabIndex={0}
@@ -120,50 +127,52 @@ export function FanCard({
           activateFan();
         }}
       >
-        <span ref={fanInnerRef} className="fan-inner">
-          <span className="fan-front" aria-hidden={revealed}>
+        <span className="fan-inner">
+          <span className={`fan-front ${backWeightClass}`} aria-hidden={revealed}>
             {frontContent}
           </span>
           <span className={`fan-back ${backDensityClass} ${backWeightClass}`} aria-hidden={!revealed}>
             <span className="pinyin">{entry.pinyin}</span>
             <span className={`hanzi-answer ${fontSizeClass}`}>{headword}</span>
-            <span className="translation">{displayEnglish}</span>
-            <span className="example-block">
-              <span className="example-line">
-                <span className="example-text">{example}</span>
-                <button
-                  className="example-audio"
-                  type="button"
-                  aria-label="Listen to example"
-                  title="Listen to example"
-                  onClick={(event) => {
+            <span className="fan-back-details">
+              <span className="translation">{displayEnglish}</span>
+              <span className="example-block">
+                <span className="example-line">
+                  <span className="example-text">{example}</span>
+                  <button
+                    className="example-audio"
+                    type="button"
+                    aria-label="Listen to example"
+                    title="Listen to example"
+                    onClick={(event) => {
+                      event.stopPropagation();
+                      void speakEntryAudio(entry, scriptMode, "example");
+                    }}
+                  >
+                    <Volume2 size={13} aria-hidden="true" />
+                  </button>
+                </span>
+                <span className={`example-translation ${exampleTranslationClass}`}>
+                  {exampleTranslationLines.map((line, index) => (
+                    <span key={`${index}-${line}`}>{line}</span>
+                  ))}
+                </span>
+                <details
+                  className="example-toggle"
+                  open={showExamplePinyin}
+                  onClick={(event) => event.stopPropagation()}
+                  onToggle={(event) => {
                     event.stopPropagation();
-                    void speakEntryAudio(entry, scriptMode, "example");
+                    setShowExamplePinyin((event.currentTarget as HTMLDetailsElement).open);
                   }}
                 >
-                  <Volume2 size={13} aria-hidden="true" />
-                </button>
+                  <summary>
+                    <ChevronDown className="example-chevron" size={14} aria-hidden="true" />
+                    Pinyin
+                  </summary>
+                  <span className="example-pinyin">{entry.examplePinyin}</span>
+                </details>
               </span>
-              <span className={`example-translation ${exampleTranslationClass}`}>
-                {exampleTranslationLines.map((line, index) => (
-                  <span key={`${index}-${line}`}>{line}</span>
-                ))}
-              </span>
-              <details
-                className="example-toggle"
-                open={showExamplePinyin}
-                onClick={(event) => event.stopPropagation()}
-                onToggle={(event) => {
-                  event.stopPropagation();
-                  setShowExamplePinyin((event.currentTarget as HTMLDetailsElement).open);
-                }}
-              >
-                <summary>
-                  <ChevronDown className="example-chevron" size={14} aria-hidden="true" />
-                  Pinyin
-                </summary>
-                <span className="example-pinyin">{entry.examplePinyin}</span>
-              </details>
             </span>
           </span>
         </span>
@@ -240,6 +249,10 @@ function getDisplayEnglish(entry: VocabEntry) {
 }
 
 function splitExampleTranslation(translation: string) {
+  if (translation === "Which item of clothing do you like?") {
+    return ["Which item of clothing", "do you like?"];
+  }
+
   if (translation.length < 36) return [translation];
 
   const words = translation.split(" ");
